@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>HTML Authoring Pitfalls</h1><h3><a id=31342 href="#31342">🔗</a>J Gill &#x3C;JGill99@imajis.com&#x3E;</h3><span>12/11/2001 5:19:11 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If you view</p><p><a href="/tuning/topicId_31242.html#31242">/tuning/topicId_31242.html#31242</a></p><p>you will see the result of coloring all horizontal lines white in HTML (which is not carried over in the text-based source document, with direct link below:</p><p><a href="/tuning/topicId_31242.html#31242?source=1">/tuning/topicId_31242.html#31242?source=1</a></p><p>yielding the (text) source document.</p><p>That the color information is (not surprizingly) not retained in the source document, the (to me) less obvious detail is the grotesque results of some of my (HTML) &quot;touch-up&quot; work. So, I&apos;m gonna forget about letting HTML &quot;fix&quot; my diagrams with such &quot;window-dressing&quot; code, leaving the source all fubarred...</p><p>J Gill</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning HTML Authoring Pitfalls</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>HTML Authoring Pitfalls</h1><h3><a id=31342 href="#31342">🔗</a>J Gill &#x3C;JGill99@imajis.com&#x3E;</h3><span>12/11/2001 5:19:11 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If you view</p><p><a href="/tuning/topicId_31242.html#31242">/tuning/topicId_31242.html#31242</a></p><p>you will see the result of coloring all horizontal lines white in HTML (which is not carried over in the text-based source document, with direct link below:</p><p><a href="/tuning/topicId_31242.html#31242?source=1">/tuning/topicId_31242.html#31242?source=1</a></p><p>yielding the (text) source document.</p><p>That the color information is (not surprizingly) not retained in the source document, the (to me) less obvious detail is the grotesque results of some of my (HTML) &quot;touch-up&quot; work. So, I&apos;m gonna forget about letting HTML &quot;fix&quot; my diagrams with such &quot;window-dressing&quot; code, leaving the source all fubarred...</p><p>J Gill</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

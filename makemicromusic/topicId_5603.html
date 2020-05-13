@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>Timidity and Scala</h1><h3><a id=5603 href="#5603">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>12/5/2003 2:33:40 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Instead of playing retuned midi files with Timidity, it&apos;s now<br/>also possible to write a tuning table from Scala.<br/>So the midi files don&apos;t need to be changed, may be a bit<br/>easier.<br/>So in Scala do:</p><p>set synth 117<br/>send/file tuning.tbl</p><p>Then use the -Z option with Timidity like this:</p><p>timidity -Ztuning.tbl myfile.mid</p><p>I&apos;ll make a webpage about it someday.</p><p>Manuel</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Timidity and Scala</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>Timidity and Scala</h1><h3><a id=5603 href="#5603">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>12/5/2003 2:33:40 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Instead of playing retuned midi files with Timidity, it&apos;s now<br/>also possible to write a tuning table from Scala.<br/>So the midi files don&apos;t need to be changed, may be a bit<br/>easier.<br/>So in Scala do:</p><p>set synth 117<br/>send/file tuning.tbl</p><p>Then use the -Z option with Timidity like this:</p><p>timidity -Ztuning.tbl myfile.mid</p><p>I&apos;ll make a webpage about it someday.</p><p>Manuel</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

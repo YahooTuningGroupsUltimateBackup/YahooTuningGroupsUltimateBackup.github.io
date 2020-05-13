@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>(no subject)</h1><h3><a id=1150 href="#1150">🔗</a>Robert C Valentine &#x3C;bval@xxx.xxxxx.xxxx&#x3E;</h3><span>3/2/1999 6:33:53 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Sarn,</p><p>I recently was playing around with similar problems to some that may<br/>be relevent to you.</p><p>The question I asked myself was,</p><p>   &quot;given an equal tempterment, can I write a program that will come up<br/>    with a reasonable, quasi-meantone treatment&quot;.</p><p>For instance, type in &quot;17&quot;, and get out</p><p>  major scale : 3 3 1 3 3 3 1<br/>  sharp : +2  (double sharp +4)<br/>  flat  : -2  (double flat  -4)</p><p>The idea being that transposition and alterations used in 12 TET would<br/>have a mathematically consistant mapping in the new temperment (i.e.,<br/>sharping the &apos;F&apos; will produce a G scale that is a transposed version of<br/>the C scale).</p><p>So, given</p><p>  temperment = number of tones per octave<br/>  whole = interval from C to D, D to E, etc<br/>  half = interval from E to F</p><p>  whole = temperment / 6<br/>  half = ( temperment - ( 5 * whole ) ) / 2<br/>  if ( ( ( ( 5 * whole ) + 2 * half ) ) != temperment )<br/>      (however you would like to special case the problem<br/>      to produce results that interest you)<br/>  sharp = whole - half<br/>  flat = - sharp</p><p>My primary interest was to take a text based music piece and &quot;render&quot;<br/>it appropriately into other TETs (and somewhat inappropriately in<br/>others, fo instance, those with negative sharps).</p><p>Like most of my projects, this one is unfinished.</p><p>Bob Valentine</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning (no subject)</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>(no subject)</h1><h3><a id=1150 href="#1150">🔗</a>Robert C Valentine &#x3C;bval@xxx.xxxxx.xxxx&#x3E;</h3><span>3/2/1999 6:33:53 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Sarn,</p><p>I recently was playing around with similar problems to some that may<br/>be relevent to you.</p><p>The question I asked myself was,</p><p>   &quot;given an equal tempterment, can I write a program that will come up<br/>    with a reasonable, quasi-meantone treatment&quot;.</p><p>For instance, type in &quot;17&quot;, and get out</p><p>  major scale : 3 3 1 3 3 3 1<br/>  sharp : +2  (double sharp +4)<br/>  flat  : -2  (double flat  -4)</p><p>The idea being that transposition and alterations used in 12 TET would<br/>have a mathematically consistant mapping in the new temperment (i.e.,<br/>sharping the &apos;F&apos; will produce a G scale that is a transposed version of<br/>the C scale).</p><p>So, given</p><p>  temperment = number of tones per octave<br/>  whole = interval from C to D, D to E, etc<br/>  half = interval from E to F</p><p>  whole = temperment / 6<br/>  half = ( temperment - ( 5 * whole ) ) / 2<br/>  if ( ( ( ( 5 * whole ) + 2 * half ) ) != temperment )<br/>      (however you would like to special case the problem<br/>      to produce results that interest you)<br/>  sharp = whole - half<br/>  flat = - sharp</p><p>My primary interest was to take a text based music piece and &quot;render&quot;<br/>it appropriately into other TETs (and somewhat inappropriately in<br/>others, fo instance, those with negative sharps).</p><p>Like most of my projects, this one is unfinished.</p><p>Bob Valentine</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

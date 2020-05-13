@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Re: Midi messages</h1><h3><a id=26296 href="#26296">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>7/17/2001 9:50:09 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi John,</p><p>What about a tuning bank select message (rpn 4)?<br/><a href="http://www.midi.org/about-midi/tuning.htm">http://www.midi.org/about-midi/tuning.htm</a></p><p>Actually, seems all the rpns from 5 upwards are free too<br/>as they have never been assigned to anything. As there<br/>are 16,384 of them available to assign, and only 5 have ever<br/>been assigned, all in the original midi spec, I suppose<br/>if one chose a large rpn like 8192, or say, a range of<br/>rpns from 8192 upwards, it is hardly likely any of them<br/>will be registered to mean anything in the very near future.</p><p>Perhaps one should hesitate about using a rpn - but doesn&apos;t<br/>seem that likely that many more will be added in the immediate<br/>future, I suppose one never knows,...</p><p>Or, possibly a nrpn? I&apos;m not sure what issues are involved<br/>in using those.</p><p>I wonder if rpns or nrpns are easier to insert than a sysex?</p><p>Just a few thoughts.</p><p>The rpns are easier to program for at low level api, as<br/>in Windows C anyway, you need to use special function<br/>calls just for sysexes (as the standard lowlevel api ones only<br/>let you send two bytes of data at a time).</p><p>Basically, you have to fill a buffer with the sysex, and<br/>then send that, and the way it is done in Windows is quite<br/>complicated.</p><p>I don&apos;t know the details as I haven&apos;t needed to do it yet.<br/>That&apos;s for midi relaying - of course they are easy to read<br/>from a midi file.</p><p>Of course that level of things doesn&apos;t affect most, as the<br/>programmer of whatever program one is<br/>using will have done it (and I&apos;m sure it won&apos;t be that<br/>hard to do if I ever do need to to it!).</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Re: Midi messages</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Re: Midi messages</h1><h3><a id=26296 href="#26296">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>7/17/2001 9:50:09 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi John,</p><p>What about a tuning bank select message (rpn 4)?<br/><a href="http://www.midi.org/about-midi/tuning.htm">http://www.midi.org/about-midi/tuning.htm</a></p><p>Actually, seems all the rpns from 5 upwards are free too<br/>as they have never been assigned to anything. As there<br/>are 16,384 of them available to assign, and only 5 have ever<br/>been assigned, all in the original midi spec, I suppose<br/>if one chose a large rpn like 8192, or say, a range of<br/>rpns from 8192 upwards, it is hardly likely any of them<br/>will be registered to mean anything in the very near future.</p><p>Perhaps one should hesitate about using a rpn - but doesn&apos;t<br/>seem that likely that many more will be added in the immediate<br/>future, I suppose one never knows,...</p><p>Or, possibly a nrpn? I&apos;m not sure what issues are involved<br/>in using those.</p><p>I wonder if rpns or nrpns are easier to insert than a sysex?</p><p>Just a few thoughts.</p><p>The rpns are easier to program for at low level api, as<br/>in Windows C anyway, you need to use special function<br/>calls just for sysexes (as the standard lowlevel api ones only<br/>let you send two bytes of data at a time).</p><p>Basically, you have to fill a buffer with the sysex, and<br/>then send that, and the way it is done in Windows is quite<br/>complicated.</p><p>I don&apos;t know the details as I haven&apos;t needed to do it yet.<br/>That&apos;s for midi relaying - of course they are easy to read<br/>from a midi file.</p><p>Of course that level of things doesn&apos;t affect most, as the<br/>programmer of whatever program one is<br/>using will have done it (and I&apos;m sure it won&apos;t be that<br/>hard to do if I ever do need to to it!).</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

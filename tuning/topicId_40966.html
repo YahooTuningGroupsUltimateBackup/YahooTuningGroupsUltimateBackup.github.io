@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Quicktime pitch  resolution</h1><h3><a id=40966 href="#40966">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>11/17/2002 9:00:23 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Paul,</p><p>&gt; &gt; I&apos;ve done a test by setting the output for Quicktime to Midi Yoke<br/>&gt; instead<br/>&gt;&gt;  of its own internal synthesizer, then recording that in FTS.<br/>&gt; &gt;<br/>&gt; &gt; This shows that in that situation it changes the pitch bend<br/>&gt; range to 24 semitones<br/>&gt; &gt; before relaying the notes - i.e. +- 12 semitones, giving a<br/>&gt; resolution of 0.15 cents.</p><p>&gt; well this is neither 128 nor 256 parts per semitone, but rather<br/>&gt; over 600! seems like kind of a mystery, huh?</p><p>Yes.</p><p>In any case, it&apos;s a mystery to me why they would change the pitch<br/>bend range at all just to play ones midi clips on another midi device -<br/>you&apos;d think they would just pass everything on unchanged. Instead,<br/>they change the pitch bend range, and also remap all the pitch bends<br/>in the file in accordance with the new range.</p><p>One could perhaps imagine that maybe there are two parts<br/>to it - a pre-processor and the player itself, so that the<br/>output for the other player has been through the pre-processor first</p><p>But then, if it is like that, why does it get changed to a range<br/>which doesn&apos;t match up with their documentation for Quicktime?</p><p>Anyway I did sone measurements using FFT - and it was within around half a cent<br/>or so of the correct pitches for a 30 second major chord, so not too bad<br/>for a wavetable soft synth.</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Quicktime pitch  resolution</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Quicktime pitch  resolution</h1><h3><a id=40966 href="#40966">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>11/17/2002 9:00:23 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Paul,</p><p>&gt; &gt; I&apos;ve done a test by setting the output for Quicktime to Midi Yoke<br/>&gt; instead<br/>&gt;&gt;  of its own internal synthesizer, then recording that in FTS.<br/>&gt; &gt;<br/>&gt; &gt; This shows that in that situation it changes the pitch bend<br/>&gt; range to 24 semitones<br/>&gt; &gt; before relaying the notes - i.e. +- 12 semitones, giving a<br/>&gt; resolution of 0.15 cents.</p><p>&gt; well this is neither 128 nor 256 parts per semitone, but rather<br/>&gt; over 600! seems like kind of a mystery, huh?</p><p>Yes.</p><p>In any case, it&apos;s a mystery to me why they would change the pitch<br/>bend range at all just to play ones midi clips on another midi device -<br/>you&apos;d think they would just pass everything on unchanged. Instead,<br/>they change the pitch bend range, and also remap all the pitch bends<br/>in the file in accordance with the new range.</p><p>One could perhaps imagine that maybe there are two parts<br/>to it - a pre-processor and the player itself, so that the<br/>output for the other player has been through the pre-processor first</p><p>But then, if it is like that, why does it get changed to a range<br/>which doesn&apos;t match up with their documentation for Quicktime?</p><p>Anyway I did sone measurements using FFT - and it was within around half a cent<br/>or so of the correct pitches for a 30 second major chord, so not too bad<br/>for a wavetable soft synth.</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

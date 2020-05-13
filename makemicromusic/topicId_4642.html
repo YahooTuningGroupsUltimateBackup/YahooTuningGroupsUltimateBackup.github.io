@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>Scala and sysex Commands</h1><h3><a id=4642 href="#4642">🔗</a>jnagy2002 &#x3C;jnagy2002@...&#x3E;</h3><span>5/17/2003 4:52:53 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Scala and sysex Commands</p><p>Dear group,</p><p>By calling Yamaha I found out that the PSR 330 and my PSR 340 do have<br/>the same tone generation card and that the appropriate sysex commands<br/>look like (from a PSR 330 manual):</p><p>F043104C0800417FF7</p><p>To retune to a new scale would require 12 such commands per channel<br/>at the most. Note: the 00417F part is all that changes. Numbers are<br/>all in hexadecimal. 00 to 0F denotes channel 1 to 16; 41 to 4C points<br/>to all Cs all C#s and so on, ending with 4C  for all the Bs; next is<br/>the pitch adjustment: 00 = -63 cents 40 = 0 cents 7F=+63 cents. If<br/>one could set up a table like a spread sheet to help remember the<br/>relationships that would be great.  Scala does something like a table<br/>but I can&apos;t figure out how.  I&apos;ve tried:  SET SYNTH  107 and SET<br/>SYNTH 1<br/>SEND  F043104C0800417FF7  without much success.  Would someone please<br/>help?</p><p>Best wishes,<br/>Jim Nagy</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Scala and sysex Commands</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>Scala and sysex Commands</h1><h3><a id=4642 href="#4642">🔗</a>jnagy2002 &#x3C;jnagy2002@...&#x3E;</h3><span>5/17/2003 4:52:53 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Scala and sysex Commands</p><p>Dear group,</p><p>By calling Yamaha I found out that the PSR 330 and my PSR 340 do have<br/>the same tone generation card and that the appropriate sysex commands<br/>look like (from a PSR 330 manual):</p><p>F043104C0800417FF7</p><p>To retune to a new scale would require 12 such commands per channel<br/>at the most. Note: the 00417F part is all that changes. Numbers are<br/>all in hexadecimal. 00 to 0F denotes channel 1 to 16; 41 to 4C points<br/>to all Cs all C#s and so on, ending with 4C  for all the Bs; next is<br/>the pitch adjustment: 00 = -63 cents 40 = 0 cents 7F=+63 cents. If<br/>one could set up a table like a spread sheet to help remember the<br/>relationships that would be great.  Scala does something like a table<br/>but I can&apos;t figure out how.  I&apos;ve tried:  SET SYNTH  107 and SET<br/>SYNTH 1<br/>SEND  F043104C0800417FF7  without much success.  Would someone please<br/>help?</p><p>Best wishes,<br/>Jim Nagy</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

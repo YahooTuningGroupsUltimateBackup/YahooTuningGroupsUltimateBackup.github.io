@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list TUNING digest 1401</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>TUNING digest 1401</h1><h3><a id=7626 href="#7626">🔗</a>&#x22;jloffink&#x22; &#x3C;jloffink@...&#x3E;</h3><span>5/1/1998 5:09:04 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>> From: gbreed@cix.compulink.co.uk (Graham Breed)<br>> > synth players sometimes intentionally detune a pair of oscillators so<br>> > they'd slowly phase shift and create a "fat" sound that is richer and<br>> > less boring than a single oscillator.  <br>> <br>> This is standard with the dual play mode on my DX21, although<br>> that's slightly different because the two notes will have<br>> different timbres.  Even with identical timbres, you don't have<br>> to hear the phase shifting for the sound to be changed.  I usually<br>> set a 1 or 2 cent detuning so that it doesn't interfere with the<br>> harmony.<br>><br> > You may want to stop the tuning getting _too_ accurate so that<br>> the phasing becomes audible.  To aim the beats between 0.4 and 0.5<br>> cents you need about 20 millicent precision.  Higher precision<br>> means the beats can be set in tune with the tempo or harmony.<br>> That complicates the tuning process, of course.  Fast, accurate<br>> pitch bends may be required.<br>> <br>Kurzweil K2000/K2500 programs have a "FineHz" tuning parameter that lets<br>you detune each layer by +-6 Hz in 0.10 Hz increments, in addition to the<br>normal cents pitch adjustment.<br>> <br>> What are the practical problems with implementing this precision<br>> on a synth?  I'm assuming the errors creep in when you convert<br>> from a cents value to a frequency ratio.  This looks like the<br>> simplest algorithm that works:<br>> <br>> if (n<0)<br>>  r = 1+ n*5.8454e-4<br>> else<br>>  r = 1+ n*5.707e-4<br>> endif<br>> <br>> Where n is the tuning in cents relative to 12-equal, and -50 <= n<br>> <= 50.  I'm assuming the ratios for 12-equal will be in a lookup<br>> table.  Multiply the relevant one by r.<br>> <br>> The worst intervals using my algorithm are 0.25 cents out.<br>> Maybe this is why we're only given 1 cent steps at the moment.  A<br>> larger lookup table with third-tone ratios should give enough<br>> accuracy for 0.1 cent steps.<br>> <br>Synths frequency resolution is ultimately limited by hardware, which is<br>specified in Hertz rather than cents due to the nature of the phase<br>accumulator used in all wavetable/DSP synths and samplers.  A lookup table<br>is used by the software that converts cents to Hertz (actually the phase<br>increment), either one master octave or the whole keyboard.  This table<br>might be stored in the synth manufacturer's custom integrated circuits or<br>in their software code ROM.  Due to the speed requirements and low math<br>capabilities of the main microprocessors it is unlikely that an algorithm<br>would be used.<br><br>John Loffink<br>jloffink@pdq.net</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

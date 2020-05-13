@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>An even more interesting example of partial periodicity</h1><h3><a id=102012 href="#102012">🔗</a>Petr Pa&#x159;&#xED;zek &#x3C;petrparizek2000@...&#x3E;</h3><span>12/10/2011 1:13:03 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Continuing onto what I&apos;ve said in message #102004, this example may be even more interesting than the previous ones although not as easy to understand. This time, there&apos;s a rolloff meaning that the intensity is inversely proportional to frequency. It&apos;s a stereo sound where one channel contains frequencies of 1:5:9:13:17:... while the other contains frequencies of 3:7:11:15:19:...</p><p><a href="http://dl.dropbox.com/u/8497979/1vs3_over_4_rolloff.wav">http://dl.dropbox.com/u/8497979/1vs3_over_4_rolloff.wav</a></p><p>Although only one of them actually contains a sine wave of 1Hz, the general periodicity of 1Hz is obvious in both of them. And although none of them contains a sine wave of 4Hz, the partial periodicity of 4Hz is also pretty apparent in both of them.</p><p>What&apos;s more, since the impulses which are 250 ms apart are just 90-degree or -90-degree phase-shifted copies of each other, then summing the two channels results in a square wave while subtracting them results in an approximated phase-shifted square wave delayed by 250 ms. Of course, it&apos;s mathematically impossible to exactly phase-shift a &quot;step&quot; or a &quot;switch&quot; because the resulting impulse would run into infinitely high amplitudes and infinite lengths. But the periodic approximations given here are very good anyway.</p><p>Petr</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning An even more interesting example of partial periodicity</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>An even more interesting example of partial periodicity</h1><h3><a id=102012 href="#102012">🔗</a>Petr Pa&#x159;&#xED;zek &#x3C;petrparizek2000@...&#x3E;</h3><span>12/10/2011 1:13:03 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Continuing onto what I&apos;ve said in message #102004, this example may be even more interesting than the previous ones although not as easy to understand. This time, there&apos;s a rolloff meaning that the intensity is inversely proportional to frequency. It&apos;s a stereo sound where one channel contains frequencies of 1:5:9:13:17:... while the other contains frequencies of 3:7:11:15:19:...</p><p><a href="http://dl.dropbox.com/u/8497979/1vs3_over_4_rolloff.wav">http://dl.dropbox.com/u/8497979/1vs3_over_4_rolloff.wav</a></p><p>Although only one of them actually contains a sine wave of 1Hz, the general periodicity of 1Hz is obvious in both of them. And although none of them contains a sine wave of 4Hz, the partial periodicity of 4Hz is also pretty apparent in both of them.</p><p>What&apos;s more, since the impulses which are 250 ms apart are just 90-degree or -90-degree phase-shifted copies of each other, then summing the two channels results in a square wave while subtracting them results in an approximated phase-shifted square wave delayed by 250 ms. Of course, it&apos;s mathematically impossible to exactly phase-shift a &quot;step&quot; or a &quot;switch&quot; because the resulting impulse would run into infinitely high amplitudes and infinite lengths. But the periodic approximations given here are very good anyway.</p><p>Petr</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

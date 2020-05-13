@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Javascript (for newbies) to convert ratios to cents and vice-versa</h1><h3><a id=16096 href="#16096">🔗</a>Charles Lucy &#x3C;LUCY@ILHAWAII.NET&#x3E;</h3><span>12/1/2000 3:07:25 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Here is a simple JavaScript which may be useful for novices.<br/>To use it copy the lines between and excluding the *******&apos;s, paste it<br/>into an html page, and display with a browser.<br/>(It works fine on Netscape with Linux, and should with most other<br/>systems)</p><p>START of SCRIPT<br/>******<br/>&lt;p&gt;&lt;left&gt;Convert between ratio and cents&lt;br&gt;<br/>Enter a number in either field, then click outside the text box.<br/>&lt;form&gt;<br/>Ratio:<br/>&lt;input type=&quot;text&quot; name=&quot;F&quot; value=&quot;1.5&quot;<br/>onChange=&quot;C.value =(Math.log(this.value)*1200)/(Math.log(2))&quot;&gt;&lt;br&gt;<br/>Cents:<br/>&lt;input type=&quot;text&quot; name=&quot;C&quot; value=&quot;701.955&quot;<br/>onChange=&quot;F.value = Math.exp(((this.value)*Math.log(2))/1200)&quot;&gt;&lt;br&gt;<br/>*********<br/>END of SCRIPT<br/>--<br/>~====================================================~<br/>Charles Lucy - <a href="mailto:lucy@harmonics.com">lucy@harmonics.com</a> (LucyScaleDevelopments)<br/>------------  Promoting global harmony through LucyTuning  -------<br/>for information on LucyTuning go to <a href="http://www.ilhawaii.net/~lucy">http://www.ilhawaii.net/~lucy</a>  or<br/><a href="http://www.harmonics.com/lucy/">http://www.harmonics.com/lucy/</a><br/>for Lucytuned Lullabies go to <a href="http://www.lucytune.com">http://www.lucytune.com</a> or<br/><a href="http://www.lucytune.co.uk">http://www.lucytune.co.uk</a><br/>--------------------------------------------------------</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Javascript (for newbies) to convert ratios to cents and vice-versa</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Javascript (for newbies) to convert ratios to cents and vice-versa</h1><h3><a id=16096 href="#16096">🔗</a>Charles Lucy &#x3C;LUCY@ILHAWAII.NET&#x3E;</h3><span>12/1/2000 3:07:25 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Here is a simple JavaScript which may be useful for novices.<br/>To use it copy the lines between and excluding the *******&apos;s, paste it<br/>into an html page, and display with a browser.<br/>(It works fine on Netscape with Linux, and should with most other<br/>systems)</p><p>START of SCRIPT<br/>******<br/>&lt;p&gt;&lt;left&gt;Convert between ratio and cents&lt;br&gt;<br/>Enter a number in either field, then click outside the text box.<br/>&lt;form&gt;<br/>Ratio:<br/>&lt;input type=&quot;text&quot; name=&quot;F&quot; value=&quot;1.5&quot;<br/>onChange=&quot;C.value =(Math.log(this.value)*1200)/(Math.log(2))&quot;&gt;&lt;br&gt;<br/>Cents:<br/>&lt;input type=&quot;text&quot; name=&quot;C&quot; value=&quot;701.955&quot;<br/>onChange=&quot;F.value = Math.exp(((this.value)*Math.log(2))/1200)&quot;&gt;&lt;br&gt;<br/>*********<br/>END of SCRIPT<br/>--<br/>~====================================================~<br/>Charles Lucy - <a href="mailto:lucy@harmonics.com">lucy@harmonics.com</a> (LucyScaleDevelopments)<br/>------------  Promoting global harmony through LucyTuning  -------<br/>for information on LucyTuning go to <a href="http://www.ilhawaii.net/~lucy">http://www.ilhawaii.net/~lucy</a>  or<br/><a href="http://www.harmonics.com/lucy/">http://www.harmonics.com/lucy/</a><br/>for Lucytuned Lullabies go to <a href="http://www.lucytune.com">http://www.lucytune.com</a> or<br/><a href="http://www.lucytune.co.uk">http://www.lucytune.co.uk</a><br/>--------------------------------------------------------</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

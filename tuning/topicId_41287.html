@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Quicktime Pitch bends</h1><h3><a id=41287 href="#41287">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>11/29/2002 3:54:34 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>HI there,</p><p>Sorry, now that I actually use the pitch bends I&apos;ve been coding,<br/>I find that QT is actually doing 512 pitch bend units to a semitone<br/>here. That&apos;s the default pitch bend range.</p><p>They are indeed two byte integers, but the first _9_ bytes are<br/>used for a semitone, not the first 8 as I was expecting,<br/>and the remaining 6 bytes are used for the number<br/>of semitones to give a range of +- 64 semitones.</p><p>If I do the pitch bend test using midi notes 58<br/>with a pitch bend of 1024 and 62 with a pitch bend<br/>of -1024 they both sound middle c so 1024 = one tone<br/>so 512 = semitone...</p><p>I&apos;ve added quick time support to the PlayMidiLib<br/>(as an extra dll you can include with your program to<br/>play notes via QT) but not yet uploaded it - a bit<br/>later tonight prob. but some more testing and things<br/>to do first</p><p>Robert</p></div><h3><a id=41288 href="#41288">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>11/29/2002 3:57:05 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Of course, bytes there should read bits - the first _9_ bits<br/>etc...</p><p>Sorry,</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Quicktime Pitch bends</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Quicktime Pitch bends</h1><h3><a id=41287 href="#41287">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>11/29/2002 3:54:34 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>HI there,</p><p>Sorry, now that I actually use the pitch bends I&apos;ve been coding,<br/>I find that QT is actually doing 512 pitch bend units to a semitone<br/>here. That&apos;s the default pitch bend range.</p><p>They are indeed two byte integers, but the first _9_ bytes are<br/>used for a semitone, not the first 8 as I was expecting,<br/>and the remaining 6 bytes are used for the number<br/>of semitones to give a range of +- 64 semitones.</p><p>If I do the pitch bend test using midi notes 58<br/>with a pitch bend of 1024 and 62 with a pitch bend<br/>of -1024 they both sound middle c so 1024 = one tone<br/>so 512 = semitone...</p><p>I&apos;ve added quick time support to the PlayMidiLib<br/>(as an extra dll you can include with your program to<br/>play notes via QT) but not yet uploaded it - a bit<br/>later tonight prob. but some more testing and things<br/>to do first</p><p>Robert</p></div><h3><a id=41288 href="#41288">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>11/29/2002 3:57:05 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Of course, bytes there should read bits - the first _9_ bits<br/>etc...</p><p>Sorry,</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Wave Convergents Final Form</h1><h3><a id=90696 href="#90696">🔗</a>rick &#x3C;rick_ballan@...&#x3E;</h3><span>7/5/2010 2:52:50 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello all,</p><p>A few weeks ago Steve Martin pointed out that my previous method was not always giving the correct results. I&apos;ve now corrected this. I won&apos;t give any proofs now but just the method. I&apos;ve attached a file which shows that the peaks of the wave do indeed occur at the GCD&apos;s between the (wave) convergents.</p><p>Given the sum of two sines of the form</p><p>f(t) = sin[2pi at] + sin[2pi bt],</p><p>where a/b is either coprime or irrational, then its extrema occur at the times t = (2k +/-1)/2(a + b) where</p><p>(2k +/-1) = (Round to even[j*2(a + b)/(a - b)]) +/- 1, j = 0,1,2,3,...</p><p>The wave convergents are given by</p><p>Round[2a/(a - b)]/Round[2b/(a - b) = p/q.</p><p>The ~ GCD = (a + b)/(p + q) or</p><p>2(a + b)/(Round[2a/(a - b)] + Round[2b/(a - b)]).</p><p>You can see some examples on the file I&apos;ve posted called &quot;Round Odd eg&apos;s&quot;. It shows the intervals a/b = 81/64, 19/16, 32/27 and 51/32 respectively. There you&apos;ll see that the black dots occur at all the wave extrema and that the time difference between them correspond to the GCD fundamentals between the wave convergents.</p><p>Cheers</p><p>Rick</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Wave Convergents Final Form</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Wave Convergents Final Form</h1><h3><a id=90696 href="#90696">🔗</a>rick &#x3C;rick_ballan@...&#x3E;</h3><span>7/5/2010 2:52:50 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello all,</p><p>A few weeks ago Steve Martin pointed out that my previous method was not always giving the correct results. I&apos;ve now corrected this. I won&apos;t give any proofs now but just the method. I&apos;ve attached a file which shows that the peaks of the wave do indeed occur at the GCD&apos;s between the (wave) convergents.</p><p>Given the sum of two sines of the form</p><p>f(t) = sin[2pi at] + sin[2pi bt],</p><p>where a/b is either coprime or irrational, then its extrema occur at the times t = (2k +/-1)/2(a + b) where</p><p>(2k +/-1) = (Round to even[j*2(a + b)/(a - b)]) +/- 1, j = 0,1,2,3,...</p><p>The wave convergents are given by</p><p>Round[2a/(a - b)]/Round[2b/(a - b) = p/q.</p><p>The ~ GCD = (a + b)/(p + q) or</p><p>2(a + b)/(Round[2a/(a - b)] + Round[2b/(a - b)]).</p><p>You can see some examples on the file I&apos;ve posted called &quot;Round Odd eg&apos;s&quot;. It shows the intervals a/b = 81/64, 19/16, 32/27 and 51/32 respectively. There you&apos;ll see that the black dots occur at all the wave extrema and that the time difference between them correspond to the GCD fundamentals between the wave convergents.</p><p>Cheers</p><p>Rick</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

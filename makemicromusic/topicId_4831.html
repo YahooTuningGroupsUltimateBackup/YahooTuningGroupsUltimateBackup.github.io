@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>New mean-tone scale generating page</h1><h3><a id=4831 href="#4831">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>6/5/2003 11:30:45 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>HI there,</p><p>I did a new version of my mean tone scale generation page - changes suggested by<br/>Charles Lucy.</p><p><a href="http://tunesmithy.netfirms.com/japplets/mean_tone_in_cents.htm">http://tunesmithy.netfirms.com/japplets/mean_tone_in_cents.htm</a></p><p>First of all - whenever you change the comma then the meantone scale updates instantly<br/>- no need to press a button any more.</p><p>Also now you can edit any of the tempered or wolf fifths, thirds or minor thirds and<br/>the meantone scale and all the other intervals will also update immediately to<br/>reflect the change.</p><p>Note for web page developers:</p><p> I did it by processing keyup events<br/>&quot;javascript:onkeyup=whatever()&quot;&gt;</p><p>and I just found a great site with demos of all the Javascript events on it:</p><p><a href="http://www.xs4all.nl/~ppk/js/index.html">http://www.xs4all.nl/~ppk/js/index.html</a></p><p>Thanks,</p><p>Robert</p></div><h3><a id=4833 href="#4833">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>6/5/2003 11:36:55 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi there,</p><p>Sorry about the word shift:</p><p>onkeyup=&quot;javascript:whatever()&quot;</p><p>Thanks,</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic New mean-tone scale generating page</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>New mean-tone scale generating page</h1><h3><a id=4831 href="#4831">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>6/5/2003 11:30:45 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>HI there,</p><p>I did a new version of my mean tone scale generation page - changes suggested by<br/>Charles Lucy.</p><p><a href="http://tunesmithy.netfirms.com/japplets/mean_tone_in_cents.htm">http://tunesmithy.netfirms.com/japplets/mean_tone_in_cents.htm</a></p><p>First of all - whenever you change the comma then the meantone scale updates instantly<br/>- no need to press a button any more.</p><p>Also now you can edit any of the tempered or wolf fifths, thirds or minor thirds and<br/>the meantone scale and all the other intervals will also update immediately to<br/>reflect the change.</p><p>Note for web page developers:</p><p> I did it by processing keyup events<br/>&quot;javascript:onkeyup=whatever()&quot;&gt;</p><p>and I just found a great site with demos of all the Javascript events on it:</p><p><a href="http://www.xs4all.nl/~ppk/js/index.html">http://www.xs4all.nl/~ppk/js/index.html</a></p><p>Thanks,</p><p>Robert</p></div><h3><a id=4833 href="#4833">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>6/5/2003 11:36:55 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi there,</p><p>Sorry about the word shift:</p><p>onkeyup=&quot;javascript:whatever()&quot;</p><p>Thanks,</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

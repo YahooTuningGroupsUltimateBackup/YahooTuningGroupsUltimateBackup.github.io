@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>pi ~= 7^7/2^18</h1><h3><a id=38492 href="#38492">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>7/6/2002 1:42:28 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>HI Margo,</p><p>Thanks for the suggestion about using the pi = 22/7<br/>approx.</p><p>I tried pi with 2 7 and 11 as the factors to try and got</p><p>Successive approx. to 3.14159265359/1 in form:<br/>2^a * 7^b * 11^c</p><p>Max quotient to look for: 1e+050</p><p>2/1  2^2/1  11/2^2  2^5/11  2^12/11^3  11^8/2^26  2^57/11^16  2*11/7  11^38/(2^1<br/>27*7)  7^7/2^18<br/>(39627 values tested)</p><p>Values in cents<br/>0.0 1200 2400 1751.3179 1848.6821 1946.0462 2010.5435 1978.9129 1982.492 1981.25<br/>59 1981.7813</p><p>Cents diffs from target 1981.7954<br/>-781.79536 418.20464 -230.47741 -133.1133 -35.749182 28.748184 -2.8824332 0.6966<br/>8053 -0.53945198 -0.014010083</p><p>3.14159265359/1 = 1981.79535537 cents</p><p>I thought the program was going to find them in the order of increasing<br/>values for the product of denumerator and denominator but clearly<br/>it is using some other ordering. Looking at the code it doesn&apos;t<br/>really say anything about how they are ordered, and I think perhaps<br/>at the time I was just trying to find various xenharmonic bridges<br/>without really being concerned about ordering them<br/>in a systematic way.</p><p>Anyway was intrigued to find that 7^7/2^18 is a very<br/>close approximation to pi indeed.</p><p>It works out at 3.1415672...<br/>pi is<br/>3.141592653...<br/>22/7 is<br/>3.142857142...</p><p>Anyone else noticed this before?</p><p>As for the cents values - you see those in the output.</p><p>Obviously I will need to do more work on the program if I want<br/>to do some experimental investigating of the prime limit<br/>type flavour of irrationals.</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning pi ~= 7^7/2^18</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>pi ~= 7^7/2^18</h1><h3><a id=38492 href="#38492">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>7/6/2002 1:42:28 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>HI Margo,</p><p>Thanks for the suggestion about using the pi = 22/7<br/>approx.</p><p>I tried pi with 2 7 and 11 as the factors to try and got</p><p>Successive approx. to 3.14159265359/1 in form:<br/>2^a * 7^b * 11^c</p><p>Max quotient to look for: 1e+050</p><p>2/1  2^2/1  11/2^2  2^5/11  2^12/11^3  11^8/2^26  2^57/11^16  2*11/7  11^38/(2^1<br/>27*7)  7^7/2^18<br/>(39627 values tested)</p><p>Values in cents<br/>0.0 1200 2400 1751.3179 1848.6821 1946.0462 2010.5435 1978.9129 1982.492 1981.25<br/>59 1981.7813</p><p>Cents diffs from target 1981.7954<br/>-781.79536 418.20464 -230.47741 -133.1133 -35.749182 28.748184 -2.8824332 0.6966<br/>8053 -0.53945198 -0.014010083</p><p>3.14159265359/1 = 1981.79535537 cents</p><p>I thought the program was going to find them in the order of increasing<br/>values for the product of denumerator and denominator but clearly<br/>it is using some other ordering. Looking at the code it doesn&apos;t<br/>really say anything about how they are ordered, and I think perhaps<br/>at the time I was just trying to find various xenharmonic bridges<br/>without really being concerned about ordering them<br/>in a systematic way.</p><p>Anyway was intrigued to find that 7^7/2^18 is a very<br/>close approximation to pi indeed.</p><p>It works out at 3.1415672...<br/>pi is<br/>3.141592653...<br/>22/7 is<br/>3.142857142...</p><p>Anyone else noticed this before?</p><p>As for the cents values - you see those in the output.</p><p>Obviously I will need to do more work on the program if I want<br/>to do some experimental investigating of the prime limit<br/>type flavour of irrationals.</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Semiring Formalization of Scales and Chords</h1><h3><a id=21327 href="#21327">🔗</a>Ryan Avella &#x3C;domeofatonement@yahoo.com&#x3E;</h3><span>8/11/2013 11:06:28 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Before reading this post, I would suggest referring back to an earlier post written by Mike Battaglia, which originated the idea of a semiring representation of scales and chords:</p><p><a href="http://tech.groups.yahoo.com/group/tuning-math/message/21304">http://tech.groups.yahoo.com/group/tuning-math/message/21304</a></p><p>Let us define a note as a n-tuple of integers, and a scale as a set of notes.  From two notes we can construct a third by element-wise addition, +.  From two scales we can construct a third by taking their union, U.  If A and B are singletons such that A={a} and B={b}, then we define their product A*B={a+b}, where * distributes over U.</p><p>Additionally, if A={a}, let A^T={-a} be the complement of A.  This unary operator generalizes to sets of larger cardinality by the following property: (AUB)^T=(A^T)U(B^T).</p><p>Using just these axioms, we can derive some important inequalities on the cardinalities of scales.  Note: Some of the following inequalities assume that a set is non-empty.</p><p>max(|A|, |B|) &lt;= |AUB| &lt;= |A|+|B|<br/>|A|+|B|-1 &lt;= |A*B| &lt;= |A|*|B|<br/>2*(|A|-1)+1 &lt;= |(A^T)*A| &lt;= |A|*(|A|-1)+1</p><p>If for each of the members of a scale A, there exists another member such that the L-1 distance spanned between is precisely 1, we will call that scale connected.</p><p>Conjecture: For a connected scale A whose n-tuples consist of n-dimensions, the following inequality holds true:</p><p>|(A^T)*A| &lt;= 1/n*[(n-1)*|A|^2+2*|A|-1]</p><p>For the n=1 case, this simplifies to the following:</p><p>|(A^T)*A| = 2*|A|-1</p><p>If we define a function dia(A)=A*(A^T), some interesting properties are observed.</p><p>dia(A)=dia(A)^T=dia(A^T)<br/>dia(dia(A))=dia(A*A)=dia(A)*dia(A)</p><p>B is a subset of dia(B) if and only if B contains the 0-vector (a n-tuple with all entries 0).</p><p>Ryan Avella</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Semiring Formalization of Scales and Chords</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Semiring Formalization of Scales and Chords</h1><h3><a id=21327 href="#21327">🔗</a>Ryan Avella &#x3C;domeofatonement@yahoo.com&#x3E;</h3><span>8/11/2013 11:06:28 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Before reading this post, I would suggest referring back to an earlier post written by Mike Battaglia, which originated the idea of a semiring representation of scales and chords:</p><p><a href="/tuning-math/message/21304">/tuning-math/message/21304</a></p><p>Let us define a note as a n-tuple of integers, and a scale as a set of notes.  From two notes we can construct a third by element-wise addition, +.  From two scales we can construct a third by taking their union, U.  If A and B are singletons such that A={a} and B={b}, then we define their product A*B={a+b}, where * distributes over U.</p><p>Additionally, if A={a}, let A^T={-a} be the complement of A.  This unary operator generalizes to sets of larger cardinality by the following property: (AUB)^T=(A^T)U(B^T).</p><p>Using just these axioms, we can derive some important inequalities on the cardinalities of scales.  Note: Some of the following inequalities assume that a set is non-empty.</p><p>max(|A|, |B|) &lt;= |AUB| &lt;= |A|+|B|<br/>|A|+|B|-1 &lt;= |A*B| &lt;= |A|*|B|<br/>2*(|A|-1)+1 &lt;= |(A^T)*A| &lt;= |A|*(|A|-1)+1</p><p>If for each of the members of a scale A, there exists another member such that the L-1 distance spanned between is precisely 1, we will call that scale connected.</p><p>Conjecture: For a connected scale A whose n-tuples consist of n-dimensions, the following inequality holds true:</p><p>|(A^T)*A| &lt;= 1/n*[(n-1)*|A|^2+2*|A|-1]</p><p>For the n=1 case, this simplifies to the following:</p><p>|(A^T)*A| = 2*|A|-1</p><p>If we define a function dia(A)=A*(A^T), some interesting properties are observed.</p><p>dia(A)=dia(A)^T=dia(A^T)<br/>dia(dia(A))=dia(A*A)=dia(A)*dia(A)</p><p>B is a subset of dia(B) if and only if B contains the 0-vector (a n-tuple with all entries 0).</p><p>Ryan Avella</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

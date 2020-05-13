@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Generators for temperaments</h1><h3><a id=12632 href="#12632">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>9/6/2005 4:31:44 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I was discussing this a little on the tuning group:</p><p><a href="http://launch.groups.yahoo.com/group/tuning/message/60228">http://launch.groups.yahoo.com/group/tuning/message/60228</a></p><p>I didn&apos;t want to go into it more deeply there, but in case it wasn&apos;t<br/>clear, here is a more mathematical look.</p><p>Paul mentioned the use of the generator pairs 10;9 and 16;15 or 9;8<br/>and 16;15 for meantone, where the semicolon indicates we are using<br/>tempered intervals. By adding the comma 81/80 to the mix we can shift<br/>to pure intervals, and consider triples such as [10/9 16/15 81/80] or<br/>[9/8 16/15 81/80]. Taking the matrix of monzos for these and<br/>inverting, we get matrices with columns of vals.</p><p>[9/8 16/15 81/80]^(-1) = [&lt;5 8 12|, &lt;2 3 4|, -&lt;2 3 5|]</p><p>[10/9 16/15 81/80]^(-1) = [&lt;5 8 12|, &lt;2 3 4|, &lt;3 5 7|]</p><p>[16/15 25/24 81/80]^(-1) = [&lt;7 11 16|, &lt;5 8 12|, &lt;3 5 7|]</p><p>[25/24 128/125 81/80]^(-1) = [&lt;12 19 28|, &lt;7 11 16|, &lt;3 5 7|]</p><p>You might compare the above to octave-generator:</p><p>[2 3/2 81/80]^(-1) = [&lt;1 1 0|, &lt;0 1 4|, &lt;0 0 -1|]</p><p>You can also look at higher prime limits like this:</p><p>[10/9 16/15 81/80 126/125]^(-1) = [&lt;5 8 12 15|, &lt;2 3 4 4|, &lt;3 5 7 8|,<br/>&lt;0 0 0 1|]</p><p>And of course other temperaments:</p><p>[16/15 135/128 225/224 1029/1024]^(-1) = [&lt;11 17 26 31|, -&lt;1 1 3 3|,<br/>&lt;6 9 15 17|, &lt;2 3 5 6|]</p><p>etc etc.</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Generators for temperaments</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Generators for temperaments</h1><h3><a id=12632 href="#12632">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>9/6/2005 4:31:44 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I was discussing this a little on the tuning group:</p><p><a href="/tuning/topicId_59689.html#60228">/tuning/topicId_59689.html#60228</a></p><p>I didn&apos;t want to go into it more deeply there, but in case it wasn&apos;t<br/>clear, here is a more mathematical look.</p><p>Paul mentioned the use of the generator pairs 10;9 and 16;15 or 9;8<br/>and 16;15 for meantone, where the semicolon indicates we are using<br/>tempered intervals. By adding the comma 81/80 to the mix we can shift<br/>to pure intervals, and consider triples such as [10/9 16/15 81/80] or<br/>[9/8 16/15 81/80]. Taking the matrix of monzos for these and<br/>inverting, we get matrices with columns of vals.</p><p>[9/8 16/15 81/80]^(-1) = [&lt;5 8 12|, &lt;2 3 4|, -&lt;2 3 5|]</p><p>[10/9 16/15 81/80]^(-1) = [&lt;5 8 12|, &lt;2 3 4|, &lt;3 5 7|]</p><p>[16/15 25/24 81/80]^(-1) = [&lt;7 11 16|, &lt;5 8 12|, &lt;3 5 7|]</p><p>[25/24 128/125 81/80]^(-1) = [&lt;12 19 28|, &lt;7 11 16|, &lt;3 5 7|]</p><p>You might compare the above to octave-generator:</p><p>[2 3/2 81/80]^(-1) = [&lt;1 1 0|, &lt;0 1 4|, &lt;0 0 -1|]</p><p>You can also look at higher prime limits like this:</p><p>[10/9 16/15 81/80 126/125]^(-1) = [&lt;5 8 12 15|, &lt;2 3 4 4|, &lt;3 5 7 8|,<br/>&lt;0 0 0 1|]</p><p>And of course other temperaments:</p><p>[16/15 135/128 225/224 1029/1024]^(-1) = [&lt;11 17 26 31|, -&lt;1 1 3 3|,<br/>&lt;6 9 15 17|, &lt;2 3 5 6|]</p><p>etc etc.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

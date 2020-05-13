@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Semiconvergent stuff</h1><h3><a id=1380 href="#1380">🔗</a>genewardsmith@juno.com</h3><span>11/5/2001 7:20:41 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning@y..., &quot;Paul Erlich&quot; &lt;paul@s...&gt; wrote:<br/>&gt; --- In tuning@y..., &quot;Paul Erlich&quot; &lt;paul@s...&gt; wrote:</p><p>&gt; Gene, if there&apos;s a simple algorithm that gets us only these<br/>&gt; semiconvergents and not the others (simpler, that is, than<br/>&gt; calculating all the semiconvergents and then throwing some out),<br/>let<br/>&gt; us know on tuning-math.</p><p>Here&apos;s another way to do it: the convergents to 2^(7/24) are<br/>5/4,11/9,71/58,224/183... which tells us that before 71/58 we have<br/>semiconvergents of the form (11n+5)/(9n+4). We can solve the linear<br/>equation for n which finds the value for which this is exactly as far<br/>from 2^(7/24) as is 11/9, but on the other side, which gives<br/>n=2.926... . This tells us we can toss out the values for n=1 and n=2.<br/>If you were going to code this this would be a pretty good system,<br/>but I doubt it&apos;s any kind of improvement by hand except in the cases<br/>where we have a very good convergent, leading to a long line of<br/>semiconvergents.</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Semiconvergent stuff</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Semiconvergent stuff</h1><h3><a id=1380 href="#1380">🔗</a>genewardsmith@juno.com</h3><span>11/5/2001 7:20:41 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning@y..., &quot;Paul Erlich&quot; &lt;paul@s...&gt; wrote:<br/>&gt; --- In tuning@y..., &quot;Paul Erlich&quot; &lt;paul@s...&gt; wrote:</p><p>&gt; Gene, if there&apos;s a simple algorithm that gets us only these<br/>&gt; semiconvergents and not the others (simpler, that is, than<br/>&gt; calculating all the semiconvergents and then throwing some out),<br/>let<br/>&gt; us know on tuning-math.</p><p>Here&apos;s another way to do it: the convergents to 2^(7/24) are<br/>5/4,11/9,71/58,224/183... which tells us that before 71/58 we have<br/>semiconvergents of the form (11n+5)/(9n+4). We can solve the linear<br/>equation for n which finds the value for which this is exactly as far<br/>from 2^(7/24) as is 11/9, but on the other side, which gives<br/>n=2.926... . This tells us we can toss out the values for n=1 and n=2.<br/>If you were going to code this this would be a pretty good system,<br/>but I doubt it&apos;s any kind of improvement by hand except in the cases<br/>where we have a very good convergent, leading to a long line of<br/>semiconvergents.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Lesfips</h1><h3><a id=20167 href="#20167">🔗</a>Mike Battaglia &#x3C;battaglia01@gmail.com&#x3E;</h3><span>1/11/2012 12:44:02 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I&apos;m very confused about Lesfips and how they work. For example, in this article</p><p><a href="http://xenharmonic.wikispaces.com/Lesfip+scales">http://xenharmonic.wikispaces.com/Lesfip+scales</a></p><p>it says that we&apos;re supposed to minimize the sum of squared error<br/>relative to some target list of intervals. But that&apos;s too vague. Last<br/>night on XA chat, in response to some of these questions, Keenan<br/>mentioned shifting the &quot;target chord&quot; along some position on the chain<br/>of generators, but I don&apos;t see anything about a chain of generators or<br/>anything like that on this page.</p><p>I think it&apos;s true that the &quot;target list of intervals&quot; are meant to be<br/>intervals that don&apos;t have to have the lowest note as the tonic of the<br/>overall scale. For example, if we&apos;re looking at making a circulating<br/>15-EDO we can optimize as a target 5/4 the intervals between 0\15 and<br/>5\15, 2\15 and 7\15, 4\15 and 9\15, all of which are 5\15&apos;s but on<br/>different roots. But it&apos;s not clear to me that that&apos;s correct.</p><p>Can someone please help me out and describe the algorithm in<br/>individual steps, starting from the beginning? I&apos;ve gotten very much<br/>used to reading Gene&apos;s articles written in the very precise,<br/>mathematical, style that he tends to write, and it would be very<br/>helpful for me if I could see a similarly mathematical description of<br/>the scales this article is supposed to produce.</p><p>-Mike</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Lesfips</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Lesfips</h1><h3><a id=20167 href="#20167">🔗</a>Mike Battaglia &#x3C;battaglia01@gmail.com&#x3E;</h3><span>1/11/2012 12:44:02 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I&apos;m very confused about Lesfips and how they work. For example, in this article</p><p><a href="http://xenharmonic.wikispaces.com/Lesfip+scales">http://xenharmonic.wikispaces.com/Lesfip+scales</a></p><p>it says that we&apos;re supposed to minimize the sum of squared error<br/>relative to some target list of intervals. But that&apos;s too vague. Last<br/>night on XA chat, in response to some of these questions, Keenan<br/>mentioned shifting the &quot;target chord&quot; along some position on the chain<br/>of generators, but I don&apos;t see anything about a chain of generators or<br/>anything like that on this page.</p><p>I think it&apos;s true that the &quot;target list of intervals&quot; are meant to be<br/>intervals that don&apos;t have to have the lowest note as the tonic of the<br/>overall scale. For example, if we&apos;re looking at making a circulating<br/>15-EDO we can optimize as a target 5/4 the intervals between 0\15 and<br/>5\15, 2\15 and 7\15, 4\15 and 9\15, all of which are 5\15&apos;s but on<br/>different roots. But it&apos;s not clear to me that that&apos;s correct.</p><p>Can someone please help me out and describe the algorithm in<br/>individual steps, starting from the beginning? I&apos;ve gotten very much<br/>used to reading Gene&apos;s articles written in the very precise,<br/>mathematical, style that he tends to write, and it would be very<br/>helpful for me if I could see a similarly mathematical description of<br/>the scales this article is supposed to produce.</p><p>-Mike</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

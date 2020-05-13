@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list TUNING digest 591 - 12 tone optimization</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>TUNING digest 591 - 12 tone optimization</h1><h3><a id=2414 href="#2414">🔗</a>Jeff Welty &#x3C;jwelty@...&#x3E;</h3><span>12/22/1995 12:26:28 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Jeff said:<br>> <br>> The objective function I minimize the sum of squared errors of<br>> actual interval values minus desired interval values.<br>> <br>> 	errsum = 0 ;<br>> 	for n = 0 to 11 {<br>> 	    v1 = note_cents[n] ;<br>> 	    w1 = note_weight[n] ;<br>> 	    for i = 0 to 6 {<br>> 		int n2 = n+i+1 ;<br>> 		if (n2 < 12) {<br>> 		    v2 = note_cents[n2] ;<br>> 		    w2 = note_weight[n2] ;<br>> 		} else {<br>> 		    v2 = note_cents[n2-12]+1200. ;<br>> 		    w2 = note_weight[n2-12] ;<br>> 		}<br>> 		err = interval_weight[i]*w1*w2*((v2-v1) - desired_interval[i]) ;<br>> 		errsum = errsum + err*err ;<br>> 	    }<br>> 	}<br>> <br>> <br>Manuel Op de Coul said:<br>> I don't completely understand from the code what it is that is coming<br>> out of it. You to have to supply weights for 12 notes and then only 7<br>> intervals are compared. Are you comparing the prime on purpose, or is<br>> it always 0 cents? Is the resulting scale always symmetrical? The<br>> error-function seems to be quadratic in the note values, and so far as<br>> I can tell you need indeed an iterative procedure to find the minimum<br>> of it. If there wouldn't be product terms of pitch variables then the<br>> solution could be found algebraically by setting the derivative to <br>> each of them to zero.<br>> <br><br>First, the easy ones.<br>1.) The resulting scale is definitely not symmetrical. It is my understanding<br>that it is impossible to have all perfect intervals in a 12 tone scale<br>where the intervals are based on frequency ratios. -- the input data<br>actually asks for the desired interval values in terms of ratios i.e.<br>a fifth is 3/2 a fourth is 4/3 etc.<br><br>2.) the routine is indeed iterative.<br><br>Now the harder ones -- thanks for making me think about this Manuel!<br>You found a bug in the routine.  The intent I had was to compare the<br>actual intervals between all notes only once, but using 7 half steps<br>forward from each note results in some duplication and an inadvertant<br>doubling of the weights for intervals 6&7 since each is calculated twice<br>and added to the error sum!  That's what I get for "throwing" this<br>together.  (and that's the value of having other minds examine the<br>process). The appropriate loop really ought to look *something* like:<br><br>	for n = 0 to 11 {<br>	    for n2 = n+1 to 11 {<br>		int i = n2-n ;<br>		if(i <=6 ) {<br>		    v1 = note_cents[n] ;<br>		    w1 = note_weight[n] ;<br>		    v2 = note_cents[n2] ;<br>		    w2 = note_weight[n2] ;<br>		} else {<br>		    v1 = note_cents[n2] ;<br>		    w1 = note_weight[n2] ;<br>		    v2 = note_cents[n2]+1200. ;<br>		    w2 = note_weight[n2] ;<br>		    i = 12-i ;<br>		}<br>		err = interval_weight[i]*w1*w2*((v2-v1) - desired_interval[i]) ;<br>		errsum = errsum + err*err ;<br>	    }<br>	}<br><br>New code will come sometime for those who've asked for it with this fix.<br>Hopefully today.<br><br>Jeff Welty             <weltyj@wdni.com><br><br><br>Received: from eartha.mills.edu [144.91.3.20] by vbv40.ezh.nl<br>           with SMTP-OpenVMS via TCP/IP; Sat, 23 Dec 1995 00:00 +0100<br>Received: from  by eartha.mills.edu via SMTP (940816.SGI.8.6.9/930416.SGI)<br>	for <coul@ezh.nl> id PAA04594; Fri, 22 Dec 1995 15:00:25 -0800<br>Date: Fri, 22 Dec 1995 15:00:25 -0800<br>Message-Id: <v01530500acfc7cb10cf6@[194.137.65.33]><br>Errors-To: madole@ella.mills.edu<br>Reply-To: tuning@eartha.mills.edu<br>Originator: tuning@eartha.mills.edu<br>Sender: tuning@eartha.mills.edu</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

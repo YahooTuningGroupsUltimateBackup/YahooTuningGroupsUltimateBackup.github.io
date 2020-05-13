@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list VFX frequency resolution</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>VFX frequency resolution</h1><h3><a id=3750 href="#3750">🔗</a>Steve Curtin &#x3C;curtin@...&#x3E;</h3><span>10/8/1996 6:06:37 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>>Steve Curtin of Ensoniq has informed me that the pitch resolution of the VFX <br>>line is not 768 steps per octave, as he originally stated, but is in fact <br>>512 steps per octave. This seems correct given my expereince that the <br>>nominal size of an interval needs to be incremented by usually 2, sometimes <br>>3, cents before the rate of beating changes.<br><br>This point needs some clearing up.  I'm sorry that Paul ended up buying a<br>used Ensoniq synth that had less frequency resolution than I originally<br>thought.  The reason for this is that the VFX used an early version of our<br>oscillator chips that only had a 9-bit frequency fraction, so that although<br>the tuning was stored as 768 steps per octave, the hardware frequency<br>resolution was only 512 steps.  This was substantially improved in the case<br>of the OTTO chip which is used by all our synths and samplers since '92 or<br>so, specifically because because the VFX did not have the frequency<br>resolution to do pitch envelopes without stepping and zipper noise.  OTTO<br>has an 11-bit fraction, which is 2048 steps per octave at unity.  As has<br>been stated here before, this resolution doubles with each octave transposed<br>up and halves with each octave transpose down.  The tuning maps into an<br>exponential table, which is stored as 128 steps per semitone or 1536 steps<br>per semitone.  <br><br>regards,<br><br>Steve Curtin<br>Ensoniq Corp<br><br><br>Received: from ns.ezh.nl [137.174.112.59] by vbv40.ezh.nl<br>           with SMTP-OpenVMS via TCP/IP; Tue, 8 Oct 1996 17:17 +0200<br>Received: by ns.ezh.nl; (5.65v3.2/1.3/10May95) id AA00444; Tue, 8 Oct 1996 17:18:35 +0200<br>Received: from sun4nl.NL.net by ns (smtpxd); id XA00442<br>Received: from eartha.mills.edu by sun4nl.NL.net (5.65b/NLnet-3.4)<br>	id AA04130; Tue, 8 Oct 1996 16:49:09 +0200<br>Received: from  by eartha.mills.edu via SMTP (940816.SGI.8.6.9/930416.SGI)<br>	for <manuel.op.de.coul@ezh.nl> id HAA29062; Tue, 8 Oct 1996 07:47:39 -0700<br>Date: Tue, 8 Oct 1996 07:47:39 -0700<br>Message-Id: <199610081047_MC1-A99-F743@compuserve.com><br>Errors-To: madole@ella.mills.edu<br>Reply-To: tuning@eartha.mills.edu<br>Originator: tuning@eartha.mills.edu<br>Sender: tuning@eartha.mills.edu</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

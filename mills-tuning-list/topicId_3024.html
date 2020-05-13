@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list TUNING digest 1293 jloffink</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>TUNING digest 1293 jloffink</h1><h3><a id=6990 href="#6990">🔗</a>&#x22;Fred Kohler&#x22; &#x3C;Fred_Kohler@...&#x3E;</h3><span>1/9/1998 8:31:27 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>In  TUNING digest 1293 John Loffink asked<br>"Do you want octave based tables?<br>Do you want keyboard based tables? (Remember, these are virtually<br>impossible to retune note by note on the fly, ala Justonic Pitch Palette,<br>because of the limited MIDI bandwidth)<br>How many tables do you need?<br>Are the tables assigned globally or per MIDI channel?<br>Do you need to switch between tables or notes in realtime, and if so should<br>notes be updated immediately or on new notes only?<br>Is the MIDI Tuning Dump Standard supported?"<br><br>I'm sure those that are exploring the non-octave based tunings such as Wendy<br>Carlos' Alpha and 88CET would prefer at least having an option other than<br>octave based tables.  The fastest and easiest but most proprietary way of<br>switching tunings is to have multiple "banks" resident in synth memory and<br>switch them with a simple bank number.  Up to 128 "banks" would be nice,<br>that way you could specify them with a single character in the MIDI stream.<br><br>If you are using a tuning with a lot of pitches such as more than 31TET your<br>range of octaves becomes limited (128 note numbers divided by the number of<br>pitches) so you would want separate channels to have different tuning<br>ranges.  Global tunings are handy when you have multiple synths and you want<br>them to be in tune.<br><br>We've covered the realtime versus next note on the list before and I think<br>the consensus was that most people would like to have the option.  Perhaps<br>it should be part of the "bank" specification.  Starting note number could<br>go here also.<br><br>Here's an idea.  How about having some "banks" predifined as tunings that<br>are in common use such as 19 and 31 TET Valotti+Young and others specified<br>as "user".<br><br>You should be able to set up a "bank" or "banks"  to receive a MIDI Tuning<br>Standard dump prior to a performance and switch between the "banks" in real<br>time.  I use the term "bank" in quotes because it is a term much used with<br>slightly different meanings by synth players.<br><br>---Fred.<br><br><br>---------------------------------------------------------<br> Fred Kohler, #7-240 Burnside Rd E, Victoria, BC, Canada<br> phone:(250)388-7918  email:Fred_Kohler@bc.sympatico.ca</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

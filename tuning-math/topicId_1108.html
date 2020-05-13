@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Baker's theorem and commas</h1><h3><a id=1108 href="#1108">🔗</a>genewardsmith@juno.com</h3><span>9/30/2001 12:36:42 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If we have A + B = C for a fixed small A, and large B and C, and we<br/>look at the ratio C/B = (A+B)/B = 1 + A/B, we have to very close<br/>approximation ln C/B = A/B. If C/B = p1^b1 * ... * pk^bk,<br/>then B ~ C ~ (p1^|b1| * ... * pk^|bk|)^(1/2) &lt; pk^(k*b/2), where<br/>b = max_i |b_i|. Hence ln C/B ~ A/B &lt; A pk^(-k*b/2). Baker&apos;s theorem<br/>on the other hand tells us that for some (very large) constant N, we<br/>have ln C/B &gt; b^(-N). Hence b cannot grow without limit, since<br/>ln(A pk^(-k*b/2)) = ln A - (k/2) ln(pk) b is linear in b, whereas<br/>ln(b^(-N)) = -N ln(b) is linear in log b. For large enough b,<br/>(k/2) ln(pk) b - ln A &gt; N ln(b), violating the bound of Baker&apos;s<br/>theorem; so b is bounded. This means the exponents b_i are bounded,<br/>and since they take integer values, there can be only a finite number<br/>of them.</p><p>This actually gives an effective bound, but since Baker&apos;s constant N<br/>is absurdly large it isn&apos;t much good in practice.</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Baker's theorem and commas</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Baker's theorem and commas</h1><h3><a id=1108 href="#1108">🔗</a>genewardsmith@juno.com</h3><span>9/30/2001 12:36:42 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If we have A + B = C for a fixed small A, and large B and C, and we<br/>look at the ratio C/B = (A+B)/B = 1 + A/B, we have to very close<br/>approximation ln C/B = A/B. If C/B = p1^b1 * ... * pk^bk,<br/>then B ~ C ~ (p1^|b1| * ... * pk^|bk|)^(1/2) &lt; pk^(k*b/2), where<br/>b = max_i |b_i|. Hence ln C/B ~ A/B &lt; A pk^(-k*b/2). Baker&apos;s theorem<br/>on the other hand tells us that for some (very large) constant N, we<br/>have ln C/B &gt; b^(-N). Hence b cannot grow without limit, since<br/>ln(A pk^(-k*b/2)) = ln A - (k/2) ln(pk) b is linear in b, whereas<br/>ln(b^(-N)) = -N ln(b) is linear in log b. For large enough b,<br/>(k/2) ln(pk) b - ln A &gt; N ln(b), violating the bound of Baker&apos;s<br/>theorem; so b is bounded. This means the exponents b_i are bounded,<br/>and since they take integer values, there can be only a finite number<br/>of them.</p><p>This actually gives an effective bound, but since Baker&apos;s constant N<br/>is absurdly large it isn&apos;t much good in practice.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

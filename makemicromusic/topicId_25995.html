@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>an FM-synth for those w/Csound (with the FLTK widgets)</h1><h3><a id=25995 href="#25995">🔗</a>Aaron Krister Johnson &#x3C;aaron@...&#x3E;</h3><span>2/25/2011 11:26:58 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I mention this post I did to the Csound list for any interested parties:</p><p><a href="http://tinyurl.com/494hlmn">http://tinyurl.com/494hlmn</a></p><p>...it&apos;s regarding a FLTK-GUI 3 oscillator FM instrument I wrote (meant to be<br/>run realtime with MIDI), a work in progress. Has a<br/>modulation/feedback/cross-mod matrix (al&aacute; Sytrus), great sounds are coming<br/>out of it for me. See the post above for my working list of TODOs, but if<br/>you want to have a little fun tonight, have at it. It&apos;s really addictive.</p><p>I meantion it here, too, b/c in Csound you have (of course) infinite tuning<br/>and tuning tables flexibility.  I have a little Python command line utility<br/>to change .scl files into a Csound f-table format for use by csound&apos;s MIDI<br/>tuning-table &apos;cpstmid&apos; opcode. Of course, I think Scala also does this type<br/>of thing already....so, all you&apos;d have to do is plug that table into the<br/>&lt;CsScore&gt; section of the .csd file and change the reference to &apos;cpsmidi&apos; in<br/>the &lt;CsInstruments&gt; section code to &apos;cpstmid&apos; plus the table number (make<br/>sure it isn&apos;t used already in the score). This page explains the opcode:<br/><a href="http://www.csounds.com/manual/html/cpstmid.html">http://www.csounds.com/manual/html/cpstmid.html</a> in the meantime, but future<br/>versions of this synth will perhaps have an array of preloaded fun scales an<br/>a GUI switch for immediately calling them.</p><p>AKJ</p><p>--<br/>Aaron Krister Johnson<br/><a href="http://www.akjmusic.com">http://www.akjmusic.com</a><br/><a href="http://www.untwelve.org">http://www.untwelve.org</a></p><p>[Non-text portions of this message have been removed]</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic an FM-synth for those w/Csound (with the FLTK widgets)</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>an FM-synth for those w/Csound (with the FLTK widgets)</h1><h3><a id=25995 href="#25995">🔗</a>Aaron Krister Johnson &#x3C;aaron@...&#x3E;</h3><span>2/25/2011 11:26:58 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I mention this post I did to the Csound list for any interested parties:</p><p><a href="http://tinyurl.com/494hlmn">http://tinyurl.com/494hlmn</a></p><p>...it&apos;s regarding a FLTK-GUI 3 oscillator FM instrument I wrote (meant to be<br/>run realtime with MIDI), a work in progress. Has a<br/>modulation/feedback/cross-mod matrix (al&aacute; Sytrus), great sounds are coming<br/>out of it for me. See the post above for my working list of TODOs, but if<br/>you want to have a little fun tonight, have at it. It&apos;s really addictive.</p><p>I meantion it here, too, b/c in Csound you have (of course) infinite tuning<br/>and tuning tables flexibility.  I have a little Python command line utility<br/>to change .scl files into a Csound f-table format for use by csound&apos;s MIDI<br/>tuning-table &apos;cpstmid&apos; opcode. Of course, I think Scala also does this type<br/>of thing already....so, all you&apos;d have to do is plug that table into the<br/>&lt;CsScore&gt; section of the .csd file and change the reference to &apos;cpsmidi&apos; in<br/>the &lt;CsInstruments&gt; section code to &apos;cpstmid&apos; plus the table number (make<br/>sure it isn&apos;t used already in the score). This page explains the opcode:<br/><a href="http://www.csounds.com/manual/html/cpstmid.html">http://www.csounds.com/manual/html/cpstmid.html</a> in the meantime, but future<br/>versions of this synth will perhaps have an array of preloaded fun scales an<br/>a GUI switch for immediately calling them.</p><p>AKJ</p><p>--<br/>Aaron Krister Johnson<br/><a href="http://www.akjmusic.com">http://www.akjmusic.com</a><br/><a href="http://www.untwelve.org">http://www.untwelve.org</a></p><p>[Non-text portions of this message have been removed]</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

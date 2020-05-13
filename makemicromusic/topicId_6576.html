@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Digest Number 859</h1><h3><a id=6576 href="#6576">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>5/10/2004 7:35:17 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Mark,</p><p>You can add controller messages at the start of your midi file to change the pitch bend range.<br/>You do it for each channel in the file like this:<br/>(hexadecimal at left, translation at right).</p><p>:01 b0 65 00 ;channel 1 controller 101  - coarse rpn 0 (pitch bend range)<br/>:01 b0 64 00 ;channel 1 controller 100  - fine rpn 0 (pitch bend range)<br/>:00 b0 06 02 ;channel 1 controller 6 Data Entry - coarse pitch bend range 2 semitones<br/>:00 b0 26 00 ;channel 1 controller 38 Data Entry - fine pitch bend range 0 cents<br/>:00 b0 65 7f ;channel 1 controller 101  - coarse rpn 127 (Null the rpn)</p><p>Should be recognised by most that can vary the pitch bend range, though<br/>a midi device doesn&apos;t have to respond to pitch bends at all, and doesn&apos;t have<br/>to be able to respond to requests to change its range.</p><p>Thanks,</p><p>Robert</p></div><h3><a id=6584 href="#6584">🔗</a>Gene Ward Smith &#x3C;gwsmith@...&#x3E;</h3><span>5/10/2004 10:47:46 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a>, &quot;Robert Walker&quot;<br/>&lt;robertwalker@n...&gt; wrote:<br/>&gt; Hi Mark,<br/>&gt;<br/>&gt; You can add controller messages at the start of your midi file to<br/>change the pitch bend range.</p><p>Thanks, Robert. Can you tell us where you found this out? If it&apos;s a<br/>web page I&apos;d like a look.</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Re: [MMM] Digest Number 859</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>Re: [MMM] Digest Number 859</h1><h3><a id=6576 href="#6576">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>5/10/2004 7:35:17 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Mark,</p><p>You can add controller messages at the start of your midi file to change the pitch bend range.<br/>You do it for each channel in the file like this:<br/>(hexadecimal at left, translation at right).</p><p>:01 b0 65 00 ;channel 1 controller 101  - coarse rpn 0 (pitch bend range)<br/>:01 b0 64 00 ;channel 1 controller 100  - fine rpn 0 (pitch bend range)<br/>:00 b0 06 02 ;channel 1 controller 6 Data Entry - coarse pitch bend range 2 semitones<br/>:00 b0 26 00 ;channel 1 controller 38 Data Entry - fine pitch bend range 0 cents<br/>:00 b0 65 7f ;channel 1 controller 101  - coarse rpn 127 (Null the rpn)</p><p>Should be recognised by most that can vary the pitch bend range, though<br/>a midi device doesn&apos;t have to respond to pitch bends at all, and doesn&apos;t have<br/>to be able to respond to requests to change its range.</p><p>Thanks,</p><p>Robert</p></div><h3><a id=6584 href="#6584">🔗</a>Gene Ward Smith &#x3C;gwsmith@...&#x3E;</h3><span>5/10/2004 10:47:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a>, &quot;Robert Walker&quot;<br/>&lt;robertwalker@n...&gt; wrote:<br/>&gt; Hi Mark,<br/>&gt;<br/>&gt; You can add controller messages at the start of your midi file to<br/>change the pitch bend range.</p><p>Thanks, Robert. Can you tell us where you found this out? If it&apos;s a<br/>web page I&apos;d like a look.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

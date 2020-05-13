@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Scalar complexity revised</h1><h3><a id=16750 href="#16750">🔗</a>Graham Breed &#x3C;gbreed@gmail.com&#x3E;</h3><span>9/11/2007 5:12:07 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>One more thing on this: the formula I was using before is actually a special case for the rank 2 case.  The correct one is</p><p>sqrt(det(MTM)/n**r)</p><p>where</p><p>sqrt is the square root</p><p>det is the determinant</p><p>MTM is the matrix you get by multiplying the weighted mapping by its transpose</p><p>n is the number of prime intervals</p><p>r is the rank of the temperament</p><p>** is exponentiation</p><p>This gives the obvious result for equal temperaments -- the complexity is roughly the number of notes to the octave. It&apos;s also dimensionally correct in that the number of sums that get multiplied when calculating the determinant is balanced by the correction factor.  You can replace MTM with a matrix containing means instead of sums and the scalar complexity is simply the square root of the determinant of that matrix.</p><p>Starting with unison vectors, the formula is</p><p>sqrt(det(XTX)/n**r)/prime_prod</p><p>where XTX is the equivalent of MTM, prime_prod is the product of the sizes of the prime intervals, and r is the rank of the temperament (not the number of unison vectors).</p><p>It happens that this formula is also valid for a rank 0 temperament -- where the number of prime intervals equals the number of unison vectors.  I&apos;ll leave you all to guess what value this gives.  One hint is that the weights cancel out.</p><p>              Graham</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Scalar complexity revised</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Scalar complexity revised</h1><h3><a id=16750 href="#16750">🔗</a>Graham Breed &#x3C;gbreed@gmail.com&#x3E;</h3><span>9/11/2007 5:12:07 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>One more thing on this: the formula I was using before is actually a special case for the rank 2 case.  The correct one is</p><p>sqrt(det(MTM)/n**r)</p><p>where</p><p>sqrt is the square root</p><p>det is the determinant</p><p>MTM is the matrix you get by multiplying the weighted mapping by its transpose</p><p>n is the number of prime intervals</p><p>r is the rank of the temperament</p><p>** is exponentiation</p><p>This gives the obvious result for equal temperaments -- the complexity is roughly the number of notes to the octave. It&apos;s also dimensionally correct in that the number of sums that get multiplied when calculating the determinant is balanced by the correction factor.  You can replace MTM with a matrix containing means instead of sums and the scalar complexity is simply the square root of the determinant of that matrix.</p><p>Starting with unison vectors, the formula is</p><p>sqrt(det(XTX)/n**r)/prime_prod</p><p>where XTX is the equivalent of MTM, prime_prod is the product of the sizes of the prime intervals, and r is the rank of the temperament (not the number of unison vectors).</p><p>It happens that this formula is also valid for a rank 0 temperament -- where the number of prime intervals equals the number of unison vectors.  I&apos;ll leave you all to guess what value this gives.  One hint is that the weights cancel out.</p><p>              Graham</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Harmonic Entropy represented as a convolution integral: an O(nlogn) time algorithm to compute HE</h1><h3><a id=18566 href="#18566">🔗</a>Mike Battaglia &#x3C;battaglia01@gmail.com&#x3E;</h3><span>1/15/2011 7:46:59 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Harmonic entropy is probably the best psychoacoustic model that we<br/>have today. However, it is extremely slow to compute, and no feasible<br/>way to compute HE for anything beyond triads currently exists at the<br/>moment. However, it can be proven that HE can be transformed into a<br/>convolution integral, and hence can be computed in O(nlogn) time.</p><p>I have worked out a mathematical derivation of the convolution<br/>integral from HE, showing that they&apos;re equivalent:</p><p><a href="http://www.mikebattagliamusic.com/music/HEConvolutionTheorem.html">http://www.mikebattagliamusic.com/music/HEConvolutionTheorem.html</a></p><p>However, the algorithm is still a work in progress, and the current<br/>hurdle to cross is that to express the integral in a discrete-time<br/>implementation leads to some irritating artifacts in the end signal<br/>unless the resolution is really fine (around 0.01 cents). This for the<br/>moment counterbalances the good done by the convolution speedup, so I<br/>have to work it out before I can roll out a fancy HE javascript applet<br/>or anything like that.</p><p>This general result has a lot of other implications as well, however,<br/>besides just making it feasible to compute HE a lot faster - see the<br/>notes at the bottom on Euclid&apos;s orchard for some ideas on how to work<br/>some of this in with Tenney interval space.</p><p>-Mike</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Harmonic Entropy represented as a convolution integral: an O(nlogn) time algorithm to compute HE</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Harmonic Entropy represented as a convolution integral: an O(nlogn) time algorithm to compute HE</h1><h3><a id=18566 href="#18566">🔗</a>Mike Battaglia &#x3C;battaglia01@gmail.com&#x3E;</h3><span>1/15/2011 7:46:59 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Harmonic entropy is probably the best psychoacoustic model that we<br/>have today. However, it is extremely slow to compute, and no feasible<br/>way to compute HE for anything beyond triads currently exists at the<br/>moment. However, it can be proven that HE can be transformed into a<br/>convolution integral, and hence can be computed in O(nlogn) time.</p><p>I have worked out a mathematical derivation of the convolution<br/>integral from HE, showing that they&apos;re equivalent:</p><p><a href="http://www.mikebattagliamusic.com/music/HEConvolutionTheorem.html">http://www.mikebattagliamusic.com/music/HEConvolutionTheorem.html</a></p><p>However, the algorithm is still a work in progress, and the current<br/>hurdle to cross is that to express the integral in a discrete-time<br/>implementation leads to some irritating artifacts in the end signal<br/>unless the resolution is really fine (around 0.01 cents). This for the<br/>moment counterbalances the good done by the convolution speedup, so I<br/>have to work it out before I can roll out a fancy HE javascript applet<br/>or anything like that.</p><p>This general result has a lot of other implications as well, however,<br/>besides just making it feasible to compute HE a lot faster - see the<br/>notes at the bottom on Euclid&apos;s orchard for some ideas on how to work<br/>some of this in with Tenney interval space.</p><p>-Mike</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

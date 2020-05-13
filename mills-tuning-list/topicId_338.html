@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list 31-tone equal temperament in Csound</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>31-tone equal temperament in Csound</h1><h3><a id=2541 href="#2541">🔗</a>Lydia Horner &#x3C;layers@...&#x3E;</h3><span>2/12/1996 3:01:39 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Ethan Walker posted to the list about a month ago (I took a vacation and<br>now I'm real behind on my email):<br><br>>What I am wondering is if there is anyone out there who has<br>>experience with creating orchestra and score files in C-sound for the<br>>31-tone chromatic scale.<br><br>Several people replied, but as I didn't see an answer that gives a<br>simple method for direct input in Csound, I've written a belated<br>response.<br><br>I usually write a C program to create my scores, and the C program<br>calculates the frequency in Hertz.  This is the simplest way to get<br>it in through Csound instrument designs, but C programming requires<br>knowing a different language from Csound.  (Another advantage of<br>the program is that you can have it generate a lot of random numbers<br>in parameter fields that should vary randomly within appropriate <br>ranges, such as the total amount of vibrato.)<br><br>If you are not familiar with the C programming language, there are a <br>number of ways to input pitch directly in Csound; for an equal tempered<br>scale such as the 31-tone scale, you can calculate the scale in Hertz,<br>calculate decimal ratios and have Csound convert the ratios to Hertz, <br>use octave.decimal which is the same as decimal ratios but has the<br>octave transposition built in to the ratio, use scale degrees or use <br>cents.  Octave.pitch class is also possible, but probably more <br>difficult to use for this purpose.<br><br>I wrote a chapter on this issue for an upcoming book (more about the<br>book at the appropriate time).  The following is one way to do the<br>31-tone chromatic scale using scale degrees in Csound:<br><br>-----------------------------------<br>idur		=	p3			; duration<br>iamp		=	p4			; amplitude<br>idegree		=	p5			; scale degree<br>ioct		=	p6			; octave transposition<br>ifactor		=	1.0226114		; the factor for 31-tone et<br>icount		=	0			; set the counter icount to 0<br>iratio		=	1<br><br>pow:<br>if icount	= 	idgree goto powout<br>iratio		=	iratio * ifactor<br>icount		=	icount + 1<br>goto		pow<br><br>powout:<br>ifreq		=	iratio * ifactor * ihertz * ioct<br>-----------------------------------<br>(Continue with  your own instrument design; ifreq is the frequency<br>in Hertz.)<br><br>To calculate "ifactor":<br><br>ifactor = (interval to divide) raised to the (1/(number of divisions)) power.<br>Example 1:  2^(1/7) power is 1/7 of an octave.<br>Example 2:  3^(1/13) power is 1/13 of an octave and a perfect 5th.<br><br>Hope this works for you.<br><br>Lydia<br><br>Received: from eartha.mills.edu [144.91.3.20] by vbv40.ezh.nl<br>           with SMTP-OpenVMS via TCP/IP; Tue, 13 Feb 1996 01:52 +0100<br>Received: from  by eartha.mills.edu via SMTP (940816.SGI.8.6.9/930416.SGI)<br>	for <coul@ezh.nl> id QAA13239; Mon, 12 Feb 1996 16:52:21 -0800<br>Date: Mon, 12 Feb 1996 16:52:21 -0800<br>Message-Id: <0099DCF76B66A735.A5B1@ezh.nl><br>Errors-To: madole@ella.mills.edu<br>Reply-To: tuning@eartha.mills.edu<br>Originator: tuning@eartha.mills.edu<br>Sender: tuning@eartha.mills.edu</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

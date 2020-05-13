@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>Microtonality in NI's Kontakt sampler -- keyboard mappings</h1><h3><a id=10036 href="#10036">🔗</a>Bill Sethares &#x3C;sethares@...&#x3E;</h3><span>7/31/2005 8:37:39 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi All,</p><p>I have a question about specifying keyboard mappings.</p><p>The background is that I have recently purchased<br/>the software sampler Kontakt intending to use it<br/>for microtonal things. It has a &quot;scripting language&quot;<br/>which makes it possible (in principle) to implement<br/>any desired tuning.</p><p>There are three microntonal scripts included:</p><p>(1) a dynamic tuning (this appears closely related to<br/>Werner Mohrlok&apos;s work, though it&apos;s hard to tell<br/>from the documentation).</p><p>(2) a 12-note retuning script (repeats the same<br/>12-note tuning over all octaves)</p><p>(3) quarter-tone tuning</p><p>I had hoped to make a script that would read in<br/>scala-generated files and then retune accordingly,<br/>but am stymied because the language does not<br/>have the ability to read in any kind of<br/>external files. So I have decided to write<br/>a script that will do any equal temperament<br/>(since this can be done algorithmically).</p><p>Here&apos;s the question: how should the relationship<br/>between MIDI notes played and sounded pitches<br/>be specified? It seems that there are two parameters<br/>needed, but they can be specifed in different ways.<br/>For example, they could be</p><p>(a) lowest pitch to be sounded<br/>(b) MIDI note that will correspond to the lowest pitch</p><p>I have (so far) implemented this by having the user<br/>choose a MIDI note number corresponding to<br/>the starting pitch and another corresponding<br/>to the lowest keyboard note. I am wondering<br/>if there is a better way.</p><p>Also, if anyone is using Kontakt, I would be happy<br/>to share the script.</p><p>--Bill Sethares</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Microtonality in NI's Kontakt sampler -- keyboard mappings</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>Microtonality in NI's Kontakt sampler -- keyboard mappings</h1><h3><a id=10036 href="#10036">🔗</a>Bill Sethares &#x3C;sethares@...&#x3E;</h3><span>7/31/2005 8:37:39 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi All,</p><p>I have a question about specifying keyboard mappings.</p><p>The background is that I have recently purchased<br/>the software sampler Kontakt intending to use it<br/>for microtonal things. It has a &quot;scripting language&quot;<br/>which makes it possible (in principle) to implement<br/>any desired tuning.</p><p>There are three microntonal scripts included:</p><p>(1) a dynamic tuning (this appears closely related to<br/>Werner Mohrlok&apos;s work, though it&apos;s hard to tell<br/>from the documentation).</p><p>(2) a 12-note retuning script (repeats the same<br/>12-note tuning over all octaves)</p><p>(3) quarter-tone tuning</p><p>I had hoped to make a script that would read in<br/>scala-generated files and then retune accordingly,<br/>but am stymied because the language does not<br/>have the ability to read in any kind of<br/>external files. So I have decided to write<br/>a script that will do any equal temperament<br/>(since this can be done algorithmically).</p><p>Here&apos;s the question: how should the relationship<br/>between MIDI notes played and sounded pitches<br/>be specified? It seems that there are two parameters<br/>needed, but they can be specifed in different ways.<br/>For example, they could be</p><p>(a) lowest pitch to be sounded<br/>(b) MIDI note that will correspond to the lowest pitch</p><p>I have (so far) implemented this by having the user<br/>choose a MIDI note number corresponding to<br/>the starting pitch and another corresponding<br/>to the lowest keyboard note. I am wondering<br/>if there is a better way.</p><p>Also, if anyone is using Kontakt, I would be happy<br/>to share the script.</p><p>--Bill Sethares</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

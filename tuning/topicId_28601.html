@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Scala and program numbers</h1><h3><a id=28601 href="#28601">🔗</a>genewardsmith@juno.com</h3><span>9/26/2001 12:01:03 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Is there a way to edit a Scala .seq file to give a separate program<br/>number/patch to separate voices?</p></div><h3><a id=28602 href="#28602">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>9/26/2001 2:39:36 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;Is there a way to edit a Scala .seq file to give a separate program<br/>&gt;number/patch to separate voices?</p><p>Yes, use the track statement. The program statement must come after<br/>the track statement and is then valid for the notes inside that track<br/>that come after it, until (if) there&apos;s another program statement in<br/>that track. For example two tracks with a different program number<br/>for the whole track:</p><p>0     track 1<br/>0     program 41<br/>[your voice 1 score]</p><p>0     track 2<br/>0     program 76<br/>[your voice 2 score]</p><p>Manuel</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Scala and program numbers</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Scala and program numbers</h1><h3><a id=28601 href="#28601">🔗</a>genewardsmith@juno.com</h3><span>9/26/2001 12:01:03 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Is there a way to edit a Scala .seq file to give a separate program<br/>number/patch to separate voices?</p></div><h3><a id=28602 href="#28602">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>9/26/2001 2:39:36 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;Is there a way to edit a Scala .seq file to give a separate program<br/>&gt;number/patch to separate voices?</p><p>Yes, use the track statement. The program statement must come after<br/>the track statement and is then valid for the notes inside that track<br/>that come after it, until (if) there&apos;s another program statement in<br/>that track. For example two tracks with a different program number<br/>for the whole track:</p><p>0     track 1<br/>0     program 41<br/>[your voice 1 score]</p><p>0     track 2<br/>0     program 76<br/>[your voice 2 score]</p><p>Manuel</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

@@ -1,1 +1,26 @@
-<a href="/tuning-math">back to list</a><h1>Generalized Height Functions</h1><h3><a id=21021 href="#21021">🔗</a>Ryan Avella &#x3C;domeofatonement@yahoo.com&#x3E;</h3><span>9/10/2012 12:35:39 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>While messing around with some height functions (mainly Weil height and Benedetti height), I noticed a few cool properties but didn&apos;t really think too much about their implications.  Then Mike informed me that a month prior he had already formed an equation to represent the patterns we both noticed.  Here is the paramaterized height Mike came up with:</p><p>F(k) = (log(n*d) + k*|log(n/d)|)</p><p>Now to simplify, lets require that n&gt;d, and lets also say that G(k) = 2^(F(k)).</p><p>G(k) = n*d*(n/d)^k</p><p>Notice what happens when you put in various values for k:</p><p>G(-infinity) = d/n<br/>G(-1) = min(n,d)^2<br/>G(0) = n*d<br/>G(1) = max(n,d)^2<br/>G(infinity) = n/d</p><p>The last three are Benedetti/Tenney height, Weil height, and interval span<br/>respectively. As long as k is in the open interval (-1,infinity), this function<br/>is a valid height function.</p><p>Ryan</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Generalized Height Functions</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Generalized Height Functions</h1><h3><a id=21021 href="#21021">🔗</a>Ryan Avella &#x3C;domeofatonement@yahoo.com&#x3E;</h3><span>9/10/2012 12:35:39 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>While messing around with some height functions (mainly Weil height and Benedetti height), I noticed a few cool properties but didn&apos;t really think too much about their implications.  Then Mike informed me that a month prior he had already formed an equation to represent the patterns we both noticed.  Here is the paramaterized height Mike came up with:</p><p>F(k) = (log(n*d) + k*|log(n/d)|)</p><p>Now to simplify, lets require that n&gt;d, and lets also say that G(k) = 2^(F(k)).</p><p>G(k) = n*d*(n/d)^k</p><p>Notice what happens when you put in various values for k:</p><p>G(-infinity) = d/n<br/>G(-1) = min(n,d)^2<br/>G(0) = n*d<br/>G(1) = max(n,d)^2<br/>G(infinity) = n/d</p><p>The last three are Benedetti/Tenney height, Weil height, and interval span<br/>respectively. As long as k is in the open interval (-1,infinity), this function<br/>is a valid height function.</p><p>Ryan</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

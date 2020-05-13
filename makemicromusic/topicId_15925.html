@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>LT notation in Scala</h1><h3><a id=15925 href="#15925">🔗</a>Gene Ward Smith &#x3C;genewardsmith@...&#x3E;</h3><span>2/6/2007 3:28:59 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Manuel has just now implemented a major advance for Scala, called lt<br/>notation. LT notation uses two generators, whose tuning is assignable.</p><p>Getting a piece into lt notation is a bit of a pain, so I am hoping<br/>for a menu item eventually. However, if you have a midi file,<br/>especally one with key signatures, you can do this, for example:</p><p>equal 31<br/>mode chromatic<br/>set lt 18 31<br/>set notation lt<br/>example/create/scale tune.mid tune.seq</p><p>This sets the notation to fifth.octave form. The &quot;31&quot; doesn&apos;t make<br/>that much difference, it makes the following lines appear in the seq<br/>file:</p><p>0     notation  LT<br/>0     lt_pars  18 31 2/1<br/>! 0     lt_gens  696.77419 2/1</p><p>I would suggest uncommenting the bottom line, and commenting or<br/>removing the middle line. Now you can have fun trying out other<br/>tunings for this piece</p><p>0     notation  LT<br/>0     lt_gens  696.0 2/1</p><p>gives 50-et,</p><p>0     notation  LT<br/>0     lt_gens 696.578  2/1</p><p>gives 1/4 comma meantone,</p><p>0     notation  LT<br/>0     lt_gens 3/2  2/1</p><p>gives Pythagorean,</p><p>0     notation  LT<br/>0     lt_gens 697.564  1201.699</p><p>gives 5-limit TOP,</p><p>0     notation  LT<br/>0     lt_gens  966.667 2/1</p><p>gives a transformation to 36-et.</p><p>I recommend starting from a good meantone version.</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic LT notation in Scala</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>LT notation in Scala</h1><h3><a id=15925 href="#15925">🔗</a>Gene Ward Smith &#x3C;genewardsmith@...&#x3E;</h3><span>2/6/2007 3:28:59 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Manuel has just now implemented a major advance for Scala, called lt<br/>notation. LT notation uses two generators, whose tuning is assignable.</p><p>Getting a piece into lt notation is a bit of a pain, so I am hoping<br/>for a menu item eventually. However, if you have a midi file,<br/>especally one with key signatures, you can do this, for example:</p><p>equal 31<br/>mode chromatic<br/>set lt 18 31<br/>set notation lt<br/>example/create/scale tune.mid tune.seq</p><p>This sets the notation to fifth.octave form. The &quot;31&quot; doesn&apos;t make<br/>that much difference, it makes the following lines appear in the seq<br/>file:</p><p>0     notation  LT<br/>0     lt_pars  18 31 2/1<br/>! 0     lt_gens  696.77419 2/1</p><p>I would suggest uncommenting the bottom line, and commenting or<br/>removing the middle line. Now you can have fun trying out other<br/>tunings for this piece</p><p>0     notation  LT<br/>0     lt_gens  696.0 2/1</p><p>gives 50-et,</p><p>0     notation  LT<br/>0     lt_gens 696.578  2/1</p><p>gives 1/4 comma meantone,</p><p>0     notation  LT<br/>0     lt_gens 3/2  2/1</p><p>gives Pythagorean,</p><p>0     notation  LT<br/>0     lt_gens 697.564  1201.699</p><p>gives 5-limit TOP,</p><p>0     notation  LT<br/>0     lt_gens  966.667 2/1</p><p>gives a transformation to 36-et.</p><p>I recommend starting from a good meantone version.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

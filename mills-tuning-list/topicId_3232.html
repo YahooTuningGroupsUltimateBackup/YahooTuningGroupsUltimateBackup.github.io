@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list Scala bug fix release</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>Scala bug fix release</h1><h3><a id=7289 href="#7289">🔗</a>Manuel.Op.de.Coul@ezh.nl</h3><span>3/23/1998 6:36:09 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>I have uploaded a new release of Scala which supercedes the<br>previous 1.4 version. It's at<br>ftp://ella.mills.edu/ccm/tuning/software/pc/scala/scala14.zip<br>Note that the filename has changed from scala.zip to scala14.zip.<br>It's a release with only bug fixes and no new features.<br>The following problems are solved:<br><br>- PYTHAGOREAN/EQUALBEATS gives incorrect results if the octave is not 2/1.<br>- KEY makes the program end with an exception if the current scale is<br>empty.<br>- The EXAMPLE command has the following problems:<br>   1) When trying to use a different equal-command for each track,<br><br>0 track 1<br>0 equal 17<br>!!!<br>0 track 2<br>0 equal 19<br><br>     it says "invalid format : 0    track 1". Inserting a dummy<br>     equal-statement before the first track solves the problem.<br>   2) Empty lines in the input file can cause unpredictable results.<br>   3) Tempo statements with a time value of 0 (absolute or relative)<br>      make previous tempo statements with time 0 lost.<br>   4) Some enharmonic equivalent note names that are not in the same<br>      octave are not interpreted correctly, for example in 15-tET, B and C<br>      are equivalent, so B.0 = C.1 but instead B.0 is interpreted as C.0.<br>   5) Negative octaves with note names don't always work correctly for<br>      example: A.-2.<br>   6) A high amount of parameter statements can cause a program crash.<br>- EQUALTEMP/DATA can cause a program crash for divisions 0 till 4.<br><br><br>John Loffink wrote:<br>> I don't know of any computer program (MIDI patch/program editor) that<br>> supports the MIDI tuning standard other than Justonic's Pitch Pallette,<br>and<br>> it supports only 12 note per octave scales.  Anyone?<br><br>Scala supports it (but is not a MIDI patch/program editor), and the<br>EPS/EPS16/ASR10 tuning dump format. JIcalc supports them too.<br><br>Manuel Op de Coul    coul@ezh.nl</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

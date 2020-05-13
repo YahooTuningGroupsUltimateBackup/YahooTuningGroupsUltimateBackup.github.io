@@ -1,1 +1,26 @@
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] For Manuel: 12 note scales</h1><h3><a id=4347 href="#4347">🔗</a>manuel.op.de.coul@...</h3><span>2/26/2003 1:33:27 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Jon,</p><p>&gt;I discovered this when trying to utilize some pelog scales, and it made<br/>me<br/>&gt;wonder: is there a quick-and-dirty command to &apos;pad&apos; a scale out to 12<br/>&gt;pitches (even if they are duplicates)?</p><p>Not a built-in command, but you can use &quot;<a href="https://twitter.com/to12">@to12</a>&quot; if you save this file in<br/>the<br/>Scala directory:</p><p>! to12.cmd<br/>echo Duplicate tones to make 12.<br/>copy 0 1<br/>equal 12<br/>swap 1<br/>select/model 1<br/>! The next optional command shifts the pitch to accommodate a<br/>! range restriction:<br/>! set adjustment</p><p>&gt; but the problem is<br/>&gt;that in &quot;Performance&quot; mode, where you can multi-timbrally have different<br/>&gt;&quot;patches&quot; respond to different midi channels, it only seems to want to<br/>&gt;retune the first part (patch).</p><p>You probably need to see if there&apos;s a number in the sysex data<br/>that influences this. Sometimes there&apos;s a &quot;device number&quot; and Scala<br/>only uses 0. Then you could patch the sysex midi file by hand<br/>using mf2t and t2mf.</p><p>Manuel</p></div><h3><a id=4350 href="#4350">🔗</a>manuel.op.de.coul@...</h3><span>2/26/2003 6:43:31 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Another more elegant possibility is to leave the scale unchanged<br/>and do the duplicate tone assignment via the keyboard mapping:</p><p>key/mapping 0<br/>show mapping</p><p>Manuel</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Re: [MMM] For Manuel: 12 note scales</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/makemicromusic">back to list</a><h1>Re: [MMM] For Manuel: 12 note scales</h1><h3><a id=4347 href="#4347">🔗</a>manuel.op.de.coul@...</h3><span>2/26/2003 1:33:27 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Jon,</p><p>&gt;I discovered this when trying to utilize some pelog scales, and it made<br/>me<br/>&gt;wonder: is there a quick-and-dirty command to &apos;pad&apos; a scale out to 12<br/>&gt;pitches (even if they are duplicates)?</p><p>Not a built-in command, but you can use &quot;<a href="https://twitter.com/to12">@to12</a>&quot; if you save this file in<br/>the<br/>Scala directory:</p><p>! to12.cmd<br/>echo Duplicate tones to make 12.<br/>copy 0 1<br/>equal 12<br/>swap 1<br/>select/model 1<br/>! The next optional command shifts the pitch to accommodate a<br/>! range restriction:<br/>! set adjustment</p><p>&gt; but the problem is<br/>&gt;that in &quot;Performance&quot; mode, where you can multi-timbrally have different<br/>&gt;&quot;patches&quot; respond to different midi channels, it only seems to want to<br/>&gt;retune the first part (patch).</p><p>You probably need to see if there&apos;s a number in the sysex data<br/>that influences this. Sometimes there&apos;s a &quot;device number&quot; and Scala<br/>only uses 0. Then you could patch the sysex midi file by hand<br/>using mf2t and t2mf.</p><p>Manuel</p></div><h3><a id=4350 href="#4350">🔗</a>manuel.op.de.coul@...</h3><span>2/26/2003 6:43:31 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Another more elegant possibility is to leave the scale unchanged<br/>and do the duplicate tone assignment via the keyboard mapping:</p><p>key/mapping 0<br/>show mapping</p><p>Manuel</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

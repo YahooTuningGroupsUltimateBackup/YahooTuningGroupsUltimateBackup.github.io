@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Re: How to add a new entry to the FAQ url tree</h1><h3><a id=19704 href="#19704">🔗</a>Robert Walker &#x3C;robert_walker@rcwalker.freeserve.co.uk&#x3E;</h3><span>3/2/2001 11:36:15 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>For details, go to the tree</p><p><a href="http://homepage.ntlworld.com/robertwalker/tree/tree.htm">http://homepage.ntlworld.com/robertwalker/tree/tree.htm</a></p><p>and look under<br/>Tree info | Add to tree.</p><p>Note that I&apos;ve simplified it some more.</p><p>If your entry is to go in a top level folder, then even if the folder is<br/>new, the program can detect it is needed, and add it automatically.</p><p>Only if you need to add a new subfolder of a folder, then you need to<br/>read the part about how to do that.</p><p>Basic idea is - upload a file into the faq folder in the Files<br/>area. Check to see if the file name has spaces in it, if so<br/>replace them by underlines. Then note down the url.</p><p>Now go to the database area, and the FAQ_tree database.</p><p>Fill in all the fields.</p><p>First one is the Destination folder in the url tree</p><p>- this means the folder you see in the tree control - the one<br/>you want to add your entry into.</p><p>This isn&apos;t a _real_ folder, it only means anything in the context<br/>of the tree control, as a way of organising the faq tree.</p><p>---------------------------------------------------------<br/>It isn&apos;t the folder you put it in in the files area, nor is it<br/>the actual destination folder in the web site.</p><p>That&apos;s to make it possible to move entries around in the tree<br/>and then remake the database, without disturbing the urls of<br/>the files.</p><p>You don&apos;t need to know why it can work (makes me a bit dizzy to<br/>to kind of think about it too) just that it is possible.</p><p>But basically, the thing that keeps the tree together as a tree<br/>is the database, and particularly, the first Folder field.</p><p>This is the sort of thing programs are particularly good at,<br/>for once.</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Re: How to add a new entry to the FAQ url tree</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Re: How to add a new entry to the FAQ url tree</h1><h3><a id=19704 href="#19704">🔗</a>Robert Walker &#x3C;robert_walker@rcwalker.freeserve.co.uk&#x3E;</h3><span>3/2/2001 11:36:15 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>For details, go to the tree</p><p><a href="http://homepage.ntlworld.com/robertwalker/tree/tree.htm">http://homepage.ntlworld.com/robertwalker/tree/tree.htm</a></p><p>and look under<br/>Tree info | Add to tree.</p><p>Note that I&apos;ve simplified it some more.</p><p>If your entry is to go in a top level folder, then even if the folder is<br/>new, the program can detect it is needed, and add it automatically.</p><p>Only if you need to add a new subfolder of a folder, then you need to<br/>read the part about how to do that.</p><p>Basic idea is - upload a file into the faq folder in the Files<br/>area. Check to see if the file name has spaces in it, if so<br/>replace them by underlines. Then note down the url.</p><p>Now go to the database area, and the FAQ_tree database.</p><p>Fill in all the fields.</p><p>First one is the Destination folder in the url tree</p><p>- this means the folder you see in the tree control - the one<br/>you want to add your entry into.</p><p>This isn&apos;t a _real_ folder, it only means anything in the context<br/>of the tree control, as a way of organising the faq tree.</p><p>---------------------------------------------------------<br/>It isn&apos;t the folder you put it in in the files area, nor is it<br/>the actual destination folder in the web site.</p><p>That&apos;s to make it possible to move entries around in the tree<br/>and then remake the database, without disturbing the urls of<br/>the files.</p><p>You don&apos;t need to know why it can work (makes me a bit dizzy to<br/>to kind of think about it too) just that it is possible.</p><p>But basically, the thing that keeps the tree together as a tree<br/>is the database, and particularly, the first Folder field.</p><p>This is the sort of thing programs are particularly good at,<br/>for once.</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

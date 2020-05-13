@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list Pitch table changes on the ASR</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>Pitch table changes on the ASR</h1><h3><a id=2130 href="#2130">🔗</a>Steve Curtin &#x3C;curtin@...&#x3E;</h3><span>10/13/1995 6:39:20 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>It has turned out that the virtual button press method for changing pitch<br>tables on the ASR and EPS-16 does not work as previously described.  David<br>Doty noticed that it reset the viewable page instead of incrementing the<br>pitch table number.  What it does is reset the page before the up-arrow is<br>recieved, so that you're now looking at layer 2!  I then tried a "put<br>parameter" command to the pitch table parameter, but the OS blocks changing<br>this particular parameter, so this doesn't work either.<br><br>The only way to change this parameter which will really work and let you<br>change to any of the 8 possible pitch tables is with a "put layer" command,<br>which is possible at the beginnings of sections but ugly while you're<br>playing music.  The other trouble with "put layer" is that it requires<br>handshaking, in which you send a header, the ASR sends an "OK" message and<br>then you send the data.  This probably won't work if you're typing in sysex<br>from a sequencer.<br><br>It looks like the only way to switch pitch tables on the fly is to use the<br>patch select controllers, which only allows you access to four different<br>layers, or to use patch select between different instruments.  You could<br>have eight instruments in sets of two, so that patch number 1 selects tables<br>1-4 and patch number 2 selects 5-8.  This would give you at least four<br>tracks of different sounds.  All of these solutions are a kludge and I admit<br>this was a design oversight.  We're still the only sampler on the market<br>that lets you tune all 128 keys with non-octave tunings.<br><br>regards,<br><br>Steve Curtin<br>Ensoniq Corp<br><br><br>Received: from eartha.mills.edu [144.91.3.20] by vbv40.ezh.nl<br>           with SMTP-OpenVMS via TCP/IP; Fri, 13 Oct 1995 15:57 +0100<br>Received: from  by eartha.mills.edu via SMTP (940816.SGI.8.6.9/930416.SGI)<br>	for <coul@ezh.nl> id GAA00102; Fri, 13 Oct 1995 06:57:23 -0700<br>Date: Fri, 13 Oct 1995 06:57:23 -0700<br>Message-Id: <00997D0CF68692E6.4E5F@ezh.nl><br>Errors-To: madole@ella.mills.edu<br>Reply-To: tuning@eartha.mills.edu<br>Originator: tuning@eartha.mills.edu<br>Sender: tuning@eartha.mills.edu</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

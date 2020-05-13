@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>midi guitar controllers</h1><h3><a id=5346 href="#5346">🔗</a>William Sethares &#x3C;sethares@xxxxxxxx.xxx.xxxx.xxxx&#x3E;</h3><span>10/8/1999 12:51:52 PM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Darren wrote:</p><p>I have a question about the MIDI controller. . .<br/>Did you: *A* -- use a custom controller that sent a unique number for every<br/>note (to a 19-tet synth)?  or *B* -- was it a standard controller that sent<br/>12-note-per-octave numbers followed by a pitch-bend message to cause a 12-tet<br/>synth to mimic 19-tet?<br/>I am curious because I too have a 19-tet guitar. I have hesitated to go MIDI<br/>with it because I was worried that option *B* would glitch the attacks of<br/>notes, and that option *A* would be expensive. Please tell of your experience<br/>with MIDI on your guitar controller.</p><p>I have used both Beetle Quantar and  Starr Labs controllers.<br/>Each has its own strengths and weaknesses, but both are pure<br/>MIDI controllers - that is, they make no sound, but send<br/>only MIDI note data. The retuning into various temperaments<br/>is done in the synth module via tuning table.<br/>Im afraid this doesnt directly address your problem though.</p><p>My experience with pitch bend methods is ok, but it is awkward<br/>when setting up the synth-all channels in mono mode, and changing<br/>a patch requires changing the ssound on all channels at once.<br/>The trick with making pitch bends not be obnoxious is to send the<br/>pitch bend command just before the note on - that way you avoid the<br/>slide from the 12-tet sound to the retuned sound.<br/>I use MAX to do that - which is unfortunate only because it means<br/>I need to have a computer around.</p><p>Bill Sethares</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning midi guitar controllers</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>midi guitar controllers</h1><h3><a id=5346 href="#5346">🔗</a>William Sethares &#x3C;sethares@xxxxxxxx.xxx.xxxx.xxxx&#x3E;</h3><span>10/8/1999 12:51:52 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Darren wrote:</p><p>I have a question about the MIDI controller. . .<br/>Did you: *A* -- use a custom controller that sent a unique number for every<br/>note (to a 19-tet synth)?  or *B* -- was it a standard controller that sent<br/>12-note-per-octave numbers followed by a pitch-bend message to cause a 12-tet<br/>synth to mimic 19-tet?<br/>I am curious because I too have a 19-tet guitar. I have hesitated to go MIDI<br/>with it because I was worried that option *B* would glitch the attacks of<br/>notes, and that option *A* would be expensive. Please tell of your experience<br/>with MIDI on your guitar controller.</p><p>I have used both Beetle Quantar and  Starr Labs controllers.<br/>Each has its own strengths and weaknesses, but both are pure<br/>MIDI controllers - that is, they make no sound, but send<br/>only MIDI note data. The retuning into various temperaments<br/>is done in the synth module via tuning table.<br/>Im afraid this doesnt directly address your problem though.</p><p>My experience with pitch bend methods is ok, but it is awkward<br/>when setting up the synth-all channels in mono mode, and changing<br/>a patch requires changing the ssound on all channels at once.<br/>The trick with making pitch bends not be obnoxious is to send the<br/>pitch bend command just before the note on - that way you avoid the<br/>slide from the 12-tet sound to the retuned sound.<br/>I use MAX to do that - which is unfortunate only because it means<br/>I need to have a computer around.</p><p>Bill Sethares</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

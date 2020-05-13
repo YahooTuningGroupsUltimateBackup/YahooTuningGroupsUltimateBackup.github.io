@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list RE: LCMs and minimum chords</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/mills-tuning-list">back to list</a><h1>RE: LCMs and minimum chords</h1><h3><a id=2333 href="#2333">🔗</a>Mmcky@aol.com</h3><span>11/17/1995 10:55:46 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Many on this list are teachers, and therefore much better<br>qualified to explain Least Common Multiple than I, but, since I<br>am the one who constantly uses the concept, I will make an<br>attempt.  Any help would be appreciated.<br><br>The reason I think LCM is important to music, is that it<br>describes a physical reality.  If A single tone is a repeating<br>waveform, the  period of the signal is simply the inverse of its<br>frequency.  When you mix two or more tones, you get a signal<br>whose period is the least common multiple of the periods of the<br>individual tones.<br><br>There are at least two fairly simple ways of computing the least<br>common multiple of a set of integers.  One is to factor the<br>integers, and take the highest power of any single prime.  For<br>example to find the LCM of 12, 15, and 20, we factor the three<br>numbers into 2^2*3=12, 3*5=15, and 2^2*5=20.  The result is<br>2^2*3*5, or 60.  This may be the simplest method when computing<br>LCM's by hand for small numbers with small prime factors.<br><br>The other method is better for dealing with large numbers with<br>large prime factors, and is much faster for these problems, but<br>it is a little more difficult to program.  One applies Euclid's<br>algorithm to two of the numbers, and finds the greatest common<br>divisor.  Then apply the same method to the LCM just calculated<br>and the next number.  Iteration of this method gives the LMC of a<br>large set of number fairly rapidly.<br><br>Here's a brief description of Euclid's Algorithm.  Divide the<br>smallest number into the larger, throw away the answer and keep<br>the remainder.  Divide the remainder you just calculated into the<br>smaller of the original numbers.  Keep doing this until you reach<br>a zero remainder.  The last number you generated before you<br>reached the zero divisor is the greatest common divisor.<br><br>For 12 and 15: 12/15 = 1 remainder 3<br>               12/3  = 4 remainder 0<br><br>The gcd is 3.  Then take (12*15)/3=60.  The LCM of 12 and 15 is<br>60.  Now we need to find the LCM of 60 and 20.<br><br>For 20 and 60: 60/20 = 3 remainder 0<br><br>The gcd of 60 and 20 is 20. (20*60)/20=60.  The LMC of 60 and 20<br>is 60.<br><br>A minimum chord set is one that has the lowest LCM's and spans<br>the octave.  It requires computing the LCM's for all the possible<br>chords of interest in a scale, (I use triads.), and then sorting<br>the chords according to their LCM's.  I also sort according to<br>the smallest numbers in the triad, and then according to the<br>notes in the scales on which the triad is built.  This gives me<br>an unambiguous definition of the minimum chord set, but it is not<br>really clear to me that this actually produces the best minimum<br>chord set.<br><br>It might be interesting to sort all possible minimum chord sets<br>according to a composite, or sum, of their LCMs.<br><br>I hope this helps those of you who want to learn more about this<br>approach to scale analysis.<br><br>Marion<br><br><br>Received: from eartha.mills.edu [144.91.3.20] by vbv40.ezh.nl<br>           with SMTP-OpenVMS via TCP/IP; Mon, 20 Nov 1995 14:54 +0100<br>Received: from  by eartha.mills.edu via SMTP (940816.SGI.8.6.9/930416.SGI)<br>	for <coul@ezh.nl> id EAA01093; Mon, 20 Nov 1995 04:54:29 -0800<br>Date: Mon, 20 Nov 1995 04:54:29 -0800<br>Message-Id:  <9511200453.aa11876@cyber.cyber.net><br>Errors-To: madole@ella.mills.edu<br>Reply-To: tuning@eartha.mills.edu<br>Originator: tuning@eartha.mills.edu<br>Sender: tuning@eartha.mills.edu</div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

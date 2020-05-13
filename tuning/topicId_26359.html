@@ -1,1 +1,26 @@
-<a href="/tuning">back to list</a><h1>Re: Byte order</h1><h3><a id=26359 href="#26359">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>7/21/2001 3:04:55 AM</span><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi John and Jeff,</p><p>Just to mention an idea that might be relevant when sending<br/>data as a stream of (n)rpn fine / coarse data change messages.</p><p>One could use the variable length idea to send data of any length,<br/>as in the time format.</p><p>I.e. set highest order bit of coarse controller to 0 to send a<br/>single 15 bit coarse / fine controller pair (or just use the<br/>coarse controller and send it as 7 bit)</p><p>Then set to 1 for each element of a longer string, using<br/>0 to signal the end.</p><p>What is this about atomicising nrpns Jeff? How does it work?</p><p>The variable length idea of course won&apos;t work if the<br/>order of the messages can be changed.</p><p>I know that sometimes the order of messages in a midi file<br/>can be shuffled in transmission as Quicktime did that for<br/>the order of a sequence of note ons and note offs specified<br/>as simultaneous in one of my midi files. The file had<br/>a note that was switched on and then immediately switched<br/>off in the same time moment, so it was a situation one<br/>wouldn&apos;t ordinarily encounter, and I was grateful for<br/>Quicktime for highlighting the bug that lead to my program<br/>doing that.</p><p>Robert</p></div>
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning Re: Byte order</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning">back to list</a><h1>Re: Byte order</h1><h3><a id=26359 href="#26359">🔗</a>Robert Walker &#x3C;robertwalker@ntlworld.com&#x3E;</h3><span>7/21/2001 3:04:55 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi John and Jeff,</p><p>Just to mention an idea that might be relevant when sending<br/>data as a stream of (n)rpn fine / coarse data change messages.</p><p>One could use the variable length idea to send data of any length,<br/>as in the time format.</p><p>I.e. set highest order bit of coarse controller to 0 to send a<br/>single 15 bit coarse / fine controller pair (or just use the<br/>coarse controller and send it as 7 bit)</p><p>Then set to 1 for each element of a longer string, using<br/>0 to signal the end.</p><p>What is this about atomicising nrpns Jeff? How does it work?</p><p>The variable length idea of course won&apos;t work if the<br/>order of the messages can be changed.</p><p>I know that sometimes the order of messages in a midi file<br/>can be shuffled in transmission as Quicktime did that for<br/>the order of a sequence of note ons and note offs specified<br/>as simultaneous in one of my midi files. The file had<br/>a note that was switched on and then immediately switched<br/>off in the same time moment, so it was a situation one<br/>wouldn&apos;t ordinarily encounter, and I was grateful for<br/>Quicktime for highlighting the bug that lead to my program<br/>doing that.</p><p>Robert</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            
