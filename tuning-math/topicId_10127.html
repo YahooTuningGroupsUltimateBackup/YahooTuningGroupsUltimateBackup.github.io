@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math More on Interval Vectors</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>More on Interval Vectors</h1><h3><a id=10127 href="#10127">🔗</a>Paul G Hjelmstad &#x3C;paul.hjelmstad@us.ing.com&#x3E;</h3><span>3/26/2004 10:26:26 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The sequence 1,1,2,3,7,13,35,85,254,701,2377,7944,25220...<br/>appears on the Encyclopedia of Integer Sequences(A045611) as the<br/>&quot;Number of different energy states of n positive and n negative<br/>charges on a necklace..&quot; This sequence also corresponds to Intvec<br/>(2n,n)for n=(0...12). This caused me to search the EIS for other<br/>interesting sequences.</p><p>A045612 is kind of interesting. It is the &quot;Number of different energy<br/>states between two stacked necklaces, each of n positive and n<br/>negative charges.&quot; I got to thinking that it might be fun to take<br/>(for example) all the different pairs of hexachords (in 12-et) and<br/>compute this for them. This can then be used to represent all the<br/>voice-leading potentialities between hexachords. The vector used<br/>for A045612 is different in that it now must include 0 as well<br/>as 1,2,3,4,5,6. Once again, you get Z-relations, which I would like<br/>to call Z2-relations because you are comparing 2 necklaces<br/>(hexachords). I will call the main function Intvec2(2n,n)</p><p>Just to prove A045612, here are the 5 interval vectors for Intvec2<br/>(4,2): (0,4,0), (2,0,2) (2,2,0), (0,2,2) and (1,2,1), which appears<br/>twice. This makes 5 interval vectors (or energy states). The counts<br/>are for (0,1,2) distances. I&apos;ll do my computations for hexachords<br/>and post them soon.</p><p>Paul Hj</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

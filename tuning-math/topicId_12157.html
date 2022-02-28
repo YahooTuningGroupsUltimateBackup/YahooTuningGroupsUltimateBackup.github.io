@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math More on extending generator mappings to temperaments</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>More on extending generator mappings to temperaments</h1><h3><a id=12157 href="#12157">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>5/17/2005 1:47:32 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>In message</p><p><a href="/tuning-math/message/12139">/tuning-math/message/12139</a></p><p>I discussed how to extend a generator mapping [a,b,c] to a wedgie, and<br/>hence a 7-limit temperament. Here is a purely algebraic definition of<br/>what that is, under the additional assumption that the resulting<br/>temperament must be supported by the et val &lt;v2 v3 v5 v7|.</p><p>First we form the bival (and it is one)</p><p>&lt;&lt;v2*a v2*b v2*c v3*b-v5*a v3*c-v7*a v5*c-v7*b||</p><p>Now we reduce this in the standard way to a wedgie: we divide out any<br/>common factors, and make the first nonzero coefficient positive. The<br/>result is a wedgie where the generator part of the mapping is what we<br/>want. While the result is guaranteed to be a wedgie for a temperament,<br/>it probably will not be any good. If we take [1 4 10], for example,<br/>then using the above method with the standard vals for 12, 19, 31, 43,<br/>etc will give meantone. If the val does not support meantone, the<br/>result is normally complete rubbish, and typically with n periods to<br/>the octave, where n is the division we are using. Even when that<br/>doesn&apos;t happen, as for instance with 94, which gives a temperament<br/>with a 1/47 octave period, the result is still normally rubbish.<br/>Buried in the rubbish, however, there seems to be a good r2<br/>temperament--while one comma of the TM reduction is garbage,<br/>corresponding to the period, there is another which is good, and is<br/>the common comma of the val in question and meantone.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

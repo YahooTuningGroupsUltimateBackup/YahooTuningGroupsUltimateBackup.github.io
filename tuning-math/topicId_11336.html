@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Monzo question re Fokker blocks</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Monzo question re Fokker blocks</h1><h3><a id=11336 href="#11336">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>8/14/2004 4:09:47 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="/tuning/topicId_55446.html#55500">/tuning/topicId_55446.html#55500</a></p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;monz&quot; &lt;monz@t...&gt; wrote:</p><p>&gt; please do elaborate -- why only 3 blocks in this case?<br/>&gt; what&apos;s your general formula for finding how many blocks<br/>&gt; are &quot;possible&quot;?</p><p>Suppose we are in the p-limit, where p is the nth prime. Suppose also<br/>we have a comma list {c1, ..., c_{n-1}} of n-1 intervals. Suppose this<br/>list to be reduced (no torsion), so that if we wedge these together we<br/>get an (n-1)-monzo whose complement is a val v0, which we may change<br/>the sign of in order to make v0(2) = m a postive number. Since the<br/>list is reduced, the gcd of the coordinates of v0 is 1; it is reduced.<br/>We want to find all the Fokker blocks with the above comma list, which<br/>will be blocks with m elements.</p><p>We choose an auxilliary interval c0, such that v(c0)=1. If we take the<br/>nxn matrix with rows the monzos of {c0, c1, ..., c_{n-1}} then this<br/>will be unimodular, ie with determinant +-1. We can invert it to get<br/>an integral matrix, whose columns are vals, the first of which is v0,<br/>so we may name them {v0, v1, ..., v_{n-1}}. Then for any rational<br/>number q, we have that</p><p>q = c0^v0(q) c1^v1(q) ... c_{n-1}^v_{n-1}(q)</p><p>In particular, we can express 2 as</p><p>2 = c0^m c1^v1(q) ... c_{n-1}^v_{n-1}(2)</p><p>If ||x|| = floor(x+1/2) is a nearest-integer function, then for<br/>offsets a0, a1, ..., an, -1/2 &lt; ai &lt; 1/2, we have that</p><p>1 = c0^||a0|| c1^||a1|| ... c_{n-1}^||a_{n-1}||</p><p>2 = c0^||m+a0|| c1^||m*(v1(2)/m)+a1|| ...<br/>c_{n-1}^||m*(v_{n-1}(2)/m)+ a_{n-1}||</p><p>We can now find Fokker blocks, with these offsets, by setting the ith<br/>block element as</p><p>Fokker[i] = c0^||i+a0|| c1^||i*(v1(2)/m)+a1|| ...<br/>c_{n-1}^||i*(v_{n-1}(2)/m)+a_{n-1}||</p><p>If we look at where and how the a1 actually change anything, we find<br/>we can restrict consideration simply to the a0=0, and ai to any<br/>rational number of the form j/(2*m), with j odd and -m &lt; j &lt; m. This<br/>gives us a finite number of things to check. We then end up with all<br/>the various transpositions of the same scale; by reducing scales to a<br/>standard form, we can cut the size of the list by a factor of m.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

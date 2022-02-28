@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Rectangular breed scales</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Rectangular breed scales</h1><h3><a id=12170 href="#12170">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>5/21/2005 2:11:05 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Another interesting way to construct scales for breed tempering is to<br/>take rectangles of the generators. I checked scales of the form [a,b],<br/>for 1 &lt;= a,b &lt;= 6, where by this I mean that I took (49/40)^i(10/7)^j,<br/>with 0 &lt;= i &lt;= a and 0 &lt;= j &lt;= b, and reduced these by octaves and<br/>2401/2400. Below I list what we get in those cases where the resulting<br/>scale is epimorphic, listing [a,b], the scale, and the epimorph val<br/>for the scale. Note the 3x3 square, the [2,2] scale, is epimorphic.</p><p>[2, 1]<br/>[1, 15/14, 49/40, 10/7, 3/2, 7/4]<br/>[6, 10, 14, 17]</p><p>[2, 2]<br/>[1, 49/48, 15/14, 49/40, 5/4, 10/7, 3/2, 49/32, 7/4]<br/>[9, 15, 22, 26]</p><p>[4, 1]<br/>[1, 15/14, 9/8, 49/40, 21/16, 10/7, 3/2, 45/28, 7/4, 90/49]<br/>[10, 16, 23, 28]</p><p>[6, 1]<br/>[1, 15/14, 9/8, 135/112, 49/40, 21/16, 135/98, 10/7, 3/2, 45/28,<br/>27/16, 7/4, 90/49, 63/32]<br/>[14, 22, 32, 39]</p><p>[2, 4]<br/>[1, 49/48, 25/24, 15/14, 35/32, 49/40, 5/4, 125/98, 10/7, 35/24, 3/2,<br/>49/32, 25/16, 7/4, 25/14]<br/>[15, 25, 36, 43]</p><p>[2, 6]<br/>[1, 49/48, 25/24, 625/588, 15/14, 35/32, 125/112, 49/40, 5/4, 125/98,<br/>125/96, 10/7, 35/24, 125/84, 3/2, 49/32, 25/16, 625/392, 7/4, 25/14,<br/>175/96]<br/>[21, 35, 50, 60]</p><p>[6, 2]<br/>[1, 49/48, 15/14, 9/8, 147/128, 135/112, 49/40, 5/4, 21/16, 135/98,<br/>45/32, 10/7, 3/2, 49/32, 45/28, 27/16, 441/256, 7/4, 90/49, 15/8, 63/32]<br/>[21, 33, 49, 59]</p></div><h3><a id=12171 href="#12171">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>5/21/2005 2:28:04 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:tuning-math@yahoogroups.com">tuning-math@yahoogroups.com</a>, &quot;Gene Ward Smith&quot; &lt;gwsmith@s...&gt;<br/>wrote:<br/>&gt; Another interesting way to construct scales for breed tempering is to<br/>&gt; take rectangles of the generators.</p><p>Looking at these further, the 7x3 rectangle strikes me as particularly<br/>interesting, since it is epimorpic with the 21-et standard val, and is<br/>a miracle modmos. Possibly similar results could be had for canasta<br/>and studloco using corner clipping.</p><p>The modmos in question is, in the mode of the scale given below, the<br/>following:</p><p>[-22, -19, -17, -16, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5,<br/>-4, -3, -2, 0, 1, 3, 6]</p><p>Here are some Scala scl formatted scales:</p><p>! brect73.scl<br/>7x3 breed rectangle scale, &lt;21 33 49 59| epimorphic<br/>21<br/>!<br/>49/48<br/>15/14<br/>49/45<br/>10/9<br/>7/6<br/>49/40<br/>5/4<br/>80/63<br/>4/3<br/>49/36<br/>10/7<br/>3/2<br/>49/32<br/>14/9<br/>49/30<br/>5/3<br/>7/4<br/>16/9<br/>49/27<br/>40/21<br/>2</p><p>! brect33.scl<br/>3x3 breed rectangle scale, &lt;9 15 22 26| epimorphic<br/>9<br/>!<br/>8/7<br/>6/5<br/>49/40<br/>7/5<br/>8/5<br/>49/30<br/>12/7<br/>49/25<br/>2</p><p>! brect35.scl<br/>3x5 breed rectangle scale, &lt;15 25 36 43| epimorphic<br/>15<br/>!<br/>49/48<br/>8/7<br/>7/6<br/>6/5<br/>49/40<br/>5/4<br/>7/5<br/>10/7<br/>8/5<br/>49/30<br/>5/3<br/>12/7<br/>7/4<br/>49/25<br/>2</p><p>! brect37.scl<br/>3x7 breed rectangle scale, &lt;21 35 50 60| epimorphic<br/>21<br/>!<br/>49/48<br/>36/35<br/>21/20<br/>15/14<br/>147/125<br/>6/5<br/>49/40<br/>5/4<br/>48/35<br/>7/5<br/>10/7<br/>36/25<br/>147/100<br/>3/2<br/>49/32<br/>42/25<br/>12/7<br/>7/4<br/>48/25<br/>49/25<br/>2</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

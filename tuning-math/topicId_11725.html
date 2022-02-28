@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Generators for 4000/3993 planar</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Generators for 4000/3993 planar</h1><h3><a id=11725 href="#11725">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>3/7/2005 7:22:15 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This is a good example, since it doesn&apos;t wimp out on us by letting us<br/>use {2,3,5,7} as a set of generators. Here, following the discussion<br/>on sci.math, I am not meaning a specific tuning by &quot;generator&quot;.</p><p>We may first form a set of vals by taking all 4-monzos<br/>4000/3993^p^q^r, where p, q, and r are distinct primes from the set<br/>{2,3,5,7,11}. We now reduce this to Hermite normal form and toss the<br/>six columns of zeros, giving us the matrix</p><p>M = [&lt;1 2 0 0 1|, &lt;0 3 0 0 -1|, &lt;0 0 1 0 1|, &lt;0 0 0 1 0|]</p><p>If now we take</p><p>N = [|1 0 0 0 0&gt;, |1 0 1 0 -1&gt;, |0 0 1 0 0&gt;, |0 0 0 1 0&gt;]</p><p>Then NM is the 4x4 identity matrix. The rows of N are monzos<br/>corresponding to 2, 10/11, 5, and 7 respectively. We can renomalize by<br/>taking 11/10 instead of 10/11, and changing the sign of the second<br/>column of M. We now have, ignoring questions of tuning, a basis for<br/>the generators of the temperament given by {2, 11/10, 5, 7}. Referring<br/>to the rows of M, we see that</p><p>2 ~ 2<br/>3 ~ 2^2 (11/10)^(-3) = 4000/1331<br/>5 ~ 5<br/>7 ~ 7<br/>11 ~ 2 (11/10) 5 = 11</p><p>Hence, up to 4000/3993, we can express the 11-limit in terms of<br/>2^a * (11/10)^b 5^c 7^d. If we now optimize the tuning of these, we<br/>get our optimized tuning of the 4000/3993 spacial temperament. Or, of<br/>course, we could simply tune fifths 4000/3993, or three cents, sharp,<br/>and keep the rest pure if we liked that idea.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

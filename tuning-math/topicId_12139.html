@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Finding the wedgie from the 2-part</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Finding the wedgie from the 2-part</h1><h3><a id=12139 href="#12139">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>5/12/2005 5:38:11 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>By the 2-part I mean the first n entries, where n=pi(p)-1 is the<br/>number of odd primes. If the period is an octave, this is just the<br/>number of generator steps to get to the odd primes; otherwise it is<br/>that times the number of periods in an octave.</p><p>In the 7-limit case, if we have [a, b, c] and want to extend it to a<br/>wedgie, we can use the fact that the values we want are the exponents<br/>of two for triprime commas. If 3 takes a generator steps, for<br/>instance, and 5 takes b, then 3^b/5^a takes no generator steps, and if<br/>we find the appropriate expoentent we have a comma for the<br/>temperament. The upshot is that</p><p>&lt;&lt;a b c ||log2(3^b/5^a)|| ||log2(3^c/7^a)|| ||log2(5^c/7^b)|| ||</p><p>is going to give the wedgie if there is a reasonable one to give. Here<br/>||x|| means the integer closest to x.</p><p>When doing this, we should check to see if the result is actually a<br/>wedge product, which we can test for by seeing if, for the wedgie<br/>&lt;&lt;a b c d e f|| we have a*e-b*f+c*d = 0. We can also remove common<br/>factors and make the reduction to the standard wedgie. For 11 limit<br/>and higher, the method is the same, but the tests to see if the result<br/>is a wedge product get out of hand after a while, since they amount to<br/>taking all combinations of four primes {p1,p2,p3,p4}, and getting the<br/>corresponding {p1,p2,p3,p4} possible wedgie by selecting the<br/>appropriate values from the possible wedgie being tested, and using<br/>the same method as the 7-limit. These relationships are known as the<br/>Pluecker relationships, or Plueker-Grassmann syzygies, and we can<br/>discuss the whole thing in mathematical overkill mode by saying that<br/>wedgies are exactly points on the Pluecker embedding of the Grassmannian.</p><p>We can often get one temperament from another by multiplying by some<br/>positive integer m and reducing mod n, where n&gt;m is relatively prime<br/>to m. For instance, starting from [1 4 10], and reducing mod 31, we<br/>get semififths multiplying by 2, mothra/cynder by 3, tritonic by 5,<br/>miracle by 6, orwell by 7, valentine by 9, myna by 10, slender by 13<br/>and hemithirds by 15, to name the interesting results. Less often we<br/>can find something by multiplying by n but not reducing; in this case<br/>the period will be a fraction of an octave. When the result is a<br/>wedgie at all, it is normally not an interesting one but I will try to<br/>see if I can find interesting examples.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

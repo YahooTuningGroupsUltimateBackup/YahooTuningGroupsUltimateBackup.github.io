@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math Kernel intersections and unions</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>Kernel intersections and unions</h1><h3><a id=10596 href="#10596">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>6/29/2004 3:57:49 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I just wrote some programs for finding kernel intersections and unions<br/>for two 7-limit linear temperaments, and may up the ante to the<br/>11-limit, where things get more complicated, next.</p><p>In the 7-limit, the Pfaffian of the two wedgies is either not zero, in<br/>which case the temperaments are unrelated and we get nothing in the<br/>intersection and a rank 4 union, or the Pfaffian is zero. In that<br/>case, the temperaments are related, and we get a single comma<br/>generating the intersection, and a single val definiting, by the<br/>commas it annihilates, the union. I took a list of 112 7-limit linear<br/>temperaments and got the usual suspects, for the most part, with<br/>temperaments related to meantone. By this I mean for the union I got<br/>the expected 5, 7, 12, 19 or 31. However, I also found three 50&apos;s and<br/>a 43.</p><p>Meantone related via 50-et union:</p><p>&lt;&lt;12 -2 20 -31 -2 52|| wizard 225/224 intersection</p><p>&lt;&lt;13 2 30 -27 11 64|| 225/224 intersection</p><p>&lt;&lt;11 -6 10 -35 -15 40|| 225/224 intersection</p><p>Meantone related via 43-et union:</p><p>&lt;&lt;7 -15 -16 -40 -45 -5|| 225/224 intersection</p><p>Of course, 225/224 is one of the usual suspects when it comes to<br/>kernel intersections with meantone, but I got some oddballs there:</p><p>Meantone related via 5103/5000</p><p>&lt;&lt;5 8 2 1 -11 -1|| 12 union</p><p>Meantone related via 703125/702464</p><p>&lt;&lt;23 -1 13 -55 -44 33|| 31 union</p><p>Meantone related via 3645/3584</p><p>&lt;&lt;1 -8 -2 -15 -6 18|| 12 union</p><p>&lt;&lt;0 12 12 19 19 -6|| 12 union (duh)</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+                <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>Yahoo Tuning Groups Ultimate Backup tuning-math 23-limit vals for atomic</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+        <a href="/tuning-math">back to list</a><h1>23-limit vals for atomic</h1><h3><a id=11050 href="#11050">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>7/20/2004 2:34:09 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>My standard 23-limit version of atomic has a different val for 1848<br/>than standard, which in fact has a lower badness, no surprise. We have</p><p>1848 val<br/>&lt;1848 2929 4291 5188 6393 6838 7553 7850 8359|</p><p>2460 val (standard val)<br/>&lt;2460 3899 5712 6906 8510 9103 10055 10450 11128|</p><p>period mapping<br/>&lt;12 19 28 34 42 43 47 50 52|</p><p>generator mapping<br/>&lt;0 1 -7 -16 -25 72 105 50 117|</p><p>The 1848 val is 154 periods and 3 generators, the 2460 is 205 periods<br/>and 4 generators. Schisminas mapped to [-3, 154] in atomic are<br/>4225/4224 and 6656/6655; these are mapped by 1848 (using either the<br/>val I gave or the standard val) to 0. 2460 maps them to 1; it maps<br/>10648/10647 to 0, which 1848 maps to 1.</p></div>
+                <script>
+                    let monospace = false
+                    $('button').on('click', function () {
+                      if (monospace) {
+                        $('p').css("font-family", "")
+                      } else {
+                        $('p').css("font-family", "monospace")
+                      }
+                      monospace = !monospace
+                    })
+                </script>
+            
