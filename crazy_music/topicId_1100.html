@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/crazy_music">back to list</a><h1>really crazy music</h1><h3><a id=1100 href="#1100">🔗</a>John Starrett &#x3C;jstarret@...&#x3E;</h3><span>9/6/2001 7:30:34 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The John Cage Organ Foundation in Halberstadt began a performance of<br/>John Cage&apos;s Organ/ASLAP that they estimate will take 639 years to<br/>complete. The organ in St. Burchardi Church won&apos;t be completed until<br/>2003, but air will rush out the bellows until the pipes are in place.<br/>Then the magic begins. Changes will take place monthly, and a real<br/>musician will press down the new keys, which will be then held down by<br/>weights until the next change a month later. The excitement is<br/>building.</p><p>John Starrett</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="crazy_music" selected>crazy_music</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="1100" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/crazy_music">back to list</a><h1>really crazy music</h1><h3><a id=1100 href="#1100">🔗</a>John Starrett &#x3C;jstarret@...&#x3E;</h3><span>9/6/2001 7:30:34 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The John Cage Organ Foundation in Halberstadt began a performance of<br/>John Cage&apos;s Organ/ASLAP that they estimate will take 639 years to<br/>complete. The organ in St. Burchardi Church won&apos;t be completed until<br/>2003, but air will rush out the bellows until the pipes are in place.<br/>Then the magic begins. Changes will take place monthly, and a real<br/>musician will press down the new keys, which will be then held down by<br/>weights until the next change a month later. The excitement is<br/>building.</p><p>John Starrett</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {

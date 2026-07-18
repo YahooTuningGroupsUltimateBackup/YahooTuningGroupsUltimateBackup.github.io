@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/tuning">back to list</a><h1>Coolest thing</h1><h3><a id=97700 href="#97700">🔗</a>John Moriarty &#x3C;JlMoriart@...&#x3E;</h3><span>4/6/2011 3:23:58 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This might just be the coolest thing I&apos;ve ever seen:</p><p><a href="http://wheelof.com/whitney/index.php?var=v7">http://wheelof.com/whitney/index.php?var=v7</a></p><p>John</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="tuning" selected>tuning</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="97700" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/tuning">back to list</a><h1>Coolest thing</h1><h3><a id=97700 href="#97700">🔗</a>John Moriarty &#x3C;JlMoriart@...&#x3E;</h3><span>4/6/2011 3:23:58 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This might just be the coolest thing I&apos;ve ever seen:</p><p><a href="http://wheelof.com/whitney/index.php?var=v7">http://wheelof.com/whitney/index.php?var=v7</a></p><p>John</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {

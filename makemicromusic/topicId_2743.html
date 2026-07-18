@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/makemicromusic">back to list</a><h1>new stuff</h1><h3><a id=2743 href="#2743">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>4/25/2002 11:22:51 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello everybody.</p><p>Two new pieces of mine can be found at:</p><p><a href="http://music.dartmouth.edu/~larry/">http://music.dartmouth.edu/~larry/</a></p><p>It&apos;s Larry Polansky&apos;s site. Click on misc. recordings, scores, then click bottom<br/>link, misc. demos, etc.</p><p>Be careful, this is the most &quot;academic&quot; stuff I&apos;ve done in a long time. No funk,<br/>or catchy melody.</p><p>Enjoy your day.<br/>George</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="makemicromusic" selected>makemicromusic</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="2743" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/makemicromusic">back to list</a><h1>new stuff</h1><h3><a id=2743 href="#2743">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>4/25/2002 11:22:51 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello everybody.</p><p>Two new pieces of mine can be found at:</p><p><a href="http://music.dartmouth.edu/~larry/">http://music.dartmouth.edu/~larry/</a></p><p>It&apos;s Larry Polansky&apos;s site. Click on misc. recordings, scores, then click bottom<br/>link, misc. demos, etc.</p><p>Be careful, this is the most &quot;academic&quot; stuff I&apos;ve done in a long time. No funk,<br/>or catchy melody.</p><p>Enjoy your day.<br/>George</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {

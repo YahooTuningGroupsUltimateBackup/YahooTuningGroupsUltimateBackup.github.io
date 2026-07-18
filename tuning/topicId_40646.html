@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/tuning">back to list</a><h1>blackjack station now searchable</h1><h3><a id=40646 href="#40646">🔗</a>Joseph Pehrson &#x3C;jpehrson@rcn.com&#x3E;</h3><span>11/5/2002 6:23:47 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Well, we&apos;ve made it to the &quot;big time,&quot; and our Blackjack station is<br/>now searchable:</p><p>Just go to <a href="http://mp3.com">mp3.com</a> and enter in &quot;Blackjack...&quot;</p><p><a href="http://www.mp3.com/">http://www.mp3.com/</a></p><p>Joseph Pehrson</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="tuning" selected>tuning</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="40646" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/tuning">back to list</a><h1>blackjack station now searchable</h1><h3><a id=40646 href="#40646">🔗</a>Joseph Pehrson &#x3C;jpehrson@rcn.com&#x3E;</h3><span>11/5/2002 6:23:47 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Well, we&apos;ve made it to the &quot;big time,&quot; and our Blackjack station is<br/>now searchable:</p><p>Just go to <a href="http://mp3.com">mp3.com</a> and enter in &quot;Blackjack...&quot;</p><p><a href="http://www.mp3.com/">http://www.mp3.com/</a></p><p>Joseph Pehrson</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {

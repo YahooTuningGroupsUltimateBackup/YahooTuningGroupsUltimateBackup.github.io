@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/tuning-math">back to list</a><h1>Circulant graphs</h1><h3><a id=11574 href="#11574">🔗</a>Gene Ward Smith &#x3C;genewardsmith@coolgoose.com&#x3E;</h3><span>10/30/2004 7:04:40 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>A circulant graph is a graph on n nodes, which we can take to be<br/>numbers mod n. For every element of an index set (which without loss<br/>of generality we can take to run from 1 to floor(n/2)) we draw an edge<br/>from<br/>m to m+i if i is in the index set. A circulant graph has a circulant<br/>matrix as its adjacency matrix, and from the size of the index set<br/>there are 2^floor(n/2) of them for each n. If the index set represents<br/>consonances for an n-division, the corresponding circulant graph has a<br/>musical interpretation.</p><p>Circulant matricies can have nontrivial isomorphisms. For instance<br/>there are 64 circulant matricies mod 12, but only 48 if we take them<br/>up to isomorphism. Nontrivial isomorphisms could be interesting.</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="tuning-math" selected>tuning-math</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="11574" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/tuning-math">back to list</a><h1>Circulant graphs</h1><h3><a id=11574 href="#11574">🔗</a>Gene Ward Smith &#x3C;genewardsmith@coolgoose.com&#x3E;</h3><span>10/30/2004 7:04:40 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>A circulant graph is a graph on n nodes, which we can take to be<br/>numbers mod n. For every element of an index set (which without loss<br/>of generality we can take to run from 1 to floor(n/2)) we draw an edge<br/>from<br/>m to m+i if i is in the index set. A circulant graph has a circulant<br/>matrix as its adjacency matrix, and from the size of the index set<br/>there are 2^floor(n/2) of them for each n. If the index set represents<br/>consonances for an n-division, the corresponding circulant graph has a<br/>musical interpretation.</p><p>Circulant matricies can have nontrivial isomorphisms. For instance<br/>there are 64 circulant matricies mod 12, but only 48 if we take them<br/>up to isomorphism. Nontrivial isomorphisms could be interesting.</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {

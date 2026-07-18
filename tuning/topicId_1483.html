@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/tuning">back to list</a><h1>PB homepage</h1><h3><a id=1483 href="#1483">🔗</a>Peter Blasser &#x3C;Peter.Blasser@xxxxxxx.xxxx&#x3E;</h3><span>3/10/1999 11:01:39 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Check out my homepage v. 1.0 at <a href="http://www.oberlin.edu/~pblasser">http://www.oberlin.edu/~pblasser</a>.  It has<br/>some csound scores and orcs, lots of music clips, a program for generating<br/>csound scores in 22 tone equal temperament.  All the music is in some form<br/>of alternative tuning, like 22tet 31tet JI, etc..  There are sections on<br/>instruments, and a few interactive java applets.</p><p>AND IT&apos;S NOT CHEESY.</p><p>The main color is green, and I didn&apos;t put any silly background images in<br/>there, because they just clutter up simplicity.</p><p>Tell me how you like it.</p><p><a href="http://www.oberlin.edu/~pblasser">http://www.oberlin.edu/~pblasser</a></p><p>-Peter</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="tuning" selected>tuning</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="1483" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/tuning">back to list</a><h1>PB homepage</h1><h3><a id=1483 href="#1483">🔗</a>Peter Blasser &#x3C;Peter.Blasser@xxxxxxx.xxxx&#x3E;</h3><span>3/10/1999 11:01:39 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Check out my homepage v. 1.0 at <a href="http://www.oberlin.edu/~pblasser">http://www.oberlin.edu/~pblasser</a>.  It has<br/>some csound scores and orcs, lots of music clips, a program for generating<br/>csound scores in 22 tone equal temperament.  All the music is in some form<br/>of alternative tuning, like 22tet 31tet JI, etc..  There are sections on<br/>instruments, and a few interactive java applets.</p><p>AND IT&apos;S NOT CHEESY.</p><p>The main color is green, and I didn&apos;t put any silly background images in<br/>there, because they just clutter up simplicity.</p><p>Tell me how you like it.</p><p><a href="http://www.oberlin.edu/~pblasser">http://www.oberlin.edu/~pblasser</a></p><p>-Peter</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {

@@ -11,7 +11,22 @@
             <body>
             </body>
             </html>
-        <a href="/tuning">back to list</a><h1>Testing if this thing transmits Czech characters</h1><h3><a id=95769 href="#95769">🔗</a>petrparizek2000 &#x3C;petrparizek2000@...&#x3E;</h3><span>1/22/2011 5:09:01 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi there,<br/>I&apos;m just testing what this interface does when I post a few words in Czech:</p><p>---<br/>Dobr&yacute; ve&ccaron;er.<br/>---<br/>&iacute;&rcaron;ka, v&yacute;ka, tlou&#x9D;ka.<br/>---<br/>V&ecaron;, &dcaron;&aacute;bel, k&uring;&ncaron;.<br/>---<br/>Mezi m&eacute; obl&iacute;ben&eacute; skladatele pat&rcaron;&iacute; tak&eacute; Anton&iacute;n Dvo&rcaron;&aacute;k.<br/>---</p><p>Okay, back to English again.</p><p>Petr</p></div>
+        
+    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+        <div>
+            <input type="text" name="q" size="40" placeholder="search the archive">
+            <button>search</button>
+            <a href="/search/">advanced</a>
+        </div>
+        <div>
+            <select name="list">
+                <option value="tuning" selected>tuning</option>
+                <option value="">all lists</option>
+            </select>
+            <label><input name="topic" value="95769" checked type="checkbox"> this topic only</label>
+        </div>
+    </form>
+<a href="/tuning">back to list</a><h1>Testing if this thing transmits Czech characters</h1><h3><a id=95769 href="#95769">🔗</a>petrparizek2000 &#x3C;petrparizek2000@...&#x3E;</h3><span>1/22/2011 5:09:01 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi there,<br/>I&apos;m just testing what this interface does when I post a few words in Czech:</p><p>---<br/>Dobr&yacute; ve&ccaron;er.<br/>---<br/>&iacute;&rcaron;ka, v&yacute;ka, tlou&#x9D;ka.<br/>---<br/>V&ecaron;, &dcaron;&aacute;bel, k&uring;&ncaron;.<br/>---<br/>Mezi m&eacute; obl&iacute;ben&eacute; skladatele pat&rcaron;&iacute; tak&eacute; Anton&iacute;n Dvo&rcaron;&aacute;k.<br/>---</p><p>Okay, back to English again.</p><p>Petr</p></div>
                 <script>
                     let monospace = false
                     $('button').on('click', function () {
