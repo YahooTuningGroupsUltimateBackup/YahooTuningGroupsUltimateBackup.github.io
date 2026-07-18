@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="5346" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning">back to list</a><h1>midi guitar controllers</h1><h3><a id=5346 href="#5346">🔗</a>William Sethares &#x3C;sethares@xxxxxxxx.xxx.xxxx.xxxx&#x3E;</h3><span>10/8/1999 12:51:52 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Darren wrote:</p><p>I have a question about the MIDI controller. . .<br/>Did you: *A* -- use a custom controller that sent a unique number for every<br/>note (to a 19-tet synth)?  or *B* -- was it a standard controller that sent<br/>12-note-per-octave numbers followed by a pitch-bend message to cause a 12-tet<br/>synth to mimic 19-tet?<br/>I am curious because I too have a 19-tet guitar. I have hesitated to go MIDI<br/>with it because I was worried that option *B* would glitch the attacks of<br/>notes, and that option *A* would be expensive. Please tell of your experience<br/>with MIDI on your guitar controller.</p><p>I have used both Beetle Quantar and  Starr Labs controllers.<br/>Each has its own strengths and weaknesses, but both are pure<br/>MIDI controllers - that is, they make no sound, but send<br/>only MIDI note data. The retuning into various temperaments<br/>is done in the synth module via tuning table.<br/>Im afraid this doesnt directly address your problem though.</p><p>My experience with pitch bend methods is ok, but it is awkward<br/>when setting up the synth-all channels in mono mode, and changing<br/>a patch requires changing the ssound on all channels at once.<br/>The trick with making pitch bends not be obnoxious is to send the<br/>pitch bend command just before the note on - that way you avoid the<br/>slide from the 12-tet sound to the retuned sound.<br/>I use MAX to do that - which is unfortunate only because it means<br/>I need to have a computer around.</p><p>Bill Sethares</p></div>

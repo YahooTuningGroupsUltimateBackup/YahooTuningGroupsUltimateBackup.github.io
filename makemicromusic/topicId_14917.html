@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="14917" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/makemicromusic">back to list</a><h1>Re: multiple instances of InTun</h1><h3><a id=14917 href="#14917">🔗</a>Daniel Wolf &#x3C;djwolf@...&#x3E;</h3><span>10/12/2006 4:50:40 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This is probably something that others already know about, but -- being slow on the uptake as usual --  I only recently discovered: InTun ( <a href="http://rainwarrior.thenoos.net/intun/index.html">http://rainwarrior.thenoos.net/intun/index.html</a> ), a realtime midi retuning program by Brad Smith (runs on Windows machines), can be open in multiple instances, each attached to its own, separate, virtual midi port (I use Maple or Midi Yoke to create the virtual ports, or loops). Each instance of InTun can have its own scale. With this, I can compose directly in a notation program or sequencer, and have pretty good real time tuning.</p><p>With this set up, composing for an arrangement like Jacob Barton&apos;s 17tet divided between two pianos would be a snap. Assign one piano to midi channels 1-16, output to one virtual port, and assign the second piano to channels 17-32 with output to a second virtual port, then assign each port to one instance of InTun. DJW</p></div>

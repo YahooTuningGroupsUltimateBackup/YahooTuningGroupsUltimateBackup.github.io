@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="26355" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning">back to list</a><h1>byte order in [N]RPN messages</h1><h3><a id=26355 href="#26355">🔗</a>X. J. Scott &#x3C;xjscott@earthlink.net&#x3E;</h3><span>7/20/2001 4:52:14 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>[JdL asked regarding MIDI [N]RPNs:]</p><p>&gt; the LSB comes last, right?</p><p>Um I haven&apos;t looked at it in a while. I think that the<br/>edit occurs when the data byte is received and that the<br/>order of the parameter bytes is irrelevant, and in fact<br/>if only one is received (say the LSB) then the other<br/>from the last time is retained. But that&apos;s just a vague<br/>memory. The only instrument I am familiar with that<br/>uses them a lot is the Prophet VS.</p><p>I&apos;d say that when you are recieving them, you should be<br/>able to catch them in any order and you need to have a<br/>static history buffer of 32 bytes to hold the last MSB<br/>and LSB received on each of 16 channels per port. When<br/>you get the data byte, accept whatever the current<br/>state of your NRPN buffer is. (I suggest don&apos;t use the<br/>RPNs since they are supposed to be registered with MMA<br/>first.)</p><p>- Jeff</p></div>

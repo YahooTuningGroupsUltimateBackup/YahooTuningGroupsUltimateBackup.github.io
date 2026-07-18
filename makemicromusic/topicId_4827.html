@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="4827" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: Octet perc fix</h1><h3><a id=4827 href="#4827">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>6/5/2003 3:29:58 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;Are you suggesting splitting the midi into separate instrument tracks,<br/>&gt;feeding the results into Scala, and then trying to put the whole think<br/>&gt;back together again? Or was this for Manuel&apos;s benefit?</p><p>Jon meant the former, to prevent running out of channels when<br/>retuning by effectively using more than 16 midi channels.</p><p>Manuel</p></div>

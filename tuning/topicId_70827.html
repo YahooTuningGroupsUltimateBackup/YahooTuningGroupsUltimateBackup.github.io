@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="70827" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning">back to list</a><h1>DX7II cartridge tuning dump</h1><h3><a id=70827 href="#70827">🔗</a>Dennis DeSantis &#x3C;dennis@dennisdesantis.com&#x3E;</h3><span>4/1/2007 10:06:59 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi,</p><p>Forgive me if I&apos;ve missed this in the list archives, but I&apos;m trying to figure out how to make sense of the sysex file that results from doing a cartridge tuning dump from a DX7II.  I&apos;m trying to export a bunch of tuning data to import into FM7.  I can view the resulting file in a raw sysex editor, but neither Scala nor FM7 see it as a valid file.</p><p>I&apos;ve found lots of software that can send tuning data TO a DX, but I&apos;m having no luck finding any that can receive tuning data from one.</p><p>Any ideas?</p><p>Thanks,</p><p>--<br/>Dennis DeSantis<br/><a href="http://www.dennisdesantis.com">www.dennisdesantis.com</a></p><p>Mailing List:<br/><a href="mailto:list-subscribe@lists.dennisdesantis.com">list-subscribe@lists.dennisdesantis.com</a></p></div><h3><a id=70831 href="#70831">🔗</a>Gene Ward Smith &#x3C;genewardsmith@sbcglobal.net&#x3E;</h3><span>4/2/2007 11:40:16 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, Dennis DeSantis &lt;dennis@...&gt; wrote:</p><p>&gt; Any ideas?</p><p>The Scala tuning dump is decipherable, albeit cryptic.<br/>I suggest you look at what Scala thinks the sysex<br/>should look like, and compare it to what it does<br/>look like. If you see a long list of identical numbers<br/>somewhere, that would be a great start.</p></div>

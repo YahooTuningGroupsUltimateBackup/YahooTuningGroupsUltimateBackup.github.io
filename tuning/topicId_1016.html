@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="1016" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning">back to list</a><h1>Re: scl --->sysex or syx</h1><h3><a id=1016 href="#1016">🔗</a>manuel.op.de.coul@xxx.xx</h3><span>2/25/1999 7:34:58 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt; Is there a method where I can easily convert a scl or<br/>&gt; something created fm modes to sysex message<br/>&gt; without turning to windows or something else<br/>&gt; e.g.  *.scl for synth 2 or 107<br/>&gt; easily converted to according sysex message????</p><p>The best you can do is the following:<br/>Create a file called dump.cmd with these two lines<br/>ECHO Give midi-file name:<br/>SEND/FILE ?<br/>The question mark is important. Then start Scala and do<br/>SET SYNTH 2<br/>ITERATE <a href="https://twitter.com/dump">@dump</a> *.scl<br/>Now for each file you must type a name, you can type over<br/>the original name from the screen without extension.<br/>It&apos;s a useful suggestion to make it automatic altogether<br/>but that&apos;s not possible at the moment.</p><p>Manuel Op de Coul    <a href="mailto:coul@ezh.nl">coul@ezh.nl</a></p></div>

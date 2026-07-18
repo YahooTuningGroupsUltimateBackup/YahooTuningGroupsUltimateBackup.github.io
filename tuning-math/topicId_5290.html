@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="5290" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning-math">back to list</a><h1>Some improved poptimal generators</h1><h3><a id=5290 href="#5290">🔗</a>Gene Ward Smith &#x3C;genewardsmith@juno.com&#x3E; &#x3C;genewardsmith@juno.com&#x3E;</h3><span>1/5/2003 1:55:33 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I wrote code for least-cubes optimization for linear temperaments, and used it to improve a few of the values. I was surprised by how often the least cubes value allowed me to slightly enlarge the interval of known poptimal generators, but for the most part this made no difference. It did, however, in three instances; and I was especially happy to find that the 94-et is poptimal for schismic.</p><p>Quartaminorthirds [9, 5, -3, -21, 30, -13]</p><p>[1, 16/247], ==&gt; [1, 9/139]</p><p>Supermajor seconds [3, 12, -1, -36, 10, 12]</p><p>[1, 59/305], ==&gt; [1, 53/274]</p><p>Schismic [1, -8, -14, -10, 25, -15]</p><p>[1, 134/229], ==&gt; [1, 55/94]</p></div>

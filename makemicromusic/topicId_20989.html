@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="20989" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/makemicromusic">back to list</a><h1>FluidSynth tables (was: Re: [MMM] Lack of Rationale)</h1><h3><a id=20989 href="#20989">🔗</a>Aaron Johnson &#x3C;aaron@...&#x3E;</h3><span>9/10/2009 11:49:59 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt; &nbsp;But somebody<br/>&gt; said recently that the stand-alone FluidSynth does have<br/>&gt; tuning tables.</p><p>I think that may have been me....although I love FluidSynth, it&apos;s a<br/>shame that they haven&apos;t implemented the MIDI tuning standard yet (but<br/>then again, very few have, so it&apos;s really a &apos;standard&apos; in name only)</p><p>TiMidity does respond to SYSEX MTS messages, but its soundfont<br/>rendering is not as good as FluidSynth&apos;s, and it&apos;s not in active<br/>development anymore. Although I pushed for a patch to get rid of a<br/>clicking problem--an old TiMidity developer has self-published a patch<br/>to fix that issue. And, from the TODO file, it looks like the next<br/>FluidSynth version may contain MTS functionality.</p><p>AKJ<br/>--</p><p>Aaron Krister Johnson<br/><a href="http://www.akjmusic.com">http://www.akjmusic.com</a><br/><a href="http://www.untwelve.org">http://www.untwelve.org</a></p></div>

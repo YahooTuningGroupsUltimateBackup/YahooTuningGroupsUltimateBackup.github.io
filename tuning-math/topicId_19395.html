@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="19395" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning-math">back to list</a><h1>TE error cutoffs and ETs</h1><h3><a id=19395 href="#19395">🔗</a>Graham Breed &#x3C;gbreed@gmail.com&#x3E;</h3><span>7/31/2011 8:02:41 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I was talking in another place about the function to return<br/>all equal temperaments with a given number of steps to the<br/>octave within a given Tenney-Euclidean (TE) error.  That<br/>depends on having a measure that always increases when you<br/>consider a new prime.  With a fairly uninteresting piece of<br/>algebra, I&apos;ve proved that this is the case.  Here it is:</p><p><a href="http://x31eq.com/increase.pdf">http://x31eq.com/increase.pdf</a></p><p>It&apos;s the variance of the weighted mapping multiplied by the<br/>number of primes you&apos;re considering.  There are hand waving<br/>proofs that this does always increase.  The variance is the<br/>mean-squared deviation relative to the mean, and the mean<br/>is the point where the mean-squared deviation is<br/>minimized.  Adding a point to the sum must increase it.<br/>Moving the point the deviations are being measured from<br/>must increase it *before* that extra point gets added.  But<br/>now there&apos;s no need to wave any hands because it&apos;s all in<br/>algebra.</p><p>                    Graham</p></div>

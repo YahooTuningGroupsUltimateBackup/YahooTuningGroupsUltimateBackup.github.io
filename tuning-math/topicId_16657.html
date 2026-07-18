@@ -16,7 +16,6 @@
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
-            <a href="/search/">advanced</a>
         </div>
         <div>
             <select name="list">
@@ -24,6 +23,13 @@
                 <option value="">all lists</option>
             </select>
             <label><input name="topic" value="16657" checked type="checkbox"> this topic only</label>
+        </div>
+        <div>
+            <label>author <input type="text" name="author"></label>
+        </div>
+        <div>
+            <label>after <input type="text" name="after" size="10" placeholder="2001-05"></label>
+            <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
 <a href="/tuning-math">back to list</a><h1>Re: [tuning-math] Digest Number 2117</h1><h3><a id=16657 href="#16657">🔗</a>Jon Wild &#x3C;wild@music.mcgill.ca&#x3E;</h3><span>6/21/2007 8:08:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Paul Hj wrote:</p><p>&gt;       What language did you use for<br/>&gt;       your Z-relations program again?</p><p>C. You have to do more work up front--it&apos;s a fairly &quot;bare bones&quot;, close-to-the-metal language--but for programs whose runtime grows combinatorially with the size of the scale, writing optimised loops and your own lean C functions will let it run much quicker than a program in an interpreted language like Maple.</p><p>This problem of enumerating scales is much smaller and I doubt you&apos;d find a difference between a fast compiled language like C and an interpreted language. You could learn a modern language like Python and code what you want much more easily--so what if it takes 6 seconds to run, instead of 60 milliseconds. (The problem is when it takes 6 days instead of 60 minutes, for big problems.)</p><p>--Jon</p></div>
