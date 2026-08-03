@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Modefecker</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Modefecker</h1><h3><a id=2622 href="#2622">🔗</a>manuel.op.de.coul@...</h3><span>3/22/2002 8:57:42 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hello Guiseppi,</p><p>I&apos;m sending to the list because your email bounces.</p><p>It looks very nice. But Pro-52 tuning is limited to 12<br/>tones isn&apos;t it? When I do 14 out of 19 it gives 13<br/>tones, not 14 or 12. This must be a bug.</p><p>The values which are printed in the .p5m file have<br/>decimal commas instead of decimal points. If that&apos;s<br/>not ok you probably should disregard the locale<br/>setting.</p><p>This doesn&apos;t look right too:<br/>C=7,74<br/>C=8,9<br/>C=9,67<br/>C=10,83<br/>C=11,61</p><p>Best,</p><p>Manuel</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>Modefecker</h1><h3><a id=2622 href="#2622">🔗</a>manuel.op.de.coul@...</h3><span>3/22/2002 8:57:42 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Hello Guiseppi,</p><p>I&apos;m sending to the list because your email bounces.</p><p>It looks very nice. But Pro-52 tuning is limited to 12<br/>tones isn&apos;t it? When I do 14 out of 19 it gives 13<br/>tones, not 14 or 12. This must be a bug.</p><p>The values which are printed in the .p5m file have<br/>decimal commas instead of decimal points. If that&apos;s<br/>not ok you probably should disregard the locale<br/>setting.</p><p>This doesn&apos;t look right too:<br/>C=7,74<br/>C=8,9<br/>C=9,67<br/>C=10,83<br/>C=11,61</p><p>Best,</p><p>Manuel</p></div>

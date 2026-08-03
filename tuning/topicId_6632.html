@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Welcome back x 2</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Welcome back x 2</h1><h3><a id=6632 href="#6632">🔗</a>John A. deLaubenfels &#x3C;jadl@xxxxxx.xxxx&#x3E;</h3><span>12/5/1999 12:02:35 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Welcome back, Neil Haverstick and Dave Keenan!</p></div><h3><a id=6633 href="#6633">🔗</a>D.Stearns &#x3C;stearns@xxxxxxx.xxxx&#x3E;</h3><span>12/5/1999 4:06:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>[John A. deLaubenfels:]<br/>&gt; Welcome back, Neil Haverstick and Dave Keenan!</p><p>Speaking of Neil, there is a very recent online guitar magazine<br/>interview at &lt;<a href="http://www.hhgiguitar.com/mag.htm">http://www.hhgiguitar.com/mag.htm</a>&gt; for anyone who might<br/>be interested.</p><p>Dan</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Welcome back x 2</h1><h3><a id=6632 href="#6632">🔗</a>John A. deLaubenfels &#x3C;jadl@xxxxxx.xxxx&#x3E;</h3><span>12/5/1999 12:02:35 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Welcome back, Neil Haverstick and Dave Keenan!</p></div><h3><a id=6633 href="#6633">🔗</a>D.Stearns &#x3C;stearns@xxxxxxx.xxxx&#x3E;</h3><span>12/5/1999 4:06:30 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>[John A. deLaubenfels:]<br/>&gt; Welcome back, Neil Haverstick and Dave Keenan!</p><p>Speaking of Neil, there is a very recent online guitar magazine<br/>interview at &lt;<a href="http://www.hhgiguitar.com/mag.htm">http://www.hhgiguitar.com/mag.htm</a>&gt; for anyone who might<br/>be interested.</p><p>Dan</p></div>

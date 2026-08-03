@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Re: FAQ entries from web sites</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: FAQ entries from web sites</h1><h3><a id=19768 href="#19768">🔗</a>Robert Walker &#x3C;robert_walker@rcwalker.freeserve.co.uk&#x3E;</h3><span>3/4/2001 7:23:27 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I&apos;ve renamed the url field to</p><p>Url to get new entry from - leave blank for new folder</p><p>If you have a web page for the FAQ on your web site,<br/>then there is no need to upload it to the files<br/>area, though of course you can if you want to.</p><p>One can just give the original url to the web page<br/>in the url field of the database.</p><p>If it is a working draft, and one plans to delete it from<br/>ones web site when it is complete, then you can exclude<br/>it from (well behaved) search engines in your robots.txt<br/>file.</p><p>For those who haven&apos;t made one of those, it looks like this:</p><p>User-agent: *<br/>Disallow: /fts_beta/</p><p>You save it as robots.txt in the root folder of your web site.</p><p>This one will tell all well behaved search engines to ignore<br/>files in the</p><p>/fts_beta/<br/>folder</p><p>You can add as many folders as you like to it.</p><p>User-agent: *<br/>says to disallow all search engines.</p><p>Robert</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Re: FAQ entries from web sites</h1><h3><a id=19768 href="#19768">🔗</a>Robert Walker &#x3C;robert_walker@rcwalker.freeserve.co.uk&#x3E;</h3><span>3/4/2001 7:23:27 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>I&apos;ve renamed the url field to</p><p>Url to get new entry from - leave blank for new folder</p><p>If you have a web page for the FAQ on your web site,<br/>then there is no need to upload it to the files<br/>area, though of course you can if you want to.</p><p>One can just give the original url to the web page<br/>in the url field of the database.</p><p>If it is a working draft, and one plans to delete it from<br/>ones web site when it is complete, then you can exclude<br/>it from (well behaved) search engines in your robots.txt<br/>file.</p><p>For those who haven&apos;t made one of those, it looks like this:</p><p>User-agent: *<br/>Disallow: /fts_beta/</p><p>You save it as robots.txt in the root folder of your web site.</p><p>This one will tell all well behaved search engines to ignore<br/>files in the</p><p>/fts_beta/<br/>folder</p><p>You can add as many folders as you like to it.</p><p>User-agent: *<br/>says to disallow all search engines.</p><p>Robert</p></div>

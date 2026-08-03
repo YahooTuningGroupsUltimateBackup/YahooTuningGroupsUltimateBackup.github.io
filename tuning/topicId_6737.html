@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning monophonic/polyphonic retuning</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>monophonic/polyphonic retuning</h1><h3><a id=6737 href="#6737">🔗</a>William Sethares &#x3C;sethares@xxxxxxxx.xxx.xxxx.xxxx&#x3E;</h3><span>12/7/1999 6:12:39 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt;What about with Kelly Fitz&apos; LemurPro for Mac? Still a load of work (and for<br/>&gt;me, a lot of waiting) but it would be _possible_ to retune instruments or<br/>&gt;their partials in a polyphonic file.</p><p>Well, first, let me never find myself in the position of saying<br/>&quot;never&quot;...</p><p>The primary difficulty is that of<br/>determining which partials go with which notes.<br/>(This is necessary because otherwise you are scrambling up the<br/>partials from different voices).<br/>The process is simple enough to envision - e.g.,<br/>find the fundamentals, then identify a harmonic series<br/>above each fundamental (assuming the sounds have known<br/>harmonic spectrum). However, it is very tricky to make work.</p><p>Im sure you are aware that all the commercially available<br/>pitch detecting software (and hardware, like the antares)<br/>works only on monophonic<br/>sources - this is why, say, MIDI guitars need special pickups -<br/>to isolate the sound from each string for separate processing<br/>for the pitch detection process.</p><p>Bill Sethares</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>monophonic/polyphonic retuning</h1><h3><a id=6737 href="#6737">🔗</a>William Sethares &#x3C;sethares@xxxxxxxx.xxx.xxxx.xxxx&#x3E;</h3><span>12/7/1999 6:12:39 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>&gt;What about with Kelly Fitz&apos; LemurPro for Mac? Still a load of work (and for<br/>&gt;me, a lot of waiting) but it would be _possible_ to retune instruments or<br/>&gt;their partials in a polyphonic file.</p><p>Well, first, let me never find myself in the position of saying<br/>&quot;never&quot;...</p><p>The primary difficulty is that of<br/>determining which partials go with which notes.<br/>(This is necessary because otherwise you are scrambling up the<br/>partials from different voices).<br/>The process is simple enough to envision - e.g.,<br/>find the fundamentals, then identify a harmonic series<br/>above each fundamental (assuming the sounds have known<br/>harmonic spectrum). However, it is very tricky to make work.</p><p>Im sure you are aware that all the commercially available<br/>pitch detecting software (and hardware, like the antares)<br/>works only on monophonic<br/>sources - this is why, say, MIDI guitars need special pickups -<br/>to isolate the sound from each string for separate processing<br/>for the pitch detection process.</p><p>Bill Sethares</p></div>

@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning some keys are more equal than others ...</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>some keys are more equal than others ...</h1><h3><a id=71500 href="#71500">🔗</a>Tom Dent &#x3C;stringph@gmail.com&#x3E;</h3><span>4/28/2007 11:33:48 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>More quote:</p><p>&quot;Unequal temperament was practiced in olden times when music did not<br/>wander far from a few keys which were favored in the tuning. You will<br/>see (...) how a temperament could be set in such a way as to favor a<br/>certain key (...) and also those keys which are nearly related to it;<br/>but, that in favoring these keys, our scale must be constructed<br/>greatly to the detriment of the &apos;remote&apos; keys...&quot;</p><p>somewhat clearer what &quot;try to favor the flat keys&quot; might mean?<br/>~~~T~~~</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>some keys are more equal than others ...</h1><h3><a id=71500 href="#71500">🔗</a>Tom Dent &#x3C;stringph@gmail.com&#x3E;</h3><span>4/28/2007 11:33:48 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>More quote:</p><p>&quot;Unequal temperament was practiced in olden times when music did not<br/>wander far from a few keys which were favored in the tuning. You will<br/>see (...) how a temperament could be set in such a way as to favor a<br/>certain key (...) and also those keys which are nearly related to it;<br/>but, that in favoring these keys, our scale must be constructed<br/>greatly to the detriment of the &apos;remote&apos; keys...&quot;</p><p>somewhat clearer what &quot;try to favor the flat keys&quot; might mean?<br/>~~~T~~~</p></div>

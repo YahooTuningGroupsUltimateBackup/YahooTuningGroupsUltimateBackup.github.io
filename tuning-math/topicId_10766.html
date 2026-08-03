@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning-math Kwai</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Kwai</h1><h3><a id=10766 href="#10766">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>7/7/2004 2:04:17 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&quot;Kwai&quot; because it is bridgable. The 7 and 11 limit have the same TOP<br/>tuning, and 5 is close, so I would give them the same name.</p><p>11-limit Kwai {540/539, 1375/1372, 5120/5103}<br/>poptimal generator 291/497<br/>[1, 33, 27, -18, 50, 40, -32, -30, -156, -144]<br/>[[1, 2, 16, 14, -4], [0, -1, -33, -27, 18]]</p><p>7-limit Kwai</p><p>Number 53 Kwai {5120/5103, 16875/16807}<br/>7&amp;9 copop fifth generator 493/842</p><p>[1, 33, 27, 50, 40, -30]<br/>[[1, 2, 16, 14], [0, -1, -33, -27]]<br/>TOP tuning [1199.680495, 1902.108988, 2785.571846, 3369.722869]<br/>TOP generators [1199.680495, 497.2520023]<br/>bad: 64.536886 comp: 14.212326 err: .319505</p><p>MOS 7, 12, 17, 29, 41, 70<br/>The 41 note MOS seems logical. 152, in its universality, handles it<br/>well.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning-math">back to list</a><h1>Kwai</h1><h3><a id=10766 href="#10766">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>7/7/2004 2:04:17 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>&quot;Kwai&quot; because it is bridgable. The 7 and 11 limit have the same TOP<br/>tuning, and 5 is close, so I would give them the same name.</p><p>11-limit Kwai {540/539, 1375/1372, 5120/5103}<br/>poptimal generator 291/497<br/>[1, 33, 27, -18, 50, 40, -32, -30, -156, -144]<br/>[[1, 2, 16, 14, -4], [0, -1, -33, -27, 18]]</p><p>7-limit Kwai</p><p>Number 53 Kwai {5120/5103, 16875/16807}<br/>7&amp;9 copop fifth generator 493/842</p><p>[1, 33, 27, 50, 40, -30]<br/>[[1, 2, 16, 14], [0, -1, -33, -27]]<br/>TOP tuning [1199.680495, 1902.108988, 2785.571846, 3369.722869]<br/>TOP generators [1199.680495, 497.2520023]<br/>bad: 64.536886 comp: 14.212326 err: .319505</p><p>MOS 7, 12, 17, 29, 41, 70<br/>The 41 note MOS seems logical. 152, in its universality, handles it<br/>well.</p></div>

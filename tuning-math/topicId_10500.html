@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning-math The unison family</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>The unison family</h1><h3><a id=10500 href="#10500">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>6/13/2004 12:34:10 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The null or unison temperament is the &quot;temperament&quot; which maps<br/>everything to 1; in the 7-limit, it has wedgie &lt;&lt;0 0 0 0 0 0||. If we<br/>take nexial adjustemnts to it, we get temperaments of the DoubleO type:</p><p>null+5 &lt;&lt;0 0 5 0 8 12|| DoubleO 5 {16/15, 27/25}</p><p>null+7 &lt;&lt;0 0 7 0 11 16|| Jamesbond = DoubleO 7 {25/24, 81/80}</p><p>null+12 &lt;&lt;0 0 12 0 19 28|| DoubleO 12 {81/80, 128/125}</p><p>null+19 &lt;&lt;0 0 19 0 30 44|| DoubleO 19 {81/80, 3125/3072}</p><p>Like other families, if we enforce a badness limit we get only a<br/>finite number of members of the family. The complexity is O(n) and the<br/>error O(n^(-3/2)), so logflat badness is O(sqrt(n)), and we get<br/>finiteness. Nothing beyond DoubleO 19 seems very interesting from a<br/>badness viewpont, despite the steady decrease of error to zero, which<br/>doesn&apos;t happen with other families.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning-math">back to list</a><h1>The unison family</h1><h3><a id=10500 href="#10500">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>6/13/2004 12:34:10 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>The null or unison temperament is the &quot;temperament&quot; which maps<br/>everything to 1; in the 7-limit, it has wedgie &lt;&lt;0 0 0 0 0 0||. If we<br/>take nexial adjustemnts to it, we get temperaments of the DoubleO type:</p><p>null+5 &lt;&lt;0 0 5 0 8 12|| DoubleO 5 {16/15, 27/25}</p><p>null+7 &lt;&lt;0 0 7 0 11 16|| Jamesbond = DoubleO 7 {25/24, 81/80}</p><p>null+12 &lt;&lt;0 0 12 0 19 28|| DoubleO 12 {81/80, 128/125}</p><p>null+19 &lt;&lt;0 0 19 0 30 44|| DoubleO 19 {81/80, 3125/3072}</p><p>Like other families, if we enforce a badness limit we get only a<br/>finite number of members of the family. The complexity is O(n) and the<br/>error O(n^(-3/2)), so logflat badness is O(sqrt(n)), and we get<br/>finiteness. Nothing beyond DoubleO 19 seems very interesting from a<br/>badness viewpont, despite the steady decrease of error to zero, which<br/>doesn&apos;t happen with other families.</p></div>

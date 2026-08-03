@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic News on Rationale (though not much)</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>News on Rationale (though not much)</h1><h3><a id=21471 href="#21471">🔗</a>touchedchuckk &#x3C;BadMuthaHubbard@...&#x3E;</h3><span>11/10/2009 4:51:21 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>For anyone who is interested, I believe I&apos;ve fixed the soundfont issue in Rationale that Cody brought up: that only one sample was used for the whole soundfont, regardless of pitch. It&apos;s fixed in the latest 0.2.1 zipfile at<br/><a href="http://www.sourceforge.net/projects/rationale">http://www.sourceforge.net/projects/rationale</a></p><p>I&apos;ve been trying to set up executables for Mac and Windows, so users won&apos;t have to separately install the dependencies, and it&apos;s a PITA so far... it don&apos;t work so good! I&apos;ll keep chipping away at it.</p><p>Peace.<br/>-Chuckk</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>News on Rationale (though not much)</h1><h3><a id=21471 href="#21471">🔗</a>touchedchuckk &#x3C;BadMuthaHubbard@...&#x3E;</h3><span>11/10/2009 4:51:21 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>For anyone who is interested, I believe I&apos;ve fixed the soundfont issue in Rationale that Cody brought up: that only one sample was used for the whole soundfont, regardless of pitch. It&apos;s fixed in the latest 0.2.1 zipfile at<br/><a href="http://www.sourceforge.net/projects/rationale">http://www.sourceforge.net/projects/rationale</a></p><p>I&apos;ve been trying to set up executables for Mac and Windows, so users won&apos;t have to separately install the dependencies, and it&apos;s a PITA so far... it don&apos;t work so good! I&apos;ll keep chipping away at it.</p><p>Peace.<br/>-Chuckk</p></div>

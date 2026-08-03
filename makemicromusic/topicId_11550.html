@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Another example</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Another example</h1><h3><a id=11550 href="#11550">🔗</a>stephenszpak &#x3C;stephen_szpak@...&#x3E;</h3><span>12/25/2005 10:05:29 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>In the files section there is another extremely short example of<br/>what I do:</p><p>C#xmsus-C#xm-Ax-Gx-F#.ogg</p><p>Used about 400k total, of memory for my two pieces there.<br/>Don&apos;t worry, I&apos;m not going to fill it all up with my stuff.<br/>(Even my free hotmail account has a capacity of 250 MB.<br/> I don&apos;t know why Yahoo has so little here.)</p><p>  Comments on this 15 second piano piece in the Szpak<br/>  Scale ( a 24 note non-EDO scale ) are welcome.</p><p> Stephen Szpak</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>Another example</h1><h3><a id=11550 href="#11550">🔗</a>stephenszpak &#x3C;stephen_szpak@...&#x3E;</h3><span>12/25/2005 10:05:29 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>In the files section there is another extremely short example of<br/>what I do:</p><p>C#xmsus-C#xm-Ax-Gx-F#.ogg</p><p>Used about 400k total, of memory for my two pieces there.<br/>Don&apos;t worry, I&apos;m not going to fill it all up with my stuff.<br/>(Even my free hotmail account has a capacity of 250 MB.<br/> I don&apos;t know why Yahoo has so little here.)</p><p>  Comments on this 15 second piano piece in the Szpak<br/>  Scale ( a 24 note non-EDO scale ) are welcome.</p><p> Stephen Szpak</p></div>

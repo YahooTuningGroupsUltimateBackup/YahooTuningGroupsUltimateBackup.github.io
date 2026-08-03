@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Recommended listenting, dynamic tuning, rocky/csound</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Recommended listenting, dynamic tuning, rocky/csound</h1><h3><a id=1416 href="#1416">🔗</a>Paul H. Erlich &#x3C;PErlich@xxxxxxxxxxxxx.xxxx&#x3E;</h3><span>3/8/1999 4:50:26 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Newcomers should check out Tuning Digest Tape Swap, which was a<br/>predecessor to the CD for those of us not wealthy enough to take on the<br/>responsibility of buying ~100 CDs -- Gary Morrison is now in charge of<br/>distributing the Tape Swap tape. In addition to fine compositions by<br/>Bill Alves, Brian McLaren, and others, a nice 22-tET piece of mine was<br/>on it. That piece would be a perfect candidate for John deLaubenfels&apos;<br/>dynamic retuning algorithm. I&apos;d like to make the piece more widely<br/>available -- it seems that Peter Blasser has created just the thing to<br/>make that possible. Peter, can you help me get started?</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Recommended listenting, dynamic tuning, rocky/csound</h1><h3><a id=1416 href="#1416">🔗</a>Paul H. Erlich &#x3C;PErlich@xxxxxxxxxxxxx.xxxx&#x3E;</h3><span>3/8/1999 4:50:26 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Newcomers should check out Tuning Digest Tape Swap, which was a<br/>predecessor to the CD for those of us not wealthy enough to take on the<br/>responsibility of buying ~100 CDs -- Gary Morrison is now in charge of<br/>distributing the Tape Swap tape. In addition to fine compositions by<br/>Bill Alves, Brian McLaren, and others, a nice 22-tET piece of mine was<br/>on it. That piece would be a perfect candidate for John deLaubenfels&apos;<br/>dynamic retuning algorithm. I&apos;d like to make the piece more widely<br/>available -- it seems that Peter Blasser has created just the thing to<br/>make that possible. Peter, can you help me get started?</p></div>

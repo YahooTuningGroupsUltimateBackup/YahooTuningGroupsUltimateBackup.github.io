@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Please turn off the yeloow background.</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Please turn off the yeloow background.</h1><h3><a id=905 href="#905">🔗</a>kalamataguy@...</h3><span>8/6/2001 7:09:48 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>hello,</p><p>Do not know if others have this problem.<br/>The yellow background gives me a headache.<br/>However the content is great! :)</p><p>Kalamata Kid</p></div><h3><a id=906 href="#906">🔗</a>John A. deLaubenfels &#x3C;jdl@...&#x3E;</h3><span>8/6/2001 12:20:55 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>[Kalamata Kid wrote:]<br/>&gt;Do not know if others have this problem.<br/>&gt;The yellow background gives me a headache.<br/>&gt;However the content is great! :)</p><p>I&apos;ll second that!  Sure miss that white background.  The &quot;new&quot; list<br/>has a more mild yellow background, which I note preceded this list&apos;s<br/>more intense yellow by about a day.  Jeff, we don&apos;t need to be copycats!</p><p>JdL</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Please turn off the yeloow background.</h1><h3><a id=905 href="#905">🔗</a>kalamataguy@...</h3><span>8/6/2001 7:09:48 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>hello,</p><p>Do not know if others have this problem.<br/>The yellow background gives me a headache.<br/>However the content is great! :)</p><p>Kalamata Kid</p></div><h3><a id=906 href="#906">🔗</a>John A. deLaubenfels &#x3C;jdl@...&#x3E;</h3><span>8/6/2001 12:20:55 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>[Kalamata Kid wrote:]<br/>&gt;Do not know if others have this problem.<br/>&gt;The yellow background gives me a headache.<br/>&gt;However the content is great! :)</p><p>I&apos;ll second that!  Sure miss that white background.  The &quot;new&quot; list<br/>has a more mild yellow background, which I note preceded this list&apos;s<br/>more intense yellow by about a day.  Jeff, we don&apos;t need to be copycats!</p><p>JdL</p></div>

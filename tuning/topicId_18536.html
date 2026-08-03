@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Dis-claimer</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Dis-claimer</h1><h3><a id=18536 href="#18536">🔗</a>jpehrson@rcn.com</h3><span>2/10/2001 12:18:27 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I dis wanted to claim that my previous post requesting a &quot;Mathematical<br/>Challenge for 2001&quot; was only a spoof and it was not intended as any<br/>personal reflection on Jacky Ligon, who has done such a fine job of<br/>both theorizing AND composing!  A good role model for all of us!</p><p>Details in that post have no specific reference to any persons living<br/>or dead, especially dead ones...</p><p>_________ ______ _____ _<br/>Joseph Pehrson</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Dis-claimer</h1><h3><a id=18536 href="#18536">🔗</a>jpehrson@rcn.com</h3><span>2/10/2001 12:18:27 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>I dis wanted to claim that my previous post requesting a &quot;Mathematical<br/>Challenge for 2001&quot; was only a spoof and it was not intended as any<br/>personal reflection on Jacky Ligon, who has done such a fine job of<br/>both theorizing AND composing!  A good role model for all of us!</p><p>Details in that post have no specific reference to any persons living<br/>or dead, especially dead ones...</p><p>_________ ______ _____ _<br/>Joseph Pehrson</p></div>

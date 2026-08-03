@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Re: [tuning] non-octave consistency</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: [tuning] non-octave consistency</h1><h3><a id=9442 href="#9442">🔗</a>MANUEL.OP.DE.COUL@EZH.NL</h3><span>4/3/2000 5:10:21 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Carl wrote:<br/>&gt; Does the graph of consistency values over tones/per-octave ever stop<br/>&gt; changing shape?  The chart at...</p><p>&gt; ftp://ella.mills.edu/ccm/tuning/papers/consist_limits.txt</p><p>&gt; ...implies that it does, but I would guess that it does not, and that the<br/>&gt; chart really implies that .001 cent is enough resolution for the step size<br/>&gt; of equal temperaments, for practical purposes.</p><p>Good that you ask. I reran the program that created this chart on a faster<br/>machine with a much finer sieve, and discovered that there are more transition<br/>points than given in the file. So the implied suggestion that it&apos;s complete<br/>is indeed wrong. There are transition points which are less than 0.00001 cents<br/>apart. I shall post a new file some time. The difference is only of theoretical<br/>interest.</p><p>Manuel Op de Coul    <a href="mailto:coul@ezh.nl">coul@ezh.nl</a></p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Re: [tuning] non-octave consistency</h1><h3><a id=9442 href="#9442">🔗</a>MANUEL.OP.DE.COUL@EZH.NL</h3><span>4/3/2000 5:10:21 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Carl wrote:<br/>&gt; Does the graph of consistency values over tones/per-octave ever stop<br/>&gt; changing shape?  The chart at...</p><p>&gt; ftp://ella.mills.edu/ccm/tuning/papers/consist_limits.txt</p><p>&gt; ...implies that it does, but I would guess that it does not, and that the<br/>&gt; chart really implies that .001 cent is enough resolution for the step size<br/>&gt; of equal temperaments, for practical purposes.</p><p>Good that you ask. I reran the program that created this chart on a faster<br/>machine with a much finer sieve, and discovered that there are more transition<br/>points than given in the file. So the implied suggestion that it&apos;s complete<br/>is indeed wrong. There are transition points which are less than 0.00001 cents<br/>apart. I shall post a new file some time. The difference is only of theoretical<br/>interest.</p><p>Manuel Op de Coul    <a href="mailto:coul@ezh.nl">coul@ezh.nl</a></p></div>

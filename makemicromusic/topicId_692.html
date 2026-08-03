@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Microtuning with Infinity</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Microtuning with Infinity</h1><h3><a id=692 href="#692">🔗</a>jpehrson@...</h3><span>8/22/2001 4:29:51 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I received the following message from Michael Lambie from SoundQuest.</p><p>Looks as though Infinity can do microtuning in a similar way as<br/>Csound, but in a &quot;gui&quot; manner... hopefully.  I just ordered it, so I<br/>will report back when I get it up and running:</p><p>Hi Joseph,</p><p>Thanks for the inquiry.</p><p>Actually, we released Infinity&apos;s second service pack today which<br/>includes new objects and enhanced DXi and VST plug in features.</p><p>In terms of micro tuning, even the original release of Infinity was<br/>capable of micro tuning. To make it easier, we have implemented two<br/>methods of permanently setting micro tuning values for audio sources<br/>(oscillators, KarplusStrong, and Sampler objects).</p><p>You can provide 128 frequency values, one for each MIDI note. Or you<br/>can specify an octave and provide 12 note values and the object will<br/>automatically generate the values for the other octaves.</p><p>If you have any other questions, please let me know.</p><p>Michael Lambie<br/>Sound Quest Inc.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>Microtuning with Infinity</h1><h3><a id=692 href="#692">🔗</a>jpehrson@...</h3><span>8/22/2001 4:29:51 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>I received the following message from Michael Lambie from SoundQuest.</p><p>Looks as though Infinity can do microtuning in a similar way as<br/>Csound, but in a &quot;gui&quot; manner... hopefully.  I just ordered it, so I<br/>will report back when I get it up and running:</p><p>Hi Joseph,</p><p>Thanks for the inquiry.</p><p>Actually, we released Infinity&apos;s second service pack today which<br/>includes new objects and enhanced DXi and VST plug in features.</p><p>In terms of micro tuning, even the original release of Infinity was<br/>capable of micro tuning. To make it easier, we have implemented two<br/>methods of permanently setting micro tuning values for audio sources<br/>(oscillators, KarplusStrong, and Sampler objects).</p><p>You can provide 128 frequency values, one for each MIDI note. Or you<br/>can specify an octave and provide 12 note values and the object will<br/>automatically generate the values for the other octaves.</p><p>If you have any other questions, please let me know.</p><p>Michael Lambie<br/>Sound Quest Inc.</p></div>

@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Tech support question: I'm using Scala to retune a MIDI keyboard, but each key plays two notes - one from the current scale in Scala and one seemingly from the keyboard's default 12TET tuning.</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Tech support question: I'm using Scala to retune a MIDI keyboard, but each key plays two notes - one from the current scale in Scala and one seemingly from the keyboard's default 12TET tuning.</h1><h3><a id=106376 href="#106376">🔗</a>scalahelp@...</h3><span>3/8/2014 10:19:09 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>However, if I play Scala&apos;s onscreen keyboard (with my MIDI keyboard as the MIDI output device), everything works as it should: I hear my keyboard playing the correct tuning only.</p><p> I&apos;d like to play on my physical keyboard and hear only the tuning from Scala, not two different scales at once.</p><p> I&apos;m using Scala 2.36i and a Casio Privia PX-330.</p></div><h3><a id=106377 href="#106377">🔗</a>Graham Breed &#x3C;gbreed@...&#x3E;</h3><span>3/9/2014 1:12:19 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>On 09/03/14 06:19, scalahelp@... wrote:</p><p>&gt;   I&apos;d like to play on my physical keyboard and hear only the tuning from Scala, not two different scales at once.</p><p>Set &quot;local control off&quot; on the keyboard.</p><p>             Graham</p></div><h3><a id=106378 href="#106378">🔗</a>scalahelp@...</h3><span>3/9/2014 10:17:29 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Thank you so much! It works perfectly.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Tech support question: I'm using Scala to retune a MIDI keyboard, but each key plays two notes - one from the current scale in Scala and one seemingly from the keyboard's default 12TET tuning.</h1><h3><a id=106376 href="#106376">🔗</a>scalahelp@...</h3><span>3/8/2014 10:19:09 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>However, if I play Scala&apos;s onscreen keyboard (with my MIDI keyboard as the MIDI output device), everything works as it should: I hear my keyboard playing the correct tuning only.</p><p> I&apos;d like to play on my physical keyboard and hear only the tuning from Scala, not two different scales at once.</p><p> I&apos;m using Scala 2.36i and a Casio Privia PX-330.</p></div><h3><a id=106377 href="#106377">🔗</a>Graham Breed &#x3C;gbreed@...&#x3E;</h3><span>3/9/2014 1:12:19 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>On 09/03/14 06:19, scalahelp@... wrote:</p><p>&gt;   I&apos;d like to play on my physical keyboard and hear only the tuning from Scala, not two different scales at once.</p><p>Set &quot;local control off&quot; on the keyboard.</p><p>             Graham</p></div><h3><a id=106378 href="#106378">🔗</a>scalahelp@...</h3><span>3/9/2014 10:17:29 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Thank you so much! It works perfectly.</p></div>

@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning BP music</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>BP music</h1><h3><a id=21644 href="#21644">🔗</a>John Starrett &#x3C;jstarret@carbon.cudenver.edu&#x3E;</h3><span>4/26/2001 8:51:25 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>There are some excerpts of Bohlen-Pierce music here:<br/><a href="http://kspace.com/KM/music.sys/Carpenter/pages/home.html">http://kspace.com/KM/music.sys/Carpenter/pages/home.html</a><br/>Listen to the .wav files if you can, as the Real Audio ones are of<br/>rather low quality.</p><p>--<br/>John Starrett<br/>&quot;We have nothing to fear but the scary stuff.&quot;<br/><a href="http://www-math.cudenver.edu/~jstarret/microtone.html">http://www-math.cudenver.edu/~jstarret/microtone.html</a></p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>BP music</h1><h3><a id=21644 href="#21644">🔗</a>John Starrett &#x3C;jstarret@carbon.cudenver.edu&#x3E;</h3><span>4/26/2001 8:51:25 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>There are some excerpts of Bohlen-Pierce music here:<br/><a href="http://kspace.com/KM/music.sys/Carpenter/pages/home.html">http://kspace.com/KM/music.sys/Carpenter/pages/home.html</a><br/>Listen to the .wav files if you can, as the Real Audio ones are of<br/>rather low quality.</p><p>--<br/>John Starrett<br/>&quot;We have nothing to fear but the scary stuff.&quot;<br/><a href="http://www-math.cudenver.edu/~jstarret/microtone.html">http://www-math.cudenver.edu/~jstarret/microtone.html</a></p></div>

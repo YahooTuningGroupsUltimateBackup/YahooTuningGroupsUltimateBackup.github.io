@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Question to Carl</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Question to Carl</h1><h3><a id=66757 href="#66757">🔗</a>Aaron Krister Johnson &#x3C;aaron@akjmusic.com&#x3E;</h3><span>6/7/2006 7:21:32 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Carl,</p><p>Would you mind setting your client or whatever to say:</p><p>&lt;quote marks&gt; On such-and-such a date, so-and-so wrote:<br/>&lt;quote marks&gt; blah blah blah</p><p>I have had a hell of a time tracing down sources for your replies!</p><p>Thanks,<br/>Aaron.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Question to Carl</h1><h3><a id=66757 href="#66757">🔗</a>Aaron Krister Johnson &#x3C;aaron@akjmusic.com&#x3E;</h3><span>6/7/2006 7:21:32 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Carl,</p><p>Would you mind setting your client or whatever to say:</p><p>&lt;quote marks&gt; On such-and-such a date, so-and-so wrote:<br/>&lt;quote marks&gt; blah blah blah</p><p>I have had a hell of a time tracing down sources for your replies!</p><p>Thanks,<br/>Aaron.</p></div>

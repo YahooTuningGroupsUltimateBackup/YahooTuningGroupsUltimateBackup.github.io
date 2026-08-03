@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning A correction for Dan Stearns</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>A correction for Dan Stearns</h1><h3><a id=22110 href="#22110">🔗</a>paul@stretch-music.com</h3><span>5/4/2001 3:09:08 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Sorry, Dan . . . in my search, the CS property could be violated as<br/>long as none of the _consonant_ intervals came out to different step<br/>sizes in different places . . . for example, 7-out-of-12 is not CS<br/>because the diminished fifth equals the augmented fourth, but as<br/>that&apos;s not a 5-limit consonance, that doesn&apos;t bother me when looking<br/>at the 7-out-of-12 as a scale with 6 consonant 5-limit triads.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>A correction for Dan Stearns</h1><h3><a id=22110 href="#22110">🔗</a>paul@stretch-music.com</h3><span>5/4/2001 3:09:08 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Sorry, Dan . . . in my search, the CS property could be violated as<br/>long as none of the _consonant_ intervals came out to different step<br/>sizes in different places . . . for example, 7-out-of-12 is not CS<br/>because the diminished fifth equals the augmented fourth, but as<br/>that&apos;s not a 5-limit consonance, that doesn&apos;t bother me when looking<br/>at the 7-out-of-12 as a scale with 6 consonant 5-limit triads.</p></div>

@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning (no subject)</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>(no subject)</h1><h3><a id=453 href="#453">🔗</a>Daniel Wolf &#x3C;DJWOLF_MATERIAL@xxxxxxxxxx.xxxx&#x3E;</h3><span>1/24/1999 11:36:16 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Sarn Richard Ursell &lt;<a href="mailto:thcdelta@pop.ihug.co.nz">thcdelta@pop.ihug.co.nz</a>&gt; asked:</p><p>&lt;Does anybody know if infra-sound and ultra-sound have been used in music,<br/>&lt;microtonal or otherwise?</p><p>Richard Maxfield, in his _Night Musik_ (196?), used difference tones<br/>between a variable oscillator and the erase head oscillator of his tape<br/>recorder.</p><p>Ron Kuivila, in the early 1980&apos;s, did extensive work with ultrasound,<br/>modulating the ultrasound with an ordinary household fan.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>(no subject)</h1><h3><a id=453 href="#453">🔗</a>Daniel Wolf &#x3C;DJWOLF_MATERIAL@xxxxxxxxxx.xxxx&#x3E;</h3><span>1/24/1999 11:36:16 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Sarn Richard Ursell &lt;<a href="mailto:thcdelta@pop.ihug.co.nz">thcdelta@pop.ihug.co.nz</a>&gt; asked:</p><p>&lt;Does anybody know if infra-sound and ultra-sound have been used in music,<br/>&lt;microtonal or otherwise?</p><p>Richard Maxfield, in his _Night Musik_ (196?), used difference tones<br/>between a variable oscillator and the erase head oscillator of his tape<br/>recorder.</p><p>Ron Kuivila, in the early 1980&apos;s, did extensive work with ultrasound,<br/>modulating the ultrasound with an ordinary household fan.</p></div>

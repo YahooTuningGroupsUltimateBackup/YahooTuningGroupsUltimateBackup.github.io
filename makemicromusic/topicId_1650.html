@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Persistence of Time</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Persistence of Time</h1><h3><a id=1650 href="#1650">🔗</a>sethares@...</h3><span>1/10/2002 6:58:52 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>In talking about &quot;persistence of time&quot;, jacky wrote:</p><p>&gt;This is just incredible! Fantastic percussion work. It sounds as if<br/>&gt;the percussion may be a part of the tuned texture. Right - wrong?</p><p>Thanks - and right - the rhythmic bed is basically a 3 against 2 pattern,<br/>and is integrated into the melodic/harmonic portions in the<br/>sense that (more or less) everything occurs on elements of<br/>the 3 by 2. Actually, some voices are 3 by 2, others 4 by 3,<br/>others 6 by 4, others 8 by 3, etc, but the point is that all<br/>of these provide accents and variations on the underlying 3 by 2.</p><p>&gt;How do you do it Bill?</p><p>I&apos;ll take this question literally.</p><p>The basic rhythmic motif was created with a Max program -<br/>superimposing the various rhythms and playing them in random 12-tet<br/>pitches. When I decided on the orchestration, I FFT&apos;d the<br/>timbres of the sounds (many of them quite inharmonic)<br/>and then re-tuned using a variant of the adaptive method<br/>(in this case a Matlab program) so as to maximize<br/>consonance (actually, to minimize the dissonance)<br/>at each time instant.</p><p>Bill Sethares</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>Persistence of Time</h1><h3><a id=1650 href="#1650">🔗</a>sethares@...</h3><span>1/10/2002 6:58:52 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>In talking about &quot;persistence of time&quot;, jacky wrote:</p><p>&gt;This is just incredible! Fantastic percussion work. It sounds as if<br/>&gt;the percussion may be a part of the tuned texture. Right - wrong?</p><p>Thanks - and right - the rhythmic bed is basically a 3 against 2 pattern,<br/>and is integrated into the melodic/harmonic portions in the<br/>sense that (more or less) everything occurs on elements of<br/>the 3 by 2. Actually, some voices are 3 by 2, others 4 by 3,<br/>others 6 by 4, others 8 by 3, etc, but the point is that all<br/>of these provide accents and variations on the underlying 3 by 2.</p><p>&gt;How do you do it Bill?</p><p>I&apos;ll take this question literally.</p><p>The basic rhythmic motif was created with a Max program -<br/>superimposing the various rhythms and playing them in random 12-tet<br/>pitches. When I decided on the orchestration, I FFT&apos;d the<br/>timbres of the sounds (many of them quite inharmonic)<br/>and then re-tuned using a variant of the adaptive method<br/>(in this case a Matlab program) so as to maximize<br/>consonance (actually, to minimize the dissonance)<br/>at each time instant.</p><p>Bill Sethares</p></div>

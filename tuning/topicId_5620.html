@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning AW.: archives in HTML & other ramblings</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>AW.: archives in HTML & other ramblings</h1><h3><a id=5620 href="#5620">🔗</a>DWolf77309@xx.xxx</h3><span>10/20/1999 10:49:23 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Since all subscribers to the Mills list initially received an email<br/>indicating that the list was archived, it should not be problematic to post<br/>the archives to a new web site. However, once the archives are posted, it<br/>would be a good gesture to offer all contributors the opportunity to remove<br/>any of their own postings. Any other kinds of editing or revisions of the<br/>texts would be too much work, but the opportunity to retract an item should<br/>be reserved for every writer.</p><p>Daniel Wolf</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>AW.: archives in HTML & other ramblings</h1><h3><a id=5620 href="#5620">🔗</a>DWolf77309@xx.xxx</h3><span>10/20/1999 10:49:23 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Since all subscribers to the Mills list initially received an email<br/>indicating that the list was archived, it should not be problematic to post<br/>the archives to a new web site. However, once the archives are posted, it<br/>would be a good gesture to offer all contributors the opportunity to remove<br/>any of their own postings. Any other kinds of editing or revisions of the<br/>texts would be too much work, but the opportunity to retract an item should<br/>be reserved for every writer.</p><p>Daniel Wolf</p></div>

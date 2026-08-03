@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning-math Wedgie badness -- for real this time!</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Wedgie badness -- for real this time!</h1><h3><a id=17067 href="#17067">🔗</a>Graham Breed &#x3C;gbreed@gmail.com&#x3E;</h3><span>3/17/2008 11:21:46 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Looks like the correct formula for scalar badness from wedge products is</p><p>B = |T^V|/sqrt[n**(r+1)]</p><p>Where T is the wedge product of the weighted vals, V is the vector of weighted prime intervals, |...| is the measure for Euclidean space as defined by Browne, sqrt is the square root, n is the number of prime intervals, r is the rank of the temperament class, and ** is exponentiation.</p><p>From primerr.pdf, the scalar complexity is</p><p>k = |T|/sqrt(n**r)</p><p>so the TOP-RMS error is</p><p>E = |T^V|/[sqrt(n)*|T|]</p><p>                  Graham</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning-math">back to list</a><h1>Wedgie badness -- for real this time!</h1><h3><a id=17067 href="#17067">🔗</a>Graham Breed &#x3C;gbreed@gmail.com&#x3E;</h3><span>3/17/2008 11:21:46 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Looks like the correct formula for scalar badness from wedge products is</p><p>B = |T^V|/sqrt[n**(r+1)]</p><p>Where T is the wedge product of the weighted vals, V is the vector of weighted prime intervals, |...| is the measure for Euclidean space as defined by Browne, sqrt is the square root, n is the number of prime intervals, r is the rank of the temperament class, and ** is exponentiation.</p><p>From primerr.pdf, the scalar complexity is</p><p>k = |T|/sqrt(n**r)</p><p>so the TOP-RMS error is</p><p>E = |T^V|/[sqrt(n)*|T|]</p><p>                  Graham</p></div>

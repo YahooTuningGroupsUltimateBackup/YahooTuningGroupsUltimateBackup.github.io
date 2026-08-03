@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Re:Doty's Doldrums [not getting it]</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re:Doty's Doldrums [not getting it]</h1><h3><a id=9579 href="#9579">🔗</a>Hans van Bemmelen &#x3C;hans@techtrans.nl&#x3E;</h3><span>4/16/2000 10:33:36 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I order the Just Intonation primer a few months ago and it arrived very promptly. All I have to do now is to find time to read it ... and understand it. (At least I won&apos;t have to learn 12TET, never got into that in the first place.)</p><p>Met vriendelijke groet / Regards<br/>Hans van Bemmelen<br/>Anglo-American Theatre Group - AATG<br/>The Hague, The Netherlands<br/>Tel 00 31 70 354 1233<br/>Fax 00 31 70 355 1573</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Re:Doty's Doldrums [not getting it]</h1><h3><a id=9579 href="#9579">🔗</a>Hans van Bemmelen &#x3C;hans@techtrans.nl&#x3E;</h3><span>4/16/2000 10:33:36 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>I order the Just Intonation primer a few months ago and it arrived very promptly. All I have to do now is to find time to read it ... and understand it. (At least I won&apos;t have to learn 12TET, never got into that in the first place.)</p><p>Met vriendelijke groet / Regards<br/>Hans van Bemmelen<br/>Anglo-American Theatre Group - AATG<br/>The Hague, The Netherlands<br/>Tel 00 31 70 354 1233<br/>Fax 00 31 70 355 1573</p></div>

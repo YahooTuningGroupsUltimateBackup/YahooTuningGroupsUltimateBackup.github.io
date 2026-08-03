@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Subminors</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Subminors</h1><h3><a id=2423 href="#2423">🔗</a>Gary Morrison &#x3C;mr88cet@xxxxx.xxxx&#x3E;</h3><span>4/20/1999 12:44:02 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt; &gt; Is use of the sub-minor effectively confined to pieces which are<br/>&gt; &gt; carefully constructed, without many otherwise desirable, rich, and<br/>&gt; &gt; tunable chords?  If no, does anybody have a midi sequence (or other<br/>&gt; &gt; music example) illustrating how to solve this problem?</p><p>   Sorry if I missed some context, but what problem?  This question seems<br/>to be based upon the premise that subminors lack richness, tunability,<br/>and desirability.  If in &quot;subminors&quot; you include 7:6 and 7:4 for example,<br/>then I personally see no evidence of that.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Subminors</h1><h3><a id=2423 href="#2423">🔗</a>Gary Morrison &#x3C;mr88cet@xxxxx.xxxx&#x3E;</h3><span>4/20/1999 12:44:02 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>&gt; &gt; Is use of the sub-minor effectively confined to pieces which are<br/>&gt; &gt; carefully constructed, without many otherwise desirable, rich, and<br/>&gt; &gt; tunable chords?  If no, does anybody have a midi sequence (or other<br/>&gt; &gt; music example) illustrating how to solve this problem?</p><p>   Sorry if I missed some context, but what problem?  This question seems<br/>to be based upon the premise that subminors lack richness, tunability,<br/>and desirability.  If in &quot;subminors&quot; you include 7:6 and 7:4 for example,<br/>then I personally see no evidence of that.</p></div>

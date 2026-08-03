@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning oh yeah! (thanks!)</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>oh yeah! (thanks!)</h1><h3><a id=1432 href="#1432">🔗</a>Carl Lumma &#x3C;clumma@xxx.xxxx&#x3E;</h3><span>3/8/1999 9:46:21 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Daniel Wolf writes...</p><p>&gt;The range of tolerance in a given scale is defined by the sub-MOS&apos;s above<br/>&gt;it. For example, the generating interval for a 12 tone MOS scale with MOS<br/>&gt;subsets at 5 and 7 tones must be between 2/5 and 3/7 octaves.</p><p>I remember this now!  Man, the stuff I&apos;ve forgotten...</p><p>Carl</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>oh yeah! (thanks!)</h1><h3><a id=1432 href="#1432">🔗</a>Carl Lumma &#x3C;clumma@xxx.xxxx&#x3E;</h3><span>3/8/1999 9:46:21 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Daniel Wolf writes...</p><p>&gt;The range of tolerance in a given scale is defined by the sub-MOS&apos;s above<br/>&gt;it. For example, the generating interval for a 12 tone MOS scale with MOS<br/>&gt;subsets at 5 and 7 tones must be between 2/5 and 3/7 octaves.</p><p>I remember this now!  Man, the stuff I&apos;ve forgotten...</p><p>Carl</p></div>

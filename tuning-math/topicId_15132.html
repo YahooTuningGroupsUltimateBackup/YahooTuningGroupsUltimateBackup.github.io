@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning-math Propriety, stability, and co-stability</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Propriety, stability, and co-stability</h1><h3><a id=15132 href="#15132">🔗</a>Gene Ward Smith &#x3C;genewardsmith@coolgoose.com&#x3E;</h3><span>6/14/2006 1:12:33 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Lumma stability may be computed by taking all the overlaps between<br/>intervals, adding them up, dividing by the number of scale degrees,<br/>and subtracting that from 1. If the highest value of class(i) minus<br/>the lowest value of class(i-1) is positive, then you add it,<br/>otherwise, not.</p><p>We can then define Lumma propriety as what you get by adding only if the<br/>highest value is *less* than the lowest value, instead of greater.<br/>Change sign, and don&apos;t subtract from 1, and you have Lumma propriety.<br/>In other words, Lumma propriety is co-Lumma stability, so I withdraw<br/>my objection, and will call what you get by adding up the lenghts of<br/>intervals by some other name.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning-math">back to list</a><h1>Propriety, stability, and co-stability</h1><h3><a id=15132 href="#15132">🔗</a>Gene Ward Smith &#x3C;genewardsmith@coolgoose.com&#x3E;</h3><span>6/14/2006 1:12:33 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Lumma stability may be computed by taking all the overlaps between<br/>intervals, adding them up, dividing by the number of scale degrees,<br/>and subtracting that from 1. If the highest value of class(i) minus<br/>the lowest value of class(i-1) is positive, then you add it,<br/>otherwise, not.</p><p>We can then define Lumma propriety as what you get by adding only if the<br/>highest value is *less* than the lowest value, instead of greater.<br/>Change sign, and don&apos;t subtract from 1, and you have Lumma propriety.<br/>In other words, Lumma propriety is co-Lumma stability, so I withdraw<br/>my objection, and will call what you get by adding up the lenghts of<br/>intervals by some other name.</p></div>

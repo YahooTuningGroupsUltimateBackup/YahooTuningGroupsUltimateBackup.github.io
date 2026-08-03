@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Sibelius:  upbeats, tuning</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Sibelius:  upbeats, tuning</h1><h3><a id=10514 href="#10514">🔗</a>Christopher Bailey &#x3C;chris@...&#x3E;</h3><span>9/27/2005 7:07:29 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Yeah he did that everything-on-upbeats thing quite a lot. It&apos;s all over<br/>the 5th symphony as well.</p><p>One thing I notice about young student composers is that their music<br/>sounds sometimes to &quot;down-beaty&quot;.  When I was a student I went through a<br/>phase wehre pretty much every note I wrote was on an upbeat,  everything<br/>was tied over into the next beat.  You&apos;re just shifting things over a bit,<br/>but somehow it works,  the music really does seem more floating.</p><p>So back to topic:  how do we re-tune him????????</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>Sibelius:  upbeats, tuning</h1><h3><a id=10514 href="#10514">🔗</a>Christopher Bailey &#x3C;chris@...&#x3E;</h3><span>9/27/2005 7:07:29 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Yeah he did that everything-on-upbeats thing quite a lot. It&apos;s all over<br/>the 5th symphony as well.</p><p>One thing I notice about young student composers is that their music<br/>sounds sometimes to &quot;down-beaty&quot;.  When I was a student I went through a<br/>phase wehre pretty much every note I wrote was on an upbeat,  everything<br/>was tied over into the next beat.  You&apos;re just shifting things over a bit,<br/>but somehow it works,  the music really does seem more floating.</p><p>So back to topic:  how do we re-tune him????????</p></div>

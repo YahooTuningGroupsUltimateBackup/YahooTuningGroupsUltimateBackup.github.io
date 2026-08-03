@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning-math Double Diads</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Double Diads</h1><h3><a id=10145 href="#10145">🔗</a>Paul G Hjelmstad &#x3C;paul.hjelmstad@us.ing.com&#x3E;</h3><span>3/29/2004 11:06:37 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I have calculated the distinct energy states (interval vectors)<br/>between every combination of diads in 12-et (stacked necklaces) as<br/>being 57.</p><p>In order to calculate the interval vectors between every<br/>pair of hexachords will require checking C{81,2}*7=22,680<br/>combinations. (80+79+78+77...3+2+1 times 7 offsets, 0 thru 6)</p><p>Checking for diads only takes C{7,2} * 7 combinations = 147. They<br/>reduce to 57. Below is the interval vector times the multiplicity<br/>Note that the vector measures (0,1,2,3,4,5,6). With two stacked<br/>necklaces, it is now neccessary to measure &quot;0&quot; interval as well<br/>as 1 thru 6)</p><p>0,0,0,0,0,2,2&#x9;1<br/>0,0,0,0,1,2,1&#x9;3<br/>0,0,0,0,2,0,2&#x9;1<br/>0,0,0,0,2,2,0&#x9;1<br/>0,0,0,1,0,3,0&#x9;1<br/>0,0,0,1,1,1,1&#x9;5<br/>0,0,0,1,2,1,0&#x9;3<br/>0,0,0,2,0,0,2&#x9;1<br/>0,0,0,2,0,2,0&#x9;1<br/>0,0,0,2,2,0,0&#x9;1<br/>0,0,0,4,0,0,0&#x9;1<br/>0,0,1,0,1,1,0&#x9;1<br/>0,0,1,0,1,2,0&#x9;1<br/>0,0,1,0,2,0,1&#x9;3<br/>0,0,1,1,0,1,1&#x9;5<br/>0,0,1,1,1,1,0&#x9;5<br/>0,0,1,2,1,0,0&#x9;5<br/>0,0,2,0,0,0,2&#x9;1<br/>0,0,2,0,0,2,0&#x9;1<br/>0,0,2,0,2,0,0&#x9;4<br/>0,0,2,1,0,1,0&#x9;2<br/>0,0,3,0,0,0,1&#x9;1<br/>0,1,0,0,2,1,0&#x9;2<br/>0,1,0,1,0,2,0&#x9;2<br/>0,1,0,1,1,0,1&#x9;5<br/>0,1,0,1,2,0,0&#x9;2<br/>0,1,0,2,0,1,0&#x9;6<br/>0,1,1,0,0,1,1&#x9;5<br/>0,1,1,0,1,1,0&#x9;10<br/>0,1,1,1,0,0,1&#x9;3<br/>0,1,1,1,1,0,0&#x9;1<br/>0,1,2,0,0,1,0&#x9;2<br/>0,1,2,1,0,0,0&#x9;1<br/>0,2,0,0,0,0,2&#x9;1<br/>0,2,0,0,0,2,0&#x9;4<br/>0,2,0,0,1,0,1&#x9;2<br/>0,2,0,1,0,1,0&#x9;2<br/>0,2,1,0,1,0,0&#x9;2<br/>0,3,0,1,0,0,0&#x9;1<br/>1,0,0,0,3,0,0&#x9;1<br/>1,0,0,1,1,1,0&#x9;3<br/>1,0,0,2,0,0,1&#x9;4<br/>1,0,1,0,0,2,0&#x9;2<br/>1,0,1,0,1,0,1&#x9;7<br/>1,0,1,1,0,1,0&#x9;3<br/>1,0,2,0,1,0,0&#x9;2<br/>1,1,0,0,0,1,1&#x9;7<br/>1,1,0,0,1,1,0&#x9;3<br/>1,1,0,1,1,0,0&#x9;3<br/>1,1,1,1,0,0,0&#x9;3<br/>1,2,1,0,0,0,0&#x9;2<br/>2,0,0,0,0,0,2&#x9;2<br/>2,0,0,0,0,2,0&#x9;1<br/>2,0,0,0,2,0,0&#x9;1<br/>2,0,0,2,0,0,0&#x9;1<br/>2,0,2,0,0,0,0&#x9;1<br/>2,2,0,0,0,0,0&#x9;1</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning-math">back to list</a><h1>Double Diads</h1><h3><a id=10145 href="#10145">🔗</a>Paul G Hjelmstad &#x3C;paul.hjelmstad@us.ing.com&#x3E;</h3><span>3/29/2004 11:06:37 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>I have calculated the distinct energy states (interval vectors)<br/>between every combination of diads in 12-et (stacked necklaces) as<br/>being 57.</p><p>In order to calculate the interval vectors between every<br/>pair of hexachords will require checking C{81,2}*7=22,680<br/>combinations. (80+79+78+77...3+2+1 times 7 offsets, 0 thru 6)</p><p>Checking for diads only takes C{7,2} * 7 combinations = 147. They<br/>reduce to 57. Below is the interval vector times the multiplicity<br/>Note that the vector measures (0,1,2,3,4,5,6). With two stacked<br/>necklaces, it is now neccessary to measure &quot;0&quot; interval as well<br/>as 1 thru 6)</p><p>0,0,0,0,0,2,2&#x9;1<br/>0,0,0,0,1,2,1&#x9;3<br/>0,0,0,0,2,0,2&#x9;1<br/>0,0,0,0,2,2,0&#x9;1<br/>0,0,0,1,0,3,0&#x9;1<br/>0,0,0,1,1,1,1&#x9;5<br/>0,0,0,1,2,1,0&#x9;3<br/>0,0,0,2,0,0,2&#x9;1<br/>0,0,0,2,0,2,0&#x9;1<br/>0,0,0,2,2,0,0&#x9;1<br/>0,0,0,4,0,0,0&#x9;1<br/>0,0,1,0,1,1,0&#x9;1<br/>0,0,1,0,1,2,0&#x9;1<br/>0,0,1,0,2,0,1&#x9;3<br/>0,0,1,1,0,1,1&#x9;5<br/>0,0,1,1,1,1,0&#x9;5<br/>0,0,1,2,1,0,0&#x9;5<br/>0,0,2,0,0,0,2&#x9;1<br/>0,0,2,0,0,2,0&#x9;1<br/>0,0,2,0,2,0,0&#x9;4<br/>0,0,2,1,0,1,0&#x9;2<br/>0,0,3,0,0,0,1&#x9;1<br/>0,1,0,0,2,1,0&#x9;2<br/>0,1,0,1,0,2,0&#x9;2<br/>0,1,0,1,1,0,1&#x9;5<br/>0,1,0,1,2,0,0&#x9;2<br/>0,1,0,2,0,1,0&#x9;6<br/>0,1,1,0,0,1,1&#x9;5<br/>0,1,1,0,1,1,0&#x9;10<br/>0,1,1,1,0,0,1&#x9;3<br/>0,1,1,1,1,0,0&#x9;1<br/>0,1,2,0,0,1,0&#x9;2<br/>0,1,2,1,0,0,0&#x9;1<br/>0,2,0,0,0,0,2&#x9;1<br/>0,2,0,0,0,2,0&#x9;4<br/>0,2,0,0,1,0,1&#x9;2<br/>0,2,0,1,0,1,0&#x9;2<br/>0,2,1,0,1,0,0&#x9;2<br/>0,3,0,1,0,0,0&#x9;1<br/>1,0,0,0,3,0,0&#x9;1<br/>1,0,0,1,1,1,0&#x9;3<br/>1,0,0,2,0,0,1&#x9;4<br/>1,0,1,0,0,2,0&#x9;2<br/>1,0,1,0,1,0,1&#x9;7<br/>1,0,1,1,0,1,0&#x9;3<br/>1,0,2,0,1,0,0&#x9;2<br/>1,1,0,0,0,1,1&#x9;7<br/>1,1,0,0,1,1,0&#x9;3<br/>1,1,0,1,1,0,0&#x9;3<br/>1,1,1,1,0,0,0&#x9;3<br/>1,2,1,0,0,0,0&#x9;2<br/>2,0,0,0,0,0,2&#x9;2<br/>2,0,0,0,0,2,0&#x9;1<br/>2,0,0,0,2,0,0&#x9;1<br/>2,0,0,2,0,0,0&#x9;1<br/>2,0,2,0,0,0,0&#x9;1<br/>2,2,0,0,0,0,0&#x9;1</p></div>

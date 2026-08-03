@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Pierre Schaeffer et bruit</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Pierre Schaeffer et bruit</h1><h3><a id=11079 href="#11079">🔗</a>Joseph Pehrson &#x3C;josephpehrson@compuserve.com&#x3E;</h3><span>7/6/2000 7:54:09 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Dan Sterns posted in TD 695:</p><p>&gt; For anyone who might be interested, here&apos;s a very nice Pierre Shaeffer<br/>&gt; paper -- &quot;PIERRE SCHAEFFER, 1953: TOWARDS AN EXPERIMENTAL MUSIC&quot; --<br/>&gt; written by Carlos Palombini:<br/>&gt;</p><p>I very much enjoyed this essay... for me it showed that some of the<br/>&quot;acoustic cats&quot; were really opposed to serialism from the get-go...</p><p>_____________ _____ ___ __ _<br/>Joseph Pehrson</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Pierre Schaeffer et bruit</h1><h3><a id=11079 href="#11079">🔗</a>Joseph Pehrson &#x3C;josephpehrson@compuserve.com&#x3E;</h3><span>7/6/2000 7:54:09 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Dan Sterns posted in TD 695:</p><p>&gt; For anyone who might be interested, here&apos;s a very nice Pierre Shaeffer<br/>&gt; paper -- &quot;PIERRE SCHAEFFER, 1953: TOWARDS AN EXPERIMENTAL MUSIC&quot; --<br/>&gt; written by Carlos Palombini:<br/>&gt;</p><p>I very much enjoyed this essay... for me it showed that some of the<br/>&quot;acoustic cats&quot; were really opposed to serialism from the get-go...</p><p>_____________ _____ ___ __ _<br/>Joseph Pehrson</p></div>

@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning A good one from the Monz page...</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>A good one from the Monz page...</h1><h3><a id=17172 href="#17172">🔗</a>Joseph Pehrson &#x3C;pehrson@pubmedia.com&#x3E;</h3><span>1/5/2001 6:45:03 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt;Liszt is very pleased while sight-reading Brahms&apos;s E-flat-minor<br/>Scherzo, then plays his own recently-completed Sonata in B minor, a<br/>work whose main importance lies in Liszt&apos;s formal innovation: an<br/>attempt to fuse all 4 movements of the traditional sonata design into<br/>a 1-movement work. When Liszt looks over to see what his young<br/>visitor thinks, he finds Brahms asleep: a premonition of the major<br/>split that will occur in 19th-century European music. Brahms claims<br/>&gt;that he was simply listening with his eyes closed...</p><p>Uh huh... And Virgil Thomson used to listen to music for his reviews<br/>after opulent dinners with wine with his eyes closed as well...Much<br/>better concentration that way...<br/>__________ _____ __ ___<br/>Joseph Pehrson</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>A good one from the Monz page...</h1><h3><a id=17172 href="#17172">🔗</a>Joseph Pehrson &#x3C;pehrson@pubmedia.com&#x3E;</h3><span>1/5/2001 6:45:03 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>&gt;Liszt is very pleased while sight-reading Brahms&apos;s E-flat-minor<br/>Scherzo, then plays his own recently-completed Sonata in B minor, a<br/>work whose main importance lies in Liszt&apos;s formal innovation: an<br/>attempt to fuse all 4 movements of the traditional sonata design into<br/>a 1-movement work. When Liszt looks over to see what his young<br/>visitor thinks, he finds Brahms asleep: a premonition of the major<br/>split that will occur in 19th-century European music. Brahms claims<br/>&gt;that he was simply listening with his eyes closed...</p><p>Uh huh... And Virgil Thomson used to listen to music for his reviews<br/>after opulent dinners with wine with his eyes closed as well...Much<br/>better concentration that way...<br/>__________ _____ __ ___<br/>Joseph Pehrson</p></div>

@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning (no subject)</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>(no subject)</h1><h3><a id=2587 href="#2587">🔗</a>Mckyyy@xxx.xxx</h3><span>4/26/1999 7:34:47 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi David,</p><p>&lt;&lt;<br/>Really, how does one practically implement any tuning<br/>system with more than 30-some notes per octave?<br/>&gt;&gt;</p><p>In a word:  Multiplex.</p><p>For example, suppose you take your cue from the guitar in which notes are<br/>selected with the left hand and sounded from the right.  If you had 5 keys on<br/>the left hand, you could have 32 combinations of keys being down or up.  If<br/>you had 10 keys on the right hand, then you would have the possibility of<br/>sounding 320 notes.</p><p>Adding some more keys, or adding a state machine to the hardware or software<br/>could add more possibilities.  These are just standard tricks for designing<br/>electronic user interface circuitry.  The hard part is getting musicians to<br/>accept a new &quot;standard.&quot;  For that, I have no answer.</p><p>Marion</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>(no subject)</h1><h3><a id=2587 href="#2587">🔗</a>Mckyyy@xxx.xxx</h3><span>4/26/1999 7:34:47 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Hi David,</p><p>&lt;&lt;<br/>Really, how does one practically implement any tuning<br/>system with more than 30-some notes per octave?<br/>&gt;&gt;</p><p>In a word:  Multiplex.</p><p>For example, suppose you take your cue from the guitar in which notes are<br/>selected with the left hand and sounded from the right.  If you had 5 keys on<br/>the left hand, you could have 32 combinations of keys being down or up.  If<br/>you had 10 keys on the right hand, then you would have the possibility of<br/>sounding 320 notes.</p><p>Adding some more keys, or adding a state machine to the hardware or software<br/>could add more possibilities.  These are just standard tricks for designing<br/>electronic user interface circuitry.  The hard part is getting musicians to<br/>accept a new &quot;standard.&quot;  For that, I have no answer.</p><p>Marion</p></div>

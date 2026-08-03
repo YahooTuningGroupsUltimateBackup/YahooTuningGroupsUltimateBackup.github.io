@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic Canorus</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Canorus</h1><h3><a id=19212 href="#19212">🔗</a>Graham Breed &#x3C;gbreed@...&#x3E;</h3><span>7/6/2008 7:37:02 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Following the thread on composition software, here&apos;s a free, cross-platform score editor in development:</p><p><a href="http://canorus.berlios.de/wiki/index.php/Main_Page">http://canorus.berlios.de/wiki/index.php/Main_Page</a></p><p>If you want microtonal support now&apos;s the time to get involved.  They don&apos;t mention ABC.  NoteEdit imports and exports ABC but maybe this feature didn&apos;t carry across.  If that&apos;s the case working with LilyPond might be easier than adding all the ABC code so that we can use it with MicroABC.</p><p>                    Graham</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>Canorus</h1><h3><a id=19212 href="#19212">🔗</a>Graham Breed &#x3C;gbreed@...&#x3E;</h3><span>7/6/2008 7:37:02 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Following the thread on composition software, here&apos;s a free, cross-platform score editor in development:</p><p><a href="http://canorus.berlios.de/wiki/index.php/Main_Page">http://canorus.berlios.de/wiki/index.php/Main_Page</a></p><p>If you want microtonal support now&apos;s the time to get involved.  They don&apos;t mention ABC.  NoteEdit imports and exports ABC but maybe this feature didn&apos;t carry across.  If that&apos;s the case working with LilyPond might be easier than adding all the ABC code so that we can use it with MicroABC.</p><p>                    Graham</p></div>

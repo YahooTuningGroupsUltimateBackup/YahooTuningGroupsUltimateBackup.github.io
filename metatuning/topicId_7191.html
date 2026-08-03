@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup metatuning RFD rec.music.makers.tuning</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>RFD rec.music.makers.tuning</h1><h3><a id=7191 href="#7191">🔗</a>Gene Ward Smith &#x3C;gwsmith@...&#x3E;</h3><span>4/28/2004 12:40:40 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Yahoo is unreliable and difficult to use. We certainly have enough<br/>people to pass a Usenet tuning group if we wanted to--<br/>humanities.music.tuning would be another possible name. Of course<br/>sci.math.tuning might be more appropriate for some of it. :)</p><p>Usenet groups are easier to use than Yahoo, your postings are less<br/>likely to dissapper into the bit bucket, and Google archives them for<br/>us.</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/metatuning">back to list</a><h1>RFD rec.music.makers.tuning</h1><h3><a id=7191 href="#7191">🔗</a>Gene Ward Smith &#x3C;gwsmith@...&#x3E;</h3><span>4/28/2004 12:40:40 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Yahoo is unreliable and difficult to use. We certainly have enough<br/>people to pass a Usenet tuning group if we wanted to--<br/>humanities.music.tuning would be another possible name. Of course<br/>sci.math.tuning might be more appropriate for some of it. :)</p><p>Usenet groups are easier to use than Yahoo, your postings are less<br/>likely to dissapper into the bit bucket, and Google archives them for<br/>us.</p></div>

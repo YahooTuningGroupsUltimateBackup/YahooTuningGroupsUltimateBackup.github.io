@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning ribbons instead of strings?</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>ribbons instead of strings?</h1><h3><a id=79381 href="#79381">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>12/1/2008 10:31:07 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Any physics types want to comment on the idea of using<br/>ribbons instead of strings in a piano?  Is the total cross<br/>sectional area all that matters, regardless of shape?<br/>I doubt it.  I would guess it only matters in the direction<br/>of vibration, so ribbons would seem to make sense.  They<br/>would also kill side-to-side modes of vibration, which<br/>presumably only hurt power transfer to the soundboard.<br/>If one ribbon could stand in for three strings, it&apos;d make<br/>tuning easier, and it would presumably save space along<br/>the keyboard, which is one of the blocks to building<br/>acoustic keyboards with &gt; 12 tones/octave.</p><p>-Carl</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>ribbons instead of strings?</h1><h3><a id=79381 href="#79381">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>12/1/2008 10:31:07 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Any physics types want to comment on the idea of using<br/>ribbons instead of strings in a piano?  Is the total cross<br/>sectional area all that matters, regardless of shape?<br/>I doubt it.  I would guess it only matters in the direction<br/>of vibration, so ribbons would seem to make sense.  They<br/>would also kill side-to-side modes of vibration, which<br/>presumably only hurt power transfer to the soundboard.<br/>If one ribbon could stand in for three strings, it&apos;d make<br/>tuning easier, and it would presumably save space along<br/>the keyboard, which is one of the blocks to building<br/>acoustic keyboards with &gt; 12 tones/octave.</p><p>-Carl</p></div>

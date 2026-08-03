@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Wolfram Alpha Widgets Wiki Page</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Wolfram Alpha Widgets Wiki Page</h1><h3><a id=103983 href="#103983">🔗</a>Mike Battaglia &#x3C;battaglia01@...&#x3E;</h3><span>3/3/2012 1:40:00 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I started making this wiki page:</p><p><a href="http://xenharmonic.wikispaces.com/Wolfram+Alpha+Regular+Temperament+Widgets">http://xenharmonic.wikispaces.com/Wolfram+Alpha+Regular+Temperament+Widgets</a></p><p>So far the only widget it has is something that puts matrices in<br/>Hermite normal form, which is itself pretty useful.</p><p>I was trying to get it to do TOP and TE as well, but apparently<br/>Wolfram Alpha sucks, because it can&apos;t handle any variation of the<br/>following Mathematica expression:</p><p>Minimize[RootMeanSquare[{x, 2, 3}], x]</p><p>The {x, 2, 3} is just a dummy list for it to try and minimize the RMS<br/>of, but it keeps crapping out. I&apos;ve tried tons of variations of this<br/>and I can&apos;t get it to work. If anyone can figure it out, please let me<br/>know what expression you used to get it to work.</p><p>-Mike</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Wolfram Alpha Widgets Wiki Page</h1><h3><a id=103983 href="#103983">🔗</a>Mike Battaglia &#x3C;battaglia01@...&#x3E;</h3><span>3/3/2012 1:40:00 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>I started making this wiki page:</p><p><a href="http://xenharmonic.wikispaces.com/Wolfram+Alpha+Regular+Temperament+Widgets">http://xenharmonic.wikispaces.com/Wolfram+Alpha+Regular+Temperament+Widgets</a></p><p>So far the only widget it has is something that puts matrices in<br/>Hermite normal form, which is itself pretty useful.</p><p>I was trying to get it to do TOP and TE as well, but apparently<br/>Wolfram Alpha sucks, because it can&apos;t handle any variation of the<br/>following Mathematica expression:</p><p>Minimize[RootMeanSquare[{x, 2, 3}], x]</p><p>The {x, 2, 3} is just a dummy list for it to try and minimize the RMS<br/>of, but it keeps crapping out. I&apos;ve tried tons of variations of this<br/>and I can&apos;t get it to work. If anyone can figure it out, please let me<br/>know what expression you used to get it to work.</p><p>-Mike</p></div>

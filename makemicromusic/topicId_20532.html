@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup makemicromusic New music by Daniel Thomson</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>New music by Daniel Thomson</h1><h3><a id=20532 href="#20532">🔗</a>Prent Rodgers &#x3C;prentrodgers@...&#x3E;</h3><span>3/23/2009 2:44:21 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://danielthompson.blogspot.com">http://danielthompson.blogspot.com</a></p><p>Daniel writes on his blog: &quot;Nineteen tone equal temperament (nineteen equally spaced notes per octave instead of the usual twelve) is a popular choice for microtonal composers. It has major and minor triads that are closer to just intonation than in twelve tone equal temperament. It is generally regarded as a more consonant tuning than standard twelve tone equal temperament...<br/>Here is my Rondo in minor modes for two pianos in nineteen tone equal temperament.</p><p>See also my Nocturne for two pianos in seventeen tone equal temperament.&quot;</p><p>Go and listen!</p><p>Prent Rodgers</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/makemicromusic">back to list</a><h1>New music by Daniel Thomson</h1><h3><a id=20532 href="#20532">🔗</a>Prent Rodgers &#x3C;prentrodgers@...&#x3E;</h3><span>3/23/2009 2:44:21 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p><a href="http://danielthompson.blogspot.com">http://danielthompson.blogspot.com</a></p><p>Daniel writes on his blog: &quot;Nineteen tone equal temperament (nineteen equally spaced notes per octave instead of the usual twelve) is a popular choice for microtonal composers. It has major and minor triads that are closer to just intonation than in twelve tone equal temperament. It is generally regarded as a more consonant tuning than standard twelve tone equal temperament...<br/>Here is my Rondo in minor modes for two pianos in nineteen tone equal temperament.</p><p>See also my Nocturne for two pianos in seventeen tone equal temperament.&quot;</p><p>Go and listen!</p><p>Prent Rodgers</p></div>

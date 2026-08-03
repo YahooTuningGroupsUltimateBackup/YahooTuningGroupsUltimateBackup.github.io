@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning format request</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>format request</h1><h3><a id=2719 href="#2719">🔗</a>John A. deLaubenfels &#x3C;jadl@xxxxxx.xxxx&#x3E;</h3><span>5/7/1999 10:07:13 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Paul Erlich, I find your posts informative and enjoyable, but lately I<br/>sense you may be using a different editor and letting it do line-wrap<br/>for you.</p><p>Unfortunately, when viewing the digest on the web, at least with<br/>Internet Explorer, the lines are NOT wrapped; one must horizontally<br/>scroll WAY out to the right.  Could you wrap&apos;m before you post?</p><p>Interestingly, when you write as Brett Barbaro, there doesn&apos;t seem to<br/>be a problem...</p><p>JdL</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>format request</h1><h3><a id=2719 href="#2719">🔗</a>John A. deLaubenfels &#x3C;jadl@xxxxxx.xxxx&#x3E;</h3><span>5/7/1999 10:07:13 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Paul Erlich, I find your posts informative and enjoyable, but lately I<br/>sense you may be using a different editor and letting it do line-wrap<br/>for you.</p><p>Unfortunately, when viewing the digest on the web, at least with<br/>Internet Explorer, the lines are NOT wrapped; one must horizontally<br/>scroll WAY out to the right.  Could you wrap&apos;m before you post?</p><p>Interestingly, when you write as Brett Barbaro, there doesn&apos;t seem to<br/>be a problem...</p><p>JdL</p></div>

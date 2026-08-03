@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning A funny thing happened to me on the way to a new temperament</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>A funny thing happened to me on the way to a new temperament</h1><h3><a id=42909 href="#42909">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>3/15/2003 7:19:57 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Inspired by Margo, I decided to look for a temperament with eight 5/4s<br/>and four 32/25 major thirds going around the circle of fifths. Letting<br/>the fifths be [a,b,c,5/(a*b*c),a,b,c,5/(a*b*c),a,b,c,128/(25*a*b*c)]<br/>and calculating the least squares solution, I ended up with 1/4-comma<br/>meantone. I&apos;m afraid I wasn&apos;t alert enough to see this is where I was<br/>headed. :)</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>A funny thing happened to me on the way to a new temperament</h1><h3><a id=42909 href="#42909">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>3/15/2003 7:19:57 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Inspired by Margo, I decided to look for a temperament with eight 5/4s<br/>and four 32/25 major thirds going around the circle of fifths. Letting<br/>the fifths be [a,b,c,5/(a*b*c),a,b,c,5/(a*b*c),a,b,c,128/(25*a*b*c)]<br/>and calculating the least squares solution, I ended up with 1/4-comma<br/>meantone. I&apos;m afraid I wasn&apos;t alert enough to see this is where I was<br/>headed. :)</p></div>

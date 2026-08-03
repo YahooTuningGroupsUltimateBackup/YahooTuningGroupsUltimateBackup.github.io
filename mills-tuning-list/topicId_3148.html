@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup mills-tuning-list Identification of pitches</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>Identification of pitches</h1><h3><a id=7161 href="#7161">🔗</a>&#x22;Brian M. Ames&#x22; &#x3C;bmames@...&#x3E;</h3><span>3/1/1998 8:23:28 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>I am developing software to automatically implement alternate tunings in<br>MIDI files through the use of pitch bends or other methods. The idea is to<br>allow notation on a staff or piano roll without regard to the actual pitches<br>represented, then processing the resultant MIDI file along with a scale file<br>to produce a second MIDI file with the notes adjusted and pitch bends<br>inserted before each note to tune to the proper pitch on-the-fly.  Is there<br>an established system that precisely identifies each pitch? I know that the<br>MIDI note numbers identify 12TET but what about the rest?<br><br>Thanks,<br>Brian M. Ames<br>Visit The Ames Hymn Collection<br>http://junior.apk.net/~bmames<br>The Ames Classical Collection<br>http://www.geocities.com/Vienna/Strasse/7398</div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/mills-tuning-list">back to list</a><h1>Identification of pitches</h1><h3><a id=7161 href="#7161">🔗</a>&#x22;Brian M. Ames&#x22; &#x3C;bmames@...&#x3E;</h3><span>3/1/1998 8:23:28 PM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text">I am developing software to automatically implement alternate tunings in<br>MIDI files through the use of pitch bends or other methods. The idea is to<br>allow notation on a staff or piano roll without regard to the actual pitches<br>represented, then processing the resultant MIDI file along with a scale file<br>to produce a second MIDI file with the notes adjusted and pitch bends<br>inserted before each note to tune to the proper pitch on-the-fly.  Is there<br>an established system that precisely identifies each pitch? I know that the<br>MIDI note numbers identify 12TET but what about the rest?<br><br>Thanks,<br>Brian M. Ames<br>Visit The Ames Hymn Collection<br>http://junior.apk.net/~bmames<br>The Ames Classical Collection<br>http://www.geocities.com/Vienna/Strasse/7398</div>

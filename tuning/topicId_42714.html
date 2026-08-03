@@ -6,13 +6,13 @@
             content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <title>Yahoo Tuning Groups Ultimate Backup tuning Reply to Jason Kanter</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="/archive.css"><script src="/archive.js" defer></script>
             </head>
             <body>
             </body>
             </html>
         
-    <form action="/search/" method="get" style="margin: 10px 20px; padding: 10px 20px; background-color: #ddd">
+    <form action="/search/" method="get" class="search-bar">
         <div>
             <input type="text" name="q" size="40" placeholder="search the archive">
             <button>search</button>
@@ -32,16 +32,4 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Reply to Jason Kanter</h1><h3><a id=42714 href="#42714">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>3/6/2003 1:47:09 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Thanks for your answer, but that wasn&apos;t exactly my point.<br/>I saw the cents offset you mentioned and that&apos;s indeed the<br/>only number that can be used without accumulating roundoff<br/>errors. One extra digit behind the comma wouldn&apos;t hurt and<br/>having the numbers in straight order instead of cycle of<br/>fifths order would also be easier. I was looking for something<br/>like this:<br/> 0.0 94.168 198.171 298.078 393.680 498.045 597.590 699.492<br/> 796.123 895.757 1000.033 1095.635 1200.0<br/>Where 1/1 may be C or A, that&apos;s not really important.</p><p>Manuel</p></div>
-    <script>
-        const applyMonospace = monospace => {
-            $('.monospace').prop('checked', monospace)
-            $('.message-text').css('font-family', monospace ? 'monospace' : '')
-        }
-
-        applyMonospace(true)
-
-        $('.monospace').on('change', function () {
-            applyMonospace(this.checked)
-        })
-    </script>
+<a href="/tuning">back to list</a><h1>Reply to Jason Kanter</h1><h3><a id=42714 href="#42714">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>3/6/2003 1:47:09 AM</span><label class="monospace-control"><input type="checkbox" class="monospace" checked> monospace</label><div class="message-text"><p>Thanks for your answer, but that wasn&apos;t exactly my point.<br/>I saw the cents offset you mentioned and that&apos;s indeed the<br/>only number that can be used without accumulating roundoff<br/>errors. One extra digit behind the comma wouldn&apos;t hurt and<br/>having the numbers in straight order instead of cycle of<br/>fifths order would also be easier. I was looking for something<br/>like this:<br/> 0.0 94.168 198.171 298.078 393.680 498.045 597.590 699.492<br/> 796.123 895.757 1000.033 1095.635 1200.0<br/>Where 1/1 may be C or A, that&apos;s not really important.</p><p>Manuel</p></div>
