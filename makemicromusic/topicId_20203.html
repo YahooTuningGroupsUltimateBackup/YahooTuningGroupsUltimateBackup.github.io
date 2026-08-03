@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Mark Harvey’s Aardvark Orchestra Christmas concert</h1><h3><a id=20203 href="#20203">🔗</a>dasdasdva &#x3C;dasdasdva@...&#x3E;</h3><span>12/12/2008 2:54:49 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Btw, this for anyone who might be interested and happens to live in the<br/>Boston area, this Sunday night will mark the 36th anniversary of Mark<br/>Harvey&apos;s Aardvark Orchestra&apos;s Christmas concert at the Emmanuel church :</p><p><a href="http://calendar.boston.com/boston-ma/venues/show/17596-emmanuel-church">http://calendar.boston.com/boston-ma/venues/show/17596-emmanuel-church</a></p><p>As a teenager, I used to go to Boston all the time to hear the likes of<br/>David Moss and other ultra-out avants, and these Christmas concerts<br/>always were the highlight of the year--a kind of modern and local Duke<br/>Ellington-like Sacred Concert--and never failed to light me up with<br/>some of the special magic I felt in this season as a kid.<br/>I hope to be there this Sunday with my wife and son. So if any list<br/>members might also make it let me know, and maybe we can share a hello<br/>and a Merry Christmas or other non-denominational seasonal holiday</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Mark Harvey’s Aardvark Orchestra Christmas concert</h1><h3><a id=20203 href="#20203">🔗</a>dasdasdva &#x3C;dasdasdva@...&#x3E;</h3><span>12/12/2008 2:54:49 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Btw, this for anyone who might be interested and happens to live in the<br/>Boston area, this Sunday night will mark the 36th anniversary of Mark<br/>Harvey&apos;s Aardvark Orchestra&apos;s Christmas concert at the Emmanuel church :</p><p><a href="http://calendar.boston.com/boston-ma/venues/show/17596-emmanuel-church">http://calendar.boston.com/boston-ma/venues/show/17596-emmanuel-church</a></p><p>As a teenager, I used to go to Boston all the time to hear the likes of<br/>David Moss and other ultra-out avants, and these Christmas concerts<br/>always were the highlight of the year--a kind of modern and local Duke<br/>Ellington-like Sacred Concert--and never failed to light me up with<br/>some of the special magic I felt in this season as a kid.<br/>I hope to be there this Sunday with my wife and son. So if any list<br/>members might also make it let me know, and maybe we can share a hello<br/>and a Merry Christmas or other non-denominational seasonal holiday</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

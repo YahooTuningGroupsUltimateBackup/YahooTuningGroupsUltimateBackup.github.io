@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>papers on sound pleasantness/ugliness by Josh McDermott</h1><h3><a id=19936 href="#19936">🔗</a>WarrenS &#x3C;warren.wds@gmail.com&#x3E;</h3><span>11/2/2011 1:21:38 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>[annoying sounds]:<br/><a href="http://www.cns.nyu.edu/~jhm/McDermott_Auditory_Preference_chapter.pdf">http://www.cns.nyu.edu/~jhm/McDermott_Auditory_Preference_chapter.pdf</a></p><p>basis of consonance:<br/>[he comes out believing in harmonics]<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_CB_consonance.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_CB_consonance.pdf</a></p><p>musical intervals:<br/><a href="http://www.cns.nyu.edu/~jhm/McDermott_Intervals_2010.pdf">http://www.cns.nyu.edu/~jhm/McDermott_Intervals_2010.pdf</a></p><p>what can experiments reveal about the origins of music?:<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_cdir2009.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_cdir2009.pdf</a></p><p>the [Darwinian] evolution of music:<br/>[doesn&apos;t have much to say]<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf</a></p><p>pitch &amp; auditory system:<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>papers on sound pleasantness/ugliness by Josh McDermott</h1><h3><a id=19936 href="#19936">🔗</a>WarrenS &#x3C;warren.wds@gmail.com&#x3E;</h3><span>11/2/2011 1:21:38 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>[annoying sounds]:<br/><a href="http://www.cns.nyu.edu/~jhm/McDermott_Auditory_Preference_chapter.pdf">http://www.cns.nyu.edu/~jhm/McDermott_Auditory_Preference_chapter.pdf</a></p><p>basis of consonance:<br/>[he comes out believing in harmonics]<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_CB_consonance.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_CB_consonance.pdf</a></p><p>musical intervals:<br/><a href="http://www.cns.nyu.edu/~jhm/McDermott_Intervals_2010.pdf">http://www.cns.nyu.edu/~jhm/McDermott_Intervals_2010.pdf</a></p><p>what can experiments reveal about the origins of music?:<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_cdir2009.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_cdir2009.pdf</a></p><p>the [Darwinian] evolution of music:<br/>[doesn&apos;t have much to say]<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf</a></p><p>pitch &amp; auditory system:<br/><a href="http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf">http://www.cns.nyu.edu/~jhm/mcdermott_essay.pdf</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

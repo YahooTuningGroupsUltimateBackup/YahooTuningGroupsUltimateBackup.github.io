@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>questions and answers</h1><h3><a id=7 href="#7">🔗</a>jpehrson@...</h3><span>5/20/2001 11:05:20 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Should the fissiparous tendency remain in the ascendant?</p><p>I don&apos;t &quot;like&quot; it.  I prefer &quot;little fish&quot; in the big pool...</p><p>Is it okay to define tunings using partial differential equations, or<br/>should cents values also be given?</p><p>I think this sucks.  I never caught on to this.</p><p>Let&apos;s go to EDO</p><p>Is Paul Erlich the spawn of Satan, or only a near relative?</p><p>Perhaps only the &quot;pawn&quot; of Satan... but we love his &quot;devilish&quot;<br/>assistance!</p><p>All this and more in Meta Tuning!</p><p>Monzo was a fish on the other list... so perhaps we should have &quot;Tuna<br/>Fish...&quot;</p><p>_________ _______ ______<br/>Joseph Pehrson</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>questions and answers</h1><h3><a id=7 href="#7">🔗</a>jpehrson@...</h3><span>5/20/2001 11:05:20 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Should the fissiparous tendency remain in the ascendant?</p><p>I don&apos;t &quot;like&quot; it.  I prefer &quot;little fish&quot; in the big pool...</p><p>Is it okay to define tunings using partial differential equations, or<br/>should cents values also be given?</p><p>I think this sucks.  I never caught on to this.</p><p>Let&apos;s go to EDO</p><p>Is Paul Erlich the spawn of Satan, or only a near relative?</p><p>Perhaps only the &quot;pawn&quot; of Satan... but we love his &quot;devilish&quot;<br/>assistance!</p><p>All this and more in Meta Tuning!</p><p>Monzo was a fish on the other list... so perhaps we should have &quot;Tuna<br/>Fish...&quot;</p><p>_________ _______ ______<br/>Joseph Pehrson</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

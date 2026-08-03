@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Open Labs concept -- multitouch keyboard instrument</h1><h3><a id=20595 href="#20595">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>4/20/2009 7:15:36 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.yankodesign.com/2009/04/17/one-person-band/">http://www.yankodesign.com/2009/04/17/one-person-band/</a></p><p>Knowing Open Labs, this will probably run Windows 7 if it<br/>ever comes to market.  That means it would be relatively<br/>easy to put a generalized keyboard on it and play it<br/>through your favorite microtonal softsynth.</p><p>-Carl</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Open Labs concept -- multitouch keyboard instrument</h1><h3><a id=20595 href="#20595">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>4/20/2009 7:15:36 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.yankodesign.com/2009/04/17/one-person-band/">http://www.yankodesign.com/2009/04/17/one-person-band/</a></p><p>Knowing Open Labs, this will probably run Windows 7 if it<br/>ever comes to market.  That means it would be relatively<br/>easy to put a generalized keyboard on it and play it<br/>through your favorite microtonal softsynth.</p><p>-Carl</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

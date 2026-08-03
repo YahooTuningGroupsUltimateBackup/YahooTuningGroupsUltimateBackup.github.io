@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: LeftaFunk?</h1><h3><a id=712 href="#712">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>8/25/2001 9:34:20 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>jpehrson@... wrote:</p><p>&gt;<br/>&gt; I&apos;ve never heard anything quite like this... so that&apos;s got to be a<br/>&gt; compliment right there!<br/>&gt;</p><p>Thanks for the &quot;compliment&quot;. But did you LIKE it?</p><p>GZ</p></div><h3><a id=713 href="#713">🔗</a>jpehrson@...</h3><span>8/26/2001 8:43:14 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In MakeMicroMusic@y..., George Zelenz &lt;ploo@m...&gt; wrote:</p><p><a href="/makemicromusic/topicId_712.html#712">/makemicromusic/topicId_712.html#712</a></p><p>&gt;<br/>&gt;<br/>&gt; jpehrson@r... wrote:<br/>&gt;<br/>&gt; &gt;<br/>&gt; &gt; I&apos;ve never heard anything quite like this... so that&apos;s got to be a<br/>&gt; &gt; compliment right there!<br/>&gt; &gt;<br/>&gt;<br/>&gt; Thanks for the &quot;compliment&quot;. But did you LIKE it?<br/>&gt;<br/>&gt; GZ</p><p>Yes!  But my own *personal* likes and dislikes, I believe, are less<br/>important than the fact that this was something *different* that I<br/>had never heard before!</p><p>JP</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: LeftaFunk?</h1><h3><a id=712 href="#712">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>8/25/2001 9:34:20 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>jpehrson@... wrote:</p><p>&gt;<br/>&gt; I&apos;ve never heard anything quite like this... so that&apos;s got to be a<br/>&gt; compliment right there!<br/>&gt;</p><p>Thanks for the &quot;compliment&quot;. But did you LIKE it?</p><p>GZ</p></div><h3><a id=713 href="#713">🔗</a>jpehrson@...</h3><span>8/26/2001 8:43:14 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In MakeMicroMusic@y..., George Zelenz &lt;ploo@m...&gt; wrote:</p><p><a href="/makemicromusic/topicId_712.html#712">/makemicromusic/topicId_712.html#712</a></p><p>&gt;<br/>&gt;<br/>&gt; jpehrson@r... wrote:<br/>&gt;<br/>&gt; &gt;<br/>&gt; &gt; I&apos;ve never heard anything quite like this... so that&apos;s got to be a<br/>&gt; &gt; compliment right there!<br/>&gt; &gt;<br/>&gt;<br/>&gt; Thanks for the &quot;compliment&quot;. But did you LIKE it?<br/>&gt;<br/>&gt; GZ</p><p>Yes!  But my own *personal* likes and dislikes, I believe, are less<br/>important than the fact that this was something *different* that I<br/>had never heard before!</p><p>JP</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

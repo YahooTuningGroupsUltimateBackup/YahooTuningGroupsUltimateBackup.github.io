@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>Microtuning for the masses!</h1><h3><a id=7384 href="#7384">🔗</a>gbreed@cix.compulink.co.uk (Graham Breed)</h3><span>4/7/1998 10:20:00 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>My MIDI Relay program, which runs in Windows and adds pitch bends in real<br>time, is now available from www.cix.co.uk/~gbreed/software.htm for free.<br>Yes, no money, no address in North America and no fax machine required.<br><br>I've also put a few documents on that website, but nothing that should be<br>new to anyone who's been paying attention to this list for the past year.<br>Really, there should be some MIDI files to illustrate the scales, and<br>maybe in a few weeks there will be.</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>Microtuning for the masses!</h1><h3><a id=7384 href="#7384">🔗</a>gbreed@cix.compulink.co.uk (Graham Breed)</h3><span>4/7/1998 10:20:00 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>My MIDI Relay program, which runs in Windows and adds pitch bends in real<br>time, is now available from www.cix.co.uk/~gbreed/software.htm for free.<br>Yes, no money, no address in North America and no fax machine required.<br><br>I've also put a few documents on that website, but nothing that should be<br>new to anyone who's been paying attention to this list for the past year.<br>Really, there should be some MIDI files to illustrate the scales, and<br>maybe in a few weeks there will be.</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

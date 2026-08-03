@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Unfair Tilt Toward Israel</h1><h3><a id=6206 href="#6206">🔗</a>John A. deLaubenfels &#x3C;jdl@...&#x3E;</h3><span>11/12/2003 3:55:19 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.washingtonpost.com/ac2/wp-dyn/A24513-2003Nov10?language=printer">http://www.washingtonpost.com/ac2/wp-dyn/A24513-2003Nov10?language=printer</a></p><p>&quot;Yet in precluding a serious public discussion of our Israel-Palestine policy, the liberal Democrats who are normally the champions of free speech are actually hurting the best interests of the United States, Israel and the Jewish people.&quot;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Unfair Tilt Toward Israel</h1><h3><a id=6206 href="#6206">🔗</a>John A. deLaubenfels &#x3C;jdl@...&#x3E;</h3><span>11/12/2003 3:55:19 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.washingtonpost.com/ac2/wp-dyn/A24513-2003Nov10?language=printer">http://www.washingtonpost.com/ac2/wp-dyn/A24513-2003Nov10?language=printer</a></p><p>&quot;Yet in precluding a serious public discussion of our Israel-Palestine policy, the liberal Democrats who are normally the champions of free speech are actually hurting the best interests of the United States, Israel and the Jewish people.&quot;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

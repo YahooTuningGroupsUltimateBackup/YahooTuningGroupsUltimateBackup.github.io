@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: [tuning] Re: Rousseau - was "wolf" pack, rat pack [Isacoff]</h1><h3><a id=35545 href="#35545">🔗</a>Alison Monteith &#x3C;alison.monteith3@which.net&#x3E;</h3><span>3/11/2002 10:29:05 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="mailto:manuel.op.de.coul@eon-benelux.com">manuel.op.de.coul@eon-benelux.com</a> wrote:</p><p>&gt; &gt;The Swiss Rousseau was a major promoter of irregular temperament.<br/>&gt;<br/>&gt; He was French, like his parents, but born in Switzerland.<br/>&gt;<br/>&gt; Manuel<br/>&gt;</p><p>For what it&apos;s worth some claim he was a frotteur and a bit of a perv, not that that ever clouded<br/>anyone&apos;s musical judgement.</p><p>Best Wishes</p></div><h3><a id=35561 href="#35561">🔗</a>genewardsmith &#x3C;genewardsmith@juno.com&#x3E;</h3><span>3/11/2002 1:59:52 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning@y..., Alison Monteith &lt;alison.monteith3@w...&gt; wrote:</p><p>&gt; For what it&apos;s worth some claim he was a frotteur and a bit of a perv, not that that ever clouded<br/>&gt; anyone&apos;s musical judgement.</p><p>Rosseau in his &quot;Confessions&quot; tells the whole world he is a perv; it&apos;s a remarkable read.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: [tuning] Re: Rousseau - was "wolf" pack, rat pack [Isacoff]</h1><h3><a id=35545 href="#35545">🔗</a>Alison Monteith &#x3C;alison.monteith3@which.net&#x3E;</h3><span>3/11/2002 10:29:05 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="mailto:manuel.op.de.coul@eon-benelux.com">manuel.op.de.coul@eon-benelux.com</a> wrote:</p><p>&gt; &gt;The Swiss Rousseau was a major promoter of irregular temperament.<br/>&gt;<br/>&gt; He was French, like his parents, but born in Switzerland.<br/>&gt;<br/>&gt; Manuel<br/>&gt;</p><p>For what it&apos;s worth some claim he was a frotteur and a bit of a perv, not that that ever clouded<br/>anyone&apos;s musical judgement.</p><p>Best Wishes</p></div><h3><a id=35561 href="#35561">🔗</a>genewardsmith &#x3C;genewardsmith@juno.com&#x3E;</h3><span>3/11/2002 1:59:52 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In tuning@y..., Alison Monteith &lt;alison.monteith3@w...&gt; wrote:</p><p>&gt; For what it&apos;s worth some claim he was a frotteur and a bit of a perv, not that that ever clouded<br/>&gt; anyone&apos;s musical judgement.</p><p>Rosseau in his &quot;Confessions&quot; tells the whole world he is a perv; it&apos;s a remarkable read.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

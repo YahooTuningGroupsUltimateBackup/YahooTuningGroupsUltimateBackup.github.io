@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: Digest Number 426</h1><h3><a id=6722 href="#6722">🔗</a>John Starrett &#x3C;jstarret@xxxx.xxxxxxxx.xxxx&#x3E;</h3><span>12/7/1999 1:53:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Dante-<br/>&#x9;Try the second (righthand) option on <a href="http://live365.com">live365.com</a>. They state on<br/>their site that they are making available (for a limited time) 365M of<br/>server space for your internet radio programming. If all else fails, I<br/>have some server space and would be willing to post some .mp3 files.<br/><a href="http://Mp3.com">Mp3.com</a> is _really_ easy though. Check out Johnny Lobster, Amit Lissack,<br/>Prent Rogers, Neil Haverstick, Ralph Jarzombek and Jeff Harrington as<br/>examples of microtonal music on <a href="http://mp3.com">mp3.com</a>. Have I missed anyone?</p><p>John Starrett<br/><a href="http://www-math.cudenver.edu/~jstarret/microtone.html">http://www-math.cudenver.edu/~jstarret/microtone.html</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: Digest Number 426</h1><h3><a id=6722 href="#6722">🔗</a>John Starrett &#x3C;jstarret@xxxx.xxxxxxxx.xxxx&#x3E;</h3><span>12/7/1999 1:53:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Dante-<br/>&#x9;Try the second (righthand) option on <a href="http://live365.com">live365.com</a>. They state on<br/>their site that they are making available (for a limited time) 365M of<br/>server space for your internet radio programming. If all else fails, I<br/>have some server space and would be willing to post some .mp3 files.<br/><a href="http://Mp3.com">Mp3.com</a> is _really_ easy though. Check out Johnny Lobster, Amit Lissack,<br/>Prent Rogers, Neil Haverstick, Ralph Jarzombek and Jeff Harrington as<br/>examples of microtonal music on <a href="http://mp3.com">mp3.com</a>. Have I missed anyone?</p><p>John Starrett<br/><a href="http://www-math.cudenver.edu/~jstarret/microtone.html">http://www-math.cudenver.edu/~jstarret/microtone.html</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

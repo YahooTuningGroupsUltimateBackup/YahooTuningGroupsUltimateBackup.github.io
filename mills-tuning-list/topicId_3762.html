@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>scary DSP system is right!</h1><h3><a id=8119 href="#8119">🔗</a>Rick Sanford &#x3C;76122.2237@...&#x3E;</h3><span>6/18/1998 10:27:51 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Hi Drew:<br><br>Can we find out:<br>1) how many of these systems there are in use today?<br>2) where the company is and how long they've been in business?<br>3) how large their capitalization is?<br><br>Or is this one of those 'new' companies?<br><br>Rick S.</div><h3><a id=8123 href="#8123">🔗</a>Gary Morrison &#x3C;mr88cet@...&#x3E;</h3><span>6/18/1998 5:53:33 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Rick Sanford wrote:<br>> You talk about 10TET (and my own forum CD piece) as Decatonic.<br>> That's like saying Octatonic is 8TET, right?<br><br>   I'll agree with that, but I didn't realize that, in commenting on a<br>mention of 7:4s that I was implying anything about any music you wrote. <br>I was just commenting on my early exposure to 7:4.  <br><br><br><br><br>> But your stuff was, in fact, 120cent (one size) 10TET?<br><br>   Yes.  Even though I did my work 10TET earlier on, it's pretty clear<br>that both Elaine Mullen (formerly Elaine Walker) and Bill Sethares have<br>surpassed my usage of it.</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>scary DSP system is right!</h1><h3><a id=8119 href="#8119">🔗</a>Rick Sanford &#x3C;76122.2237@...&#x3E;</h3><span>6/18/1998 10:27:51 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>Hi Drew:<br><br>Can we find out:<br>1) how many of these systems there are in use today?<br>2) where the company is and how long they've been in business?<br>3) how large their capitalization is?<br><br>Or is this one of those 'new' companies?<br><br>Rick S.</div><h3><a id=8123 href="#8123">🔗</a>Gary Morrison &#x3C;mr88cet@...&#x3E;</h3><span>6/18/1998 5:53:33 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>Rick Sanford wrote:<br>> You talk about 10TET (and my own forum CD piece) as Decatonic.<br>> That's like saying Octatonic is 8TET, right?<br><br>   I'll agree with that, but I didn't realize that, in commenting on a<br>mention of 7:4s that I was implying anything about any music you wrote. <br>I was just commenting on my early exposure to 7:4.  <br><br><br><br><br>> But your stuff was, in fact, 120cent (one size) 10TET?<br><br>   Yes.  Even though I did my work 10TET earlier on, it's pretty clear<br>that both Elaine Mullen (formerly Elaine Walker) and Bill Sethares have<br>surpassed my usage of it.</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

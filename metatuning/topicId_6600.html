@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Voynich update</h1><h3><a id=6600 href="#6600">🔗</a>Carl Lumma &#x3C;clumma@...&#x3E;</h3><span>1/2/2004 4:07:09 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.nature.com/nsu/031215/031215-5.html">http://www.nature.com/nsu/031215/031215-5.html</a></p><p>-Carl</p></div><h3><a id=6661 href="#6661">🔗</a>monz &#x3C;monz@...&#x3E;</h3><span>1/9/2004 1:50:31 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>hi Carl,</p><p>--- In <a href="mailto:metatuning@yahoogroups.com">metatuning@yahoogroups.com</a>, &quot;Carl Lumma&quot; &lt;clumma@y...&gt; wrote:</p><p>&gt; <a href="http://www.nature.com/nsu/031215/031215-5.html">http://www.nature.com/nsu/031215/031215-5.html</a></p><p>thanks!  i&apos;ve been interested in the Voynich manuscript<br/>ever since i first found out about it on the internet<br/>a few years ago.</p><p>-monz</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Voynich update</h1><h3><a id=6600 href="#6600">🔗</a>Carl Lumma &#x3C;clumma@...&#x3E;</h3><span>1/2/2004 4:07:09 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.nature.com/nsu/031215/031215-5.html">http://www.nature.com/nsu/031215/031215-5.html</a></p><p>-Carl</p></div><h3><a id=6661 href="#6661">🔗</a>monz &#x3C;monz@...&#x3E;</h3><span>1/9/2004 1:50:31 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>hi Carl,</p><p>--- In <a href="mailto:metatuning@yahoogroups.com">metatuning@yahoogroups.com</a>, &quot;Carl Lumma&quot; &lt;clumma@y...&gt; wrote:</p><p>&gt; <a href="http://www.nature.com/nsu/031215/031215-5.html">http://www.nature.com/nsu/031215/031215-5.html</a></p><p>thanks!  i&apos;ve been interested in the Voynich manuscript<br/>ever since i first found out about it on the internet<br/>a few years ago.</p><p>-monz</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

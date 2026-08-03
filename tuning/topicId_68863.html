@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>corigliano quartertones</h1><h3><a id=68863 href="#68863">🔗</a>Afmmjr@aol.com</h3><span>1/11/2007 6:13:50 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Jacob,</p><p>Yes, I have heard the recording and you are correct.  The tuning for the pianos is too close.  I&apos;m not sure it is consistently so.  It is disappointing, no, it is released in that condition.</p><p>As many here know, a piano tuned a quartertone lower will often rise up in pitch soon after.  Some tuners plan for the amount of rise....and they can be wrong.   Guess this means Mr. C. doesn&apos;t hear any difference.</p><p>Johnny<br/>________________________________________________________________________<br/>Check out the new AOL.  Most comprehensive set of free safety and security tools, free access to millions of high-quality videos from across the web, free AOL Mail and more.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>corigliano quartertones</h1><h3><a id=68863 href="#68863">🔗</a>Afmmjr@aol.com</h3><span>1/11/2007 6:13:50 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi Jacob,</p><p>Yes, I have heard the recording and you are correct.  The tuning for the pianos is too close.  I&apos;m not sure it is consistently so.  It is disappointing, no, it is released in that condition.</p><p>As many here know, a piano tuned a quartertone lower will often rise up in pitch soon after.  Some tuners plan for the amount of rise....and they can be wrong.   Guess this means Mr. C. doesn&apos;t hear any difference.</p><p>Johnny<br/>________________________________________________________________________<br/>Check out the new AOL.  Most comprehensive set of free safety and security tools, free access to millions of high-quality videos from across the web, free AOL Mail and more.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

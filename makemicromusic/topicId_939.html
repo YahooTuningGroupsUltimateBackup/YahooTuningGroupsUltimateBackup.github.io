@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: Sleep</h1><h3><a id=939 href="#939">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>10/5/2001 10:49:39 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Jon,</p><p>Thanks for the suggestion. Actually had sleep interrupted a fair amount<br/>recently for one reason and another and also been putting it as<br/>low priority, so you are right on about that.</p><p>Possibly some recent bugs may indeed have been because of inattentativeness<br/>because of that, and the fresher and more alert one is the less likely<br/>- looking at the type of bug they have been, such as forgetting to do<br/>something or other. I also tend to work long hours and forget to take<br/>breaks, being so interested in it all.</p><p>However, p.c.s get a lot done, and they spend the vast majority of the<br/>time asleep, even when pretty &quot;busy&quot; - I understand that it is very rare<br/>that it actually uses the processor to capacity continuously for any<br/>length of time, even if it is ultra short interrupted sleep of a few<br/>milliseconds at a time, or when it is at its most busy, sleeps<br/>perhaps measured in millionths of a second, or whatever it is.</p><p>Perhaps one can learn from that.</p><p>I plan to set it to highest priority, as you say.</p><p>Robert</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: Sleep</h1><h3><a id=939 href="#939">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>10/5/2001 10:49:39 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Jon,</p><p>Thanks for the suggestion. Actually had sleep interrupted a fair amount<br/>recently for one reason and another and also been putting it as<br/>low priority, so you are right on about that.</p><p>Possibly some recent bugs may indeed have been because of inattentativeness<br/>because of that, and the fresher and more alert one is the less likely<br/>- looking at the type of bug they have been, such as forgetting to do<br/>something or other. I also tend to work long hours and forget to take<br/>breaks, being so interested in it all.</p><p>However, p.c.s get a lot done, and they spend the vast majority of the<br/>time asleep, even when pretty &quot;busy&quot; - I understand that it is very rare<br/>that it actually uses the processor to capacity continuously for any<br/>length of time, even if it is ultra short interrupted sleep of a few<br/>milliseconds at a time, or when it is at its most busy, sleeps<br/>perhaps measured in millionths of a second, or whatever it is.</p><p>Perhaps one can learn from that.</p><p>I plan to set it to highest priority, as you say.</p><p>Robert</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

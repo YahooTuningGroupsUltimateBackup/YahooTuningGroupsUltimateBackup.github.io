@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>"Being Systematic About Subgroups" - Oops!</h1><h3><a id=104724 href="#104724">🔗</a>Mike Battaglia &#x3C;battaglia01@...&#x3E;</h3><span>6/4/2012 8:50:17 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi all - I accidentally posted a large, extremely mathematical post<br/>called &quot;Being Systematic About Subgroups&quot; here by mistake - it should<br/>be on tuning-math. I&apos;ve deleted it, but for those who got it and are<br/>like &quot;wtf is all this math?&quot; and are wondering what it&apos;s doing here,<br/>this is what happened.</p><p>The tuning-math post in question, for those interested, is actually here:<br/><a href="/tuning-math/message/20720">/tuning-math/message/20720</a></p><p>Thanks,<br/>Mike</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>"Being Systematic About Subgroups" - Oops!</h1><h3><a id=104724 href="#104724">🔗</a>Mike Battaglia &#x3C;battaglia01@...&#x3E;</h3><span>6/4/2012 8:50:17 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi all - I accidentally posted a large, extremely mathematical post<br/>called &quot;Being Systematic About Subgroups&quot; here by mistake - it should<br/>be on tuning-math. I&apos;ve deleted it, but for those who got it and are<br/>like &quot;wtf is all this math?&quot; and are wondering what it&apos;s doing here,<br/>this is what happened.</p><p>The tuning-math post in question, for those interested, is actually here:<br/><a href="/tuning-math/message/20720">/tuning-math/message/20720</a></p><p>Thanks,<br/>Mike</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

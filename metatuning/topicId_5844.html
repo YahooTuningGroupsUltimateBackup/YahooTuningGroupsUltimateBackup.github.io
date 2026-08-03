@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Almost there, for Carl and Joe...</h1><h3><a id=5844 href="#5844">🔗</a>Jon Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>9/20/2003 10:34:59 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Damn!</p><p>It is so close, but you can&apos;t adjust recording levels. However, since the firmware is upgradeable, it might be a feature to come? I don&apos;t know, but if companies are putting things like this out right now, the sub-$500 digital recorder for Joe must be right around the corner (above-$500 ones already exist...):</p><p><a href="http://tinyurl.com/o3jl">http://tinyurl.com/o3jl</a></p><p>BTW, Carl, you ought to check out OutwardSound - if they have a walk-in policy (i.e. if they aren&apos;t just a web business) they&apos;re on Alcatraz in Berkeley.</p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Almost there, for Carl and Joe...</h1><h3><a id=5844 href="#5844">🔗</a>Jon Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>9/20/2003 10:34:59 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Damn!</p><p>It is so close, but you can&apos;t adjust recording levels. However, since the firmware is upgradeable, it might be a feature to come? I don&apos;t know, but if companies are putting things like this out right now, the sub-$500 digital recorder for Joe must be right around the corner (above-$500 ones already exist...):</p><p><a href="http://tinyurl.com/o3jl">http://tinyurl.com/o3jl</a></p><p>BTW, Carl, you ought to check out OutwardSound - if they have a walk-in policy (i.e. if they aren&apos;t just a web business) they&apos;re on Alcatraz in Berkeley.</p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

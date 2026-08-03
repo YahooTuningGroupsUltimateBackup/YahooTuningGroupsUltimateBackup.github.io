@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>undefined</h1><h3><a id=37048 href="#37048">🔗</a>Christopher Bailey &#x3C;cb202@columbia.edu&#x3E;</h3><span>5/26/2002 9:37:16 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;<br/>&gt; Message: 5<br/>&gt;    Date: Sun, 26 May 2002 10:37:59 -0400<br/>&gt;    From: David Beardsley &lt;<a href="mailto:davidbeardsley@biink.com">davidbeardsley@biink.com</a>&gt;<br/>&gt; Subject: Re: AFMM show<br/>&gt;<br/>&gt; Thanks for the review. How was Patrick Grant&apos;s piece?</p><p>That was fun.  Kind of reminded me of a kitchen utensil version of<br/>Varese&apos;s Ionisation.</p><p>cb</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>undefined</h1><h3><a id=37048 href="#37048">🔗</a>Christopher Bailey &#x3C;cb202@columbia.edu&#x3E;</h3><span>5/26/2002 9:37:16 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt;<br/>&gt; Message: 5<br/>&gt;    Date: Sun, 26 May 2002 10:37:59 -0400<br/>&gt;    From: David Beardsley &lt;<a href="mailto:davidbeardsley@biink.com">davidbeardsley@biink.com</a>&gt;<br/>&gt; Subject: Re: AFMM show<br/>&gt;<br/>&gt; Thanks for the review. How was Patrick Grant&apos;s piece?</p><p>That was fun.  Kind of reminded me of a kitchen utensil version of<br/>Varese&apos;s Ionisation.</p><p>cb</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>pitch-tracking software</h1><h3><a id=7485 href="#7485">🔗</a>monz@juno.com (Joseph L Monzo)</h3><span>4/17/1998 4:52:17 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>> Alexandre Enkerli:<br>><br>> Hello all.<br>> I'm wondering about other people's experience<br>> with pitch-tracking software. For example, Wildcat<br>> Canyon claims that their Autoscore Pro 2.0 package<br>> is able to track pitch-bend. How accurate is it?  Also,<br>> there are a couple of Mac programs that track pitch.<br>> Some of them are not that bad. And some people<br>> have interesting ideas such as VocalLab, a pitch-<br>> training program that displays variation to 12ET <br>> notes.<br>><br><br>I'm particularly interested in this kind of thing.  Info on<br>websites, addresses, etc. would be appreciated.<br> <br>   Joseph L. Monzo<br>    monz@juno.com<br>    4940 Rubicam St., Philadelphia, PA 19144-1809, USA<br>    phone 215 849 6723<br><br>_____________________________________________________________________<br>You don't need to buy Internet access to use free Internet e-mail.<br>Get completely free e-mail from Juno at http://www.juno.com<br>Or call Juno at (800) 654-JUNO [654-5866]</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>pitch-tracking software</h1><h3><a id=7485 href="#7485">🔗</a>monz@juno.com (Joseph L Monzo)</h3><span>4/17/1998 4:52:17 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>> Alexandre Enkerli:<br>><br>> Hello all.<br>> I'm wondering about other people's experience<br>> with pitch-tracking software. For example, Wildcat<br>> Canyon claims that their Autoscore Pro 2.0 package<br>> is able to track pitch-bend. How accurate is it?  Also,<br>> there are a couple of Mac programs that track pitch.<br>> Some of them are not that bad. And some people<br>> have interesting ideas such as VocalLab, a pitch-<br>> training program that displays variation to 12ET <br>> notes.<br>><br><br>I'm particularly interested in this kind of thing.  Info on<br>websites, addresses, etc. would be appreciated.<br> <br>   Joseph L. Monzo<br>    monz@juno.com<br>    4940 Rubicam St., Philadelphia, PA 19144-1809, USA<br>    phone 215 849 6723<br><br>_____________________________________________________________________<br>You don't need to buy Internet access to use free Internet e-mail.<br>Get completely free e-mail from Juno at http://www.juno.com<br>Or call Juno at (800) 654-JUNO [654-5866]</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Josh McDermott quote to newspaper on dogs+consonance</h1><h3><a id=19937 href="#19937">🔗</a>WarrenS &#x3C;warren.wds@gmail.com&#x3E;</h3><span>11/2/2011 1:30:44 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&quot;I did one experiment in which dogs responded pretty differently to musical stimuli than did humans, in that they did not appear to prefer consonant to dissonant musical intervals. But it was just one experiment, using a particular method, and there is certainly the need for more work before we can make any definitive claims. &quot;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>Josh McDermott quote to newspaper on dogs+consonance</h1><h3><a id=19937 href="#19937">🔗</a>WarrenS &#x3C;warren.wds@gmail.com&#x3E;</h3><span>11/2/2011 1:30:44 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&quot;I did one experiment in which dogs responded pretty differently to musical stimuli than did humans, in that they did not appear to prefer consonant to dissonant musical intervals. But it was just one experiment, using a particular method, and there is certainly the need for more work before we can make any definitive claims. &quot;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

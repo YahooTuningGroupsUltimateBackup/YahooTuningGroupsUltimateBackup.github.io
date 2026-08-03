@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Medicine Wheel 14 edo with Rhythm Guitar, Bass and Synthesised Drums</h1><h3><a id=23421 href="#23421">🔗</a>Mark &#x3C;mark.barnes3@...&#x3E;</h3><span>10/19/2010 2:25:16 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.youtube.com/watch?v=mHyaW1fVWsg">http://www.youtube.com/watch?v=mHyaW1fVWsg</a></p></div><h3><a id=23428 href="#23428">🔗</a>ixlramp &#x3C;ixlramp@...&#x3E;</h3><span>10/20/2010 1:36:53 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Excellent video!</p><p>Mat Cooper</p></div><h3><a id=23429 href="#23429">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>10/20/2010 3:00:20 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>enjoyed!!</p><p>It struck me as a microtonal Kinks if I had to describe the sound. Very<br/>cool!</p><p>On Tue, Oct 19, 2010 at 5:25 PM, Mark &lt;<a href="mailto:mark.barnes3@ntlworld.com">mark.barnes3@ntlworld.com</a>&gt; wrote:</p><p>&gt;<br/>&gt;<br/>&gt; <a href="http://www.youtube.com/watch?v=mHyaW1fVWsg">http://www.youtube.com/watch?v=mHyaW1fVWsg</a><br/>&gt;<br/>&gt;<br/>&gt;</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Medicine Wheel 14 edo with Rhythm Guitar, Bass and Synthesised Drums</h1><h3><a id=23421 href="#23421">🔗</a>Mark &#x3C;mark.barnes3@...&#x3E;</h3><span>10/19/2010 2:25:16 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.youtube.com/watch?v=mHyaW1fVWsg">http://www.youtube.com/watch?v=mHyaW1fVWsg</a></p></div><h3><a id=23428 href="#23428">🔗</a>ixlramp &#x3C;ixlramp@...&#x3E;</h3><span>10/20/2010 1:36:53 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Excellent video!</p><p>Mat Cooper</p></div><h3><a id=23429 href="#23429">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>10/20/2010 3:00:20 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>enjoyed!!</p><p>It struck me as a microtonal Kinks if I had to describe the sound. Very<br/>cool!</p><p>On Tue, Oct 19, 2010 at 5:25 PM, Mark &lt;<a href="mailto:mark.barnes3@ntlworld.com">mark.barnes3@ntlworld.com</a>&gt; wrote:</p><p>&gt;<br/>&gt;<br/>&gt; <a href="http://www.youtube.com/watch?v=mHyaW1fVWsg">http://www.youtube.com/watch?v=mHyaW1fVWsg</a><br/>&gt;<br/>&gt;<br/>&gt;</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

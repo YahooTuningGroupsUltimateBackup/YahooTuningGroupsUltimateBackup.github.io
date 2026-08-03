@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: microtonal firebird</h1><h3><a id=7196 href="#7196">🔗</a>Rick McGowan &#x3C;rick@...&#x3E;</h3><span>7/20/2004 3:15:02 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hmmm... Can we possibly take meta-discussion of board formats to another<br/>forum, or off-list? I would like to keep only discussions of tuning stuff,<br/>and the future home of *this* forum here...</p><p>BTW, I signed up for the Google thing, if that&apos;s where we&apos;re all going...<br/>but frankly, I still think this forum should be left as-is and we should<br/>all stay here.</p><p>&#x9;Rick</p></div><h3><a id=7197 href="#7197">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>7/20/2004 3:23:11 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Rick,</p><p>{you wrote...}<br/>&gt;Hmmm... Can we possibly take meta-discussion of board formats to another<br/>&gt;forum, or off-list? I would like to keep only discussions of tuning stuff,<br/>&gt;and the future home of *this* forum here...</p><p>I&apos;d like to second that, with whatever weight I still have left! One last-chance to attempt to stay focused...</p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: microtonal firebird</h1><h3><a id=7196 href="#7196">🔗</a>Rick McGowan &#x3C;rick@...&#x3E;</h3><span>7/20/2004 3:15:02 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hmmm... Can we possibly take meta-discussion of board formats to another<br/>forum, or off-list? I would like to keep only discussions of tuning stuff,<br/>and the future home of *this* forum here...</p><p>BTW, I signed up for the Google thing, if that&apos;s where we&apos;re all going...<br/>but frankly, I still think this forum should be left as-is and we should<br/>all stay here.</p><p>&#x9;Rick</p></div><h3><a id=7197 href="#7197">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>7/20/2004 3:23:11 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Rick,</p><p>{you wrote...}<br/>&gt;Hmmm... Can we possibly take meta-discussion of board formats to another<br/>&gt;forum, or off-list? I would like to keep only discussions of tuning stuff,<br/>&gt;and the future home of *this* forum here...</p><p>I&apos;d like to second that, with whatever weight I still have left! One last-chance to attempt to stay focused...</p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

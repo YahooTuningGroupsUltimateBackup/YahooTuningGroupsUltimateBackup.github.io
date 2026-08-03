@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>MTO = Music Theory Online</h1><h3><a id=4731 href="#4731">🔗</a>jnagy2002 &#x3C;jnagy2002@...&#x3E;</h3><span>5/27/2003 7:47:59 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Dear Group,</p><p>Eytan Agmon&apos;s name has come up in one of our threads.<br/>So<br/>you<br/>can<br/>read<br/>up<br/>on<br/>him<br/>if<br/>you<br/>like<br/>at:</p><p><a href="http://smt.ucsb.edu/mto/issues/mto.96.2.1/mto.96.2.1.rothgeb.html">http://smt.ucsb.edu/mto/issues/mto.96.2.1/mto.96.2.1.rothgeb.html</a></p><p><a href="http://smt.ucsb.edu/mto/issues/mto.96.2.3/mto.96.2.3.agmon.html">http://smt.ucsb.edu/mto/issues/mto.96.2.3/mto.96.2.3.agmon.html</a></p><p>If go to the MTO home page, half way down on the left is a search<br/>engine for previoous issues.</p><p>Best Wishes,<br/>Jim</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>MTO = Music Theory Online</h1><h3><a id=4731 href="#4731">🔗</a>jnagy2002 &#x3C;jnagy2002@...&#x3E;</h3><span>5/27/2003 7:47:59 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Dear Group,</p><p>Eytan Agmon&apos;s name has come up in one of our threads.<br/>So<br/>you<br/>can<br/>read<br/>up<br/>on<br/>him<br/>if<br/>you<br/>like<br/>at:</p><p><a href="http://smt.ucsb.edu/mto/issues/mto.96.2.1/mto.96.2.1.rothgeb.html">http://smt.ucsb.edu/mto/issues/mto.96.2.1/mto.96.2.1.rothgeb.html</a></p><p><a href="http://smt.ucsb.edu/mto/issues/mto.96.2.3/mto.96.2.3.agmon.html">http://smt.ucsb.edu/mto/issues/mto.96.2.3/mto.96.2.3.agmon.html</a></p><p>If go to the MTO home page, half way down on the left is a search<br/>engine for previoous issues.</p><p>Best Wishes,<br/>Jim</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Just Intonation post</h1><h3><a id=28074 href="#28074">🔗</a>Jay Random &#x3C;cortaigne@...&#x3E;</h3><span>6/27/2011 2:48:34 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>(I realize most people on this list are probably also on the Alternate Tunings list and/or the Xenharmonic Alliance on Facebook, but in case anyone isn&apos;t:) I&apos;ve just written a post on just intonation, which of course would be elementary review for pretty much everyone here, but if anyone feels like reading through it to see whether I botched anything terribly, I&apos;d appreciate any polite feedback!</p><p><a href="http://miskatonal.blogspot.com/2011/06/just-intonation.html">http://miskatonal.blogspot.com/2011/06/just-intonation.html</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Just Intonation post</h1><h3><a id=28074 href="#28074">🔗</a>Jay Random &#x3C;cortaigne@...&#x3E;</h3><span>6/27/2011 2:48:34 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>(I realize most people on this list are probably also on the Alternate Tunings list and/or the Xenharmonic Alliance on Facebook, but in case anyone isn&apos;t:) I&apos;ve just written a post on just intonation, which of course would be elementary review for pretty much everyone here, but if anyone feels like reading through it to see whether I botched anything terribly, I&apos;d appreciate any polite feedback!</p><p><a href="http://miskatonal.blogspot.com/2011/06/just-intonation.html">http://miskatonal.blogspot.com/2011/06/just-intonation.html</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

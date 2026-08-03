@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>EGG flashbacks</h1><h3><a id=33436 href="#33436">🔗</a>paulerlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>1/29/2002 9:30:05 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>. . . Some years ago, a hasty second meeting with a reputed physics<br/>professor with so much to say . . . the first meeting, hours and<br/>hours on the history of physics in the 20th century, and his<br/>involvement with it . . . second meeting, so hasty, so many<br/>ideas . . . a totally crackpot theory of everything (or else totally<br/>revolutionary) . . . founded in research by a psychoacoustician,<br/>Peter Cariani.</p><p>Years of web searches . . . no sign of any such research . . . until<br/>now!</p><p><a href="http://homepage.mac.com/cariani/CarianiWebsite/JNMR2001.pdf">http://homepage.mac.com/cariani/CarianiWebsite/JNMR2001.pdf</a></p></div><h3><a id=33437 href="#33437">🔗</a>paulerlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>1/29/2002 9:32:11 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I wrote,</p><p>&gt;  a reputed physics professor</p><p>Meaning, he was reputedly a physics professor -- not meaning a<br/>physics professor of some repute!</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>EGG flashbacks</h1><h3><a id=33436 href="#33436">🔗</a>paulerlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>1/29/2002 9:30:05 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>. . . Some years ago, a hasty second meeting with a reputed physics<br/>professor with so much to say . . . the first meeting, hours and<br/>hours on the history of physics in the 20th century, and his<br/>involvement with it . . . second meeting, so hasty, so many<br/>ideas . . . a totally crackpot theory of everything (or else totally<br/>revolutionary) . . . founded in research by a psychoacoustician,<br/>Peter Cariani.</p><p>Years of web searches . . . no sign of any such research . . . until<br/>now!</p><p><a href="http://homepage.mac.com/cariani/CarianiWebsite/JNMR2001.pdf">http://homepage.mac.com/cariani/CarianiWebsite/JNMR2001.pdf</a></p></div><h3><a id=33437 href="#33437">🔗</a>paulerlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>1/29/2002 9:32:11 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I wrote,</p><p>&gt;  a reputed physics professor</p><p>Meaning, he was reputedly a physics professor -- not meaning a<br/>physics professor of some repute!</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

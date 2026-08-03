@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/crazy_music">back to list</a><h1>Huh?</h1><h3><a id=504 href="#504">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>7/16/2001 9:40:12 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi list,</p><p>i only sent that post once, but it&apos;s echoing or.......</p><p>GZ</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/crazy_music">back to list</a><h1>Huh?</h1><h3><a id=504 href="#504">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>7/16/2001 9:40:12 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi list,</p><p>i only sent that post once, but it&apos;s echoing or.......</p><p>GZ</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

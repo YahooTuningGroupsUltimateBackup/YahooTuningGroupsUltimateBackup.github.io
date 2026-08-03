@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>new music posted</h1><h3><a id=119 href="#119">🔗</a>John Starrett &#x3C;jstarret@...&#x3E;</h3><span>7/27/2001 4:20:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I have posted some new old music , and excerpt from Neil Haverstick&apos;s<br/>Boogie at Bebop flats. I am posting the whole piece to the Tuning<br/>Punks site at<br/><a href="http://artists.mp3s.com/artists/72/the_tuning_punks.html">http://artists.mp3s.com/artists/72/the_tuning_punks.html</a> It will take<br/>a couple of days for the song to be approved. Also, check out<br/><a href="http://www.spectralvoices.com/clips.htm">http://www.spectralvoices.com/clips.htm</a> for some cool micro sounds.</p></div><h3><a id=120 href="#120">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>7/27/2001 4:28:11 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In MakeMicroMusic@y..., &quot;John Starrett&quot; &lt;jstarret@c...&gt; wrote:<br/>&gt; I have posted some new old music , and excerpt from Neil<br/>Haverstick&apos;s<br/>&gt; Boogie at Bebop flats.</p><p>Sounds like Terje Rypdal on Saturn! This could be very popular among<br/>some avant-jazz types . . .</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>new music posted</h1><h3><a id=119 href="#119">🔗</a>John Starrett &#x3C;jstarret@...&#x3E;</h3><span>7/27/2001 4:20:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I have posted some new old music , and excerpt from Neil Haverstick&apos;s<br/>Boogie at Bebop flats. I am posting the whole piece to the Tuning<br/>Punks site at<br/><a href="http://artists.mp3s.com/artists/72/the_tuning_punks.html">http://artists.mp3s.com/artists/72/the_tuning_punks.html</a> It will take<br/>a couple of days for the song to be approved. Also, check out<br/><a href="http://www.spectralvoices.com/clips.htm">http://www.spectralvoices.com/clips.htm</a> for some cool micro sounds.</p></div><h3><a id=120 href="#120">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>7/27/2001 4:28:11 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In MakeMicroMusic@y..., &quot;John Starrett&quot; &lt;jstarret@c...&gt; wrote:<br/>&gt; I have posted some new old music , and excerpt from Neil<br/>Haverstick&apos;s<br/>&gt; Boogie at Bebop flats.</p><p>Sounds like Terje Rypdal on Saturn! This could be very popular among<br/>some avant-jazz types . . .</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

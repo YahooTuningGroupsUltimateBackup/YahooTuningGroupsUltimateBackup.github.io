@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>undefined</h1><h3><a id=29247 href="#29247">🔗</a>kraiggrady@...</h3><span>9/11/2013 8:20:48 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The Archives of Anaphoria is pleased to present its first release in 8 years<br/> IN A PENTAGONAL ROOM<br/> Performed by Clocks and Clouds<br/> Kraig Grady Meta-Slendro vibraphone<br/> Terumi Narushima Meta-Slendro organ<br/><a href="http://anaphoria.com/music.html">http://anaphoria.com/music.html</a><br/> IN A PENTAGONAL ROOM is the first CD of microtonal performance duo CLOCKS AND CLOUDS. The title refers to the unique five-sided reverberation chamber in which the recordings are made. The shape and surface of the room produce sounds and decays that last as long as 12 seconds enhancing the unique sounds of the duo&apos;s specially tuned instruments. The interaction of harmonics produced by the Meta-Slendro vibraphone and organ is captured via a special five microphone setup, resulting in what will probably be considered the definitive recording of these instruments. The album is totally acoustic and free of overdubs or enhancement. Even equalization is by-passed in order to retain the high quality of the original sounds.<br/> Dawn Crossing of the Bridge- Beginning Excerpt available here<br/><a href="http://anaphoria.com/music.html">http://anaphoria.com/music.html</a><br/>,&apos;,&apos;,&apos;,Kraig Grady,&apos;,&apos;,&apos;,<br/>&apos;&apos;&apos;&apos;&apos;&apos;&apos;North/Western Hemisphere:<br/>North American Embassy of Anaphoria island<br/>&apos;&apos;&apos;&apos;&apos;&apos;&apos;South/Eastern Hemisphere:<br/>Austronesian Outpost of Anaphoria<br/>&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>undefined</h1><h3><a id=29247 href="#29247">🔗</a>kraiggrady@...</h3><span>9/11/2013 8:20:48 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The Archives of Anaphoria is pleased to present its first release in 8 years<br/> IN A PENTAGONAL ROOM<br/> Performed by Clocks and Clouds<br/> Kraig Grady Meta-Slendro vibraphone<br/> Terumi Narushima Meta-Slendro organ<br/><a href="http://anaphoria.com/music.html">http://anaphoria.com/music.html</a><br/> IN A PENTAGONAL ROOM is the first CD of microtonal performance duo CLOCKS AND CLOUDS. The title refers to the unique five-sided reverberation chamber in which the recordings are made. The shape and surface of the room produce sounds and decays that last as long as 12 seconds enhancing the unique sounds of the duo&apos;s specially tuned instruments. The interaction of harmonics produced by the Meta-Slendro vibraphone and organ is captured via a special five microphone setup, resulting in what will probably be considered the definitive recording of these instruments. The album is totally acoustic and free of overdubs or enhancement. Even equalization is by-passed in order to retain the high quality of the original sounds.<br/> Dawn Crossing of the Bridge- Beginning Excerpt available here<br/><a href="http://anaphoria.com/music.html">http://anaphoria.com/music.html</a><br/>,&apos;,&apos;,&apos;,Kraig Grady,&apos;,&apos;,&apos;,<br/>&apos;&apos;&apos;&apos;&apos;&apos;&apos;North/Western Hemisphere:<br/>North American Embassy of Anaphoria island<br/>&apos;&apos;&apos;&apos;&apos;&apos;&apos;South/Eastern Hemisphere:<br/>Austronesian Outpost of Anaphoria<br/>&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,&apos;,</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

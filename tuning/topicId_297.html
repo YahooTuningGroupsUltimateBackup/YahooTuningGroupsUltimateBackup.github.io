@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>email oddness</h1><h3><a id=297 href="#297">🔗</a>Dan Stearns &#x3C;stearns@xxxxxxx.xxxx&#x3E;</h3><span>1/11/1999 8:45:47 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Experiencing some electronic mail oddness:</p><p>Sent a post at 9:04... Got it back at 10:23, then again at 10:56....</p><p>Anybody know what the problem might be?</p><p>Dan</p></div><h3><a id=315 href="#315">🔗</a>aloe@xxx.xxx</h3><span>1/13/1999 10:56:38 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>At 11:45 PM 1/11/99 -0500, Dan Stearns wrote:<br/>&gt;From: &quot;Dan Stearns&quot; &lt;<a href="mailto:stearns@capecod.net">stearns@capecod.net</a>&gt;<br/>&gt;<br/>&gt;Experiencing some electronic mail oddness:<br/>&gt;<br/>&gt;Sent a post at 9:04... Got it back at 10:23, then again at 10:56....<br/>&gt;<br/>&gt;Anybody know what the problem might be?</p><p>An unrealistic expectation of technological consistency?</p><p>--Charlie Jordan &lt;<a href="http://www.rev.net/~aloe/music">http://www.rev.net/~aloe/music</a>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>email oddness</h1><h3><a id=297 href="#297">🔗</a>Dan Stearns &#x3C;stearns@xxxxxxx.xxxx&#x3E;</h3><span>1/11/1999 8:45:47 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Experiencing some electronic mail oddness:</p><p>Sent a post at 9:04... Got it back at 10:23, then again at 10:56....</p><p>Anybody know what the problem might be?</p><p>Dan</p></div><h3><a id=315 href="#315">🔗</a>aloe@xxx.xxx</h3><span>1/13/1999 10:56:38 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>At 11:45 PM 1/11/99 -0500, Dan Stearns wrote:<br/>&gt;From: &quot;Dan Stearns&quot; &lt;<a href="mailto:stearns@capecod.net">stearns@capecod.net</a>&gt;<br/>&gt;<br/>&gt;Experiencing some electronic mail oddness:<br/>&gt;<br/>&gt;Sent a post at 9:04... Got it back at 10:23, then again at 10:56....<br/>&gt;<br/>&gt;Anybody know what the problem might be?</p><p>An unrealistic expectation of technological consistency?</p><p>--Charlie Jordan &lt;<a href="http://www.rev.net/~aloe/music">http://www.rev.net/~aloe/music</a>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

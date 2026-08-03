@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] advise me on building glass xylophone/marimba</h1><h3><a id=5485 href="#5485">🔗</a>Rick McGowan &#x3C;rick@...&#x3E;</h3><span>10/7/2003 10:29:51 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>For this glass xylopone idea... My first question would be, if this is<br/>window glass, how are you going to tap it without breaking the bars? Is the<br/>glass really thick enough to stand up to being tapped for musical<br/>purposes?</p><p>&#x9;Rick</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] advise me on building glass xylophone/marimba</h1><h3><a id=5485 href="#5485">🔗</a>Rick McGowan &#x3C;rick@...&#x3E;</h3><span>10/7/2003 10:29:51 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>For this glass xylopone idea... My first question would be, if this is<br/>window glass, how are you going to tap it without breaking the bars? Is the<br/>glass really thick enough to stand up to being tapped for musical<br/>purposes?</p><p>&#x9;Rick</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

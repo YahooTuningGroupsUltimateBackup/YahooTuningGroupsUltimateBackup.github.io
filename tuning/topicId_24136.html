@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>81-pitch lattice of Johnston's _Sonata for Microtonal Piano_</h1><h3><a id=24136 href="#24136">🔗</a>Paul Erlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>5/31/2001 3:04:42 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I&apos;m going to give the Scala-type lattice for the 81-pitch set used in<br/>Ben Johnston&apos;s _Sonata for Microtonal Piano_. Johnston only used<br/>seven octave-equivalent pairs in retuning the 88 keys of the piano.</p><p>Note: use a proportional font, such as Courier. Contrary to usual<br/>practice, I&apos;ll use Johnston&apos;s lattice directions: horizontal (&gt;) =<br/>5:4, vertical (^) = 3:2.</p><p>     *<br/>     * * * *<br/>   * * * * * *<br/>   * * * * * *<br/>   * * * * * *<br/>   * * * * * *<br/>     * * * * * * *<br/>     * * * * * * * *<br/>     * * * 0 * * * *<br/>     * * * * * * * *<br/>         * * * * *<br/>           * * * *<br/>           * * * *<br/>           * * * *<br/>           * * *   *</p><p>This, and almost anything else you would want to know about this<br/>piece, can be found in</p><p>Gibbens, John Jeffrey. _Design in Ben Johnston&apos;s _Sonata for<br/>Microtonal Piano_ _. Interface, Vol. 18 (1989), pp. 161-194.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>81-pitch lattice of Johnston's _Sonata for Microtonal Piano_</h1><h3><a id=24136 href="#24136">🔗</a>Paul Erlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>5/31/2001 3:04:42 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I&apos;m going to give the Scala-type lattice for the 81-pitch set used in<br/>Ben Johnston&apos;s _Sonata for Microtonal Piano_. Johnston only used<br/>seven octave-equivalent pairs in retuning the 88 keys of the piano.</p><p>Note: use a proportional font, such as Courier. Contrary to usual<br/>practice, I&apos;ll use Johnston&apos;s lattice directions: horizontal (&gt;) =<br/>5:4, vertical (^) = 3:2.</p><p>     *<br/>     * * * *<br/>   * * * * * *<br/>   * * * * * *<br/>   * * * * * *<br/>   * * * * * *<br/>     * * * * * * *<br/>     * * * * * * * *<br/>     * * * 0 * * * *<br/>     * * * * * * * *<br/>         * * * * *<br/>           * * * *<br/>           * * * *<br/>           * * * *<br/>           * * *   *</p><p>This, and almost anything else you would want to know about this<br/>piece, can be found in</p><p>Gibbens, John Jeffrey. _Design in Ben Johnston&apos;s _Sonata for<br/>Microtonal Piano_ _. Interface, Vol. 18 (1989), pp. 161-194.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

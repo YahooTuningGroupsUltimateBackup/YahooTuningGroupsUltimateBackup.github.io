@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>i found a very interesting Flash Game!</h1><h3><a id=12317 href="#12317">🔗</a>matchebifriends &#x3C;matchebifriends@...&#x3E;</h3><span>10/21/2009 11:39:25 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>haha! I i found a very interesting Flash Game today, so I wanna share it with you.  You can play online here:</p><p><a href="http://roly-poly.zoomshare.com/files/flashgame.htm">http://roly-poly.zoomshare.com/files/flashgame.htm</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>i found a very interesting Flash Game!</h1><h3><a id=12317 href="#12317">🔗</a>matchebifriends &#x3C;matchebifriends@...&#x3E;</h3><span>10/21/2009 11:39:25 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>haha! I i found a very interesting Flash Game today, so I wanna share it with you.  You can play online here:</p><p><a href="http://roly-poly.zoomshare.com/files/flashgame.htm">http://roly-poly.zoomshare.com/files/flashgame.htm</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

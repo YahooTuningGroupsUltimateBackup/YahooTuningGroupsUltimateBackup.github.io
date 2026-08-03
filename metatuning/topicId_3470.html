@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Kunstbar</h1><h3><a id=3470 href="#3470">🔗</a>Dante Rosati &#x3C;dante.interport@...&#x3E;</h3><span>11/20/2002 6:27:45 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li">http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li</a><br/>near&amp;partner=faen</p></div><h3><a id=3475 href="#3475">🔗</a>wallyesterpaulrus &#x3C;wallyesterpaulrus@...&#x3E;</h3><span>11/20/2002 7:50:41 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In metatuning@y..., &quot;Dante Rosati&quot; &lt;dante.interport@r...&gt; wrote:<br/>&gt; <a href="http://www.flash-award.com/cgi-bin/show.pl">http://www.flash-award.com/cgi-bin/show.pl</a>?<br/>op=fullscreen&amp;id=2641&amp;category=li<br/>&gt; near&amp;partner=faen</p><p>way cool, dante! thanks!</p></div><h3><a id=3490 href="#3490">🔗</a>John Starrett &#x3C;jstarret@...&#x3E;</h3><span>11/21/2002 8:47:23 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In metatuning@y..., &quot;Dante Rosati&quot; &lt;dante.interport@r...&gt; wrote:<br/>&gt; <a href="http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li">http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li</a><br/>&gt; near&amp;partner=faen</p><p>Superb! Thanks.</p><p>John Starrett</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Kunstbar</h1><h3><a id=3470 href="#3470">🔗</a>Dante Rosati &#x3C;dante.interport@...&#x3E;</h3><span>11/20/2002 6:27:45 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li">http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li</a><br/>near&amp;partner=faen</p></div><h3><a id=3475 href="#3475">🔗</a>wallyesterpaulrus &#x3C;wallyesterpaulrus@...&#x3E;</h3><span>11/20/2002 7:50:41 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In metatuning@y..., &quot;Dante Rosati&quot; &lt;dante.interport@r...&gt; wrote:<br/>&gt; <a href="http://www.flash-award.com/cgi-bin/show.pl">http://www.flash-award.com/cgi-bin/show.pl</a>?<br/>op=fullscreen&amp;id=2641&amp;category=li<br/>&gt; near&amp;partner=faen</p><p>way cool, dante! thanks!</p></div><h3><a id=3490 href="#3490">🔗</a>John Starrett &#x3C;jstarret@...&#x3E;</h3><span>11/21/2002 8:47:23 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In metatuning@y..., &quot;Dante Rosati&quot; &lt;dante.interport@r...&gt; wrote:<br/>&gt; <a href="http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li">http://www.flash-award.com/cgi-bin/show.pl?op=fullscreen&id=2641&category=li</a><br/>&gt; near&amp;partner=faen</p><p>Superb! Thanks.</p><p>John Starrett</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

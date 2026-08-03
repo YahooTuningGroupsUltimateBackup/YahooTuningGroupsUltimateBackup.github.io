@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Fokker block article on Wikipedia</h1><h3><a id=90613 href="#90613">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>6/28/2010 9:48:12 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I looked at it just now, and I&apos;m sorry if this offends anyone who may have worked on it, but the thing is an atrocity. I&apos;m thinking of burning it down and starting over, but that would probably ignite some silly war. What should I do?</p></div><h3><a id=90614 href="#90614">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>6/28/2010 10:50:00 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Burn it.  -Carl</p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;genewardsmith&quot; &lt;genewardsmith@...&gt; wrote:<br/>&gt;<br/>&gt; I looked at it just now, and I&apos;m sorry if this offends anyone who<br/>&gt; may have worked on it, but the thing is an atrocity. I&apos;m thinking<br/>&gt; of burning it down and starting over, but that would probably<br/>&gt; ignite some silly war. What should I do?<br/>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Fokker block article on Wikipedia</h1><h3><a id=90613 href="#90613">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>6/28/2010 9:48:12 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I looked at it just now, and I&apos;m sorry if this offends anyone who may have worked on it, but the thing is an atrocity. I&apos;m thinking of burning it down and starting over, but that would probably ignite some silly war. What should I do?</p></div><h3><a id=90614 href="#90614">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>6/28/2010 10:50:00 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Burn it.  -Carl</p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;genewardsmith&quot; &lt;genewardsmith@...&gt; wrote:<br/>&gt;<br/>&gt; I looked at it just now, and I&apos;m sorry if this offends anyone who<br/>&gt; may have worked on it, but the thing is an atrocity. I&apos;m thinking<br/>&gt; of burning it down and starting over, but that would probably<br/>&gt; ignite some silly war. What should I do?<br/>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

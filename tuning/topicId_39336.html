@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>CD's  Available</h1><h3><a id=39336 href="#39336">🔗</a>buzz kimball &#x3C;novosonic@hotmail.com&#x3E;</h3><span>10/7/2002 9:12:14 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>novosonic&nbsp; productions</p><p>backlist for winter 2002-2003</p><p>microtonal music of buzz kimball on&nbsp;TAPE or CD</p><p>001&nbsp; EARLY&nbsp; IMPROVISATIONS</p><p>002&nbsp;&nbsp; 31 ET AND HARMONIC GUITAR</p><p>003&nbsp;&nbsp; STEEL CELLO AND MICROTONAL</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GUITAR IMPROVISATIONS</p><p>004&nbsp;&nbsp; 31 ET GUITAR IMPROVISATIONS</p><p>005&nbsp;&nbsp; MEDITATION PROGRAM</p><p>&nbsp;</p><p>5$ each, cash or postal m.o. only for each title ordered.</p><p>all&nbsp;FIVE for $ 20.&nbsp; international orders, add extra postage,</p><p>excess refunded with order.</p><p>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOVOSONIC</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; buzz&nbsp; kimball</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2688&nbsp; hopkinton rd.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contoocook&nbsp;&nbsp; nh&nbsp;&nbsp; 03229-2841</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>--------------------------------------------------------------------------------</p><p>Send and receive Hotmail on your mobile device: Click Here<br/>[<a href="http://g.msn.com/1HM1ENUS/c152">http://g.msn.com/1HM1ENUS/c152</a>??PI=44364]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>CD's  Available</h1><h3><a id=39336 href="#39336">🔗</a>buzz kimball &#x3C;novosonic@hotmail.com&#x3E;</h3><span>10/7/2002 9:12:14 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>novosonic&nbsp; productions</p><p>backlist for winter 2002-2003</p><p>microtonal music of buzz kimball on&nbsp;TAPE or CD</p><p>001&nbsp; EARLY&nbsp; IMPROVISATIONS</p><p>002&nbsp;&nbsp; 31 ET AND HARMONIC GUITAR</p><p>003&nbsp;&nbsp; STEEL CELLO AND MICROTONAL</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GUITAR IMPROVISATIONS</p><p>004&nbsp;&nbsp; 31 ET GUITAR IMPROVISATIONS</p><p>005&nbsp;&nbsp; MEDITATION PROGRAM</p><p>&nbsp;</p><p>5$ each, cash or postal m.o. only for each title ordered.</p><p>all&nbsp;FIVE for $ 20.&nbsp; international orders, add extra postage,</p><p>excess refunded with order.</p><p>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOVOSONIC</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; buzz&nbsp; kimball</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2688&nbsp; hopkinton rd.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contoocook&nbsp;&nbsp; nh&nbsp;&nbsp; 03229-2841</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>--------------------------------------------------------------------------------</p><p>Send and receive Hotmail on your mobile device: Click Here<br/>[<a href="http://g.msn.com/1HM1ENUS/c152">http://g.msn.com/1HM1ENUS/c152</a>??PI=44364]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

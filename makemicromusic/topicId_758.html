@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Demo in an apt?</h1><h3><a id=758 href="#758">🔗</a>Harold Fortuin &#x3C;harold_fortuin@...&#x3E;</h3><span>8/29/2001 10:02:55 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Paul E. &amp; Dan S.,</p><p>Thanks for your suggestions.</p><p>I might just end up hosting this in my apt. living<br/>room in Brookline (a bit noisy being along Hwy. 9),<br/>but I&apos;d still prefer another venue.</p><p>Know any area college music students/profs who could<br/>make a room available? Or perhaps a coffee house with<br/>a small meeting room, perhaps with audio &amp; video<br/>playback? These kinds of venues have worked well in<br/>the past. An evening or weekend time would suit me<br/>best.</p><p>I&apos;ll poll a few other area musicians &amp; keep y&apos;all<br/>posted on the when &amp; where. And I&apos;ll let ya know my El<br/>Paso day &amp; time when I find out too.</p><p>Soundly yours,<br/>Harold</p><p>__________________________________________________<br/>Do You Yahoo!?<br/>Make international calls for as low as $.04/minute with Yahoo! Messenger<br/><a href="http://phonecard.yahoo.com/">http://phonecard.yahoo.com/</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Demo in an apt?</h1><h3><a id=758 href="#758">🔗</a>Harold Fortuin &#x3C;harold_fortuin@...&#x3E;</h3><span>8/29/2001 10:02:55 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Paul E. &amp; Dan S.,</p><p>Thanks for your suggestions.</p><p>I might just end up hosting this in my apt. living<br/>room in Brookline (a bit noisy being along Hwy. 9),<br/>but I&apos;d still prefer another venue.</p><p>Know any area college music students/profs who could<br/>make a room available? Or perhaps a coffee house with<br/>a small meeting room, perhaps with audio &amp; video<br/>playback? These kinds of venues have worked well in<br/>the past. An evening or weekend time would suit me<br/>best.</p><p>I&apos;ll poll a few other area musicians &amp; keep y&apos;all<br/>posted on the when &amp; where. And I&apos;ll let ya know my El<br/>Paso day &amp; time when I find out too.</p><p>Soundly yours,<br/>Harold</p><p>__________________________________________________<br/>Do You Yahoo!?<br/>Make international calls for as low as $.04/minute with Yahoo! Messenger<br/><a href="http://phonecard.yahoo.com/">http://phonecard.yahoo.com/</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Capucin catacombs</h1><h3><a id=3794 href="#3794">🔗</a>John Starrett &#x3C;jstarret@...&#x3E; &#x3C;jstarret@...&#x3E;</h3><span>12/15/2002 5:21:14 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I have placed a beautiful pic of one of the rooms in the catacombs of the Capucin monks in the Church of the Immaculate in Rome in the photo section.</p><p>John Starrett</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Capucin catacombs</h1><h3><a id=3794 href="#3794">🔗</a>John Starrett &#x3C;jstarret@...&#x3E; &#x3C;jstarret@...&#x3E;</h3><span>12/15/2002 5:21:14 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I have placed a beautiful pic of one of the rooms in the catacombs of the Capucin monks in the Church of the Immaculate in Rome in the photo section.</p><p>John Starrett</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

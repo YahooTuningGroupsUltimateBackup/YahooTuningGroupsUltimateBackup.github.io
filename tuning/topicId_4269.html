@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>FIRT DINARRA'S CD</h1><h3><a id=4269 href="#4269">🔗</a>Eduardo Sabat-Garibaldi &#x3C;esabat@xxxxxx.xxx.xxx&#x3E;</h3><span>1/12/2000 7:42:23 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Tuning Friends :</p><p>(Dinarra (Please read Deenarha) is a one ninth of a skisma 53 guitar.)<br/>I&apos;ll soon have the opportunity to sell some Dinarras&apos;s recording on CD.<br/>We are now  recording several themes of standard Jazz at a studio by<br/>   the duo of Dinarras Alejandro Sanchez-Johannes Stenger.<br/>It is my wish to try to sell them at the lowest possible price.<br/>If some of you is interested in buying the CD, please write an email<br/>  to my private address without any compromise.</p><p>Greetings</p><p>Eduardo</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>FIRT DINARRA'S CD</h1><h3><a id=4269 href="#4269">🔗</a>Eduardo Sabat-Garibaldi &#x3C;esabat@xxxxxx.xxx.xxx&#x3E;</h3><span>1/12/2000 7:42:23 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Tuning Friends :</p><p>(Dinarra (Please read Deenarha) is a one ninth of a skisma 53 guitar.)<br/>I&apos;ll soon have the opportunity to sell some Dinarras&apos;s recording on CD.<br/>We are now  recording several themes of standard Jazz at a studio by<br/>   the duo of Dinarras Alejandro Sanchez-Johannes Stenger.<br/>It is my wish to try to sell them at the lowest possible price.<br/>If some of you is interested in buying the CD, please write an email<br/>  to my private address without any compromise.</p><p>Greetings</p><p>Eduardo</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

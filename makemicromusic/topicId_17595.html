@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: Member has been banned</h1><h3><a id=17595 href="#17595">🔗</a>Joe &#x3C;tamahome02000@...&#x3E;</h3><span>9/7/2007 11:21:04 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I ain&apos;t 17 anymore.</p><p>Joe</p><p>----- Original Message ----<br/>From: Jon Szanto &lt;jszanto@...&gt;<br/>To: <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a><br/>Sent: Friday, September 7, 2007 2:15:13 PM<br/>Subject: [MMM] Re: Member has been banned</p><p>Prent,</p><p>--- In MakeMicroMusic@ yahoogroups. com, &quot;Prent Rodgers&quot;<br/>&lt;prentrodgers@ ...&gt; wrote:<br/>&gt;<br/>&gt; This gentleman is gone:<br/>&gt;<br/>&gt; Get Your Music In Film, TV, Commercials, &amp; Radio!</p><p>I&apos;m getting the list in digest form, so I just got that message. I<br/>have to say, considering the focus of the list, I found it hilarious!<br/>Did he actually *join* the group, or was it automated spam? Maybe<br/>you&apos;ll have to screen new members.</p><p>Oh, BTW: are you experiencing erectile dysfunction?</p><p>Cheers,<br/>Jon</p><p>____________________________________________________________________________________<br/>Looking for a deal? Find great prices on flights and hotels with Yahoo! FareChase.<br/><a href="http://farechase.yahoo.com/">http://farechase.yahoo.com/</a></p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: Member has been banned</h1><h3><a id=17595 href="#17595">🔗</a>Joe &#x3C;tamahome02000@...&#x3E;</h3><span>9/7/2007 11:21:04 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I ain&apos;t 17 anymore.</p><p>Joe</p><p>----- Original Message ----<br/>From: Jon Szanto &lt;jszanto@...&gt;<br/>To: <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a><br/>Sent: Friday, September 7, 2007 2:15:13 PM<br/>Subject: [MMM] Re: Member has been banned</p><p>Prent,</p><p>--- In MakeMicroMusic@ yahoogroups. com, &quot;Prent Rodgers&quot;<br/>&lt;prentrodgers@ ...&gt; wrote:<br/>&gt;<br/>&gt; This gentleman is gone:<br/>&gt;<br/>&gt; Get Your Music In Film, TV, Commercials, &amp; Radio!</p><p>I&apos;m getting the list in digest form, so I just got that message. I<br/>have to say, considering the focus of the list, I found it hilarious!<br/>Did he actually *join* the group, or was it automated spam? Maybe<br/>you&apos;ll have to screen new members.</p><p>Oh, BTW: are you experiencing erectile dysfunction?</p><p>Cheers,<br/>Jon</p><p>____________________________________________________________________________________<br/>Looking for a deal? Find great prices on flights and hotels with Yahoo! FareChase.<br/><a href="http://farechase.yahoo.com/">http://farechase.yahoo.com/</a></p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

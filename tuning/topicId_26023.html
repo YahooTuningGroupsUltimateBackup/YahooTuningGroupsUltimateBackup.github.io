@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: [tuning] Re: Beauty Quest (was: Szanto be...)</h1><h3><a id=26023 href="#26023">🔗</a>Gary Morrison &#x3C;mr88cet@austin.rr.com&#x3E;</h3><span>7/5/2001 4:09:38 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt; P.S. Thanks to all who have recently subscribed to &quot;The Microtonal<br/>&gt; Activist E-Zine&quot;.<br/>&gt;<br/>&gt; TMA:<br/>&gt; <a href="http://www.geocities.com/jacky_ligon/TMA_Info.htm">http://www.geocities.com/jacky_ligon/TMA_Info.htm</a><br/>&gt; <a href="http://www.geocities.com/jacky_ligon/TMA_archive_index.htm">http://www.geocities.com/jacky_ligon/TMA_archive_index.htm</a></p><p>This is great, Jacky!  Hopefully in a moderated forum of this sort, we can avoid some of the<br/>name-calling and flame wars that almost invariably come up over the &apos;net.</p><p>I admire your efforts in this regard.  Hopefully you&apos;ll continue to have the time to keep up this<br/>level of effort;  I&apos;m sure it&apos;s not a trivial amount of effort to periodically publish this;  web<br/>pages always look a lot easier to make than they actually are.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: [tuning] Re: Beauty Quest (was: Szanto be...)</h1><h3><a id=26023 href="#26023">🔗</a>Gary Morrison &#x3C;mr88cet@austin.rr.com&#x3E;</h3><span>7/5/2001 4:09:38 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt; P.S. Thanks to all who have recently subscribed to &quot;The Microtonal<br/>&gt; Activist E-Zine&quot;.<br/>&gt;<br/>&gt; TMA:<br/>&gt; <a href="http://www.geocities.com/jacky_ligon/TMA_Info.htm">http://www.geocities.com/jacky_ligon/TMA_Info.htm</a><br/>&gt; <a href="http://www.geocities.com/jacky_ligon/TMA_archive_index.htm">http://www.geocities.com/jacky_ligon/TMA_archive_index.htm</a></p><p>This is great, Jacky!  Hopefully in a moderated forum of this sort, we can avoid some of the<br/>name-calling and flame wars that almost invariably come up over the &apos;net.</p><p>I admire your efforts in this regard.  Hopefully you&apos;ll continue to have the time to keep up this<br/>level of effort;  I&apos;m sure it&apos;s not a trivial amount of effort to periodically publish this;  web<br/>pages always look a lot easier to make than they actually are.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

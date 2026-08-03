@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>New uploads to Youtube, 3 in Quarter Comma, 1 Pythagorean</h1><h3><a id=23705 href="#23705">🔗</a>Mark &#x3C;mark.barnes3@...&#x3E;</h3><span>11/17/2010 11:06:37 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>A previously unbroadcast improvisation about Doughnuts, The Bonzo Dog Doo Dah Band and Norway:<br/><a href="http://www.youtube.com/watch?v=YfeQCKtxbhc">http://www.youtube.com/watch?v=YfeQCKtxbhc</a></p><p>&apos;Scuse Me Mate, Got Any Marrows?<br/><a href="http://www.youtube.com/watch?v=Am7OWZjE0Fo">http://www.youtube.com/watch?v=Am7OWZjE0Fo</a></p><p>I&apos;m A Country Bumpkin<br/><a href="http://www.youtube.com/watch?v=6t5PdeC1Trw">http://www.youtube.com/watch?v=6t5PdeC1Trw</a></p><p>All in Quarter Comma at raggedjack open mike at The Turks Pub, Reading, Berkshire, England</p><p>And Doctor Longhurst<br/><a href="http://www.youtube.com/watch?v=FU-UjDEQGR8">http://www.youtube.com/watch?v=FU-UjDEQGR8</a></p><p>In Pythagorean intonation at The Jolly Anglers Pub, Reading, Berkshire England.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>New uploads to Youtube, 3 in Quarter Comma, 1 Pythagorean</h1><h3><a id=23705 href="#23705">🔗</a>Mark &#x3C;mark.barnes3@...&#x3E;</h3><span>11/17/2010 11:06:37 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>A previously unbroadcast improvisation about Doughnuts, The Bonzo Dog Doo Dah Band and Norway:<br/><a href="http://www.youtube.com/watch?v=YfeQCKtxbhc">http://www.youtube.com/watch?v=YfeQCKtxbhc</a></p><p>&apos;Scuse Me Mate, Got Any Marrows?<br/><a href="http://www.youtube.com/watch?v=Am7OWZjE0Fo">http://www.youtube.com/watch?v=Am7OWZjE0Fo</a></p><p>I&apos;m A Country Bumpkin<br/><a href="http://www.youtube.com/watch?v=6t5PdeC1Trw">http://www.youtube.com/watch?v=6t5PdeC1Trw</a></p><p>All in Quarter Comma at raggedjack open mike at The Turks Pub, Reading, Berkshire, England</p><p>And Doctor Longhurst<br/><a href="http://www.youtube.com/watch?v=FU-UjDEQGR8">http://www.youtube.com/watch?v=FU-UjDEQGR8</a></p><p>In Pythagorean intonation at The Jolly Anglers Pub, Reading, Berkshire England.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

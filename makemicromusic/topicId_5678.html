@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Muzys... microtuning support</h1><h3><a id=5678 href="#5678">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>1/13/2004 8:13:20 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;Hmm, I was looking again at VST hosts and I saw Muzys, which claims in its</p><p>&gt;blurb, &quot;microtuning support&quot;. Has anyone tried it or know about it?</p><p>I had a quick look at the demo, and it&apos;s the 12-note, detuning from<br/>12-tET in steps of 1 cent kind. To be entered in the program, I saw<br/>no file support.</p><p>Manuel</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Muzys... microtuning support</h1><h3><a id=5678 href="#5678">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>1/13/2004 8:13:20 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt;Hmm, I was looking again at VST hosts and I saw Muzys, which claims in its</p><p>&gt;blurb, &quot;microtuning support&quot;. Has anyone tried it or know about it?</p><p>I had a quick look at the demo, and it&apos;s the 12-note, detuning from<br/>12-tET in steps of 1 cent kind. To be entered in the program, I saw<br/>no file support.</p><p>Manuel</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

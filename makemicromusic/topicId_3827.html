@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>The Unstruck Sound Orchestra - updated website</h1><h3><a id=3827 href="#3827">🔗</a>Alison Monteith &#x3C;alison.monteith3@...&#x3E;</h3><span>10/6/2002 5:55:59 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Folks</p><p>I&apos;ve updated my website at : -</p><p><a href="http://www.unsork.info">http://www.unsork.info</a></p><p>Please let me know if there are any problems, and when I&apos;ve recovered<br/>from square eye syndrome I&apos;ll sort them out. And please keep posting the<br/>links with which I will update the site from time to time.</p><p>Kind Regards</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>The Unstruck Sound Orchestra - updated website</h1><h3><a id=3827 href="#3827">🔗</a>Alison Monteith &#x3C;alison.monteith3@...&#x3E;</h3><span>10/6/2002 5:55:59 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi Folks</p><p>I&apos;ve updated my website at : -</p><p><a href="http://www.unsork.info">http://www.unsork.info</a></p><p>Please let me know if there are any problems, and when I&apos;ve recovered<br/>from square eye syndrome I&apos;ll sort them out. And please keep posting the<br/>links with which I will update the site from time to time.</p><p>Kind Regards</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Kraks for PC Logic Audio</h1><h3><a id=6952 href="#6952">🔗</a>Charles Lucy &#x3C;makemicro@...&#x3E;</h3><span>6/24/2004 7:11:03 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I understand that there are easily found kraks available for the (now discontinued) Logic Audio EMagic 5 on PC platform.</p><p>This is the ultimate midi/sampling music production program (now on OSX as 6.4.2),, and also great for video sync etc.</p><p>All versions can read and play pitchbent midi files.<br/>EXS, its software sampler, can be remapped for any microtuning system to play to the nearest cent.</p><p>The obsolete PC version would also run VST plug-ins, but uses the dreaded ASIO for audio.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Kraks for PC Logic Audio</h1><h3><a id=6952 href="#6952">🔗</a>Charles Lucy &#x3C;makemicro@...&#x3E;</h3><span>6/24/2004 7:11:03 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I understand that there are easily found kraks available for the (now discontinued) Logic Audio EMagic 5 on PC platform.</p><p>This is the ultimate midi/sampling music production program (now on OSX as 6.4.2),, and also great for video sync etc.</p><p>All versions can read and play pitchbent midi files.<br/>EXS, its software sampler, can be remapped for any microtuning system to play to the nearest cent.</p><p>The obsolete PC version would also run VST plug-ins, but uses the dreaded ASIO for audio.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

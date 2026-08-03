@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Scala vs Yamaha Sysex</h1><h3><a id=5163 href="#5163">🔗</a>vquestor &#x3C;vquestor@...&#x3E;</h3><span>8/25/2003 1:41:32 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Could anyone tell me which messages are smaller - Scala messages or<br/>the Yamaha scale tune sysex(PSR 1000/2000) messages?</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Scala vs Yamaha Sysex</h1><h3><a id=5163 href="#5163">🔗</a>vquestor &#x3C;vquestor@...&#x3E;</h3><span>8/25/2003 1:41:32 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Could anyone tell me which messages are smaller - Scala messages or<br/>the Yamaha scale tune sysex(PSR 1000/2000) messages?</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

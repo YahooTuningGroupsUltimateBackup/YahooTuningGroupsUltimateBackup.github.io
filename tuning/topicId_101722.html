@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>13-limit marvel</h1><h3><a id=101722 href="#101722">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>9/26/2011 11:52:42 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I added it to the marvel family page and optimal patent vals. In case anyone is under the delusion this was obviously the right choice, hecate is closer in tuning and in its spectrum to 11-limit marvel, but I aint changing it back.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>13-limit marvel</h1><h3><a id=101722 href="#101722">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>9/26/2011 11:52:42 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I added it to the marvel family page and optimal patent vals. In case anyone is under the delusion this was obviously the right choice, hecate is closer in tuning and in its spectrum to 11-limit marvel, but I aint changing it back.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

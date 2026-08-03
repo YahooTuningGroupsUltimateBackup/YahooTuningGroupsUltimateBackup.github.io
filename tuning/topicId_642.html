@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Children's filter</h1><h3><a id=642 href="#642">🔗</a>jpehrson@...</h3><span>7/21/2001 3:08:08 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I don&apos;t need my Internet information to come through a &quot;Children&apos;s<br/>Filter.&quot;  I&apos;m not a child.</p><p>_______ _______ _______<br/>Joseph Pehrson</p></div><h3><a id=643 href="#643">🔗</a>Kraig Grady &#x3C;kraiggrady@...&#x3E;</h3><span>7/21/2001 3:33:15 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>May we regain our ancient soul of a child -  after  Lorca</p><p>jpehrson@... wrote:</p><p>&gt; I don&apos;t need my Internet information to come through a &quot;Children&apos;s<br/>&gt; Filter.&quot;  I&apos;m not a child.<br/>&gt;<br/>&gt;</p><p>-- Kraig Grady<br/>North American Embassy of Anaphoria island<br/> <a href="http://www.anaphoria.com">http://www.anaphoria.com</a></p><p>The Wandering Medicine Show<br/>Wed. 8-9 KXLU 88.9 fm</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Children's filter</h1><h3><a id=642 href="#642">🔗</a>jpehrson@...</h3><span>7/21/2001 3:08:08 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I don&apos;t need my Internet information to come through a &quot;Children&apos;s<br/>Filter.&quot;  I&apos;m not a child.</p><p>_______ _______ _______<br/>Joseph Pehrson</p></div><h3><a id=643 href="#643">🔗</a>Kraig Grady &#x3C;kraiggrady@...&#x3E;</h3><span>7/21/2001 3:33:15 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>May we regain our ancient soul of a child -  after  Lorca</p><p>jpehrson@... wrote:</p><p>&gt; I don&apos;t need my Internet information to come through a &quot;Children&apos;s<br/>&gt; Filter.&quot;  I&apos;m not a child.<br/>&gt;<br/>&gt;</p><p>-- Kraig Grady<br/>North American Embassy of Anaphoria island<br/> <a href="http://www.anaphoria.com">http://www.anaphoria.com</a></p><p>The Wandering Medicine Show<br/>Wed. 8-9 KXLU 88.9 fm</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

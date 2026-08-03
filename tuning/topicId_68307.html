@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>DIVISIONS OF THE TETRACHORD FREE ONLINE</h1><h3><a id=68307 href="#68307">🔗</a>Chuckk Hubbard &#x3C;BadMuthaHubbard@hotmail.com&#x3E;</h3><span>12/1/2006 11:11:27 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I&apos;m probably addressing a lot of the same people as on the<br/>makemicromusic list, but...</p><p>This awesome book on Greek, Islamic and etc scales is now free online:<br/><a href="http://eamusic.dartmouth.edu/~larry/published_articles/divisions_of_the_tetrachord/index.html">http://eamusic.dartmouth.edu/~larry/published_articles/divisions_of_the_tetrachord/index.html</a></p><p>The best resource there is for it.  I kept writing to the publishers<br/>about it, and recently saw someone trying to sell it for $300 on ebay<br/>(it was originally $35), so I guess they decided to make it available.<br/>Not an easy read, but very educational.</p><p>Don&apos;t miss it, it&apos;s intense.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>DIVISIONS OF THE TETRACHORD FREE ONLINE</h1><h3><a id=68307 href="#68307">🔗</a>Chuckk Hubbard &#x3C;BadMuthaHubbard@hotmail.com&#x3E;</h3><span>12/1/2006 11:11:27 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I&apos;m probably addressing a lot of the same people as on the<br/>makemicromusic list, but...</p><p>This awesome book on Greek, Islamic and etc scales is now free online:<br/><a href="http://eamusic.dartmouth.edu/~larry/published_articles/divisions_of_the_tetrachord/index.html">http://eamusic.dartmouth.edu/~larry/published_articles/divisions_of_the_tetrachord/index.html</a></p><p>The best resource there is for it.  I kept writing to the publishers<br/>about it, and recently saw someone trying to sell it for $300 on ebay<br/>(it was originally $35), so I guess they decided to make it available.<br/>Not an easy read, but very educational.</p><p>Don&apos;t miss it, it&apos;s intense.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

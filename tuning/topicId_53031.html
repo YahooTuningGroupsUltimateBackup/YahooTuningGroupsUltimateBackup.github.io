@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>music by Nicola Visalli</h1><h3><a id=53031 href="#53031">🔗</a>Joel Rodrigues &#x3C;jdrodrigues@Phreaker.net&#x3E;</h3><span>4/3/2004 11:38:26 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://stage.vitaminic.fr/main/nicola_visalli">http://stage.vitaminic.fr/main/nicola_visalli</a></p><p>&quot;Je suis un compositeur decidement eclectique: musique de microtonal, &quot;jam sessions&quot;, et mes chansons. Je pense que c&apos;est une bonne raison d&apos;ecouter moi&quot;</p><p>(I am a decidedly eclectic composer: microtonal music, &quot;jam sessions&quot;, and my songs. I think that this is a good reason to listen to me.)</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>music by Nicola Visalli</h1><h3><a id=53031 href="#53031">🔗</a>Joel Rodrigues &#x3C;jdrodrigues@Phreaker.net&#x3E;</h3><span>4/3/2004 11:38:26 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://stage.vitaminic.fr/main/nicola_visalli">http://stage.vitaminic.fr/main/nicola_visalli</a></p><p>&quot;Je suis un compositeur decidement eclectique: musique de microtonal, &quot;jam sessions&quot;, et mes chansons. Je pense que c&apos;est une bonne raison d&apos;ecouter moi&quot;</p><p>(I am a decidedly eclectic composer: microtonal music, &quot;jam sessions&quot;, and my songs. I think that this is a good reason to listen to me.)</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

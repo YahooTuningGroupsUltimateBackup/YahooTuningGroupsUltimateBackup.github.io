@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Goodbye for a while...</h1><h3><a id=1064 href="#1064">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>10/14/2001 12:49:46 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Mike,</p><p>{you wrote...}<br/>&gt;Unfortunately as soon as I popped back on I need to unsub.</p><p>...and etc. Sheesh, completely understood, with your schedule and all! A fascinating post, covering such a wide topic area. For heavens sake, come back anytime, and even if you don&apos;t sub, post from the web every so often so we know what you&apos;re up to!</p><p>&gt;I hope to sub back onto this list around winter; hopefully I will have &gt;completed something interesting audio wise.</p><p>I don&apos;t doubt that it will be not only interesting audio-wise, but with your mixing, it will also be &apos;audio wise&apos;. Your words, but a very cool omission of a hyphen!</p><p>Best to you,<br/>Jon, the List-Mom</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Goodbye for a while...</h1><h3><a id=1064 href="#1064">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>10/14/2001 12:49:46 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Mike,</p><p>{you wrote...}<br/>&gt;Unfortunately as soon as I popped back on I need to unsub.</p><p>...and etc. Sheesh, completely understood, with your schedule and all! A fascinating post, covering such a wide topic area. For heavens sake, come back anytime, and even if you don&apos;t sub, post from the web every so often so we know what you&apos;re up to!</p><p>&gt;I hope to sub back onto this list around winter; hopefully I will have &gt;completed something interesting audio wise.</p><p>I don&apos;t doubt that it will be not only interesting audio-wise, but with your mixing, it will also be &apos;audio wise&apos;. Your words, but a very cool omission of a hyphen!</p><p>Best to you,<br/>Jon, the List-Mom</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>creepy numbers</h1><h3><a id=9804 href="#9804">🔗</a>Paul Erlich &#x3C;perlich@aya.yale.edu&#x3E;</h3><span>2/24/2004 8:48:09 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Though it&apos;s not tuning-related, I thought Gene or someone might be<br/>able to &quot;explain&quot; this strange phenomenon:</p><p>(999999/127000)^2 = 62.00000000006200 . . . .</p><p>?</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>creepy numbers</h1><h3><a id=9804 href="#9804">🔗</a>Paul Erlich &#x3C;perlich@aya.yale.edu&#x3E;</h3><span>2/24/2004 8:48:09 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Though it&apos;s not tuning-related, I thought Gene or someone might be<br/>able to &quot;explain&quot; this strange phenomenon:</p><p>(999999/127000)^2 = 62.00000000006200 . . . .</p><p>?</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

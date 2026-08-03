@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>New instrument in the news</h1><h3><a id=9982 href="#9982">🔗</a>George Henry &#x3C;cruithnelaluna@...&#x3E;</h3><span>7/13/2005 9:36:07 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello all,</p><p>This is bound to be of interest to someone.</p><p>New Instrument Joins Music, Hi-Tech<br/><a href="http://dsc.discovery.com/news/briefs/20050711/stringthing.html">http://dsc.discovery.com/news/briefs/20050711/stringthing.html</a></p><p>I recommend watching the video.</p><p>The music is &apos;a little bit unusual.&apos;</p><p>Regards,<br/>George</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>New instrument in the news</h1><h3><a id=9982 href="#9982">🔗</a>George Henry &#x3C;cruithnelaluna@...&#x3E;</h3><span>7/13/2005 9:36:07 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hello all,</p><p>This is bound to be of interest to someone.</p><p>New Instrument Joins Music, Hi-Tech<br/><a href="http://dsc.discovery.com/news/briefs/20050711/stringthing.html">http://dsc.discovery.com/news/briefs/20050711/stringthing.html</a></p><p>I recommend watching the video.</p><p>The music is &apos;a little bit unusual.&apos;</p><p>Regards,<br/>George</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

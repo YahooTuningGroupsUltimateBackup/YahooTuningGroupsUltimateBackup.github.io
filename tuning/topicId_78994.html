@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Theory and Practice of Just Intonation</h1><h3><a id=78994 href="#78994">🔗</a>threesixesinarow &#x3C;CACCOLA@...&#x3E;</h3><span>11/4/2008 8:27:15 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>T. Perronet Thompson, Theory and Practice of Just Intonation:<br/>With a View to the Abolition of Temperament : as Illustrated by<br/>the Description and Use of the Enharmonic Organ, Presenting the<br/>Power of Executing with the Simple Ratios in Twenty Keys, with<br/>a Correction for Changes of Temperature, Built by Messrs. Robson,<br/>101 St. Martin&apos;s Lane, London, for the Exhibition of 1851.<br/>Effingham Wilson, London 1850</p><p><a href="http://books.google.com/books?id=iKQqAAAAYAAJ">http://books.google.com/books?id=iKQqAAAAYAAJ</a></p></div><h3><a id=78996 href="#78996">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>11/4/2008 9:17:50 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Nice find!  -C.</p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;threesixesinarow&quot; &lt;CACCOLA@...&gt; wrote:<br/>&gt;<br/>&gt; T. Perronet Thompson, Theory and Practice of Just Intonation:<br/>&gt; With a View to the Abolition of Temperament : as Illustrated by<br/>&gt; the Description and Use of the Enharmonic Organ, Presenting the<br/>&gt; Power of Executing with the Simple Ratios in Twenty Keys, with<br/>&gt; a Correction for Changes of Temperature, Built by Messrs. Robson,<br/>&gt; 101 St. Martin&apos;s Lane, London, for the Exhibition of 1851.<br/>&gt; Effingham Wilson, London 1850<br/>&gt;<br/>&gt; <a href="http://books.google.com/books?id=iKQqAAAAYAAJ">http://books.google.com/books?id=iKQqAAAAYAAJ</a><br/>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Theory and Practice of Just Intonation</h1><h3><a id=78994 href="#78994">🔗</a>threesixesinarow &#x3C;CACCOLA@...&#x3E;</h3><span>11/4/2008 8:27:15 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>T. Perronet Thompson, Theory and Practice of Just Intonation:<br/>With a View to the Abolition of Temperament : as Illustrated by<br/>the Description and Use of the Enharmonic Organ, Presenting the<br/>Power of Executing with the Simple Ratios in Twenty Keys, with<br/>a Correction for Changes of Temperature, Built by Messrs. Robson,<br/>101 St. Martin&apos;s Lane, London, for the Exhibition of 1851.<br/>Effingham Wilson, London 1850</p><p><a href="http://books.google.com/books?id=iKQqAAAAYAAJ">http://books.google.com/books?id=iKQqAAAAYAAJ</a></p></div><h3><a id=78996 href="#78996">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>11/4/2008 9:17:50 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Nice find!  -C.</p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;threesixesinarow&quot; &lt;CACCOLA@...&gt; wrote:<br/>&gt;<br/>&gt; T. Perronet Thompson, Theory and Practice of Just Intonation:<br/>&gt; With a View to the Abolition of Temperament : as Illustrated by<br/>&gt; the Description and Use of the Enharmonic Organ, Presenting the<br/>&gt; Power of Executing with the Simple Ratios in Twenty Keys, with<br/>&gt; a Correction for Changes of Temperature, Built by Messrs. Robson,<br/>&gt; 101 St. Martin&apos;s Lane, London, for the Exhibition of 1851.<br/>&gt; Effingham Wilson, London 1850<br/>&gt;<br/>&gt; <a href="http://books.google.com/books?id=iKQqAAAAYAAJ">http://books.google.com/books?id=iKQqAAAAYAAJ</a><br/>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

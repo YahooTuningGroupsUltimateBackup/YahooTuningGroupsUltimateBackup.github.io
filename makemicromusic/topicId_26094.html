@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>No sensa humor</h1><h3><a id=26094 href="#26094">🔗</a>Neil Haverstick &#x3C;microstick@...&#x3E;</h3><span>2/26/2011 9:59:05 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Wow...a bit touchy on the old forum...guess I better not say &quot;Rite of Spring&quot; is a good tune...Hstick  (and almost sold out Guitar Masters in Rapid City tonite...great bunch of folks up here...) &#x9;&#x9; &#x9;   &#x9;&#x9;</p><p>[Non-text portions of this message have been removed]</p></div><h3><a id=26095 href="#26095">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>2/26/2011 11:07:37 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a>, Neil Haverstick &lt;microstick@...&gt; wrote:<br/>&gt;<br/>&gt;<br/>&gt;    Wow...a bit touchy on the old forum...guess I better not say &quot;Rite of Spring&quot; is a good tune...Hstick  (and almost sold out Guitar Masters in Rapid City tonite...great bunch of folks up here...)</p><p>Never leave your room without your parka. On January 10, 1911, temperatures in Rapid City dropped from 62 degrees to minus 13 degrees in two hours, with most of the drop concentrated in a span of five minutes. Just saying.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>No sensa humor</h1><h3><a id=26094 href="#26094">🔗</a>Neil Haverstick &#x3C;microstick@...&#x3E;</h3><span>2/26/2011 9:59:05 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Wow...a bit touchy on the old forum...guess I better not say &quot;Rite of Spring&quot; is a good tune...Hstick  (and almost sold out Guitar Masters in Rapid City tonite...great bunch of folks up here...) &#x9;&#x9; &#x9;   &#x9;&#x9;</p><p>[Non-text portions of this message have been removed]</p></div><h3><a id=26095 href="#26095">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>2/26/2011 11:07:37 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a>, Neil Haverstick &lt;microstick@...&gt; wrote:<br/>&gt;<br/>&gt;<br/>&gt;    Wow...a bit touchy on the old forum...guess I better not say &quot;Rite of Spring&quot; is a good tune...Hstick  (and almost sold out Guitar Masters in Rapid City tonite...great bunch of folks up here...)</p><p>Never leave your room without your parka. On January 10, 1911, temperatures in Rapid City dropped from 62 degrees to minus 13 degrees in two hours, with most of the drop concentrated in a span of five minutes. Just saying.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

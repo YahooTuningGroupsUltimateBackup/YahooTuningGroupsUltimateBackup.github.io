@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>overpaid CEOs</h1><h3><a id=2241 href="#2241">🔗</a>X. J .Scott &#x3C;xjscott@...&#x3E;</h3><span>4/11/2002 6:50:09 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt; $1 million. To put this prize in perspective, however, Joseph<br/>&gt; Naccio, CEO of the telcommunications corporation Qwest earns<br/>&gt; 100 times that much every year to run it into the ground.</p><p>John,</p><p>I think you are underestimating the immense hard work<br/>and dedication that it takes to run a perfectly good<br/>company into the ground! :) Let&apos;s give Naccio the<br/>credit that is due him!</p><p>- Jeff</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>overpaid CEOs</h1><h3><a id=2241 href="#2241">🔗</a>X. J .Scott &#x3C;xjscott@...&#x3E;</h3><span>4/11/2002 6:50:09 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt; $1 million. To put this prize in perspective, however, Joseph<br/>&gt; Naccio, CEO of the telcommunications corporation Qwest earns<br/>&gt; 100 times that much every year to run it into the ground.</p><p>John,</p><p>I think you are underestimating the immense hard work<br/>and dedication that it takes to run a perfectly good<br/>company into the ground! :) Let&apos;s give Naccio the<br/>credit that is due him!</p><p>- Jeff</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

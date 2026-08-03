@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>tone/interval generation FREEware</h1><h3><a id=4433 href="#4433">🔗</a>Kriist@xxx.xxx</h3><span>8/24/1999 11:14:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>i got a freeware program off the net(i think from <a href="http://www.hitsquad.com/smm">www.hitsquad.com/smm</a>)thats<br/>called sweepgenerator<br/>it gives you audio sweeps(for testing equip etc....)but it also can produce<br/>tones<br/>also from that page is spectogram(also freeware)<br/>it does realtime analysis of files or input<br/>2 real nice programs</p><p>rodrigo</p><p>In a message dated 8/24/99 8:39:24 AM Pacific Daylight Time,<br/><a href="mailto:leo.perretti@projectpp.it">leo.perretti@projectpp.it</a> writes:</p><p>&lt;&lt; &gt;      In this connection, I was wondering if any of you knew of<br/> &gt;software that would allow one to generate tones of any<br/> &gt;specific audible frequencies --- singly or in combination.  One<br/> &gt;interest is to demonstrate to students in a Sociology of Music  the<br/> &gt;differences in temperaments --- including the equal-tempered,<br/> &gt;well-tempered and mean-tone ones.  Due to the complexity of the<br/> &gt;topic, it would be valuable to add the experiential dimension to all<br/> &gt;this. &gt;&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>tone/interval generation FREEware</h1><h3><a id=4433 href="#4433">🔗</a>Kriist@xxx.xxx</h3><span>8/24/1999 11:14:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>i got a freeware program off the net(i think from <a href="http://www.hitsquad.com/smm">www.hitsquad.com/smm</a>)thats<br/>called sweepgenerator<br/>it gives you audio sweeps(for testing equip etc....)but it also can produce<br/>tones<br/>also from that page is spectogram(also freeware)<br/>it does realtime analysis of files or input<br/>2 real nice programs</p><p>rodrigo</p><p>In a message dated 8/24/99 8:39:24 AM Pacific Daylight Time,<br/><a href="mailto:leo.perretti@projectpp.it">leo.perretti@projectpp.it</a> writes:</p><p>&lt;&lt; &gt;      In this connection, I was wondering if any of you knew of<br/> &gt;software that would allow one to generate tones of any<br/> &gt;specific audible frequencies --- singly or in combination.  One<br/> &gt;interest is to demonstrate to students in a Sociology of Music  the<br/> &gt;differences in temperaments --- including the equal-tempered,<br/> &gt;well-tempered and mean-tone ones.  Due to the complexity of the<br/> &gt;topic, it would be valuable to add the experiential dimension to all<br/> &gt;this. &gt;&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

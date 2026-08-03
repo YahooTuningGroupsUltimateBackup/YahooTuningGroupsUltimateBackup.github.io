@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>RE: Diagrams</h1><h3><a id=8931 href="#8931">🔗</a>&#x22;Paul H. Erlich&#x22; &#x3C;PErlich@...&#x3E;</h3><span>12/7/1998 12:10:26 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Sorry about the bandwidth people but if you've got a good spatial<br>imagination then I encourage examining the sets of three diagrams -- it<br>can be quite enlightening to get a 3-d understanding of a scale in your<br>head.<br><br>>Gee... Luckily isn't the word i'd use... I've got Maple.  Do you think<br>that<br>>it could draw us some pretty 3D versions of these?<br><br>I don't know -- I can give you the coordinates of the notes and you can<br>do the rest -- let me know off the list. A molecular modeling tool might<br>be the best kind of software for this -- I would use bonds to represent<br>consonant intervals.</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>RE: Diagrams</h1><h3><a id=8931 href="#8931">🔗</a>&#x22;Paul H. Erlich&#x22; &#x3C;PErlich@...&#x3E;</h3><span>12/7/1998 12:10:26 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>Sorry about the bandwidth people but if you've got a good spatial<br>imagination then I encourage examining the sets of three diagrams -- it<br>can be quite enlightening to get a 3-d understanding of a scale in your<br>head.<br><br>>Gee... Luckily isn't the word i'd use... I've got Maple.  Do you think<br>that<br>>it could draw us some pretty 3D versions of these?<br><br>I don't know -- I can give you the coordinates of the notes and you can<br>do the rest -- let me know off the list. A molecular modeling tool might<br>be the best kind of software for this -- I would use bonds to represent<br>consonant intervals.</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

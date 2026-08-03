@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Composers Concordance 20th Anniversary Season!</h1><h3><a id=46626 href="#46626">🔗</a>Joseph Pehrson &#x3C;jpehrson@rcn.com&#x3E;</h3><span>8/28/2003 7:19:33 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The Composers Concordance has presented concerts now for 20 years!<br/>Come join us for a new year of surprises and fun, well, some *music*<br/>too!</p><p>2003-2004:</p><p><a href="http://www.composersconcordance.org/">http://www.composersconcordance.org/</a></p><p>Joseph Pehrson (one of the CC directors)</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Composers Concordance 20th Anniversary Season!</h1><h3><a id=46626 href="#46626">🔗</a>Joseph Pehrson &#x3C;jpehrson@rcn.com&#x3E;</h3><span>8/28/2003 7:19:33 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The Composers Concordance has presented concerts now for 20 years!<br/>Come join us for a new year of surprises and fun, well, some *music*<br/>too!</p><p>2003-2004:</p><p><a href="http://www.composersconcordance.org/">http://www.composersconcordance.org/</a></p><p>Joseph Pehrson (one of the CC directors)</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

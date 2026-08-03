@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>RE: [tuning] Erlich experiment still on burner??</h1><h3><a id=11370 href="#11370">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>8/7/2000 11:21:41 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Joseph -- now that you&apos;re back, I&apos;ll e-mail you the .wav files.</p></div><h3><a id=11378 href="#11378">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>8/7/2000 3:48:35 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px; padding: 20px; background-color: #ddd'><b>Attachments</b></div><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This is the JI 4:5:6:7 chord.</p></div><h3><a id=11379 href="#11379">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>8/7/2000 4:06:00 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Sorry, all -- that was meant for Joe Pehrson.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>RE: [tuning] Erlich experiment still on burner??</h1><h3><a id=11370 href="#11370">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>8/7/2000 11:21:41 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Joseph -- now that you&apos;re back, I&apos;ll e-mail you the .wav files.</p></div><h3><a id=11378 href="#11378">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>8/7/2000 3:48:35 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div style='margin: 0px 20px; padding: 20px; background-color: #ddd'><b>Attachments</b></div><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>This is the JI 4:5:6:7 chord.</p></div><h3><a id=11379 href="#11379">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>8/7/2000 4:06:00 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Sorry, all -- that was meant for Joe Pehrson.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

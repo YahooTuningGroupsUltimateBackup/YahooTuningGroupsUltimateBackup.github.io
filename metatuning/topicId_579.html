@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>good news from Pakistan!</h1><h3><a id=579 href="#579">🔗</a>jpehrson@...</h3><span>9/28/2001 9:16:04 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Well... not exactly *good* news, but *better* news.</p><p>From the New York Times today 9-28-01:</p><p>&quot;In Jalalabad, for example, according to a witness&apos;s report relayed<br/>to Islamabad today, the fear normally spread by one of the Taliban&apos;s<br/>most repressive agencies, the religious police, has dissipated as<br/>their offices have all but shut down.  One consequence has been that<br/>people have been playing music again, something proscribed, under<br/>penalty of lashing or worse, after the Taliban took power.&quot;</p><p>JP</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>good news from Pakistan!</h1><h3><a id=579 href="#579">🔗</a>jpehrson@...</h3><span>9/28/2001 9:16:04 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Well... not exactly *good* news, but *better* news.</p><p>From the New York Times today 9-28-01:</p><p>&quot;In Jalalabad, for example, according to a witness&apos;s report relayed<br/>to Islamabad today, the fear normally spread by one of the Taliban&apos;s<br/>most repressive agencies, the religious police, has dissipated as<br/>their offices have all but shut down.  One consequence has been that<br/>people have been playing music again, something proscribed, under<br/>penalty of lashing or worse, after the Taliban took power.&quot;</p><p>JP</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

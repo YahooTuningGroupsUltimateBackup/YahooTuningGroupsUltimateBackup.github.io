@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Four Pieces</h1><h3><a id=28076 href="#28076">🔗</a>christopherv &#x3C;chrisvaisvil@...&#x3E;</h3><span>6/29/2011 9:58:02 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I have four pieces done as part of my tuning survey using my Fender Mustang, Roland GR-20, Fractal Tune Smithy, Sonar X1</p><p>1. In Erv Wilson&apos;s 22 tone scale for Rod Poole<br/>2. for French Horns and 3. for cheesy voices in  13 notes per octave<br/>4. for vibraphone in a higher prime limit Just Intonation scale.</p><p>The details, online play, and download are here:</p><p><a href="http://chrisvaisvil.com/?p=993">http://chrisvaisvil.com/?p=993</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Four Pieces</h1><h3><a id=28076 href="#28076">🔗</a>christopherv &#x3C;chrisvaisvil@...&#x3E;</h3><span>6/29/2011 9:58:02 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I have four pieces done as part of my tuning survey using my Fender Mustang, Roland GR-20, Fractal Tune Smithy, Sonar X1</p><p>1. In Erv Wilson&apos;s 22 tone scale for Rod Poole<br/>2. for French Horns and 3. for cheesy voices in  13 notes per octave<br/>4. for vibraphone in a higher prime limit Just Intonation scale.</p><p>The details, online play, and download are here:</p><p><a href="http://chrisvaisvil.com/?p=993">http://chrisvaisvil.com/?p=993</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

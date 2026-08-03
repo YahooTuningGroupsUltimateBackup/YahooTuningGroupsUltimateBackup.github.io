@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Another Scala for the Mac</h1><h3><a id=3698 href="#3698">🔗</a>manuel.op.de.coul@...</h3><span>8/13/2002 7:24:31 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>A Linux/PowerPC version of Scala was created by Michal Seta.<br/>Download it from this page:<br/><a href="http://creazone.eworldmusic.com/doc/mis/linux">http://creazone.eworldmusic.com/doc/mis/linux</a></p><p>It&apos;s the latest 2.05 version. Please let one of us know if<br/>there are any problems.</p><p>Now that there are two Mac versions I hope I can escape from<br/>the revenge of Mac users who declare a piece of software that<br/>doesn&apos;t run on a Mac as Windows-only :-)</p><p>Manuel</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Another Scala for the Mac</h1><h3><a id=3698 href="#3698">🔗</a>manuel.op.de.coul@...</h3><span>8/13/2002 7:24:31 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>A Linux/PowerPC version of Scala was created by Michal Seta.<br/>Download it from this page:<br/><a href="http://creazone.eworldmusic.com/doc/mis/linux">http://creazone.eworldmusic.com/doc/mis/linux</a></p><p>It&apos;s the latest 2.05 version. Please let one of us know if<br/>there are any problems.</p><p>Now that there are two Mac versions I hope I can escape from<br/>the revenge of Mac users who declare a piece of software that<br/>doesn&apos;t run on a Mac as Windows-only :-)</p><p>Manuel</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>The book THE EIGHTH NOTE</h1><h3><a id=28828 href="#28828">🔗</a>Giancarlo DALMONTE &#x3C;giancarlodalmonte@...&#x3E;</h3><span>9/13/2012 10:43:10 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi People,<br/>I wonder if you can post here the news regarding the availability in the<br/>bookstores of my essay THE EIGHTH NOTE. And also the address of my<br/>website in which there is the synthesis of the book.<br/>The essay, published by Pendragon of Bologna, takes advantage of the<br/>presentation written by the great Italian jazz musician Paolo Fresu. The<br/>book is distributed by <a href="http://Amazon.it">Amazon.it</a>.<br/>I have prepared a brief press and attached it to this message, so that<br/>it can be viewed, to see, in fact, if it is publishable, the whole of it<br/>or a part. I do not want to be intrusive to the point of advertising<br/>myself, but only provide the information.<br/>Thanks.<br/>Giancarlo Dalmonte</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>The book THE EIGHTH NOTE</h1><h3><a id=28828 href="#28828">🔗</a>Giancarlo DALMONTE &#x3C;giancarlodalmonte@...&#x3E;</h3><span>9/13/2012 10:43:10 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi People,<br/>I wonder if you can post here the news regarding the availability in the<br/>bookstores of my essay THE EIGHTH NOTE. And also the address of my<br/>website in which there is the synthesis of the book.<br/>The essay, published by Pendragon of Bologna, takes advantage of the<br/>presentation written by the great Italian jazz musician Paolo Fresu. The<br/>book is distributed by <a href="http://Amazon.it">Amazon.it</a>.<br/>I have prepared a brief press and attached it to this message, so that<br/>it can be viewed, to see, in fact, if it is publishable, the whole of it<br/>or a part. I do not want to be intrusive to the point of advertising<br/>myself, but only provide the information.<br/>Thanks.<br/>Giancarlo Dalmonte</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

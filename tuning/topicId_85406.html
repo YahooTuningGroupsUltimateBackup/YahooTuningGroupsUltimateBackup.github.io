@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Microtonal site in Spanish</h1><h3><a id=85406 href="#85406">🔗</a>John H. Chalmers &#x3C;JHCHALMERS@...&#x3E;</h3><span>12/17/2009 8:53:18 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I saw this URL in a comment to a microtonal YouTube video: <a href="http://microtonalismo.com/">http://microtonalismo.com/</a></p><p>--John<br/>--<br/>I am using the free version of SPAMfighter.<br/>We are a community of 6 million users fighting spam.<br/>SPAMfighter has removed 64 of my spam emails to date.<br/>Get the free SPAMfighter here: <a href="http://www.spamfighter.com/len">http://www.spamfighter.com/len</a></p><p>The Professional version does not have this message</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Microtonal site in Spanish</h1><h3><a id=85406 href="#85406">🔗</a>John H. Chalmers &#x3C;JHCHALMERS@...&#x3E;</h3><span>12/17/2009 8:53:18 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I saw this URL in a comment to a microtonal YouTube video: <a href="http://microtonalismo.com/">http://microtonalismo.com/</a></p><p>--John<br/>--<br/>I am using the free version of SPAMfighter.<br/>We are a community of 6 million users fighting spam.<br/>SPAMfighter has removed 64 of my spam emails to date.<br/>Get the free SPAMfighter here: <a href="http://www.spamfighter.com/len">http://www.spamfighter.com/len</a></p><p>The Professional version does not have this message</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

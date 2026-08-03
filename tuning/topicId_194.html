@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>ET discussion</h1><h3><a id=194 href="#194">🔗</a>jpehrson@...</h3><span>7/2/2001 7:55:31 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Thanks to Brian McLaren for his excellent discussion of various ET&apos;s<br/>and the interesting music.  I enjoyed it so much, I haven&apos;t had time<br/>to finish the mclaren &quot;Microtonality -- Present, Past, Future&quot; from<br/>the MicroFest.</p><p>Hope to soon, though...</p><p>_______ ______ _________<br/>Joseph Pehrson</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>ET discussion</h1><h3><a id=194 href="#194">🔗</a>jpehrson@...</h3><span>7/2/2001 7:55:31 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Thanks to Brian McLaren for his excellent discussion of various ET&apos;s<br/>and the interesting music.  I enjoyed it so much, I haven&apos;t had time<br/>to finish the mclaren &quot;Microtonality -- Present, Past, Future&quot; from<br/>the MicroFest.</p><p>Hope to soon, though...</p><p>_______ ______ _________<br/>Joseph Pehrson</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

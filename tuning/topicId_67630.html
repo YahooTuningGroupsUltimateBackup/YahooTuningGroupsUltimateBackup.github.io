@@ -32,18 +32,18 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>[Fwd: elsie hamilton]</h1><h3><a id=67630 href="#67630">🔗</a>John H. Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>10/4/2006 7:50:55 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&nbsp;</p><p>-------- Original Message --------</p><p>Subject:&nbsp; elsie hamilton Date:&nbsp; Wed, 04 Oct 2006 07:49:17 +0100 From:&nbsp; Brian Lee<br/>To:&nbsp; <a href="mailto:waburt@melbourne.dialix.com.au">waburt@melbourne.dialix.com.au</a> CC:&nbsp; <a href="mailto:jhchalmers@ucsd.edu">jhchalmers@ucsd.edu</a></p><p>Hi Warren and John,</p><p>Just to let you know that my site is up and running now. There are articles by<br/>Kathleen Schlesinger and Elsie Hamilton and scores by Elsie Hamilton (just<br/>follow the links to Articles/Elsie and Kathy) as well as some articles by myself<br/>on just intonation and also some sound clips of Medicine River, an album I made<br/>using my own variation on the Schlesinger harmoniai.</p><p>Hope you enjoy.</p><p><a href="http://www.nakedlight.co.uk">http://www.nakedlight.co.uk</a> [<a href="http://www.nakedlight.co.uk/">http://www.nakedlight.co.uk/</a>]</p><p>Also if you know of anyone else who would be interested please feel free to<br/>forward this mail. And if you know of any sites/groups/organisations that would<br/>be interested, please let me know.</p><p>Greetings from an autumnal London</p><p>Brian<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p><p>NEW UPDATED WEBSITE<br/>with articles, soundclips, movie clip and online ordering facility<br/><a href="http://www.nakedlight.co.uk">http://www.nakedlight.co.uk</a> [<a href="http://www.nakedlight.co.uk/">http://www.nakedlight.co.uk/</a>]<br/>&nbsp;<br/>&nbsp;</p><br/>
+<a href="/tuning">back to list</a><h1>[Fwd: elsie hamilton]</h1><h3><a id=67630 href="#67630">🔗</a>John H. Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>10/4/2006 7:50:55 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&nbsp;</p><p>-------- Original Message --------</p><p>Subject:&nbsp; elsie hamilton Date:&nbsp; Wed, 04 Oct 2006 07:49:17 +0100 From:&nbsp; Brian Lee<br/>To:&nbsp; <a href="mailto:waburt@melbourne.dialix.com.au">waburt@melbourne.dialix.com.au</a> CC:&nbsp; <a href="mailto:jhchalmers@ucsd.edu">jhchalmers@ucsd.edu</a></p><p>Hi Warren and John,</p><p>Just to let you know that my site is up and running now. There are articles by<br/>Kathleen Schlesinger and Elsie Hamilton and scores by Elsie Hamilton (just<br/>follow the links to Articles/Elsie and Kathy) as well as some articles by myself<br/>on just intonation and also some sound clips of Medicine River, an album I made<br/>using my own variation on the Schlesinger harmoniai.</p><p>Hope you enjoy.</p><p><a href="http://www.nakedlight.co.uk">http://www.nakedlight.co.uk</a> [<a href="http://www.nakedlight.co.uk/">http://www.nakedlight.co.uk/</a>]</p><p>Also if you know of anyone else who would be interested please feel free to<br/>forward this mail. And if you know of any sites/groups/organisations that would<br/>be interested, please let me know.</p><p>Greetings from an autumnal London</p><p>Brian<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p><p>NEW UPDATED WEBSITE<br/>with articles, soundclips, movie clip and online ordering facility<br/><a href="http://www.nakedlight.co.uk">http://www.nakedlight.co.uk</a> [<a href="http://www.nakedlight.co.uk/">http://www.nakedlight.co.uk/</a>]<br/>&nbsp;<br/>&nbsp;</p><br/>
 <p>[ Attachment content not displayed ]</p><br/>
 <p>[ Attachment content not displayed ]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

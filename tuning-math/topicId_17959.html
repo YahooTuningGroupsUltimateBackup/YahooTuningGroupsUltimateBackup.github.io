@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>re Steinhaus 3 Gap conjecture, etc.</h1><h3><a id=17959 href="#17959">🔗</a>John H. Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>4/28/2010 8:54:31 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I didn&apos;t remember that an Euler Genus is the sum of CPS either and I&apos;ve been a student of Wilsoniana for 40+ years.</p><p>When we first heard of Ravenstein&apos;s paper, which, IIRC, Larry Hanson found, I wrote Ravenstein and pointed out the musical applications, but he never replied. Perhaps Kraig, Terumi, Warren or Greg Schiemer could try to contact him, assuming he&apos;s still extant and at the U of Wollongong.</p><p>--John</p></div><h3><a id=17961 href="#17961">🔗</a>genewardsmith &#x3C;genewardsmith@sbcglobal.net&#x3E;</h3><span>6/28/2010 7:10:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:tuning-math@yahoogroups.com">tuning-math@yahoogroups.com</a>, &quot;John H. Chalmers&quot; &lt;JHCHALMERS@...&gt; wrote:</p><p>&gt; When we first heard of Ravenstein&apos;s paper, which, IIRC, Larry Hanson<br/>&gt; found, I wrote Ravenstein and pointed out the musical applications, but<br/>&gt; he never replied. Perhaps Kraig, Terumi, Warren or Greg Schiemer could<br/>&gt; try to contact him, assuming he&apos;s still extant and at the U of Wollongong.</p><p>What do you want from Ravenstein?</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>re Steinhaus 3 Gap conjecture, etc.</h1><h3><a id=17959 href="#17959">🔗</a>John H. Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>4/28/2010 8:54:31 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I didn&apos;t remember that an Euler Genus is the sum of CPS either and I&apos;ve been a student of Wilsoniana for 40+ years.</p><p>When we first heard of Ravenstein&apos;s paper, which, IIRC, Larry Hanson found, I wrote Ravenstein and pointed out the musical applications, but he never replied. Perhaps Kraig, Terumi, Warren or Greg Schiemer could try to contact him, assuming he&apos;s still extant and at the U of Wollongong.</p><p>--John</p></div><h3><a id=17961 href="#17961">🔗</a>genewardsmith &#x3C;genewardsmith@sbcglobal.net&#x3E;</h3><span>6/28/2010 7:10:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In <a href="mailto:tuning-math@yahoogroups.com">tuning-math@yahoogroups.com</a>, &quot;John H. Chalmers&quot; &lt;JHCHALMERS@...&gt; wrote:</p><p>&gt; When we first heard of Ravenstein&apos;s paper, which, IIRC, Larry Hanson<br/>&gt; found, I wrote Ravenstein and pointed out the musical applications, but<br/>&gt; he never replied. Perhaps Kraig, Terumi, Warren or Greg Schiemer could<br/>&gt; try to contact him, assuming he&apos;s still extant and at the U of Wollongong.</p><p>What do you want from Ravenstein?</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

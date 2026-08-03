@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>mystery book</h1><h3><a id=5584 href="#5584">🔗</a>Joseph Pehrson &#x3C;jpehrson@...&#x3E;</h3><span>8/30/2003 10:40:22 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Was it somebody from one of the tuning lists who kindly sent me the<br/>science fiction book _The Long Afternoon of Earth_ by Brian Aldiss?<br/>It came from some city in Florida, and there was no message in it, so<br/>I&apos;m not really sure who to thank.</p><p>I believe the person who sent it knew that I was rereading _The Lord<br/>of the Flies_ and sent it because of that, but there has been a lot<br/>going on and I can&apos;t remember who said they were going to send this<br/>book to me...</p><p>Thanks!</p><p>J. Pehrson</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>mystery book</h1><h3><a id=5584 href="#5584">🔗</a>Joseph Pehrson &#x3C;jpehrson@...&#x3E;</h3><span>8/30/2003 10:40:22 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Was it somebody from one of the tuning lists who kindly sent me the<br/>science fiction book _The Long Afternoon of Earth_ by Brian Aldiss?<br/>It came from some city in Florida, and there was no message in it, so<br/>I&apos;m not really sure who to thank.</p><p>I believe the person who sent it knew that I was rereading _The Lord<br/>of the Flies_ and sent it because of that, but there has been a lot<br/>going on and I can&apos;t remember who said they were going to send this<br/>book to me...</p><p>Thanks!</p><p>J. Pehrson</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

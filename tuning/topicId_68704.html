@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>3/17-comma meantone</h1><h3><a id=68704 href="#68704">🔗</a>Aaron Krister Johnson &#x3C;aaron@dividebypi.com&#x3E;</h3><span>1/6/2007 2:06:58 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I was wondering whether anyone has investigated this from the 5-limit<br/>JI point of view that the log (cents) errors from JI for the 3/2 and<br/>the 5/4 are proportional to their prime numerators (the error for 3/2<br/>is three-fifths the error or the 5/4).</p><p>I know that 3/17-comma is well approximated by 55-edo, too.</p><p>-A.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>3/17-comma meantone</h1><h3><a id=68704 href="#68704">🔗</a>Aaron Krister Johnson &#x3C;aaron@dividebypi.com&#x3E;</h3><span>1/6/2007 2:06:58 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I was wondering whether anyone has investigated this from the 5-limit<br/>JI point of view that the log (cents) errors from JI for the 3/2 and<br/>the 5/4 are proportional to their prime numerators (the error for 3/2<br/>is three-fifths the error or the 5/4).</p><p>I know that 3/17-comma is well approximated by 55-edo, too.</p><p>-A.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

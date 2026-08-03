@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Happy Baktun!!</h1><h3><a id=28922 href="#28922">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>12/20/2012 5:45:09 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://chrisvaisvil.com/?p=2935">http://chrisvaisvil.com/?p=2935</a></p><p>*Happy Baktun!!&lt;<a href="http://micro.soonlabel.com/harmonic_series/20121218_midi_happy_2012_12_21.mp3">http://micro.soonlabel.com/harmonic_series/20121218_midi_happy_2012_12_21.mp3</a>&gt;<br/>* is a piece for harmonic series tuning piano, sitar, tabura, trumpet,<br/>piccolo and percussion with effects.</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Happy Baktun!!</h1><h3><a id=28922 href="#28922">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>12/20/2012 5:45:09 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://chrisvaisvil.com/?p=2935">http://chrisvaisvil.com/?p=2935</a></p><p>*Happy Baktun!!&lt;<a href="http://micro.soonlabel.com/harmonic_series/20121218_midi_happy_2012_12_21.mp3">http://micro.soonlabel.com/harmonic_series/20121218_midi_happy_2012_12_21.mp3</a>&gt;<br/>* is a piece for harmonic series tuning piano, sitar, tabura, trumpet,<br/>piccolo and percussion with effects.</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

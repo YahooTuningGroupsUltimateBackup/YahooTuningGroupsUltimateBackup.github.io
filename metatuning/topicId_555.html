@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>quote by Alan H. Linton</h1><h3><a id=555 href="#555">🔗</a>X. J. Scott &#x3C;xjscott@...&#x3E;</h3><span>9/27/2001 9:31:39 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&quot;[During] 150 years of the science of bacteriology,<br/>there is no evidence that one species of bacteria has<br/>changed into another.&quot;</p><p> -- British bacteriologist Alan H. Linton</p></div><h3><a id=589 href="#589">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>9/28/2001 1:18:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In metatuning@y..., &quot;X. J. Scott&quot; &lt;xjscott@e...&gt; wrote:<br/>&gt; &quot;[During] 150 years of the science of bacteriology,<br/>&gt; there is no evidence that one species of bacteria has<br/>&gt; changed into another.&quot;<br/>&gt;<br/>&gt;  -- British bacteriologist Alan H. Linton</p><p>As Dr. Evil would say, &quot;Riiiiiight . . .&quot;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>quote by Alan H. Linton</h1><h3><a id=555 href="#555">🔗</a>X. J. Scott &#x3C;xjscott@...&#x3E;</h3><span>9/27/2001 9:31:39 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&quot;[During] 150 years of the science of bacteriology,<br/>there is no evidence that one species of bacteria has<br/>changed into another.&quot;</p><p> -- British bacteriologist Alan H. Linton</p></div><h3><a id=589 href="#589">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>9/28/2001 1:18:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In metatuning@y..., &quot;X. J. Scott&quot; &lt;xjscott@e...&gt; wrote:<br/>&gt; &quot;[During] 150 years of the science of bacteriology,<br/>&gt; there is no evidence that one species of bacteria has<br/>&gt; changed into another.&quot;<br/>&gt;<br/>&gt;  -- British bacteriologist Alan H. Linton</p><p>As Dr. Evil would say, &quot;Riiiiiight . . .&quot;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

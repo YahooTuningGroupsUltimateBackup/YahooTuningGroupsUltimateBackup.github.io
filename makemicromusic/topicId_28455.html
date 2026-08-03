@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>In The Hand - 3 Pieces for Solo Piano</h1><h3><a id=28455 href="#28455">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>12/6/2011 7:28:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This is a collection of improvisations put together as an EP</p><p>In The Hand - in John O&apos;Sullivan&apos;s Blue JI tuning<br/>download<br/><a href="http://micro.soonlabel.com/blue-tuning/daily20111206-in-the-hand-blue-ji.mp3">http://micro.soonlabel.com/blue-tuning/daily20111206-in-the-hand-blue-ji.mp3</a></p><p>Quarter of a Mean Tone - in a tuning, quarter comma meantone that was<br/>popular in the Renaissance<br/>download<br/><a href="http://micro.soonlabel.com/quarter-comma-meantone/its-a-quarter-of-a-mean-tone.mp3">http://micro.soonlabel.com/quarter-comma-meantone/its-a-quarter-of-a-mean-tone.mp3</a></p><p>22 edt Improvisation - a new tuning (to me) suggested by Peter Kosmorsky<br/>download  <a href="http://micro.soonlabel.com/22-edt/daily20111206-22edt-improv.mp3">http://micro.soonlabel.com/22-edt/daily20111206-22edt-improv.mp3</a></p><p>Online play for all of them is to be found here:<br/><a href="http://chrisvaisvil.com/?p=1886">http://chrisvaisvil.com/?p=1886</a></p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>In The Hand - 3 Pieces for Solo Piano</h1><h3><a id=28455 href="#28455">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>12/6/2011 7:28:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>This is a collection of improvisations put together as an EP</p><p>In The Hand - in John O&apos;Sullivan&apos;s Blue JI tuning<br/>download<br/><a href="http://micro.soonlabel.com/blue-tuning/daily20111206-in-the-hand-blue-ji.mp3">http://micro.soonlabel.com/blue-tuning/daily20111206-in-the-hand-blue-ji.mp3</a></p><p>Quarter of a Mean Tone - in a tuning, quarter comma meantone that was<br/>popular in the Renaissance<br/>download<br/><a href="http://micro.soonlabel.com/quarter-comma-meantone/its-a-quarter-of-a-mean-tone.mp3">http://micro.soonlabel.com/quarter-comma-meantone/its-a-quarter-of-a-mean-tone.mp3</a></p><p>22 edt Improvisation - a new tuning (to me) suggested by Peter Kosmorsky<br/>download  <a href="http://micro.soonlabel.com/22-edt/daily20111206-22edt-improv.mp3">http://micro.soonlabel.com/22-edt/daily20111206-22edt-improv.mp3</a></p><p>Online play for all of them is to be found here:<br/><a href="http://chrisvaisvil.com/?p=1886">http://chrisvaisvil.com/?p=1886</a></p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

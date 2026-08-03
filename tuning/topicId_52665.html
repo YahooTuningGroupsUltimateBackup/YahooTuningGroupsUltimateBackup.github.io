@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>I can't stand the just version... ["Mush"]</h1><h3><a id=52665 href="#52665">🔗</a>Joseph Pehrson &#x3C;jpehrson@rcn.com&#x3E;</h3><span>2/29/2004 9:46:59 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The just version of &quot;Mush&quot; ruins the piece.  I can&apos;t listen to it for<br/>a minute...</p><p>JP</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>I can't stand the just version... ["Mush"]</h1><h3><a id=52665 href="#52665">🔗</a>Joseph Pehrson &#x3C;jpehrson@rcn.com&#x3E;</h3><span>2/29/2004 9:46:59 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The just version of &quot;Mush&quot; ruins the piece.  I can&apos;t listen to it for<br/>a minute...</p><p>JP</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>[ot]Any FATAR users out there who can enlighten me a bit?</h1><h3><a id=4142 href="#4142">🔗</a>joel &#x3C;mango@xxxxxxxxxxx.xxx&#x3E;</h3><span>8/4/1999 8:59:48 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>How can you make sequences with a FATAR SL-880 or SL-990 while it only has<br/>2 MIDI outs? It doesn&apos;t have MIDI in or through, right?</p><p>Thanks</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>[ot]Any FATAR users out there who can enlighten me a bit?</h1><h3><a id=4142 href="#4142">🔗</a>joel &#x3C;mango@xxxxxxxxxxx.xxx&#x3E;</h3><span>8/4/1999 8:59:48 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>How can you make sequences with a FATAR SL-880 or SL-990 while it only has<br/>2 MIDI outs? It doesn&apos;t have MIDI in or through, right?</p><p>Thanks</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

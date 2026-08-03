@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>changing drone with bell-improv, 87edo with changing transpositions</h1><h3><a id=28620 href="#28620">🔗</a>calebmrgn &#x3C;calebmrgn@...&#x3E;</h3><span>3/2/2012 6:30:45 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.box.com/s/udu917e61vz6r9pa7jk6">http://www.box.com/s/udu917e61vz6r9pa7jk6</a></p><p>This is somewhat crude, and certainly boring as a 9-minute piece.</p><p>But I&apos;m including it because the harmonies mostly sound ok, and it embodies the basic concept:  High-register drones are re-harmonized -- hopefully a little obliquely.</p><p>The bells are EXS24 instruments with the pitch-bend set to +-12.  This turns out to be a good way of working for me, and surprisingly, it&apos;s accurate enough for my purposes.</p><p>In a more advanced version of this piece, the pitch-bend changes will be disguised, but here you can hear them.</p><p>The improv is heavy on 3-7-9-11-13 motives, and I&apos;m trying to avoid too obvious extended dominant seventh chords.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>changing drone with bell-improv, 87edo with changing transpositions</h1><h3><a id=28620 href="#28620">🔗</a>calebmrgn &#x3C;calebmrgn@...&#x3E;</h3><span>3/2/2012 6:30:45 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.box.com/s/udu917e61vz6r9pa7jk6">http://www.box.com/s/udu917e61vz6r9pa7jk6</a></p><p>This is somewhat crude, and certainly boring as a 9-minute piece.</p><p>But I&apos;m including it because the harmonies mostly sound ok, and it embodies the basic concept:  High-register drones are re-harmonized -- hopefully a little obliquely.</p><p>The bells are EXS24 instruments with the pitch-bend set to +-12.  This turns out to be a good way of working for me, and surprisingly, it&apos;s accurate enough for my purposes.</p><p>In a more advanced version of this piece, the pitch-bend changes will be disguised, but here you can hear them.</p><p>The improv is heavy on 3-7-9-11-13 motives, and I&apos;m trying to avoid too obvious extended dominant seventh chords.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

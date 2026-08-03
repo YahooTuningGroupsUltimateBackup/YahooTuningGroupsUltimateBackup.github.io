@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>TUNING digest 1140</h1><h3><a id=5912 href="#5912">🔗</a>&#x22;Fred Kohler&#x22; &#x3C;Fred_Kohler@...&#x3E;</h3><span>7/28/1997 10:22:29 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Everyone;<br>    John S. Allen, inventor of the Notebender keyboard, has a web page with<br>info on music keyboard design with a section on generalized keyboard design.<br> Link titles on his page include:<br><br>Improving the Musical Instrument Keyboard<br>MIDI editing/Cakewalk for Windows<br>On Rabbits, Mathematics and Musical Scales<br>Notation for Microtonal Scales, Part 1<br><br>I urge everyone to have a look at<br> http://web0.tiac.net/users/jsallen/music/index.htm<br><br>--Fred.<br><br>---------------------------------------------------------<br> Fred Kohler, #7-240 Burnside Rd E, Victoria, BC, Canada<br> phone:(250)388-7918  email:Fred_Kohler@bc.sympatico.ca</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>TUNING digest 1140</h1><h3><a id=5912 href="#5912">🔗</a>&#x22;Fred Kohler&#x22; &#x3C;Fred_Kohler@...&#x3E;</h3><span>7/28/1997 10:22:29 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>Everyone;<br>    John S. Allen, inventor of the Notebender keyboard, has a web page with<br>info on music keyboard design with a section on generalized keyboard design.<br> Link titles on his page include:<br><br>Improving the Musical Instrument Keyboard<br>MIDI editing/Cakewalk for Windows<br>On Rabbits, Mathematics and Musical Scales<br>Notation for Microtonal Scales, Part 1<br><br>I urge everyone to have a look at<br> http://web0.tiac.net/users/jsallen/music/index.htm<br><br>--Fred.<br><br>---------------------------------------------------------<br> Fred Kohler, #7-240 Burnside Rd E, Victoria, BC, Canada<br> phone:(250)388-7918  email:Fred_Kohler@bc.sympatico.ca</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>14-note Fokker blocks</h1><h3><a id=12748 href="#12748">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>10/1/2005 2:37:24 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I&apos;ve uploaded a zip file for some of these. None of the scales turned<br/>out to be epimorphic, though presumably less interesting ones could be<br/>found which are. However, one set, based on 2048/2025 and 2048/1875<br/>strikes me as quite interesting. I called this series &quot;diaddim&quot;, after<br/>&quot;diaschismic&quot; and &quot;double diminished third&quot;. It is interesting from<br/>the point of view of marvel tempering. 256/225 serves as an 8/7 in<br/>marvel, and is at an angle of 10.9 degrees from 2048/2025 and 19.1<br/>from 2048/1875, and between them. The product of 2048/2025 and<br/>2048/1875 is only 3 degrees from 256/225. As a result, the Fokker<br/>blocks are long in the 256/225 direction, and there are relatively a<br/>lot of tetrads; the scales feature four otonal and four utonal<br/>tetrads, which isn&apos;t bad. The fullest harmonies are from diaddim2 and<br/>its inverse diaddim3, which have<br/>six of each kind of triad.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>14-note Fokker blocks</h1><h3><a id=12748 href="#12748">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>10/1/2005 2:37:24 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I&apos;ve uploaded a zip file for some of these. None of the scales turned<br/>out to be epimorphic, though presumably less interesting ones could be<br/>found which are. However, one set, based on 2048/2025 and 2048/1875<br/>strikes me as quite interesting. I called this series &quot;diaddim&quot;, after<br/>&quot;diaschismic&quot; and &quot;double diminished third&quot;. It is interesting from<br/>the point of view of marvel tempering. 256/225 serves as an 8/7 in<br/>marvel, and is at an angle of 10.9 degrees from 2048/2025 and 19.1<br/>from 2048/1875, and between them. The product of 2048/2025 and<br/>2048/1875 is only 3 degrees from 256/225. As a result, the Fokker<br/>blocks are long in the 256/225 direction, and there are relatively a<br/>lot of tetrads; the scales feature four otonal and four utonal<br/>tetrads, which isn&apos;t bad. The fullest harmonies are from diaddim2 and<br/>its inverse diaddim3, which have<br/>six of each kind of triad.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

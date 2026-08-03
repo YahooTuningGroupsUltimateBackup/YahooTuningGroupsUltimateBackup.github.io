@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>Meantone center?</h1><h3><a id=8102 href="#8102">🔗</a>&#x22;Bob Lee&#x22; &#x3C;quasar@...&#x3E;</h3><span>6/16/1998 8:16:50 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>Ascend11@aol.com (sorry I don't know your name) wrote about the difference<br>between sixth comma and quarter comma meantone piano tunings. Fascinating -<br>especially the part about the natural vibrato effect of sixth comma.<br><br>My question - which key do you use as the center of your meantone tunings?<br><br>    -b0b-<br><br>http://wco.com/~quasar/tunings/fscale12.htm</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>Meantone center?</h1><h3><a id=8102 href="#8102">🔗</a>&#x22;Bob Lee&#x22; &#x3C;quasar@...&#x3E;</h3><span>6/16/1998 8:16:50 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>Ascend11@aol.com (sorry I don't know your name) wrote about the difference<br>between sixth comma and quarter comma meantone piano tunings. Fascinating -<br>especially the part about the natural vibrato effect of sixth comma.<br><br>My question - which key do you use as the center of your meantone tunings?<br><br>    -b0b-<br><br>http://wco.com/~quasar/tunings/fscale12.htm</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

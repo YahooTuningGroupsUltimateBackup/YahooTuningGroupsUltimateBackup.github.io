@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Prime Factors Using Spreadsheet</h1><h3><a id=20395 href="#20395">🔗</a>Mohajeri Shahin &#x3C;shahinm@...&#x3E;</h3><span>2/9/2009 4:50:53 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://people.revoledu.com/kardi/tutorial/BasicMath/Prime/PrimeFactor.htm">http://people.revoledu.com/kardi/tutorial/BasicMath/Prime/PrimeFactor.htm</a></p><p>Or:</p><p>downloaded here &lt;<a href="http://people.revoledu.com/kardi/tutorial/Excel/Spreadsheet/PrimeFactor.xls">http://people.revoledu.com/kardi/tutorial/Excel/Spreadsheet/PrimeFactor.xls</a>&gt; .</p><p>Shaahin mohajeri , Tombak player and microtonalist</p><p>My microtonal web site &lt;<a href="http://www.96edo.com/">http://www.96edo.com/</a>&gt;</p><p>Shaahin in wikipedia &lt;<a href="http://en.wikipedia.org/wiki/Shaahin_Mohajeri">http://en.wikipedia.org/wiki/Shaahin_Mohajeri</a>&gt;</p><p>My farsi page in harmonytalk &lt;<a href="http://www.harmonytalk.com/mohajeri">http://www.harmonytalk.com/mohajeri</a>&gt;</p><p>Irandrumz ensemble &lt;<a href="http://irandrumz.googlepages.com/">http://irandrumz.googlepages.com/</a>&gt;</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#x1D0; &quot;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&quot; &lt;<a href="http://acousticsoftombak.blogfa.com/">http://acousticsoftombak.blogfa.com/</a>&gt;</p><p>*********</p><p><a href="http://www.kayson-ir.com">www.kayson-ir.com</a> &lt;<a href="http://www.kayson-ir.com/">http://www.kayson-ir.com/</a>&gt;</p><p>2288 Iranzamin bldg Iranzamin Ave.</p><p>Shahrak Qods, Tehran 14656, Iran<br/>Telephone: (9821) 88072501-9</p><p>Fax: (9821) 88072500<br/>Email: shahinm@... &lt;mailto:shahinm@...&gt;</p><p>P Please consider the environment before printing this mail note.</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Prime Factors Using Spreadsheet</h1><h3><a id=20395 href="#20395">🔗</a>Mohajeri Shahin &#x3C;shahinm@...&#x3E;</h3><span>2/9/2009 4:50:53 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://people.revoledu.com/kardi/tutorial/BasicMath/Prime/PrimeFactor.htm">http://people.revoledu.com/kardi/tutorial/BasicMath/Prime/PrimeFactor.htm</a></p><p>Or:</p><p>downloaded here &lt;<a href="http://people.revoledu.com/kardi/tutorial/Excel/Spreadsheet/PrimeFactor.xls">http://people.revoledu.com/kardi/tutorial/Excel/Spreadsheet/PrimeFactor.xls</a>&gt; .</p><p>Shaahin mohajeri , Tombak player and microtonalist</p><p>My microtonal web site &lt;<a href="http://www.96edo.com/">http://www.96edo.com/</a>&gt;</p><p>Shaahin in wikipedia &lt;<a href="http://en.wikipedia.org/wiki/Shaahin_Mohajeri">http://en.wikipedia.org/wiki/Shaahin_Mohajeri</a>&gt;</p><p>My farsi page in harmonytalk &lt;<a href="http://www.harmonytalk.com/mohajeri">http://www.harmonytalk.com/mohajeri</a>&gt;</p><p>Irandrumz ensemble &lt;<a href="http://irandrumz.googlepages.com/">http://irandrumz.googlepages.com/</a>&gt;</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#x1D0; &quot;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&quot; &lt;<a href="http://acousticsoftombak.blogfa.com/">http://acousticsoftombak.blogfa.com/</a>&gt;</p><p>*********</p><p><a href="http://www.kayson-ir.com">www.kayson-ir.com</a> &lt;<a href="http://www.kayson-ir.com/">http://www.kayson-ir.com/</a>&gt;</p><p>2288 Iranzamin bldg Iranzamin Ave.</p><p>Shahrak Qods, Tehran 14656, Iran<br/>Telephone: (9821) 88072501-9</p><p>Fax: (9821) 88072500<br/>Email: shahinm@... &lt;mailto:shahinm@...&gt;</p><p>P Please consider the environment before printing this mail note.</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

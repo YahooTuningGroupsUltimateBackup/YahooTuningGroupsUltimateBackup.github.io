@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>RE: [MMM] object lesson in great software</h1><h3><a id=3063 href="#3063">🔗</a>John Loffink &#x3C;jloffink@...&#x3E;</h3><span>5/21/2002 7:41:19 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>There is some mention of microtuning support in the new Cubase SX but I<br/>have not yet been able to get any details.</p><p>John Loffink<br/>jloffink@...</p><p>&gt; -----Original Message-----<br/>&gt; From: X. J. Scott [mailto:xjscott@...]<br/>&gt; Sent: Tuesday, May 21, 2002 4:07 PM<br/>&gt; To: mmm<br/>&gt; Subject: [MMM] object lesson in great software<br/>&gt;<br/>&gt; There was a recent mention of Cubase VST.<br/>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>RE: [MMM] object lesson in great software</h1><h3><a id=3063 href="#3063">🔗</a>John Loffink &#x3C;jloffink@...&#x3E;</h3><span>5/21/2002 7:41:19 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>There is some mention of microtuning support in the new Cubase SX but I<br/>have not yet been able to get any details.</p><p>John Loffink<br/>jloffink@...</p><p>&gt; -----Original Message-----<br/>&gt; From: X. J. Scott [mailto:xjscott@...]<br/>&gt; Sent: Tuesday, May 21, 2002 4:07 PM<br/>&gt; To: mmm<br/>&gt; Subject: [MMM] object lesson in great software<br/>&gt;<br/>&gt; There was a recent mention of Cubase VST.<br/>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

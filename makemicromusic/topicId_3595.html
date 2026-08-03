@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>some tunes</h1><h3><a id=3595 href="#3595">🔗</a>Christopher Bailey &#x3C;cb202@...&#x3E;</h3><span>7/11/2002 3:37:56 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>These aren&apos;t exactly microtonal, but Mom encouraged me to post &apos;em, so<br/>here goes:</p><p>Here are some quasi-techno ditties I did for various folks:</p><p>The Dorkbot theme song:<br/>        <a href="http://music.columbia.edu/cmc/dorkbotnyc/dorkbotnyc.mp3">http://music.columbia.edu/cmc/dorkbotnyc/dorkbotnyc.mp3</a><br/>Dorkbotnyc: artists doing strange things with electricity:<br/>        <a href="http://music.columbia.edu/cmc/dorkbotnyc">http://music.columbia.edu/cmc/dorkbotnyc</a></p><p>The Artbots theme song:<br/>        <a href="http://www.artbots.org/artbots.mp3">http://www.artbots.org/artbots.mp3</a><br/>Artbots:<br/>        <a href="http://www.artbots.org">http://www.artbots.org</a></p><p>        The latter features your favorite dark chord progressions from<br/>Gotterdaemerung.</p><p>I used ProTools and the coolest synth/sampler box I&apos;ve come across, the<br/>Roland XV-5080, and some raw samples of various sorts,  plus a host of<br/>plug-ins.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>some tunes</h1><h3><a id=3595 href="#3595">🔗</a>Christopher Bailey &#x3C;cb202@...&#x3E;</h3><span>7/11/2002 3:37:56 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>These aren&apos;t exactly microtonal, but Mom encouraged me to post &apos;em, so<br/>here goes:</p><p>Here are some quasi-techno ditties I did for various folks:</p><p>The Dorkbot theme song:<br/>        <a href="http://music.columbia.edu/cmc/dorkbotnyc/dorkbotnyc.mp3">http://music.columbia.edu/cmc/dorkbotnyc/dorkbotnyc.mp3</a><br/>Dorkbotnyc: artists doing strange things with electricity:<br/>        <a href="http://music.columbia.edu/cmc/dorkbotnyc">http://music.columbia.edu/cmc/dorkbotnyc</a></p><p>The Artbots theme song:<br/>        <a href="http://www.artbots.org/artbots.mp3">http://www.artbots.org/artbots.mp3</a><br/>Artbots:<br/>        <a href="http://www.artbots.org">http://www.artbots.org</a></p><p>        The latter features your favorite dark chord progressions from<br/>Gotterdaemerung.</p><p>I used ProTools and the coolest synth/sampler box I&apos;ve come across, the<br/>Roland XV-5080, and some raw samples of various sorts,  plus a host of<br/>plug-ins.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

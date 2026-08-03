@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Timbre manipulation for 10TET</h1><h3><a id=18542 href="#18542">🔗</a>djtrancendance &#x3C;djtrancendance@...&#x3E;</h3><span>4/15/2008 8:11:19 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I was wondering if the is any software that can match the timbre of<br/>any sampled instrument to 10TET (IE so the overtones ratios = the<br/>scale) for the PC.</p><p>   I have found 10TET is actually a beautifully consonant scale so<br/>long as you stick with pure sine waves for instruments :-D...but I am<br/>looking for a way to play it cleanly with instruments with overlapping<br/>overtones. :-)</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Timbre manipulation for 10TET</h1><h3><a id=18542 href="#18542">🔗</a>djtrancendance &#x3C;djtrancendance@...&#x3E;</h3><span>4/15/2008 8:11:19 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I was wondering if the is any software that can match the timbre of<br/>any sampled instrument to 10TET (IE so the overtones ratios = the<br/>scale) for the PC.</p><p>   I have found 10TET is actually a beautifully consonant scale so<br/>long as you stick with pure sine waves for instruments :-D...but I am<br/>looking for a way to play it cleanly with instruments with overlapping<br/>overtones. :-)</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

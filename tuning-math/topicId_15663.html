@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Minimum distance tetrad</h1><h3><a id=15663 href="#15663">🔗</a>Gene Ward Smith &#x3C;genewardsmith@coolgoose.com&#x3E;</h3><span>8/30/2006 2:31:57 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Here&apos;s a nice formula which follows from the fact that the 7-limit<br/>diamond is [-1..0,-1..0,-1..0]. If [a,b,c] is the ontonal tetrad<br/>corresponding to some interval 1 &lt;= q &lt; 2, then the tetrad with<br/>minimal distance to the origin tetrad is well defined. For each of a,<br/>b, and c, substract 1 if they are positive, and leave unchanged if<br/>they are negative; the resulting tetrad is the one closest to the<br/>origin containing q.</p><p>For instance, for 225/224 we have [1,1,4] as the otonal root tetrad,<br/>and so [0,0,3] as the minimal tetrad. This can be a useful thing to<br/>know for scale construction.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>Minimum distance tetrad</h1><h3><a id=15663 href="#15663">🔗</a>Gene Ward Smith &#x3C;genewardsmith@coolgoose.com&#x3E;</h3><span>8/30/2006 2:31:57 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Here&apos;s a nice formula which follows from the fact that the 7-limit<br/>diamond is [-1..0,-1..0,-1..0]. If [a,b,c] is the ontonal tetrad<br/>corresponding to some interval 1 &lt;= q &lt; 2, then the tetrad with<br/>minimal distance to the origin tetrad is well defined. For each of a,<br/>b, and c, substract 1 if they are positive, and leave unchanged if<br/>they are negative; the resulting tetrad is the one closest to the<br/>origin containing q.</p><p>For instance, for 225/224 we have [1,1,4] as the otonal root tetrad,<br/>and so [0,0,3] as the minimal tetrad. This can be a useful thing to<br/>know for scale construction.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

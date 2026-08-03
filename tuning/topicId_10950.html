@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>dynamic lattice</h1><h3><a id=10950 href="#10950">🔗</a>Rosati &#x3C;dante@pop.interport.net&#x3E;</h3><span>6/27/2000 11:45:22 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>this looks like it could be adapted to lattices in some way:</p><p><a href="http://sodaplay.com/constructor/index.htm">http://sodaplay.com/constructor/index.htm</a></p><p>in fact it looks like a walking lattice.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>dynamic lattice</h1><h3><a id=10950 href="#10950">🔗</a>Rosati &#x3C;dante@pop.interport.net&#x3E;</h3><span>6/27/2000 11:45:22 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>this looks like it could be adapted to lattices in some way:</p><p><a href="http://sodaplay.com/constructor/index.htm">http://sodaplay.com/constructor/index.htm</a></p><p>in fact it looks like a walking lattice.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

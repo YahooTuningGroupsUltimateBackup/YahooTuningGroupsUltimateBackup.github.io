@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Number 39</h1><h3><a id=54138 href="#54138">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>7/7/2004 12:18:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>We have to go all the way down to Number 39 these days to find<br/>something without at least one name, but that&apos;s not why I&apos;m picking<br/>on it. It&apos;s got a small generator, so it looks like another good<br/>example to study.</p><p>&lt;&lt;11 18 5 3 -23 -39|| 26&amp;27<br/>[&lt;1 2 3 3|, &lt;0 -11 -18 -5|]<br/>copop 7&amp;9 limit generators 7/186, 9/239<br/>TM basis: {1728/1715, 4000/3969}<br/>MOS: 26, 27, 53, 80<br/>generator is an approximate 36/35 ~ 49/48 ~ 250/243</p><p>What&apos;s a good name? &quot;Quartonic&quot; since 36/35 and 250/243 are close to<br/>being quartertones is the best I&apos;m coming up with now. How would the<br/>notation mavens propose to notate it?</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Number 39</h1><h3><a id=54138 href="#54138">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>7/7/2004 12:18:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>We have to go all the way down to Number 39 these days to find<br/>something without at least one name, but that&apos;s not why I&apos;m picking<br/>on it. It&apos;s got a small generator, so it looks like another good<br/>example to study.</p><p>&lt;&lt;11 18 5 3 -23 -39|| 26&amp;27<br/>[&lt;1 2 3 3|, &lt;0 -11 -18 -5|]<br/>copop 7&amp;9 limit generators 7/186, 9/239<br/>TM basis: {1728/1715, 4000/3969}<br/>MOS: 26, 27, 53, 80<br/>generator is an approximate 36/35 ~ 49/48 ~ 250/243</p><p>What&apos;s a good name? &quot;Quartonic&quot; since 36/35 and 250/243 are close to<br/>being quartertones is the best I&apos;m coming up with now. How would the<br/>notation mavens propose to notate it?</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Gene and Ozan</h1><h3><a id=66947 href="#66947">🔗</a>Afmmjr@aol.com</h3><span>6/14/2006 6:43:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Sorry, Gene, I do not know the birth, etc. particulars for David Rothenberg.  My suggestion, call him on the telephone.  If interested, I&apos;ll get you his phone number.</p><p>Ozan, of course the Haydn, Glinka, and Mozart AFMM performances were in Werckmeister III.</p><p>Johnny<br/>________________________________________________________________________<br/>Check out <a href="http://AOL.com">AOL.com</a> today. Breaking news, video search, pictures, email and IM. All on demand. Always Free.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Gene and Ozan</h1><h3><a id=66947 href="#66947">🔗</a>Afmmjr@aol.com</h3><span>6/14/2006 6:43:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Sorry, Gene, I do not know the birth, etc. particulars for David Rothenberg.  My suggestion, call him on the telephone.  If interested, I&apos;ll get you his phone number.</p><p>Ozan, of course the Haydn, Glinka, and Mozart AFMM performances were in Werckmeister III.</p><p>Johnny<br/>________________________________________________________________________<br/>Check out <a href="http://AOL.com">AOL.com</a> today. Breaking news, video search, pictures, email and IM. All on demand. Always Free.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

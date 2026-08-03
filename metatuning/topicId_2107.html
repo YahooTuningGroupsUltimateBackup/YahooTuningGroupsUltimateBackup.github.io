@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>the catholic church's stand on abortion</h1><h3><a id=2107 href="#2107">🔗</a>paulerlich &#x3C;paul@...&#x3E;</h3><span>3/21/2002 4:18:43 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Note that &quot;zygotic personhood&quot; (the idea that a fertilized egg is a<br/>person) is a recent concept. For example, before 1869, the Catholic<br/>church believed that the embryo was not a person until it was 40 days<br/>old. (Aristotle agreed with this 40-day threshold.) Thus, the church<br/>did not believe a human had a soul until day 40. Pope Innocent III in<br/>1211 determined that the time of ensoulment was anywhere from 12 to<br/>16 weeks. This means that the Catholic church, for centuries, did not<br/>equate abortion with murder.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>the catholic church's stand on abortion</h1><h3><a id=2107 href="#2107">🔗</a>paulerlich &#x3C;paul@...&#x3E;</h3><span>3/21/2002 4:18:43 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Note that &quot;zygotic personhood&quot; (the idea that a fertilized egg is a<br/>person) is a recent concept. For example, before 1869, the Catholic<br/>church believed that the embryo was not a person until it was 40 days<br/>old. (Aristotle agreed with this 40-day threshold.) Thus, the church<br/>did not believe a human had a soul until day 40. Pope Innocent III in<br/>1211 determined that the time of ensoulment was anywhere from 12 to<br/>16 weeks. This means that the Catholic church, for centuries, did not<br/>equate abortion with murder.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Multiply ambiguous temperaments</h1><h3><a id=63262 href="#63262">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>1/1/2006 2:55:10 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If the septimal kleisma of 225/224 is tempered out, the septimal<br/>kleismic augmented triad, 5/4-5/4-9/7, is a chord of ambiguous<br/>tonality. If the septimal semicomma of 126/125 is tempered out, the<br/>septimal semicomma diminished seventh chord, 6/5-6/5-6/5-7/6, as a<br/>chord of ambiguous tonality. If the orwell comma of 1728/1715 is<br/>tempered out, the orwell tetrad, 5/4-7/6-7/6-7/6, is a chord of<br/>ambiguous tonality. Tempering out two of these gives linear<br/>temperaments with two different ambiguous chords. If we temper out<br/>126/125 and 225/224, we get septimal meantone temperament. If we<br/>temper out 1728/1715 and 225/224, we get orwell temperament. If we<br/>temper out 126/125 and 1728/1715, we get myna temperament.</p></div><h3><a id=63263 href="#63263">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>1/1/2006 3:00:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;Gene Ward Smith&quot; &lt;gwsmith@s...&gt; wrote:</p><p>&gt; If we temper out<br/>&gt; 126/125 and 225/224, we get septimal meantone temperament. If we<br/>&gt; temper out 1728/1715 and 225/224, we get orwell temperament. If we<br/>&gt; temper out 126/125 and 1728/1715, we get myna temperament.</p><p>I forgot to add that if we temper out all three, we get 31-et.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Multiply ambiguous temperaments</h1><h3><a id=63262 href="#63262">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>1/1/2006 2:55:10 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>If the septimal kleisma of 225/224 is tempered out, the septimal<br/>kleismic augmented triad, 5/4-5/4-9/7, is a chord of ambiguous<br/>tonality. If the septimal semicomma of 126/125 is tempered out, the<br/>septimal semicomma diminished seventh chord, 6/5-6/5-6/5-7/6, as a<br/>chord of ambiguous tonality. If the orwell comma of 1728/1715 is<br/>tempered out, the orwell tetrad, 5/4-7/6-7/6-7/6, is a chord of<br/>ambiguous tonality. Tempering out two of these gives linear<br/>temperaments with two different ambiguous chords. If we temper out<br/>126/125 and 225/224, we get septimal meantone temperament. If we<br/>temper out 1728/1715 and 225/224, we get orwell temperament. If we<br/>temper out 126/125 and 1728/1715, we get myna temperament.</p></div><h3><a id=63263 href="#63263">🔗</a>Gene Ward Smith &#x3C;gwsmith@svpal.org&#x3E;</h3><span>1/1/2006 3:00:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;Gene Ward Smith&quot; &lt;gwsmith@s...&gt; wrote:</p><p>&gt; If we temper out<br/>&gt; 126/125 and 225/224, we get septimal meantone temperament. If we<br/>&gt; temper out 1728/1715 and 225/224, we get orwell temperament. If we<br/>&gt; temper out 126/125 and 1728/1715, we get myna temperament.</p><p>I forgot to add that if we temper out all three, we get 31-et.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

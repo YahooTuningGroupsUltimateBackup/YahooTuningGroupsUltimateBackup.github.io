@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>686/675</h1><h3><a id=3194 href="#3194">🔗</a>genewardsmith &#x3C;genewardsmith@juno.com&#x3E;</h3><span>2/2/2002 10:18:00 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Has anyone noticed this one? I saw it turning up in the reduced bases of 37 and 55; it is a comma of 9,10,19,27,29,36,37,46,55,56, and is productive of a number of good temperaments.</p></div><h3><a id=3195 href="#3195">🔗</a>genewardsmith &#x3C;genewardsmith@juno.com&#x3E;</h3><span>2/2/2002 10:24:19 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning-math@y..., &quot;genewardsmith&quot; &lt;genewardsmith@j...&gt; wrote:</p><p>&gt; Has anyone noticed this one? I saw it turning up in the reduced bases of 37 and 55; it is a comma of 9,10,19,27,29,36,37,46,55,56, and is productive of a number of good temperaments.</p><p>I should add it also turned up in the survey of 7-limit temperaments. It is (7/6)^3 / (5/4)^2.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>686/675</h1><h3><a id=3194 href="#3194">🔗</a>genewardsmith &#x3C;genewardsmith@juno.com&#x3E;</h3><span>2/2/2002 10:18:00 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Has anyone noticed this one? I saw it turning up in the reduced bases of 37 and 55; it is a comma of 9,10,19,27,29,36,37,46,55,56, and is productive of a number of good temperaments.</p></div><h3><a id=3195 href="#3195">🔗</a>genewardsmith &#x3C;genewardsmith@juno.com&#x3E;</h3><span>2/2/2002 10:24:19 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In tuning-math@y..., &quot;genewardsmith&quot; &lt;genewardsmith@j...&gt; wrote:</p><p>&gt; Has anyone noticed this one? I saw it turning up in the reduced bases of 37 and 55; it is a comma of 9,10,19,27,29,36,37,46,55,56, and is productive of a number of good temperaments.</p><p>I should add it also turned up in the survey of 7-limit temperaments. It is (7/6)^3 / (5/4)^2.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

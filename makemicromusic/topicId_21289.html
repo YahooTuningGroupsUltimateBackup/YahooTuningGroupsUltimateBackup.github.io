@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>eigenharp video: details</h1><h3><a id=21289 href="#21289">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>10/16/2009 10:58:21 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>These two videos (about 12 min total) are well worth watching.<br/>These guys have done a bang-up job.  From what I hear, the software,<br/>digital interconnect, everything is engineered to the 9s.</p><p><a href="http://www.engadget.com/2009/10/16/eigenharp-alpha-pico-demo-and-mind-blowing-concert-hands-on/">http://www.engadget.com/2009/10/16/eigenharp-alpha-pico-demo-and-mind-blowing-concert-hands-on/</a></p><p>Tons of potential here.  It&apos;s the first all digital controller<br/>that I can see being used by front men on stage, sightreading<br/>folks in a pit at the theater, microtonalists, for music of<br/>pretty much every style.  CNMAT eat your heart out.</p><p>-Carl</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>eigenharp video: details</h1><h3><a id=21289 href="#21289">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>10/16/2009 10:58:21 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>These two videos (about 12 min total) are well worth watching.<br/>These guys have done a bang-up job.  From what I hear, the software,<br/>digital interconnect, everything is engineered to the 9s.</p><p><a href="http://www.engadget.com/2009/10/16/eigenharp-alpha-pico-demo-and-mind-blowing-concert-hands-on/">http://www.engadget.com/2009/10/16/eigenharp-alpha-pico-demo-and-mind-blowing-concert-hands-on/</a></p><p>Tons of potential here.  It&apos;s the first all digital controller<br/>that I can see being used by front men on stage, sightreading<br/>folks in a pit at the theater, microtonalists, for music of<br/>pretty much every style.  CNMAT eat your heart out.</p><p>-Carl</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

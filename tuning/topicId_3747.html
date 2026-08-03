@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: New Wilson Archive addition</h1><h3><a id=3747 href="#3747">🔗</a>Kraig Grady &#x3C;kraiggrady@xxxxxxxxx.xxxx&#x3E;</h3><span>6/24/1999 12:06:20 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>To all!<br/>    Our newest addition SOME BASIC PATTERNS UNDERLYING 12 &amp; 17 with an earlier paper<br/>that contains the original idea SEPTENDENE CENTERED ON THE BOSANQUET. Together at<br/>last at <a href="http://www.anaphoria.com/genus.html">http://www.anaphoria.com/genus.html</a><br/>    This scale is capable of much of the Boomsliter and Creel extended referance or<br/>any of us who hear melodic commatic shifts in our diatonic melodies. I remember<br/>Glenn Prior including these on his concerts with Ivor. Even Ivor relize the<br/>corectness of such shifts.</p><p>&gt;</p><p>-- Kraig Grady<br/>North American Embassy of Anaphoria Island<br/><a href="http://www.anaphoria.com">http://www.anaphoria.com</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: New Wilson Archive addition</h1><h3><a id=3747 href="#3747">🔗</a>Kraig Grady &#x3C;kraiggrady@xxxxxxxxx.xxxx&#x3E;</h3><span>6/24/1999 12:06:20 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>To all!<br/>    Our newest addition SOME BASIC PATTERNS UNDERLYING 12 &amp; 17 with an earlier paper<br/>that contains the original idea SEPTENDENE CENTERED ON THE BOSANQUET. Together at<br/>last at <a href="http://www.anaphoria.com/genus.html">http://www.anaphoria.com/genus.html</a><br/>    This scale is capable of much of the Boomsliter and Creel extended referance or<br/>any of us who hear melodic commatic shifts in our diatonic melodies. I remember<br/>Glenn Prior including these on his concerts with Ivor. Even Ivor relize the<br/>corectness of such shifts.</p><p>&gt;</p><p>-- Kraig Grady<br/>North American Embassy of Anaphoria Island<br/><a href="http://www.anaphoria.com">http://www.anaphoria.com</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

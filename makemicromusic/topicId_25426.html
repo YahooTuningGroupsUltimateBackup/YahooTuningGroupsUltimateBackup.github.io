@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Hammer Dulcimer Improvisations</h1><h3><a id=25426 href="#25426">🔗</a>christopherv &#x3C;chrisvaisvil@...&#x3E;</h3><span>2/5/2011 3:02:56 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The hammer dulcimer is tuned by ear to some unknown tuning - some 30 strings give or take.</p><p>You can listen online here:<br/><a href="http://notonlymusic.com/board/viewtopic.php?f=23&t=782&start=0">http://notonlymusic.com/board/viewtopic.php?f=23&t=782&start=0</a></p><p>Bowed Hammer Dulcimer With Slide and Some Vocal<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer001vocal.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer001vocal.mp3</a></p><p>ebowed, bowed, and hammmered hammer dulcimer<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer002.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer002.mp3</a></p><p>Various Hammer Dulcimer stuff titled &quot;The Furnace Turns On - Sorry&quot;</p><p><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer003.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer003.mp3</a></p><p>finger picked and slide used on hammer dulcimer<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-finger-pick-slide.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-finger-pick-slide.mp3</a></p><p>(viola bow) Bowed Hammer Dulcimer<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-bowed.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-bowed.mp3</a></p><p>Please feel free to use any of this in anything.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Hammer Dulcimer Improvisations</h1><h3><a id=25426 href="#25426">🔗</a>christopherv &#x3C;chrisvaisvil@...&#x3E;</h3><span>2/5/2011 3:02:56 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The hammer dulcimer is tuned by ear to some unknown tuning - some 30 strings give or take.</p><p>You can listen online here:<br/><a href="http://notonlymusic.com/board/viewtopic.php?f=23&t=782&start=0">http://notonlymusic.com/board/viewtopic.php?f=23&t=782&start=0</a></p><p>Bowed Hammer Dulcimer With Slide and Some Vocal<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer001vocal.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer001vocal.mp3</a></p><p>ebowed, bowed, and hammmered hammer dulcimer<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer002.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer002.mp3</a></p><p>Various Hammer Dulcimer stuff titled &quot;The Furnace Turns On - Sorry&quot;</p><p><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer003.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer003.mp3</a></p><p>finger picked and slide used on hammer dulcimer<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-finger-pick-slide.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-finger-pick-slide.mp3</a></p><p>(viola bow) Bowed Hammer Dulcimer<br/><a href="http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-bowed.mp3">http://clones.soonlabel.com/public/improvfriday/20110205/dulcimer004-bowed.mp3</a></p><p>Please feel free to use any of this in anything.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

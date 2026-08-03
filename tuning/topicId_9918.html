@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>FRETS POSITION  Subject: innovative fretboards. TD 629</h1><h3><a id=9918 href="#9918">🔗</a>Eduardo Sabat-Garibaldi &#x3C;ESABAT@ADINET.COM.UY&#x3E;</h3><span>5/9/2000 10:16:35 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Dear Venus D&apos;emilo :<br/>Five years ago I edited a book. &quot;Principios de la Gama Dinamica&quot;.<br/>It&apos;s written in Spanish. You can see some information in my web page.<br/>There is a chapter of physics formulas and computation on the<br/>calculation<br/>of the right position of the frets.</p><p>Muchos Saludos<br/>--<br/>Eduardo Sabat-Garibaldi<br/>Simon Bolivar 1260<br/>11300 Montevideo<br/>URUGUAY<br/>email: <a href="mailto:esabat@adinet.com.uy">esabat@adinet.com.uy</a></p><p><a href="http://members.xoom.com/dinarra/dinarra.html">http://members.xoom.com/dinarra/dinarra.html</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>FRETS POSITION  Subject: innovative fretboards. TD 629</h1><h3><a id=9918 href="#9918">🔗</a>Eduardo Sabat-Garibaldi &#x3C;ESABAT@ADINET.COM.UY&#x3E;</h3><span>5/9/2000 10:16:35 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Dear Venus D&apos;emilo :<br/>Five years ago I edited a book. &quot;Principios de la Gama Dinamica&quot;.<br/>It&apos;s written in Spanish. You can see some information in my web page.<br/>There is a chapter of physics formulas and computation on the<br/>calculation<br/>of the right position of the frets.</p><p>Muchos Saludos<br/>--<br/>Eduardo Sabat-Garibaldi<br/>Simon Bolivar 1260<br/>11300 Montevideo<br/>URUGUAY<br/>email: <a href="mailto:esabat@adinet.com.uy">esabat@adinet.com.uy</a></p><p><a href="http://members.xoom.com/dinarra/dinarra.html">http://members.xoom.com/dinarra/dinarra.html</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

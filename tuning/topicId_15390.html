@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Scala 1.7 for Linux</h1><h3><a id=15390 href="#15390">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>11/9/2000 9:46:08 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The new Linux version of Scala has been made.<br/>It was tested on Redhat 6 and Mandrake 7 Linux.<br/>The file is:<br/><a href="http://www.xs4all.nl/~huygensf/software/scala17linux6.zip">http://www.xs4all.nl/~huygensf/software/scala17linux6.zip</a></p><p>Thanks to Christopher Chapman.</p><p>Manuel Op de Coul</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Scala 1.7 for Linux</h1><h3><a id=15390 href="#15390">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>11/9/2000 9:46:08 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The new Linux version of Scala has been made.<br/>It was tested on Redhat 6 and Mandrake 7 Linux.<br/>The file is:<br/><a href="http://www.xs4all.nl/~huygensf/software/scala17linux6.zip">http://www.xs4all.nl/~huygensf/software/scala17linux6.zip</a></p><p>Thanks to Christopher Chapman.</p><p>Manuel Op de Coul</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

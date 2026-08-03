@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Enough with the OSX/Linux/Unix stuff</h1><h3><a id=12141 href="#12141">🔗</a>Jon Szanto &#x3C;jszanto@...&#x3E;</h3><span>2/1/2006 8:15:40 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hey listers,</p><p>I tried to keep it as narrow as possible: the Mac platform. I should have actually said OS X or a recent Mac OS. Lets not let MMM get diffused by an OT dialogue about other operating systems which don&apos;t have any relevance to my original question.</p><p>Thanks to all that offered suggestions, on the mark or not!</p><p>Cheers,<br/>Jon</p></div><h3><a id=12143 href="#12143">🔗</a>paolovalladolid &#x3C;phv40@...&#x3E;</h3><span>2/1/2006 12:07:41 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a>, Jon Szanto &lt;jszanto@...&gt; wrote:<br/>&gt;<br/>&gt; Hey listers,<br/>&gt;<br/>&gt; I tried to keep it as narrow as possible: the Mac platform. I should<br/>have actually said OS X or a recent Mac OS. Lets not let MMM get<br/>diffused by an OT dialogue about other operating systems which don&apos;t<br/>have any relevance to my original question.</p><p>Sorry, Jon, for my part in this.</p><p>This site has all the info anyone could care to want about OSX:<br/><a href="http://www.apple.com/macosx/">http://www.apple.com/macosx/</a></p><p>That&apos;s all I have to say about that.</p></div><h3><a id=12146 href="#12146">🔗</a>paolovalladolid &#x3C;phv40@...&#x3E;</h3><span>2/1/2006 12:30:37 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Further apologies to Keenan and Chris.  Thanks, Carl.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Enough with the OSX/Linux/Unix stuff</h1><h3><a id=12141 href="#12141">🔗</a>Jon Szanto &#x3C;jszanto@...&#x3E;</h3><span>2/1/2006 8:15:40 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hey listers,</p><p>I tried to keep it as narrow as possible: the Mac platform. I should have actually said OS X or a recent Mac OS. Lets not let MMM get diffused by an OT dialogue about other operating systems which don&apos;t have any relevance to my original question.</p><p>Thanks to all that offered suggestions, on the mark or not!</p><p>Cheers,<br/>Jon</p></div><h3><a id=12143 href="#12143">🔗</a>paolovalladolid &#x3C;phv40@...&#x3E;</h3><span>2/1/2006 12:07:41 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In <a href="mailto:MakeMicroMusic@yahoogroups.com">MakeMicroMusic@yahoogroups.com</a>, Jon Szanto &lt;jszanto@...&gt; wrote:<br/>&gt;<br/>&gt; Hey listers,<br/>&gt;<br/>&gt; I tried to keep it as narrow as possible: the Mac platform. I should<br/>have actually said OS X or a recent Mac OS. Lets not let MMM get<br/>diffused by an OT dialogue about other operating systems which don&apos;t<br/>have any relevance to my original question.</p><p>Sorry, Jon, for my part in this.</p><p>This site has all the info anyone could care to want about OSX:<br/><a href="http://www.apple.com/macosx/">http://www.apple.com/macosx/</a></p><p>That&apos;s all I have to say about that.</p></div><h3><a id=12146 href="#12146">🔗</a>paolovalladolid &#x3C;phv40@...&#x3E;</h3><span>2/1/2006 12:30:37 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Further apologies to Keenan and Chris.  Thanks, Carl.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

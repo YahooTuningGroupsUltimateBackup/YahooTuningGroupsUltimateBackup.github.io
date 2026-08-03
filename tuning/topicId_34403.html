@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Symbols for 72-tET</h1><h3><a id=34403 href="#34403">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>2/18/2002 7:57:51 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Here are the accidentals that Ivan Wyschnagradsky proposed for<br/>the notation of 72-tET:<br/><a href="/tuning/files/docs/wysch72.gif">/tuning/files/docs/wysch72.gif</a></p><p>Manuel</p></div><h3><a id=34406 href="#34406">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>2/18/2002 8:08:26 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Sorry for the typo, it&apos;s Ivan Wyschnegradsky.</p><p>Manuel</p></div><h3><a id=34416 href="#34416">🔗</a>jpehrson2 &#x3C;jpehrson@rcn.com&#x3E;</h3><span>2/18/2002 11:43:23 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning@y..., manuel.op.de.coul@e... wrote:</p><p><a href="/tuning/topicId_34403.html#34403">/tuning/topicId_34403.html#34403</a></p><p>&gt; Here are the accidentals that Ivan Wyschnagradsky proposed for<br/>&gt; the notation of 72-tET:<br/>&gt; <a href="/tuning/files/docs/wysch72.gif">/tuning/files/docs/wysch72.gif</a><br/>&gt;<br/>&gt; Manuel</p><p>***I&apos;ve seen this before, but I believe, following Ezra Sims, that<br/>it&apos;s too hard to read quickly.</p><p>J. Pehrson</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Symbols for 72-tET</h1><h3><a id=34403 href="#34403">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>2/18/2002 7:57:51 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Here are the accidentals that Ivan Wyschnagradsky proposed for<br/>the notation of 72-tET:<br/><a href="/tuning/files/docs/wysch72.gif">/tuning/files/docs/wysch72.gif</a></p><p>Manuel</p></div><h3><a id=34406 href="#34406">🔗</a>manuel.op.de.coul@eon-benelux.com</h3><span>2/18/2002 8:08:26 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Sorry for the typo, it&apos;s Ivan Wyschnegradsky.</p><p>Manuel</p></div><h3><a id=34416 href="#34416">🔗</a>jpehrson2 &#x3C;jpehrson@rcn.com&#x3E;</h3><span>2/18/2002 11:43:23 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In tuning@y..., manuel.op.de.coul@e... wrote:</p><p><a href="/tuning/topicId_34403.html#34403">/tuning/topicId_34403.html#34403</a></p><p>&gt; Here are the accidentals that Ivan Wyschnagradsky proposed for<br/>&gt; the notation of 72-tET:<br/>&gt; <a href="/tuning/files/docs/wysch72.gif">/tuning/files/docs/wysch72.gif</a><br/>&gt;<br/>&gt; Manuel</p><p>***I&apos;ve seen this before, but I believe, following Ezra Sims, that<br/>it&apos;s too hard to read quickly.</p><p>J. Pehrson</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

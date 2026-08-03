@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>An inquiry....</h1><h3><a id=62998 href="#62998">🔗</a>pgreenhaw@nypl.org</h3><span>12/20/2005 8:37:30 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I was pushing around numbers the other day and was curious about the<br/>possibilities of using such processes as x to the power of y to the power z<br/>(what is this called in the math world by the way?) -- an example:<br/>B<br/>5^3^0 (5^1)<br/>5^3^1 (5^3)<br/>5^3^2 (5^9)<br/>5^3^3 (5^27)<br/>5^3^4 (5^81)<br/>5^3^5 (5^243)<br/>B<br/>This little sequence gives rise to a set of pitches at approx. cents:<br/>B<br/>386 - 1159 - 1077 - 830 - 91 - 274<br/>B<br/>Has anyone explored this in more detail?B There is obviously some sort of deep<br/>logic to this method..... just wondering how far its been explored....<br/>B<br/>Paul</p><p>B</p><p>___________________________________________<br/>PaulB Greenhaw<br/>MusicB SpecialistB II<br/>TheB NewB YorkB PublicB LibraryB forB theB PerformingB Arts<br/>40B LincolnB CenterB Plaza<br/>NewB York,&nbsp;NYB 10023<br/>(212)B 870-1892<br/>__________________________________________</p></div><h3><a id=63013 href="#63013">🔗</a>Yahya Abdal-Aziz &#x3C;yahya@melbpc.org.au&#x3E;</h3><span>12/21/2005 5:11:03 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>On Tue, 20 Dec 2005 <a href="mailto:pgreenhaw@nypl.org">pgreenhaw@nypl.org</a> wrote:<br/>&gt;<br/>&gt;<br/>&gt;<br/>&gt; [This message is not in displayable format]</p><p>At least, that&apos;s how it appears on the digest! :-)<br/>So for the widest possible audience on list, please<br/>ensure that your messages ARE displayable as<br/>plain text.   Thanks!</p><p>Yahya</p><p>--<br/>No virus found in this outgoing message.<br/>Checked by AVG Free Edition.<br/>Version: 7.1.371 / Virus Database: 267.14.3/209 - Release Date: 21/12/05</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>An inquiry....</h1><h3><a id=62998 href="#62998">🔗</a>pgreenhaw@nypl.org</h3><span>12/20/2005 8:37:30 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I was pushing around numbers the other day and was curious about the<br/>possibilities of using such processes as x to the power of y to the power z<br/>(what is this called in the math world by the way?) -- an example:<br/>B<br/>5^3^0 (5^1)<br/>5^3^1 (5^3)<br/>5^3^2 (5^9)<br/>5^3^3 (5^27)<br/>5^3^4 (5^81)<br/>5^3^5 (5^243)<br/>B<br/>This little sequence gives rise to a set of pitches at approx. cents:<br/>B<br/>386 - 1159 - 1077 - 830 - 91 - 274<br/>B<br/>Has anyone explored this in more detail?B There is obviously some sort of deep<br/>logic to this method..... just wondering how far its been explored....<br/>B<br/>Paul</p><p>B</p><p>___________________________________________<br/>PaulB Greenhaw<br/>MusicB SpecialistB II<br/>TheB NewB YorkB PublicB LibraryB forB theB PerformingB Arts<br/>40B LincolnB CenterB Plaza<br/>NewB York,&nbsp;NYB 10023<br/>(212)B 870-1892<br/>__________________________________________</p></div><h3><a id=63013 href="#63013">🔗</a>Yahya Abdal-Aziz &#x3C;yahya@melbpc.org.au&#x3E;</h3><span>12/21/2005 5:11:03 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>On Tue, 20 Dec 2005 <a href="mailto:pgreenhaw@nypl.org">pgreenhaw@nypl.org</a> wrote:<br/>&gt;<br/>&gt;<br/>&gt;<br/>&gt; [This message is not in displayable format]</p><p>At least, that&apos;s how it appears on the digest! :-)<br/>So for the widest possible audience on list, please<br/>ensure that your messages ARE displayable as<br/>plain text.   Thanks!</p><p>Yahya</p><p>--<br/>No virus found in this outgoing message.<br/>Checked by AVG Free Edition.<br/>Version: 7.1.371 / Virus Database: 267.14.3/209 - Release Date: 21/12/05</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

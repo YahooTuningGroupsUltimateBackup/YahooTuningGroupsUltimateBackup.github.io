@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>Jewish music</h1><h3><a id=8722 href="#8722">🔗</a>Neil Haverstick &#x3C;stick@...&#x3E;</h3><span>10/30/1998 9:20:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>A Jewish friend of mine just showed me something really interesting;<br>it was the text of a scripture reading that a cantor does in a service,<br>but it is not spoken...there are pitches to go along with certain<br>syllables, and to make it real tough, it has to be memorized. There are<br>little marks under the syllables, indicating the pitch to be sung. I<br>thought it was fascinating; needless to say, the pitches would not be in<br>12 equal. Does anyone out there know more about this subject, and what<br>tuning they might be using? Obviously, this concept goes way back in<br>time, and doubtless has deep spiritual connections...I am curious.<br>    On a slightly different note, I chatted briefly with a virtuoso pipa<br>player, and she mentioned that Chinese pitches will vary from region to<br>region...this, of course, doesn't surprise me at all, but again, it's a<br>subject I'd like to know more about. It reminds me of blues players, who<br>vary the pitch of a bent note according to the mood they're in at the<br>time, and I suspect this is common practice among Indian and Arabic<br>musicians as well. Any folks know about Chinese tunings, and I mean pre<br>12 equal? Thanks...Hstick</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>Jewish music</h1><h3><a id=8722 href="#8722">🔗</a>Neil Haverstick &#x3C;stick@...&#x3E;</h3><span>10/30/1998 9:20:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>A Jewish friend of mine just showed me something really interesting;<br>it was the text of a scripture reading that a cantor does in a service,<br>but it is not spoken...there are pitches to go along with certain<br>syllables, and to make it real tough, it has to be memorized. There are<br>little marks under the syllables, indicating the pitch to be sung. I<br>thought it was fascinating; needless to say, the pitches would not be in<br>12 equal. Does anyone out there know more about this subject, and what<br>tuning they might be using? Obviously, this concept goes way back in<br>time, and doubtless has deep spiritual connections...I am curious.<br>    On a slightly different note, I chatted briefly with a virtuoso pipa<br>player, and she mentioned that Chinese pitches will vary from region to<br>region...this, of course, doesn't surprise me at all, but again, it's a<br>subject I'd like to know more about. It reminds me of blues players, who<br>vary the pitch of a bent note according to the mood they're in at the<br>time, and I suspect this is common practice among Indian and Arabic<br>musicians as well. Any folks know about Chinese tunings, and I mean pre<br>12 equal? Thanks...Hstick</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

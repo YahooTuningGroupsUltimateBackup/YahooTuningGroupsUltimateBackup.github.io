@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>oh man</h1><h3><a id=51583 href="#51583">🔗</a>Carl Lumma &#x3C;ekin@lumma.org&#x3E;</h3><span>1/11/2004 3:39:38 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I just noticed that this footer...</p><p>You do not need web access to participate.  You may subscribe<br/>through email.  Send an empty email to one of these addresses:<br/>  <a href="mailto:tuning-subscribe@yahoogroups.com">tuning-subscribe@yahoogroups.com</a> - join the tuning group.<br/>  <a href="mailto:tuning-unsubscribe@yahoogroups.com">tuning-unsubscribe@yahoogroups.com</a> - unsubscribe from the tuning<br/>                                           group.<br/>  <a href="mailto:tuning-nomail@yahoogroups.com">tuning-nomail@yahoogroups.com</a> - put your email message delivery on<br/>                          hold for the tuning group.<br/>  <a href="mailto:tuning-digest@yahoogroups.com">tuning-digest@yahoogroups.com</a> - change your subscription to daily<br/>                         digest mode.<br/>  <a href="mailto:tuning-normal@yahoogroups.com">tuning-normal@yahoogroups.com</a> - change your subscription to<br/>                         individual  emails.<br/>  <a href="mailto:tuning-help@yahoogroups.com">tuning-help@yahoogroups.com</a> - receive general help information.</p><p>...only appears in the e-mails!  Mark, Mark, Mark...</p><p>-Carl</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>oh man</h1><h3><a id=51583 href="#51583">🔗</a>Carl Lumma &#x3C;ekin@lumma.org&#x3E;</h3><span>1/11/2004 3:39:38 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I just noticed that this footer...</p><p>You do not need web access to participate.  You may subscribe<br/>through email.  Send an empty email to one of these addresses:<br/>  <a href="mailto:tuning-subscribe@yahoogroups.com">tuning-subscribe@yahoogroups.com</a> - join the tuning group.<br/>  <a href="mailto:tuning-unsubscribe@yahoogroups.com">tuning-unsubscribe@yahoogroups.com</a> - unsubscribe from the tuning<br/>                                           group.<br/>  <a href="mailto:tuning-nomail@yahoogroups.com">tuning-nomail@yahoogroups.com</a> - put your email message delivery on<br/>                          hold for the tuning group.<br/>  <a href="mailto:tuning-digest@yahoogroups.com">tuning-digest@yahoogroups.com</a> - change your subscription to daily<br/>                         digest mode.<br/>  <a href="mailto:tuning-normal@yahoogroups.com">tuning-normal@yahoogroups.com</a> - change your subscription to<br/>                         individual  emails.<br/>  <a href="mailto:tuning-help@yahoogroups.com">tuning-help@yahoogroups.com</a> - receive general help information.</p><p>...only appears in the e-mails!  Mark, Mark, Mark...</p><p>-Carl</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

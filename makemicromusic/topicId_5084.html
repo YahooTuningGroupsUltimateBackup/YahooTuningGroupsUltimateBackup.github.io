@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] New piece online</h1><h3><a id=5084 href="#5084">🔗</a>David Beardsley &#x3C;db@...&#x3E;</h3><span>8/3/2003 6:21:00 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>----- Original Message -----<br/>From: &quot;Jonathan M. Szanto&quot; &lt;JSZANTO@...&gt;</p><p>&gt; But just before all this occurred (and I&apos;ll post progress reports along<br/>the<br/>&gt; way), I had another sound adventure that I thought was worth sharing. So<br/>if<br/>&gt; you have spare time on your hands (and ears), you can take a look over at:<br/>&gt;<br/>&gt; <a href="http://www.microtonal.org/music.html">http://www.microtonal.org/music.html</a><br/>&gt;<br/>&gt; ...and see what happened.</p><p>Very nice, I like the ambience. Wheew! And the title too!</p><p>* David Beardsley<br/>* microtonal guitar<br/>* <a href="http://biink.com/db">http://biink.com/db</a></p></div><h3><a id=5087 href="#5087">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>8/3/2003 8:47:26 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>David,</p><p>{you wrote...}<br/>&gt;Very nice, I like the ambience. Wheew! And the title too!</p><p>So often you&apos;re the very first to report back! Thanks for the comments, I couldn&apos;t believe what Jacky did to such a simple little file. The tools we have at our disposal these days, I tell ya...</p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] New piece online</h1><h3><a id=5084 href="#5084">🔗</a>David Beardsley &#x3C;db@...&#x3E;</h3><span>8/3/2003 6:21:00 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>----- Original Message -----<br/>From: &quot;Jonathan M. Szanto&quot; &lt;JSZANTO@...&gt;</p><p>&gt; But just before all this occurred (and I&apos;ll post progress reports along<br/>the<br/>&gt; way), I had another sound adventure that I thought was worth sharing. So<br/>if<br/>&gt; you have spare time on your hands (and ears), you can take a look over at:<br/>&gt;<br/>&gt; <a href="http://www.microtonal.org/music.html">http://www.microtonal.org/music.html</a><br/>&gt;<br/>&gt; ...and see what happened.</p><p>Very nice, I like the ambience. Wheew! And the title too!</p><p>* David Beardsley<br/>* microtonal guitar<br/>* <a href="http://biink.com/db">http://biink.com/db</a></p></div><h3><a id=5087 href="#5087">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>8/3/2003 8:47:26 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>David,</p><p>{you wrote...}<br/>&gt;Very nice, I like the ambience. Wheew! And the title too!</p><p>So often you&apos;re the very first to report back! Thanks for the comments, I couldn&apos;t believe what Jacky did to such a simple little file. The tools we have at our disposal these days, I tell ya...</p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

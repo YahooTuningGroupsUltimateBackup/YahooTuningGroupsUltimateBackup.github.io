@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>A list of Software that we must have on our computer</h1><h3><a id=12233 href="#12233">🔗</a>darwin_lewis2001 &#x3C;darwin_lewis2001@...&#x3E;</h3><span>9/9/2008 11:12:45 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>We don&apos;t have to spend fortunes to get software for different<br/>applications. They are available in plenty as freeware.</p><p>Have a look at a list of all essential software that are available for<br/>free here: <a href="http://freesoftware.internethunter.info">http://freesoftware.internethunter.info</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>A list of Software that we must have on our computer</h1><h3><a id=12233 href="#12233">🔗</a>darwin_lewis2001 &#x3C;darwin_lewis2001@...&#x3E;</h3><span>9/9/2008 11:12:45 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>We don&apos;t have to spend fortunes to get software for different<br/>applications. They are available in plenty as freeware.</p><p>Have a look at a list of all essential software that are available for<br/>free here: <a href="http://freesoftware.internethunter.info">http://freesoftware.internethunter.info</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

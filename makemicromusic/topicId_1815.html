@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Will the real Robert Walker please stand up!</h1><h3><a id=1815 href="#1815">🔗</a>jonszanto &#x3C;JSZANTO@...&#x3E;</h3><span>1/19/2002 11:06:19 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Robert,</p><p>So, is that *you* standing in the snow on your music page at<br/><a href="http://mp3.com.au">mp3.com.au</a>?</p><p>Mom</p></div><h3><a id=1829 href="#1829">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>1/21/2002 12:19:08 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi Monz,</p><p>Glad you liked the 7 equal trio. A bit of humour there, esp. in the<br/>2nd movement with the cellist going his /her own way until the<br/>others take up on the idea.</p><p>Robert</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Will the real Robert Walker please stand up!</h1><h3><a id=1815 href="#1815">🔗</a>jonszanto &#x3C;JSZANTO@...&#x3E;</h3><span>1/19/2002 11:06:19 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Robert,</p><p>So, is that *you* standing in the snow on your music page at<br/><a href="http://mp3.com.au">mp3.com.au</a>?</p><p>Mom</p></div><h3><a id=1829 href="#1829">🔗</a>Robert Walker &#x3C;robertwalker@...&#x3E;</h3><span>1/21/2002 12:19:08 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi Monz,</p><p>Glad you liked the 7 equal trio. A bit of humour there, esp. in the<br/>2nd movement with the cellist going his /her own way until the<br/>others take up on the idea.</p><p>Robert</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

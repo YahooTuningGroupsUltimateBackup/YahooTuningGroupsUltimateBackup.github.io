@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Here is a idea to a pc -program to get a view over the chords and all mathematic</h1><h3><a id=75488 href="#75488">🔗</a>gunnar.tungland &#x3C;gunnar.tungland@hotmail.com&#x3E;</h3><span>3/9/2008 1:42:51 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.esnips.com/web/Whowillmakeapc-programofthis">http://www.esnips.com/web/Whowillmakeapc-programofthis</a></p><p>Regards, Gunnar</p></div><h3><a id=75507 href="#75507">🔗</a>gunnar.tungland &#x3C;gunnar.tungland@yahoo.com&#x3E;</h3><span>3/10/2008 12:47:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I hope I can post my webaddress ones more, hoping some of you will<br/>find it interesting.<br/>Regards. Gunnar<br/>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;gunnar.tungland&quot;<br/>&lt;gunnar.tungland@...&gt; wrote:<br/>&gt;<br/>&gt;   <a href="http://www.esnips.com/web/Whowillmakeapc-programofthis">http://www.esnips.com/web/Whowillmakeapc-programofthis</a><br/>&gt;<br/>&gt; Regards, Gunnar<br/>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Here is a idea to a pc -program to get a view over the chords and all mathematic</h1><h3><a id=75488 href="#75488">🔗</a>gunnar.tungland &#x3C;gunnar.tungland@hotmail.com&#x3E;</h3><span>3/9/2008 1:42:51 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.esnips.com/web/Whowillmakeapc-programofthis">http://www.esnips.com/web/Whowillmakeapc-programofthis</a></p><p>Regards, Gunnar</p></div><h3><a id=75507 href="#75507">🔗</a>gunnar.tungland &#x3C;gunnar.tungland@yahoo.com&#x3E;</h3><span>3/10/2008 12:47:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I hope I can post my webaddress ones more, hoping some of you will<br/>find it interesting.<br/>Regards. Gunnar<br/>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;gunnar.tungland&quot;<br/>&lt;gunnar.tungland@...&gt; wrote:<br/>&gt;<br/>&gt;   <a href="http://www.esnips.com/web/Whowillmakeapc-programofthis">http://www.esnips.com/web/Whowillmakeapc-programofthis</a><br/>&gt;<br/>&gt; Regards, Gunnar<br/>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Less flame, more tune</h1><h3><a id=95588 href="#95588">🔗</a>Mike Battaglia &#x3C;battaglia01@...&#x3E;</h3><span>1/14/2011 12:59:05 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Let&apos;s get back to tuning now, yes?</p><p>-Mike</p></div><h3><a id=95589 href="#95589">🔗</a>Michael &#x3C;djtrancendance@...&#x3E;</h3><span>1/14/2011 1:09:19 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>MikeB&gt;&quot;Let&apos;s get back to tuning now, yes?&quot;</p><p>Definitely!<br/>    Right now I&apos;m working on a tune using the Minerva tuning and another one<br/>with my own tuning.  Hoping the response to those tunes (IE this time around)<br/>will not be flames...even if the music &quot;stinks&quot;...but I&apos;m pretty sure it will be<br/>only &quot;moderately smelly&quot;. :-D</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Less flame, more tune</h1><h3><a id=95588 href="#95588">🔗</a>Mike Battaglia &#x3C;battaglia01@...&#x3E;</h3><span>1/14/2011 12:59:05 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Let&apos;s get back to tuning now, yes?</p><p>-Mike</p></div><h3><a id=95589 href="#95589">🔗</a>Michael &#x3C;djtrancendance@...&#x3E;</h3><span>1/14/2011 1:09:19 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>MikeB&gt;&quot;Let&apos;s get back to tuning now, yes?&quot;</p><p>Definitely!<br/>    Right now I&apos;m working on a tune using the Minerva tuning and another one<br/>with my own tuning.  Hoping the response to those tunes (IE this time around)<br/>will not be flames...even if the music &quot;stinks&quot;...but I&apos;m pretty sure it will be<br/>only &quot;moderately smelly&quot;. :-D</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Blues quote</h1><h3><a id=27616 href="#27616">🔗</a>Neil Haverstick &#x3C;microstick@...&#x3E;</h3><span>4/7/2011 10:23:44 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&quot;Blues is not a plaything...&quot; Son House, Delta blues legend<br/> &#x9;&#x9; &#x9;   &#x9;&#x9;</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Blues quote</h1><h3><a id=27616 href="#27616">🔗</a>Neil Haverstick &#x3C;microstick@...&#x3E;</h3><span>4/7/2011 10:23:44 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&quot;Blues is not a plaything...&quot; Son House, Delta blues legend<br/> &#x9;&#x9; &#x9;   &#x9;&#x9;</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

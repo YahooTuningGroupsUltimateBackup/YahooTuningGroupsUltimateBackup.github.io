@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: JI Intervals in FTS</h1><h3><a id=1617 href="#1617">🔗</a>manuel.op.de.coul@...</h3><span>1/8/2002 5:37:30 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;I also need to contact Jeff Scott, Graham Breed, and Manuel Op de Coul<br/>&gt;regarding listing their programs as well, but if they are<br/>listening/reading...</p><p>Yes please list it. The short description has changed slightly:</p><p>Scala is a very complete freeware editor/librarian/analysis tool for<br/>tunings. It allows scales to be created, heard, manipulated and combined<br/>in many ways. There is a large library of scales available. Various<br/>different synthesizers and samplers can be tuned via standard MIDI-files.</p><p>Manuel</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] Re: JI Intervals in FTS</h1><h3><a id=1617 href="#1617">🔗</a>manuel.op.de.coul@...</h3><span>1/8/2002 5:37:30 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt;I also need to contact Jeff Scott, Graham Breed, and Manuel Op de Coul<br/>&gt;regarding listing their programs as well, but if they are<br/>listening/reading...</p><p>Yes please list it. The short description has changed slightly:</p><p>Scala is a very complete freeware editor/librarian/analysis tool for<br/>tunings. It allows scales to be created, heard, manipulated and combined<br/>in many ways. There is a large library of scales available. Various<br/>different synthesizers and samplers can be tuned via standard MIDI-files.</p><p>Manuel</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

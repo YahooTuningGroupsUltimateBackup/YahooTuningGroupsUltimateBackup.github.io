@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>RE: 11-limit periodicity blocks with superparticular unison vecto rs</h1><h3><a id=7772 href="#7772">🔗</a>Paul H. Erlich &#x3C;PErlich@xxxxxxxxxxxxx.xxxx&#x3E;</h3><span>1/13/2000 3:34:45 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I wrote,</p><p>&gt;Taking 4 of these at a time, the following periodicity blocks occur most<br/>commonly:</p><p>Dave Keenan correctly pointed out that I should have written,</p><p>&quot;Taking 4 of these at a time, the following periodicity block _sizes_ occur<br/>most commonly:&quot;</p><p>Thanks, Dave!</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>RE: 11-limit periodicity blocks with superparticular unison vecto rs</h1><h3><a id=7772 href="#7772">🔗</a>Paul H. Erlich &#x3C;PErlich@xxxxxxxxxxxxx.xxxx&#x3E;</h3><span>1/13/2000 3:34:45 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I wrote,</p><p>&gt;Taking 4 of these at a time, the following periodicity blocks occur most<br/>commonly:</p><p>Dave Keenan correctly pointed out that I should have written,</p><p>&quot;Taking 4 of these at a time, the following periodicity block _sizes_ occur<br/>most commonly:&quot;</p><p>Thanks, Dave!</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

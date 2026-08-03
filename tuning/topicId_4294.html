@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: subharmonic singing - Error 404</h1><h3><a id=4294 href="#4294">🔗</a>Jim Cole &#x3C;jimcole@xxxxxxx.xxxx&#x3E;</h3><span>8/13/1999 9:24:32 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hi John,</p><p>My first post had an error in the link which resulted in the 404 not found<br/>error.  The correct link is:</p><p><a href="http://www.compsol.net/users/jimcole/clips.htm">http://www.compsol.net/users/jimcole/clips.htm</a></p><p>Please let me know if you have any more trouble and thanks for the interest.</p><p>~Jim</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: subharmonic singing - Error 404</h1><h3><a id=4294 href="#4294">🔗</a>Jim Cole &#x3C;jimcole@xxxxxxx.xxxx&#x3E;</h3><span>8/13/1999 9:24:32 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hi John,</p><p>My first post had an error in the link which resulted in the 404 not found<br/>error.  The correct link is:</p><p><a href="http://www.compsol.net/users/jimcole/clips.htm">http://www.compsol.net/users/jimcole/clips.htm</a></p><p>Please let me know if you have any more trouble and thanks for the interest.</p><p>~Jim</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

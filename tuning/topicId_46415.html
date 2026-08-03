@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>test - seeing if I can post something</h1><h3><a id=46415 href="#46415">🔗</a>Mark Nowitzky &#x3C;nowitzky@fastmail.fm&#x3E;</h3><span>8/16/2003 3:16:17 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>test - seeing if I can post something<br/>+-------------------------------------------------------<br/>| Mark Nowitzky<br/>| email:  <a href="mailto:nowitzky@alum.mit.edu">nowitzky@alum.mit.edu</a><br/>| www:    <a href="http://nowitzky.hypermart.net">http://nowitzky.hypermart.net</a><br/>|         &quot;If you haven&apos;t visited Mark Nowitzky&apos;s home<br/>|         page recently, you haven&apos;t missed much...&quot;<br/>+-------------------------------------------------------</p><p>--<br/><a href="http://www.fastmail.fm">http://www.fastmail.fm</a> - Faster than the air-speed velocity of an<br/>                          unladen european swallow</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>test - seeing if I can post something</h1><h3><a id=46415 href="#46415">🔗</a>Mark Nowitzky &#x3C;nowitzky@fastmail.fm&#x3E;</h3><span>8/16/2003 3:16:17 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>test - seeing if I can post something<br/>+-------------------------------------------------------<br/>| Mark Nowitzky<br/>| email:  <a href="mailto:nowitzky@alum.mit.edu">nowitzky@alum.mit.edu</a><br/>| www:    <a href="http://nowitzky.hypermart.net">http://nowitzky.hypermart.net</a><br/>|         &quot;If you haven&apos;t visited Mark Nowitzky&apos;s home<br/>|         page recently, you haven&apos;t missed much...&quot;<br/>+-------------------------------------------------------</p><p>--<br/><a href="http://www.fastmail.fm">http://www.fastmail.fm</a> - Faster than the air-speed velocity of an<br/>                          unladen european swallow</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

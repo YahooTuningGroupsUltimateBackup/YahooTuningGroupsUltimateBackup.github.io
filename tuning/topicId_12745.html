@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Everyman's octave-equivalent harmonic entropy curve (for John deL .)</h1><h3><a id=12745 href="#12745">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>9/13/2000 8:56:25 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I repeated the process for s=1.5% and N=67 (see<br/><a href="http://www.egroups.com/files/tuning/perlich/o015_67.jpg">http://www.egroups.com/files/tuning/perlich/o015_67.jpg</a>). John deLaubenfels<br/>would like this curve since it repeats exactly at the octave (not shown) and<br/>the 9/7 is  more dissonant than the ET major second or tritone, while the<br/>11/9 is less dissonant than the ET major second or tritone.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Everyman's octave-equivalent harmonic entropy curve (for John deL .)</h1><h3><a id=12745 href="#12745">🔗</a>Paul H. Erlich &#x3C;PERLICH@ACADIAN-ASSET.COM&#x3E;</h3><span>9/13/2000 8:56:25 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I repeated the process for s=1.5% and N=67 (see<br/><a href="http://www.egroups.com/files/tuning/perlich/o015_67.jpg">http://www.egroups.com/files/tuning/perlich/o015_67.jpg</a>). John deLaubenfels<br/>would like this curve since it repeats exactly at the octave (not shown) and<br/>the 9/7 is  more dissonant than the ET major second or tritone, while the<br/>11/9 is less dissonant than the ET major second or tritone.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

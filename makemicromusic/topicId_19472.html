@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>UnTwelve benefit event</h1><h3><a id=19472 href="#19472">🔗</a>Aaron Johnson &#x3C;aaron@...&#x3E;</h3><span>7/22/2008 6:32:08 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>To benefit &apos;UnTwelve&apos; (formally &apos;MidwestMicrofest&apos;)</p><p>Thursday, July 31st <a href="https://twitter.com/8pm">@8pm</a><br/>SPACE<br/>1245 Chicago Ave<br/>Evanston IL<br/>(purple line Dempster EL stop)</p><p>featuring a mixed set by:</p><p>Jacob Barton - utopian songs on the bizarre and marvelous udderbot<br/>Andrew Heathwaite as &apos;Nodal Nim&apos; - a quirky set of postmodern chaos-pop<br/>songs influenced by the Mayan calendar<br/>Aaron Krister Johnson - some evocative, spacious and otherworldly choral and<br/>piano works<br/>Christopher Bailey - a continuous, effervescent sound installation</p><p>followed by a wine and cheese reception</p><p>tickets are $45 (&apos;student rate&apos; of $15 available by RSVP to<br/>guestlist@...)</p><p>info and RSVP at <a href="http://untwelve.org/concerts.html">http://untwelve.org/concerts.html</a></p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>UnTwelve benefit event</h1><h3><a id=19472 href="#19472">🔗</a>Aaron Johnson &#x3C;aaron@...&#x3E;</h3><span>7/22/2008 6:32:08 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>To benefit &apos;UnTwelve&apos; (formally &apos;MidwestMicrofest&apos;)</p><p>Thursday, July 31st <a href="https://twitter.com/8pm">@8pm</a><br/>SPACE<br/>1245 Chicago Ave<br/>Evanston IL<br/>(purple line Dempster EL stop)</p><p>featuring a mixed set by:</p><p>Jacob Barton - utopian songs on the bizarre and marvelous udderbot<br/>Andrew Heathwaite as &apos;Nodal Nim&apos; - a quirky set of postmodern chaos-pop<br/>songs influenced by the Mayan calendar<br/>Aaron Krister Johnson - some evocative, spacious and otherworldly choral and<br/>piano works<br/>Christopher Bailey - a continuous, effervescent sound installation</p><p>followed by a wine and cheese reception</p><p>tickets are $45 (&apos;student rate&apos; of $15 available by RSVP to<br/>guestlist@...)</p><p>info and RSVP at <a href="http://untwelve.org/concerts.html">http://untwelve.org/concerts.html</a></p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

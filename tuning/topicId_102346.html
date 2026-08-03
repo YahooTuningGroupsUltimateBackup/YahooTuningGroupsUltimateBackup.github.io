@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Name changing</h1><h3><a id=102346 href="#102346">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>1/2/2012 9:46:23 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If the names on the catalogs of rank-two temperaments are going to change, that should be done expeditiouly before they accumulate a lot of links.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Name changing</h1><h3><a id=102346 href="#102346">🔗</a>genewardsmith &#x3C;genewardsmith@...&#x3E;</h3><span>1/2/2012 9:46:23 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>If the names on the catalogs of rank-two temperaments are going to change, that should be done expeditiouly before they accumulate a lot of links.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

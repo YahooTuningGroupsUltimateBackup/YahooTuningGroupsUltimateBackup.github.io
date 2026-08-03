@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Five JI/JT eBook chapters uploaded</h1><h3><a id=40375 href="#40375">🔗</a>prophecyspirit@aol.com</h3><span>10/29/2002 6:41:20 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>All,</p><p>My just intonation/just temperament eBook chapters, &quot;Heaven&apos;s Divine Music&quot;<br/>and<br/>&quot;Heaven&apos;s Tuning: Tempered Just Chromatic Scale,&quot; chapters 1-4, have been<br/>uploaded into my forum  &lt;A HREF=&quot;<a href="/JustIntonationOrganSchool/">/JustIntonationOrganSchool/</a>&quot;&gt;Just Intonation Organ eSchool&lt;/A&gt;  at<br/>&lt;A HREF=&quot;<a href="/tuning/files/Just%20Intonation%20Lessons/">/tuning/files/Just%20Intonation%20Lessons/</a>&quot;&gt;Click here: Yahoo! Groups : JustIntonationOrganSchool Files&lt;/A&gt;<br/><a href="/tuning/files/Just%20Intonatio">/tuning/files/Just%20Intonatio</a></p><p>n%20Lessons/</p><p>But to download the files you need to join at the homepage. Membership is<br/>open to anyone. You can unsubscribe at any time.</p><p>Sincerely,<br/>Pauline W. Phillips, Moderator, &lt;A HREF=&quot;<a href="/JohannusOrgansSchool">/JohannusOrgansSchool</a>  &quot;&gt;Johannus Organs eSchool&lt;/A&gt;<br/>Johannus Orgelbouw, Holland, builds pipe, pipe-digital, digital-sampled<br/>organs.<br/>Moderator, &lt;A HREF=&quot;<a href="/JustIntonationOrganSchool/">/JustIntonationOrganSchool/</a>&quot;&gt;Just Intonation Organ eSchool&lt;/A&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Five JI/JT eBook chapters uploaded</h1><h3><a id=40375 href="#40375">🔗</a>prophecyspirit@aol.com</h3><span>10/29/2002 6:41:20 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>All,</p><p>My just intonation/just temperament eBook chapters, &quot;Heaven&apos;s Divine Music&quot;<br/>and<br/>&quot;Heaven&apos;s Tuning: Tempered Just Chromatic Scale,&quot; chapters 1-4, have been<br/>uploaded into my forum  &lt;A HREF=&quot;<a href="/JustIntonationOrganSchool/">/JustIntonationOrganSchool/</a>&quot;&gt;Just Intonation Organ eSchool&lt;/A&gt;  at<br/>&lt;A HREF=&quot;<a href="/tuning/files/Just%20Intonation%20Lessons/">/tuning/files/Just%20Intonation%20Lessons/</a>&quot;&gt;Click here: Yahoo! Groups : JustIntonationOrganSchool Files&lt;/A&gt;<br/><a href="/tuning/files/Just%20Intonatio">/tuning/files/Just%20Intonatio</a></p><p>n%20Lessons/</p><p>But to download the files you need to join at the homepage. Membership is<br/>open to anyone. You can unsubscribe at any time.</p><p>Sincerely,<br/>Pauline W. Phillips, Moderator, &lt;A HREF=&quot;<a href="/JohannusOrgansSchool">/JohannusOrgansSchool</a>  &quot;&gt;Johannus Organs eSchool&lt;/A&gt;<br/>Johannus Orgelbouw, Holland, builds pipe, pipe-digital, digital-sampled<br/>organs.<br/>Moderator, &lt;A HREF=&quot;<a href="/JustIntonationOrganSchool/">/JustIntonationOrganSchool/</a>&quot;&gt;Just Intonation Organ eSchool&lt;/A&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

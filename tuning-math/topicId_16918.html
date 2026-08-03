@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>just intonation</h1><h3><a id=16918 href="#16918">🔗</a>retspih &#x3C;retspih@yahoo.com&#x3E;</h3><span>1/10/2008 4:45:40 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>This structure I came across some time ago if it is interesting to the group i would be<br/>interested to discuss details.  I have made a small website with a graphic image.</p><p><a href="http://intonationjuste.we.bs/">http://intonationjuste.we.bs/</a></p></div><h3><a id=16922 href="#16922">🔗</a>Carl Lumma &#x3C;carl@lumma.org&#x3E;</h3><span>1/14/2008 8:43:09 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>At 04:45 PM 1/10/2008, you wrote:<br/>&gt;This structure I came across some time ago if it is interesting to the<br/>&gt;group i would be interested to discuss details.  I have made a small<br/>&gt;website with a graphic image.<br/>&gt;<br/>&gt; <a href="http://intonationjuste.we.bs/">http://intonationjuste.we.bs/</a></p><p>Hi-</p><p>As with James, I&apos;m sorry your message may have been delayed<br/>unnecessarily.</p><p>Unfortunately, the URL above returns a 403 error to me.</p><p>-Carl</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>just intonation</h1><h3><a id=16918 href="#16918">🔗</a>retspih &#x3C;retspih@yahoo.com&#x3E;</h3><span>1/10/2008 4:45:40 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>This structure I came across some time ago if it is interesting to the group i would be<br/>interested to discuss details.  I have made a small website with a graphic image.</p><p><a href="http://intonationjuste.we.bs/">http://intonationjuste.we.bs/</a></p></div><h3><a id=16922 href="#16922">🔗</a>Carl Lumma &#x3C;carl@lumma.org&#x3E;</h3><span>1/14/2008 8:43:09 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>At 04:45 PM 1/10/2008, you wrote:<br/>&gt;This structure I came across some time ago if it is interesting to the<br/>&gt;group i would be interested to discuss details.  I have made a small<br/>&gt;website with a graphic image.<br/>&gt;<br/>&gt; <a href="http://intonationjuste.we.bs/">http://intonationjuste.we.bs/</a></p><p>Hi-</p><p>As with James, I&apos;m sorry your message may have been delayed<br/>unnecessarily.</p><p>Unfortunately, the URL above returns a 403 error to me.</p><p>-Carl</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Concerning the gfax library.</h1><h3><a id=23621 href="#23621">🔗</a>robert &#x3C;robertthomasmartin@...&#x3E;</h3><span>11/6/2010 7:33:43 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://gfax.ch/files/Literature/music/">http://gfax.ch/files/Literature/music/</a></p><p>Jason Thomas is the owner/manager of this library. I know absolutely nothing about him, where he lives, what he does etc.<br/>I am only responsible for the:<br/>music<br/>tunings<br/>science<br/>and mathematics folders.<br/>Everything else eg Jazz, Linux programming, history, biology, geology and sheet music was already there at my first sighting of this library.</p><p>If anyone has any stray PDFs which you think others might appreciate then you can send them to me via email attachment:<br/>robertthomasmartin(at)<a href="http://yahoo.com">yahoo.com</a><br/>And I will try to arrange to have them transferred to the gfax library.<br/>This is something to think about considering the transitory nature of some internet sites which sometimes just disappear like a puff of smoke.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Concerning the gfax library.</h1><h3><a id=23621 href="#23621">🔗</a>robert &#x3C;robertthomasmartin@...&#x3E;</h3><span>11/6/2010 7:33:43 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://gfax.ch/files/Literature/music/">http://gfax.ch/files/Literature/music/</a></p><p>Jason Thomas is the owner/manager of this library. I know absolutely nothing about him, where he lives, what he does etc.<br/>I am only responsible for the:<br/>music<br/>tunings<br/>science<br/>and mathematics folders.<br/>Everything else eg Jazz, Linux programming, history, biology, geology and sheet music was already there at my first sighting of this library.</p><p>If anyone has any stray PDFs which you think others might appreciate then you can send them to me via email attachment:<br/>robertthomasmartin(at)<a href="http://yahoo.com">yahoo.com</a><br/>And I will try to arrange to have them transferred to the gfax library.<br/>This is something to think about considering the transitory nature of some internet sites which sometimes just disappear like a puff of smoke.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

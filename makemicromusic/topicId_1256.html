@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: spectral mappings - One More Thing!</h1><h3><a id=1256 href="#1256">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>11/26/2001 2:17:44 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In MakeMicroMusic@y..., jacky_ligon@y... wrote:</p><p>&gt; I have seen that on some boards - like the Korg Trinity and Triton<br/>&gt; (both can do full arbitrary retuning)</p><p>Do you think I should get a Triton? My band just got a second guitar<br/>player, and he&apos;s awesome! I think I want to play keys (classic<br/>jazz/rock timbres mainly) _and_ guitar now. Meanwhile, my Ensoniq VFX<br/>is really falling short as a way of creating good-sounding microtonal<br/>music. Will the Triton solve all my problems?</p></div><h3><a id=1261 href="#1261">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>11/27/2001 10:21:29 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Paul (and Jacky?),</p><p>I&apos;ll be curious to see what the final verdict is on the true nature of the tunibility (tuneability?) of the Triton...</p><p>{Paul, you wrote...}<br/>&gt;Will the Triton solve all my problems?</p><p>I think only divine intervention can tackle *that*! :)</p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: spectral mappings - One More Thing!</h1><h3><a id=1256 href="#1256">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>11/26/2001 2:17:44 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In MakeMicroMusic@y..., jacky_ligon@y... wrote:</p><p>&gt; I have seen that on some boards - like the Korg Trinity and Triton<br/>&gt; (both can do full arbitrary retuning)</p><p>Do you think I should get a Triton? My band just got a second guitar<br/>player, and he&apos;s awesome! I think I want to play keys (classic<br/>jazz/rock timbres mainly) _and_ guitar now. Meanwhile, my Ensoniq VFX<br/>is really falling short as a way of creating good-sounding microtonal<br/>music. Will the Triton solve all my problems?</p></div><h3><a id=1261 href="#1261">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>11/27/2001 10:21:29 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Paul (and Jacky?),</p><p>I&apos;ll be curious to see what the final verdict is on the true nature of the tunibility (tuneability?) of the Triton...</p><p>{Paul, you wrote...}<br/>&gt;Will the Triton solve all my problems?</p><p>I think only divine intervention can tackle *that*! :)</p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

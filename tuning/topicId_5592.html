@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Rankin's interchangable fingerboards</h1><h3><a id=5592 href="#5592">🔗</a>Drew Skyfyre &#x3C;drew_skyfyre@xxxxx.xxxx&#x3E;</h3><span>10/19/1999 11:02:41 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>A question for owners of Mark Rankin&apos;s interchangable fingerboards :</p><p>How good (i.e. low) is the action that you get on your guitars ?<br/>Logic seems to tell me that such a system would mean a limit on how close to<br/>the frets the strings can be.</p><p>- Drew</p><p>__________________________________________________<br/>Do You Yahoo!?<br/>Bid and sell for free at <a href="http://auctions.yahoo.com">http://auctions.yahoo.com</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Rankin's interchangable fingerboards</h1><h3><a id=5592 href="#5592">🔗</a>Drew Skyfyre &#x3C;drew_skyfyre@xxxxx.xxxx&#x3E;</h3><span>10/19/1999 11:02:41 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>A question for owners of Mark Rankin&apos;s interchangable fingerboards :</p><p>How good (i.e. low) is the action that you get on your guitars ?<br/>Logic seems to tell me that such a system would mean a limit on how close to<br/>the frets the strings can be.</p><p>- Drew</p><p>__________________________________________________<br/>Do You Yahoo!?<br/>Bid and sell for free at <a href="http://auctions.yahoo.com">http://auctions.yahoo.com</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>a small bit of good news for the prospect of middle east peace</h1><h3><a id=4425 href="#4425">🔗</a>wallyesterpaulrus &#x3C;wallyesterpaulrus@...&#x3E;</h3><span>3/19/2003 2:21:32 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.haaretzdaily.com/hasen/pages/ShArt.jhtml">http://www.haaretzdaily.com/hasen/pages/ShArt.jhtml</a>?<br/>itemNo=274732&amp;contrassID=1&amp;subContrassID=1&amp;sbSubContrassID=0&amp;listSrc=Y</p><p>hopefully, this means the palestinians will finally have a<br/>representative who is himself a palestinian, and who is not a<br/>terrorist.</p><p>i pray that the next israeli elections see a similar shift toward<br/>moderation.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>a small bit of good news for the prospect of middle east peace</h1><h3><a id=4425 href="#4425">🔗</a>wallyesterpaulrus &#x3C;wallyesterpaulrus@...&#x3E;</h3><span>3/19/2003 2:21:32 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.haaretzdaily.com/hasen/pages/ShArt.jhtml">http://www.haaretzdaily.com/hasen/pages/ShArt.jhtml</a>?<br/>itemNo=274732&amp;contrassID=1&amp;subContrassID=1&amp;sbSubContrassID=0&amp;listSrc=Y</p><p>hopefully, this means the palestinians will finally have a<br/>representative who is himself a palestinian, and who is not a<br/>terrorist.</p><p>i pray that the next israeli elections see a similar shift toward<br/>moderation.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

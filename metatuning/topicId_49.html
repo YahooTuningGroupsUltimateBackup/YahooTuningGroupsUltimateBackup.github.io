@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>egjis;fojs;efouslidvhlisdmvlkdoif</h1><h3><a id=49 href="#49">🔗</a>jpehrson@...</h3><span>5/23/2001 11:35:06 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Actually, I really like this list.</p><p>I can even write:</p><p>apoisegyuas;kldnv;lasn ioaseglksa;dmvpl&apos;samdpo, ;/mv</p><p>if I want to!</p><p>______ _____ ______<br/>Joseph Pehrson</p></div><h3><a id=50 href="#50">🔗</a>John A. deLaubenfels &#x3C;jdl@...&#x3E;</h3><span>5/23/2001 11:49:17 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>[Joseph Pehrson wrote:]<br/>&gt;Actually, I really like this list.</p><p>&gt;I can even write:</p><p>&gt;apoisegyuas;kldnv;lasn ioaseglksa;dmvpl&apos;samdpo, ;/mv</p><p>&gt;if I want to!</p><p>You misspelled that: it should be</p><p>   zpoisegyuas;kldnv;lasn ioaseglksa;dmvpl&apos;samdpo, ;/mg</p><p>And I think that belongs on the meta list.  Oops, sorry, this _is_ that<br/>list!</p><p>JdL</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>egjis;fojs;efouslidvhlisdmvlkdoif</h1><h3><a id=49 href="#49">🔗</a>jpehrson@...</h3><span>5/23/2001 11:35:06 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Actually, I really like this list.</p><p>I can even write:</p><p>apoisegyuas;kldnv;lasn ioaseglksa;dmvpl&apos;samdpo, ;/mv</p><p>if I want to!</p><p>______ _____ ______<br/>Joseph Pehrson</p></div><h3><a id=50 href="#50">🔗</a>John A. deLaubenfels &#x3C;jdl@...&#x3E;</h3><span>5/23/2001 11:49:17 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>[Joseph Pehrson wrote:]<br/>&gt;Actually, I really like this list.</p><p>&gt;I can even write:</p><p>&gt;apoisegyuas;kldnv;lasn ioaseglksa;dmvpl&apos;samdpo, ;/mv</p><p>&gt;if I want to!</p><p>You misspelled that: it should be</p><p>   zpoisegyuas;kldnv;lasn ioaseglksa;dmvpl&apos;samdpo, ;/mg</p><p>And I think that belongs on the meta list.  Oops, sorry, this _is_ that<br/>list!</p><p>JdL</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

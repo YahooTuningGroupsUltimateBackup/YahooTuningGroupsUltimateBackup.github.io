@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Microtonal guitar necks</h1><h3><a id=8833 href="#8833">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>2/3/2005 11:18:29 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hey some of you,</p><p>I&apos;m on Jon Catler&apos;s mailing list because I like his music (and playing), *not* because I&apos;m a guitarist (I&apos;m not). But I got an email about him/them offering up guitar necks in beyond-12tet tunings. If interested:</p><p><a href="http://www.microtones.com/guitars.htm">http://www.microtones.com/guitars.htm</a></p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Microtonal guitar necks</h1><h3><a id=8833 href="#8833">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>2/3/2005 11:18:29 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hey some of you,</p><p>I&apos;m on Jon Catler&apos;s mailing list because I like his music (and playing), *not* because I&apos;m a guitarist (I&apos;m not). But I got an email about him/them offering up guitar necks in beyond-12tet tunings. If interested:</p><p><a href="http://www.microtones.com/guitars.htm">http://www.microtones.com/guitars.htm</a></p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

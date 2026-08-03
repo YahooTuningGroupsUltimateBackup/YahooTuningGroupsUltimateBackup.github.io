@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Guitar 9</h1><h3><a id=11352 href="#11352">🔗</a>Neil Haverstick &#x3C;STICK@USWEST.NET&#x3E;</h3><span>8/6/2000 8:54:50 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Yo guitar fans...there&apos;s a good online guitar mag available called<br/>Guitar 9. I just wrote an article for them at<br/><a href="http://www.guitar9.com/columnist76.html...from">http://www.guitar9.com/columnist76.html...from</a> there you can access the<br/>rest of the issue. It&apos;s well done and wide ranging, with lots of self<br/>help columns...they also sell a lot of guitar CD&apos;s, and they&apos;re an easy<br/>bunch to work with...Hstick</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Guitar 9</h1><h3><a id=11352 href="#11352">🔗</a>Neil Haverstick &#x3C;STICK@USWEST.NET&#x3E;</h3><span>8/6/2000 8:54:50 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Yo guitar fans...there&apos;s a good online guitar mag available called<br/>Guitar 9. I just wrote an article for them at<br/><a href="http://www.guitar9.com/columnist76.html...from">http://www.guitar9.com/columnist76.html...from</a> there you can access the<br/>rest of the issue. It&apos;s well done and wide ranging, with lots of self<br/>help columns...they also sell a lot of guitar CD&apos;s, and they&apos;re an easy<br/>bunch to work with...Hstick</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

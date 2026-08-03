@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/mills-tuning-list">back to list</a><h1>24 tone rock</h1><h3><a id=7714 href="#7714">🔗</a>Aline Surman &#x3C;stick@...&#x3E;</h3><span>5/9/1998 8:42:34 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'>By the way, there was/is (I don't know what he's doing now)a guitarist <br>in a heavy rock band using 24 tone eq temp a while back; his name is <br>Ronnie le Tekro, and the band was called TNT. I heard a brief solo on one <br>of their records, and the tonality fit the hard rock sound very well. He <br>did an interview for GuitarPlayer and talked about trying to get Fender <br>guitars to produce a "quarter stepper" guitar, as he called it. He also <br>mentioned that some Norwegian folk music touched on quarter tones. I know <br>he also did a collaboration with the great Norwegian guitarist Terje <br>Rypdal, but I've never heard it...I don't think it was <br>microtonal...Hstick</div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/mills-tuning-list">back to list</a><h1>24 tone rock</h1><h3><a id=7714 href="#7714">🔗</a>Aline Surman &#x3C;stick@...&#x3E;</h3><span>5/9/1998 8:42:34 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'>By the way, there was/is (I don't know what he's doing now)a guitarist <br>in a heavy rock band using 24 tone eq temp a while back; his name is <br>Ronnie le Tekro, and the band was called TNT. I heard a brief solo on one <br>of their records, and the tonality fit the hard rock sound very well. He <br>did an interview for GuitarPlayer and talked about trying to get Fender <br>guitars to produce a "quarter stepper" guitar, as he called it. He also <br>mentioned that some Norwegian folk music touched on quarter tones. I know <br>he also did a collaboration with the great Norwegian guitarist Terje <br>Rypdal, but I've never heard it...I don't think it was <br>microtonal...Hstick</div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

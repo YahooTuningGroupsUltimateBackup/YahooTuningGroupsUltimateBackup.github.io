@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>New Yorker Article</h1><h3><a id=3319 href="#3319">🔗</a>Joseph Pehrson &#x3C;jpehrson@...&#x3E;</h3><span>10/10/2002 9:51:13 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I highly recommend this week&apos;s New Yorker (actually *2* weeks, Oct.<br/>14 &amp; 21) for its analysis/commentary on George &quot;W&quot; Bush&apos;s and this<br/>country&apos;s recent unilateral positioning.  It&apos;s a nuanced article, and<br/>takes the subject from several different directions pointing, in<br/>part, to the &quot;Wilsonian&quot; nature of it... of which I was not aware...</p><p>J. Pehrson</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>New Yorker Article</h1><h3><a id=3319 href="#3319">🔗</a>Joseph Pehrson &#x3C;jpehrson@...&#x3E;</h3><span>10/10/2002 9:51:13 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I highly recommend this week&apos;s New Yorker (actually *2* weeks, Oct.<br/>14 &amp; 21) for its analysis/commentary on George &quot;W&quot; Bush&apos;s and this<br/>country&apos;s recent unilateral positioning.  It&apos;s a nuanced article, and<br/>takes the subject from several different directions pointing, in<br/>part, to the &quot;Wilsonian&quot; nature of it... of which I was not aware...</p><p>J. Pehrson</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>URL for Welsh=Basque DNA</h1><h3><a id=31141 href="#31141">🔗</a>Afmmjr@aol.com</h3><span>12/8/2001 7:40:03 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Below is the Welsh = Basque DNA article.</p><p><a href="http://www.colegiomaster.com.br/Curso_Master/vestibular/unic01_01/ingles.htm">http://www.colegiomaster.com.br/Curso_Master/vestibular/unic01_01/ingles.htm</a></p><p>Johnny Reinhard</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>URL for Welsh=Basque DNA</h1><h3><a id=31141 href="#31141">🔗</a>Afmmjr@aol.com</h3><span>12/8/2001 7:40:03 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Below is the Welsh = Basque DNA article.</p><p><a href="http://www.colegiomaster.com.br/Curso_Master/vestibular/unic01_01/ingles.htm">http://www.colegiomaster.com.br/Curso_Master/vestibular/unic01_01/ingles.htm</a></p><p>Johnny Reinhard</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Duende</h1><h3><a id=11595 href="#11595">🔗</a>Kraig Grady &#x3C;kraiggrady@...&#x3E;</h3><span>1/31/2007 7:40:54 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I am way behind with every thing right now. especially e-mail<br/>But was this mentioned here, i ran across an essay by Lorca on the subject!<br/>--<br/>Kraig Grady<br/>North American Embassy of Anaphoria Island &lt;<a href="http://anaphoria.com/index.html">http://anaphoria.com/index.html</a>&gt;<br/>The Wandering Medicine Show<br/>KXLU &lt;<a href="http://www.kxlu.com/main/index.asp">http://www.kxlu.com/main/index.asp</a>&gt; 88.9 FM Wed 8-9 pm Los Angeles</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Duende</h1><h3><a id=11595 href="#11595">🔗</a>Kraig Grady &#x3C;kraiggrady@...&#x3E;</h3><span>1/31/2007 7:40:54 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I am way behind with every thing right now. especially e-mail<br/>But was this mentioned here, i ran across an essay by Lorca on the subject!<br/>--<br/>Kraig Grady<br/>North American Embassy of Anaphoria Island &lt;<a href="http://anaphoria.com/index.html">http://anaphoria.com/index.html</a>&gt;<br/>The Wandering Medicine Show<br/>KXLU &lt;<a href="http://www.kxlu.com/main/index.asp">http://www.kxlu.com/main/index.asp</a>&gt; 88.9 FM Wed 8-9 pm Los Angeles</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

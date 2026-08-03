@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Korg z1 keybaord scales</h1><h3><a id=4333 href="#4333">🔗</a>microtonalist &#x3C;mark.gould@...&#x3E; &#x3C;mark.gould@...&#x3E;</h3><span>2/24/2003 11:43:09 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Can anyone tell me if and how I set up a keyboard scale on a Korg z1,<br/>such as 31 et or 19et or similar?</p><p>I&apos;ve borrowed a manual for the z1, but this implies that I can only<br/>put deviations of +/- 100cent on each of the midi notes c1 g9, so<br/>that limits it to octave scales only, yet the microsynthesis site<br/>implies that I can have any scale I want. (one thing I want to try is<br/>to tune the keys to a segment of the harmonic series,<br/>say partials 32-64 or whatever, and or aliquot scales.)</p><p>Mark (venturing from the tuning group)</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Korg z1 keybaord scales</h1><h3><a id=4333 href="#4333">🔗</a>microtonalist &#x3C;mark.gould@...&#x3E; &#x3C;mark.gould@...&#x3E;</h3><span>2/24/2003 11:43:09 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Can anyone tell me if and how I set up a keyboard scale on a Korg z1,<br/>such as 31 et or 19et or similar?</p><p>I&apos;ve borrowed a manual for the z1, but this implies that I can only<br/>put deviations of +/- 100cent on each of the midi notes c1 g9, so<br/>that limits it to octave scales only, yet the microsynthesis site<br/>implies that I can have any scale I want. (one thing I want to try is<br/>to tune the keys to a segment of the harmonic series,<br/>say partials 32-64 or whatever, and or aliquot scales.)</p><p>Mark (venturing from the tuning group)</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

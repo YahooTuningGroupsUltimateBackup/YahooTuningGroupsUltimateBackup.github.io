@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>[Fwd: Mildred Coupers Music]</h1><h3><a id=46286 href="#46286">🔗</a>John Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>8/7/2003 3:54:28 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I received this today and thought it would be of interest to Alternative tuners,<br/>xenharmonists,<br/>and other microtonalists. Ivor Darreg knew Mildred and composed in quarter-tones<br/>before he<br/>heard Joel Mandelbaum&apos;s 19-tet compositions.</p><p>-------- Original Message --------</p><p>Subject:&nbsp; Mildred Coupers Music Date:&nbsp; Thu, 7 Aug 2003 12:57:05 -0700 From:&nbsp;<br/>&quot;Couper, Greta&quot; To:&nbsp; &quot;&apos;jhchalme@alumni.ucsd.edu&apos;&quot; CC:&nbsp; &quot;&apos;JHCHALMERS@Ucsd.edu&apos;&quot;</p><p>&nbsp;</p><p>Quarter-tone composer Mildred Couper is now represented at the UCSB Special<br/>Collections library, in Santa Barbara.<br/>They have all her recordings and music scores.<br/>Greta Couper<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.library.ucsb.edu/speccoll/pa/pamss45.html">http://www.library.ucsb.edu/speccoll/pa/pamss45.html</a><br/>[<a href="http://www.library.ucsb.edu/speccoll/pa/pamss45.html">http://www.library.ucsb.edu/speccoll/pa/pamss45.html</a>]</p><p>-----------------------------------------------------------<br/>Greta E. Couper, Ph.D.<br/>Alumni Career Services &amp; Technology<br/>Pepperdine University, TCC274<br/>24255 Pacific Coast Hwy, Malibu, CA 90263<br/><a href="http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/">http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/</a><br/>[<a href="http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/">http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/</a>]<br/>(310) 506-4074,&nbsp; FAX (310) 506-4428<br/>email: <a href="mailto:gcouper@pepperdine.edu">gcouper@pepperdine.edu</a> [gcouper@pepperdine.edu]<br/>----------------------------------------------------------</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>[Fwd: Mildred Coupers Music]</h1><h3><a id=46286 href="#46286">🔗</a>John Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>8/7/2003 3:54:28 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I received this today and thought it would be of interest to Alternative tuners,<br/>xenharmonists,<br/>and other microtonalists. Ivor Darreg knew Mildred and composed in quarter-tones<br/>before he<br/>heard Joel Mandelbaum&apos;s 19-tet compositions.</p><p>-------- Original Message --------</p><p>Subject:&nbsp; Mildred Coupers Music Date:&nbsp; Thu, 7 Aug 2003 12:57:05 -0700 From:&nbsp;<br/>&quot;Couper, Greta&quot; To:&nbsp; &quot;&apos;jhchalme@alumni.ucsd.edu&apos;&quot; CC:&nbsp; &quot;&apos;JHCHALMERS@Ucsd.edu&apos;&quot;</p><p>&nbsp;</p><p>Quarter-tone composer Mildred Couper is now represented at the UCSB Special<br/>Collections library, in Santa Barbara.<br/>They have all her recordings and music scores.<br/>Greta Couper<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.library.ucsb.edu/speccoll/pa/pamss45.html">http://www.library.ucsb.edu/speccoll/pa/pamss45.html</a><br/>[<a href="http://www.library.ucsb.edu/speccoll/pa/pamss45.html">http://www.library.ucsb.edu/speccoll/pa/pamss45.html</a>]</p><p>-----------------------------------------------------------<br/>Greta E. Couper, Ph.D.<br/>Alumni Career Services &amp; Technology<br/>Pepperdine University, TCC274<br/>24255 Pacific Coast Hwy, Malibu, CA 90263<br/><a href="http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/">http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/</a><br/>[<a href="http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/">http://seaver.pepperdine.edu/studentaffairs/careercenter/alumni/</a>]<br/>(310) 506-4074,&nbsp; FAX (310) 506-4428<br/>email: <a href="mailto:gcouper@pepperdine.edu">gcouper@pepperdine.edu</a> [gcouper@pepperdine.edu]<br/>----------------------------------------------------------</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

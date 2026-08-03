@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Byebye tuning</h1><h3><a id=18918 href="#18918">🔗</a>microstick@...</h3><span>6/18/2008 8:58:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Well, after many years, I finally decided to get off the main tuning list...too much drama and sniping for an old feller like me. As someone just said, this list is a little more laid back, so I plan on keeping this one coming to my computer screen. There are some sharp folks here, and over the years I&apos;ve learned some things, and hope to still do so...here&apos;s to peaceful times at MMM...Hstick  <a href="http://myspace.com/microstick">myspace.com/microstick</a>   <a href="http://microstick.net">microstick.net</a></p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Byebye tuning</h1><h3><a id=18918 href="#18918">🔗</a>microstick@...</h3><span>6/18/2008 8:58:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Well, after many years, I finally decided to get off the main tuning list...too much drama and sniping for an old feller like me. As someone just said, this list is a little more laid back, so I plan on keeping this one coming to my computer screen. There are some sharp folks here, and over the years I&apos;ve learned some things, and hope to still do so...here&apos;s to peaceful times at MMM...Hstick  <a href="http://myspace.com/microstick">myspace.com/microstick</a>   <a href="http://microstick.net">microstick.net</a></p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>13 limit JI blues, Willie McBlind's 2nd cd is out (Jon Catler/Meredith Borden)</h1><h3><a id=20574 href="#20574">🔗</a>Joe &#x3C;tamahome02000@...&#x3E;</h3><span>4/10/2009 10:55:39 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Their 2nd cd is out.  So far I think you can only order it from their website.  The first 2 myspace tracks are from it.</p><p><a href="http://microtones.com">http://microtones.com</a><br/><a href="http://myspace.com/williemcblind">http://myspace.com/williemcblind</a></p></div><h3><a id=20575 href="#20575">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>4/10/2009 10:08:18 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Thanks for the heads-up.  All hail paypal!</p><p>-Carl</p><p>At 10:55 AM 4/10/2009, you wrote:<br/>&gt;<br/>&gt;Their 2nd cd is out.  So far I think you can only order it from their<br/>&gt;website.  The first 2 myspace tracks are from it.<br/>&gt;<br/>&gt;<a href="http://microtones.com">http://microtones.com</a><br/>&gt;<a href="http://myspace.com/williemcblind">http://myspace.com/williemcblind</a><br/>&gt;<br/>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>13 limit JI blues, Willie McBlind's 2nd cd is out (Jon Catler/Meredith Borden)</h1><h3><a id=20574 href="#20574">🔗</a>Joe &#x3C;tamahome02000@...&#x3E;</h3><span>4/10/2009 10:55:39 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Their 2nd cd is out.  So far I think you can only order it from their website.  The first 2 myspace tracks are from it.</p><p><a href="http://microtones.com">http://microtones.com</a><br/><a href="http://myspace.com/williemcblind">http://myspace.com/williemcblind</a></p></div><h3><a id=20575 href="#20575">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>4/10/2009 10:08:18 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Thanks for the heads-up.  All hail paypal!</p><p>-Carl</p><p>At 10:55 AM 4/10/2009, you wrote:<br/>&gt;<br/>&gt;Their 2nd cd is out.  So far I think you can only order it from their<br/>&gt;website.  The first 2 myspace tracks are from it.<br/>&gt;<br/>&gt;<a href="http://microtones.com">http://microtones.com</a><br/>&gt;<a href="http://myspace.com/williemcblind">http://myspace.com/williemcblind</a><br/>&gt;<br/>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

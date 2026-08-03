@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] MIDI tuning spec</h1><h3><a id=5883 href="#5883">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>3/24/2004 1:12:24 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt;Is the MIDI tuning spec limited to 128 notes ?</p><p>That&apos;s right. Not only the tuning spec, but MIDI as<br/>a whole.</p><p>&gt;If this is the case , how keyboards like the Microzone work on scales<br/>&gt;with way more notes per octave?</p><p>One possibility is they use different MIDI channels.<br/>Or special software, or multiple connections.</p><p>Manuel</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] MIDI tuning spec</h1><h3><a id=5883 href="#5883">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>3/24/2004 1:12:24 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt;Is the MIDI tuning spec limited to 128 notes ?</p><p>That&apos;s right. Not only the tuning spec, but MIDI as<br/>a whole.</p><p>&gt;If this is the case , how keyboards like the Microzone work on scales<br/>&gt;with way more notes per octave?</p><p>One possibility is they use different MIDI channels.<br/>Or special software, or multiple connections.</p><p>Manuel</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

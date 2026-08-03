@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>What Have You Done for Freedom Today?</h1><h3><a id=2891 href="#2891">🔗</a>Joel Rodrigues &#x3C;joelrodrigues@...&#x3E;</h3><span>7/29/2002 1:38:13 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>O&apos;Reilly Network: What Have You Done for Freedom Today?<br/>by Sam Williams, author of Free as in Freedom<br/>07/25/2002</p><p>&lt;<a href="http://www.oreillynet.com/lpt/a/network/2002/07/25/keynotes.html">http://www.oreillynet.com/lpt/a/network/2002/07/25/keynotes.html</a>&gt;</p><p>From the Open Source Software Convention held in San Diego.</p><p>- Joel</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>What Have You Done for Freedom Today?</h1><h3><a id=2891 href="#2891">🔗</a>Joel Rodrigues &#x3C;joelrodrigues@...&#x3E;</h3><span>7/29/2002 1:38:13 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>O&apos;Reilly Network: What Have You Done for Freedom Today?<br/>by Sam Williams, author of Free as in Freedom<br/>07/25/2002</p><p>&lt;<a href="http://www.oreillynet.com/lpt/a/network/2002/07/25/keynotes.html">http://www.oreillynet.com/lpt/a/network/2002/07/25/keynotes.html</a>&gt;</p><p>From the Open Source Software Convention held in San Diego.</p><p>- Joel</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

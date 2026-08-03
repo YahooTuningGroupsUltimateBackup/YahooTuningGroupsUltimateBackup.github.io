@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>diminished temperament -- rimsky-korsakov, ravel, scriabin</h1><h3><a id=3676 href="#3676">🔗</a>paulerlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>3/12/2002 12:43:28 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://jan.ucc.nau.edu/~krr2/atmi_files/multiple.html">http://jan.ucc.nau.edu/~krr2/atmi_files/multiple.html</a></p><p><a href="http://www.teoria.com/questions/questions2001/V-2001.htm">http://www.teoria.com/questions/questions2001/V-2001.htm</a></p><p><a href="http://www.azstarnet.com/~solo/sc743al.htm">http://www.azstarnet.com/~solo/sc743al.htm</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>diminished temperament -- rimsky-korsakov, ravel, scriabin</h1><h3><a id=3676 href="#3676">🔗</a>paulerlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>3/12/2002 12:43:28 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://jan.ucc.nau.edu/~krr2/atmi_files/multiple.html">http://jan.ucc.nau.edu/~krr2/atmi_files/multiple.html</a></p><p><a href="http://www.teoria.com/questions/questions2001/V-2001.htm">http://www.teoria.com/questions/questions2001/V-2001.htm</a></p><p><a href="http://www.azstarnet.com/~solo/sc743al.htm">http://www.azstarnet.com/~solo/sc743al.htm</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

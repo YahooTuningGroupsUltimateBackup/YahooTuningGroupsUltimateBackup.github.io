@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Audiogalaxy shut down</h1><h3><a id=2608 href="#2608">🔗</a>jdstarrett &#x3C;jstarret@...&#x3E;</h3><span>6/19/2002 8:25:01 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>The largest music file sharing network <a href="http://Audiogalaxy.com">Audiogalaxy.com</a> has been shut down by an RIAA lawsuit. Who knows where the next one will spring up?</p><p>John Starrett</p></div><h3><a id=2616 href="#2616">🔗</a>jonszanto &#x3C;JSZANTO@...&#x3E;</h3><span>6/20/2002 11:23:07 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In metatuning@y..., &quot;jdstarrett&quot; &lt;jstarret@c...&gt; wrote:<br/>&gt; The largest music file sharing network <a href="http://Audiogalaxy.com">Audiogalaxy.com</a> has been shut down by an RIAA lawsuit. Who knows where the next one will spring up?</p><p>If you care to read further, here&apos;s Wired News&apos; take on it:</p><p><a href="http://www.wired.com/news/mp3/0,1285,53342,00.html">http://www.wired.com/news/mp3/0,1285,53342,00.html</a></p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Audiogalaxy shut down</h1><h3><a id=2608 href="#2608">🔗</a>jdstarrett &#x3C;jstarret@...&#x3E;</h3><span>6/19/2002 8:25:01 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>The largest music file sharing network <a href="http://Audiogalaxy.com">Audiogalaxy.com</a> has been shut down by an RIAA lawsuit. Who knows where the next one will spring up?</p><p>John Starrett</p></div><h3><a id=2616 href="#2616">🔗</a>jonszanto &#x3C;JSZANTO@...&#x3E;</h3><span>6/20/2002 11:23:07 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In metatuning@y..., &quot;jdstarrett&quot; &lt;jstarret@c...&gt; wrote:<br/>&gt; The largest music file sharing network <a href="http://Audiogalaxy.com">Audiogalaxy.com</a> has been shut down by an RIAA lawsuit. Who knows where the next one will spring up?</p><p>If you care to read further, here&apos;s Wired News&apos; take on it:</p><p><a href="http://www.wired.com/news/mp3/0,1285,53342,00.html">http://www.wired.com/news/mp3/0,1285,53342,00.html</a></p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

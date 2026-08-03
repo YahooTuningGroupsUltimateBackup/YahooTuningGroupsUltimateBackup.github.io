@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Trying to get the springerlink word product paper</h1><h3><a id=20026 href="#20026">🔗</a>Mike Battaglia &#x3C;battaglia01@gmail.com&#x3E;</h3><span>11/14/2011 4:30:11 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Anyone have this?</p><p><a href="https://springerlink3.metapress.com/content/c23748337406x463/resource-secured/?target=fulltext.pdf&sid=usqqm1frd5x5mkhaxyww5ylb&sh=www.springerlink.com">https://springerlink3.metapress.com/content/c23748337406x463/resource-secured/?target=fulltext.pdf&sid=usqqm1frd5x5mkhaxyww5ylb&sh=www.springerlink.com</a></p><p>&quot;Anyone&quot;?</p><p>-Mike</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>Trying to get the springerlink word product paper</h1><h3><a id=20026 href="#20026">🔗</a>Mike Battaglia &#x3C;battaglia01@gmail.com&#x3E;</h3><span>11/14/2011 4:30:11 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Anyone have this?</p><p><a href="https://springerlink3.metapress.com/content/c23748337406x463/resource-secured/?target=fulltext.pdf&sid=usqqm1frd5x5mkhaxyww5ylb&sh=www.springerlink.com">https://springerlink3.metapress.com/content/c23748337406x463/resource-secured/?target=fulltext.pdf&sid=usqqm1frd5x5mkhaxyww5ylb&sh=www.springerlink.com</a></p><p>&quot;Anyone&quot;?</p><p>-Mike</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

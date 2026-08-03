@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>thanks Margo!</h1><h3><a id=23711 href="#23711">🔗</a>Robert C Valentine &#x3C;BVAL@IIL.INTEL.COM&#x3E;</h3><span>5/24/2001 3:24:25 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>&gt; Margo says<br/>&gt;<br/>&gt; Hello, there, Robert, and thank you for a very pertinent question about<br/>&gt; what is often known as the Landini cadence.<br/>&gt;<br/>&gt; For now, I&apos;ll offer this link (hopefully giving the right site for my<br/>&gt; article this time), with more comment by this evening, I hope.<br/>&gt;<br/>&gt; <a href="http://www.medieval.org/emfaq/harmony/landini.html">http://www.medieval.org/emfaq/harmony/landini.html</a><br/>&gt;</p><p>I&apos;ve saved the note and the link for the weekend (mercifully soon<br/>here). Heres a public big thanks for giving me a handle on an<br/>area of music that is having a big impact on my listenning and<br/>ical rowth.</p><p>thanks</p><p>Bob Valentine</p></div><h3><a id=23721 href="#23721">🔗</a>X. J. Scott &#x3C;xjscott@earthlink.net&#x3E;</h3><span>5/24/2001 8:28:42 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>[Bob V.:]</p><p>&gt; Heres a public big thanks for giving me a handle on an<br/>&gt; area of music that is having a big impact on my listenning and<br/>&gt; ical rowth.</p><p>Bob, they&apos;ve got creams for that now. It&apos;s completely<br/>treatable.</p><p>- Jeff<br/>:-)</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>thanks Margo!</h1><h3><a id=23711 href="#23711">🔗</a>Robert C Valentine &#x3C;BVAL@IIL.INTEL.COM&#x3E;</h3><span>5/24/2001 3:24:25 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>&gt; Margo says<br/>&gt;<br/>&gt; Hello, there, Robert, and thank you for a very pertinent question about<br/>&gt; what is often known as the Landini cadence.<br/>&gt;<br/>&gt; For now, I&apos;ll offer this link (hopefully giving the right site for my<br/>&gt; article this time), with more comment by this evening, I hope.<br/>&gt;<br/>&gt; <a href="http://www.medieval.org/emfaq/harmony/landini.html">http://www.medieval.org/emfaq/harmony/landini.html</a><br/>&gt;</p><p>I&apos;ve saved the note and the link for the weekend (mercifully soon<br/>here). Heres a public big thanks for giving me a handle on an<br/>area of music that is having a big impact on my listenning and<br/>ical rowth.</p><p>thanks</p><p>Bob Valentine</p></div><h3><a id=23721 href="#23721">🔗</a>X. J. Scott &#x3C;xjscott@earthlink.net&#x3E;</h3><span>5/24/2001 8:28:42 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>[Bob V.:]</p><p>&gt; Heres a public big thanks for giving me a handle on an<br/>&gt; area of music that is having a big impact on my listenning and<br/>&gt; ical rowth.</p><p>Bob, they&apos;ve got creams for that now. It&apos;s completely<br/>treatable.</p><p>- Jeff<br/>:-)</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

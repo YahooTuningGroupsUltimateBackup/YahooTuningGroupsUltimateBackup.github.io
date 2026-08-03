@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: [tuning] Re: Thai "7-equal" tuning (was Re: Brian McLaren's "Introduction...</h1><h3><a id=24988 href="#24988">🔗</a>Afmmjr@aol.com</h3><span>6/12/2001 7:28:17 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>If you divide 1200 by 7 you get an equiheptaphonic scale in cents<br/>measurements by dieses.</p><p>Johnny Reinhard</p></div><h3><a id=25003 href="#25003">🔗</a>xjhouston7@yahoo.com</h3><span>6/12/2001 10:53:38 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning@y..., Afmmjr@a... wrote:<br/>&gt; If you divide 1200 by 7 you get an equiheptaphonic scale in cents<br/>&gt; measurements by dieses.<br/>&gt;<br/>&gt; Johnny Reinhard</p><p>Johnny Reinhard, your messages are so frustrating!</p><p>Where are the sentences here?  The first line is a truism. Anybody on<br/>this list knows it already. The second line makes no sense at all.<br/>Where are the dieses?</p><p>Xavier</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: [tuning] Re: Thai "7-equal" tuning (was Re: Brian McLaren's "Introduction...</h1><h3><a id=24988 href="#24988">🔗</a>Afmmjr@aol.com</h3><span>6/12/2001 7:28:17 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>If you divide 1200 by 7 you get an equiheptaphonic scale in cents<br/>measurements by dieses.</p><p>Johnny Reinhard</p></div><h3><a id=25003 href="#25003">🔗</a>xjhouston7@yahoo.com</h3><span>6/12/2001 10:53:38 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In tuning@y..., Afmmjr@a... wrote:<br/>&gt; If you divide 1200 by 7 you get an equiheptaphonic scale in cents<br/>&gt; measurements by dieses.<br/>&gt;<br/>&gt; Johnny Reinhard</p><p>Johnny Reinhard, your messages are so frustrating!</p><p>Where are the sentences here?  The first line is a truism. Anybody on<br/>this list knows it already. The second line makes no sense at all.<br/>Where are the dieses?</p><p>Xavier</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

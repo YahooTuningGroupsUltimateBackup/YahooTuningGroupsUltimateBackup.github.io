@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>More on Prent's Podcast review</h1><h3><a id=8033 href="#8033">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>11/20/2004 10:41:11 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>And another thing:</p><p>One line in the review really caught my eye: &quot;...he does give some details in most &apos;casts, but sometimes they assume more of a basis in the ideas behind microtonal music than his potential podience is likely to have.&quot;</p><p>Outside of the awkward &quot;podience&quot; attribution, what is fascinating is that here is a listener *totally outside of our niche*, who is also assuming that Prent&apos;s potential audience is *also* outside of these little microtonal communities. No, microtonality won&apos;t be a huge popular uprising and sweep away everything in its path, but I am heartened that an outsider not only wants to know more, but assumes that other outsiders will give a listen. I won&apos;t say that the medium is the message, but if an alternative delivery system like Podcasts ends up expanding the audience for different musics, who could complain?</p><p>Thanks again, Prent, for not only doing it but for doing it so well!</p><p>Cheers,<br/>Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>More on Prent's Podcast review</h1><h3><a id=8033 href="#8033">🔗</a>Jonathan M. Szanto &#x3C;JSZANTO@...&#x3E;</h3><span>11/20/2004 10:41:11 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>And another thing:</p><p>One line in the review really caught my eye: &quot;...he does give some details in most &apos;casts, but sometimes they assume more of a basis in the ideas behind microtonal music than his potential podience is likely to have.&quot;</p><p>Outside of the awkward &quot;podience&quot; attribution, what is fascinating is that here is a listener *totally outside of our niche*, who is also assuming that Prent&apos;s potential audience is *also* outside of these little microtonal communities. No, microtonality won&apos;t be a huge popular uprising and sweep away everything in its path, but I am heartened that an outsider not only wants to know more, but assumes that other outsiders will give a listen. I won&apos;t say that the medium is the message, but if an alternative delivery system like Podcasts ends up expanding the audience for different musics, who could complain?</p><p>Thanks again, Prent, for not only doing it but for doing it so well!</p><p>Cheers,<br/>Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

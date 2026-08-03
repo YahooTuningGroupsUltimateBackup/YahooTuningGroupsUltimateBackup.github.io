@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/crazy_music">back to list</a><h1>Re: wavelets</h1><h3><a id=1065 href="#1065">🔗</a>X. J. Scott &#x3C;xjscott@...&#x3E;</h3><span>8/28/2001 4:55:34 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hey Brian,</p><p>Yes, Gabor logons are great fun.</p><p>Robert and I were discussing them a couple<br/>months back.</p><p>I got great results from them when I used them<br/>in part to develop my grand unified field theorem,<br/>which, by the way, is to date the only theory that<br/>is able to predict which isotopes will be radioactive.</p><p>Anyway, I stand by all I have said about FFT.</p><p>Thanks,</p><p>Jeff</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/crazy_music">back to list</a><h1>Re: wavelets</h1><h3><a id=1065 href="#1065">🔗</a>X. J. Scott &#x3C;xjscott@...&#x3E;</h3><span>8/28/2001 4:55:34 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hey Brian,</p><p>Yes, Gabor logons are great fun.</p><p>Robert and I were discussing them a couple<br/>months back.</p><p>I got great results from them when I used them<br/>in part to develop my grand unified field theorem,<br/>which, by the way, is to date the only theory that<br/>is able to predict which isotopes will be radioactive.</p><p>Anyway, I stand by all I have said about FFT.</p><p>Thanks,</p><p>Jeff</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

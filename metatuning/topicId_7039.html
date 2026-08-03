@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>Rumsfeld on dictatorship-to-democracy transition</h1><h3><a id=7039 href="#7039">🔗</a>monz &#x3C;monz@...&#x3E;</h3><span>4/7/2004 9:56:33 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>i couldn&apos;t believe what i was hearing on NPR radio tonight.<br/>Rumsfeld -- his own actual voice -- defending the situation<br/>in Iraq by saying that no country ever transtitioned from<br/>dictatorship to democracy without fighting and problems.<br/>i&apos;m paraphrasing so far, but he actually did say &quot;not a<br/>single country&quot; at one point.</p><p>this is so ridiculous ... what about almost all of the<br/>former Soviet republics?  what about East Germany, Czechia,<br/>Slovakia, Hungary?</p><p>granted, there is a small kernel of truth in what he said,<br/>and he pointed to &quot;us&quot; (America, which did have a violent<br/>revolutionary war to gain its independence) as a prime<br/>example.  but to blatantly lie about events that just<br/>happened 15 years ago ... this is just too much.</p><p>-monz</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>Rumsfeld on dictatorship-to-democracy transition</h1><h3><a id=7039 href="#7039">🔗</a>monz &#x3C;monz@...&#x3E;</h3><span>4/7/2004 9:56:33 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>i couldn&apos;t believe what i was hearing on NPR radio tonight.<br/>Rumsfeld -- his own actual voice -- defending the situation<br/>in Iraq by saying that no country ever transtitioned from<br/>dictatorship to democracy without fighting and problems.<br/>i&apos;m paraphrasing so far, but he actually did say &quot;not a<br/>single country&quot; at one point.</p><p>this is so ridiculous ... what about almost all of the<br/>former Soviet republics?  what about East Germany, Czechia,<br/>Slovakia, Hungary?</p><p>granted, there is a small kernel of truth in what he said,<br/>and he pointed to &quot;us&quot; (America, which did have a violent<br/>revolutionary war to gain its independence) as a prime<br/>example.  but to blatantly lie about events that just<br/>happened 15 years ago ... this is just too much.</p><p>-monz</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

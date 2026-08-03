@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Blues in 17</h1><h3><a id=28576 href="#28576">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>1/23/2012 8:17:37 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Blues in 17 is a classical finger picked blues / classical guitar solo<br/>hybrid with lexicon reverberation and freeze pedal. There is some<br/>sloppiness. The idea was to push myself in playing and what I was playing<br/>melodically and harmonically.</p><p>You can stream or download it from here <a href="http://chrisvaisvil.com/?p=2032">http://chrisvaisvil.com/?p=2032</a></p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Blues in 17</h1><h3><a id=28576 href="#28576">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>1/23/2012 8:17:37 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Blues in 17 is a classical finger picked blues / classical guitar solo<br/>hybrid with lexicon reverberation and freeze pedal. There is some<br/>sloppiness. The idea was to push myself in playing and what I was playing<br/>melodically and harmonically.</p><p>You can stream or download it from here <a href="http://chrisvaisvil.com/?p=2032">http://chrisvaisvil.com/?p=2032</a></p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

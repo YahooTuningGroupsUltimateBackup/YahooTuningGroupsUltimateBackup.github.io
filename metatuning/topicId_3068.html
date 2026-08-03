@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>new moon?</h1><h3><a id=3068 href="#3068">🔗</a>Dante Rosati &#x3C;dante.interport@...&#x3E;</h3><span>9/11/2002 5:55:08 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://news.bbc.co.uk/2/hi/science/nature/2251386.stm">http://news.bbc.co.uk/2/hi/science/nature/2251386.stm</a></p><p>maybe its just space junk, but I can think of dozens of cool sci-fi movies<br/>that could start this way!</p></div><h3><a id=3069 href="#3069">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>9/11/2002 6:41:46 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>thanks to this article, i learned of Cruithne:</p><p><a href="http://www.astro.queensu.ca/~wiegert/3753/3753.html">http://www.astro.queensu.ca/~wiegert/3753/3753.html</a></p><p><a href="http://burtleburtle.net/bob/physics/cruithne.html">http://burtleburtle.net/bob/physics/cruithne.html</a></p><p>this is a perfect example of the planetary RESONANCE phenomenon that<br/>got a lot of press on the tuning list a while back (Cruithne is<br/>locked into a 1:1 resonance with Earth).</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>new moon?</h1><h3><a id=3068 href="#3068">🔗</a>Dante Rosati &#x3C;dante.interport@...&#x3E;</h3><span>9/11/2002 5:55:08 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://news.bbc.co.uk/2/hi/science/nature/2251386.stm">http://news.bbc.co.uk/2/hi/science/nature/2251386.stm</a></p><p>maybe its just space junk, but I can think of dozens of cool sci-fi movies<br/>that could start this way!</p></div><h3><a id=3069 href="#3069">🔗</a>Paul Erlich &#x3C;paul@...&#x3E;</h3><span>9/11/2002 6:41:46 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>thanks to this article, i learned of Cruithne:</p><p><a href="http://www.astro.queensu.ca/~wiegert/3753/3753.html">http://www.astro.queensu.ca/~wiegert/3753/3753.html</a></p><p><a href="http://burtleburtle.net/bob/physics/cruithne.html">http://burtleburtle.net/bob/physics/cruithne.html</a></p><p>this is a perfect example of the planetary RESONANCE phenomenon that<br/>got a lot of press on the tuning list a while back (Cruithne is<br/>locked into a 1:1 resonance with Earth).</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Yahoo address errors</h1><h3><a id=35873 href="#35873">🔗</a>Pierre Lamothe &#x3C;plamothe@aei.ca&#x3E;</h3><span>3/25/2002 8:04:33 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>With ancient address I received this error message:</p><p>  The original message was received at Fri, 22 Mar 2002 05:23:07 -0500 (EST)<br/>  from <a href="http://ppp-42-64.que.aei.ca">ppp-42-64.que.aei.ca</a> [<a href="http://216.221.42.64">216.221.42.64</a>]</p><p>     ----- The following addresses had permanent fatal errors -----<br/>  &lt;<a href="mailto:tuning@groups.yahoo.com">tuning@groups.yahoo.com</a>&gt;</p><p>     ----- Transcript of session follows -----<br/>  &lt;<a href="mailto:tuning@groups.yahoo.com">tuning@groups.yahoo.com</a>&gt;... Deferred: Operation timed out with <a href="http://groups1.vip.scd.yahoo.com">groups1.vip.scd.yahoo.com</a>.<br/>  Message could not be delivered for 2 days<br/>  Message will be deleted from queue</p><p>Testing now the address <a href="mailto:tuning@yahoogroups.com">mailto:tuning@yahoogroups.com</a></p><p>Pierre</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Yahoo address errors</h1><h3><a id=35873 href="#35873">🔗</a>Pierre Lamothe &#x3C;plamothe@aei.ca&#x3E;</h3><span>3/25/2002 8:04:33 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>With ancient address I received this error message:</p><p>  The original message was received at Fri, 22 Mar 2002 05:23:07 -0500 (EST)<br/>  from <a href="http://ppp-42-64.que.aei.ca">ppp-42-64.que.aei.ca</a> [<a href="http://216.221.42.64">216.221.42.64</a>]</p><p>     ----- The following addresses had permanent fatal errors -----<br/>  &lt;<a href="mailto:tuning@groups.yahoo.com">tuning@groups.yahoo.com</a>&gt;</p><p>     ----- Transcript of session follows -----<br/>  &lt;<a href="mailto:tuning@groups.yahoo.com">tuning@groups.yahoo.com</a>&gt;... Deferred: Operation timed out with <a href="http://groups1.vip.scd.yahoo.com">groups1.vip.scd.yahoo.com</a>.<br/>  Message could not be delivered for 2 days<br/>  Message will be deleted from queue</p><p>Testing now the address <a href="mailto:tuning@yahoogroups.com">mailto:tuning@yahoogroups.com</a></p><p>Pierre</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

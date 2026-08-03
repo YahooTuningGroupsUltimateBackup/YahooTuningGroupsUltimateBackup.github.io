@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>For anyone who might be interested----> ebay stuff for sale</h1><h3><a id=12075 href="#12075">🔗</a>daniel_anthony_stearns &#x3C;daniel_anthony_stearns@...&#x3E;</h3><span>5/8/2008 4:23:00 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>added a few new things yesterday--Frith, Chet Baker, the Science Group,<br/>Patton, Camberwell Now, etc.</p><p><a href="http://search.ebay.com/_W0QQsassZdaywalksin">http://search.ebay.com/_W0QQsassZdaywalksin</a></p><p>looks like i&apos;m going to try to sell my whole CD collection, 100s of<br/>CDs.Not sure if it will all be on ebay or not, probably not, but for<br/>now at least i plan to try to add a few every couple days.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>For anyone who might be interested----> ebay stuff for sale</h1><h3><a id=12075 href="#12075">🔗</a>daniel_anthony_stearns &#x3C;daniel_anthony_stearns@...&#x3E;</h3><span>5/8/2008 4:23:00 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>added a few new things yesterday--Frith, Chet Baker, the Science Group,<br/>Patton, Camberwell Now, etc.</p><p><a href="http://search.ebay.com/_W0QQsassZdaywalksin">http://search.ebay.com/_W0QQsassZdaywalksin</a></p><p>looks like i&apos;m going to try to sell my whole CD collection, 100s of<br/>CDs.Not sure if it will all be on ebay or not, probably not, but for<br/>now at least i plan to try to add a few every couple days.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

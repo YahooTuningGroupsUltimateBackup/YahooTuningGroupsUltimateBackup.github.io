@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Fwd: Chowning's FM papers</h1><h3><a id=5634 href="#5634">🔗</a>manuel.op.de.coul@xxx.xxx</h3><span>10/21/1999 8:30:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>From the DX7 list:</p><p><a href="http://www.et.put.poznan.pl/~mbartkow/SYNTH-DIY/FM_synthesis.html">http://www.et.put.poznan.pl/~mbartkow/SYNTH-DIY/FM_synthesis.html</a><br/>The original papers by Chowning on FM.</p><p>Manuel</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Fwd: Chowning's FM papers</h1><h3><a id=5634 href="#5634">🔗</a>manuel.op.de.coul@xxx.xxx</h3><span>10/21/1999 8:30:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>From the DX7 list:</p><p><a href="http://www.et.put.poznan.pl/~mbartkow/SYNTH-DIY/FM_synthesis.html">http://www.et.put.poznan.pl/~mbartkow/SYNTH-DIY/FM_synthesis.html</a><br/>The original papers by Chowning on FM.</p><p>Manuel</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

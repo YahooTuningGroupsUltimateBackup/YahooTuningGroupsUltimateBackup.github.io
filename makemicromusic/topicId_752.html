@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Sound advice</h1><h3><a id=752 href="#752">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>8/28/2001 10:47:27 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>AMEN!</p><p>Harold Fortuin wrote:</p><p>&gt; 1) We certainly SHOULD make use of preset patches as<br/>&gt; appropriate to our needs. I think we may be lucky that<br/>&gt; Bach, Beethoven, Thelonius Monk et al didn&apos;t spend<br/>&gt; most of their composing time trying to figure out<br/>&gt; CSound or building new kinds of clavichords</p><p>Or endless yakkin bout&apos; ________.</p><p>GZ</p><p>[Non-text portions of this message have been removed]</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Sound advice</h1><h3><a id=752 href="#752">🔗</a>George Zelenz &#x3C;ploo@...&#x3E;</h3><span>8/28/2001 10:47:27 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>AMEN!</p><p>Harold Fortuin wrote:</p><p>&gt; 1) We certainly SHOULD make use of preset patches as<br/>&gt; appropriate to our needs. I think we may be lucky that<br/>&gt; Bach, Beethoven, Thelonius Monk et al didn&apos;t spend<br/>&gt; most of their composing time trying to figure out<br/>&gt; CSound or building new kinds of clavichords</p><p>Or endless yakkin bout&apos; ________.</p><p>GZ</p><p>[Non-text portions of this message have been removed]</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

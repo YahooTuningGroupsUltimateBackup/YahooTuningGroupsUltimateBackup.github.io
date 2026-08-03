@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning-math">back to list</a><h1>Re: [tuning-math] Digest Number 2117</h1><h3><a id=16657 href="#16657">🔗</a>Jon Wild &#x3C;wild@music.mcgill.ca&#x3E;</h3><span>6/21/2007 8:08:46 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Paul Hj wrote:</p><p>&gt;       What language did you use for<br/>&gt;       your Z-relations program again?</p><p>C. You have to do more work up front--it&apos;s a fairly &quot;bare bones&quot;, close-to-the-metal language--but for programs whose runtime grows combinatorially with the size of the scale, writing optimised loops and your own lean C functions will let it run much quicker than a program in an interpreted language like Maple.</p><p>This problem of enumerating scales is much smaller and I doubt you&apos;d find a difference between a fast compiled language like C and an interpreted language. You could learn a modern language like Python and code what you want much more easily--so what if it takes 6 seconds to run, instead of 60 milliseconds. (The problem is when it takes 6 days instead of 60 minutes, for big problems.)</p><p>--Jon</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning-math">back to list</a><h1>Re: [tuning-math] Digest Number 2117</h1><h3><a id=16657 href="#16657">🔗</a>Jon Wild &#x3C;wild@music.mcgill.ca&#x3E;</h3><span>6/21/2007 8:08:46 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Paul Hj wrote:</p><p>&gt;       What language did you use for<br/>&gt;       your Z-relations program again?</p><p>C. You have to do more work up front--it&apos;s a fairly &quot;bare bones&quot;, close-to-the-metal language--but for programs whose runtime grows combinatorially with the size of the scale, writing optimised loops and your own lean C functions will let it run much quicker than a program in an interpreted language like Maple.</p><p>This problem of enumerating scales is much smaller and I doubt you&apos;d find a difference between a fast compiled language like C and an interpreted language. You could learn a modern language like Python and code what you want much more easily--so what if it takes 6 seconds to run, instead of 60 milliseconds. (The problem is when it takes 6 days instead of 60 minutes, for big problems.)</p><p>--Jon</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

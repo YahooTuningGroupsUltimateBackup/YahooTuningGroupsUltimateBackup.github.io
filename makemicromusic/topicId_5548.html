@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Re: [MMM] MTS questions</h1><h3><a id=5548 href="#5548">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>11/13/2003 9:13:04 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>John Loffink wrote:<br/>&gt;Does anyone have an up to date piece of software running on the MacIntosh<br/>&gt;that supports the MIDI Tuning Standard?</p><p>I&apos;d suggest Max Magic Microtuner indeed, why not try it?<br/>The old command line Scala also supports it, but it can&apos;t be<br/>called an up to date piece of software.</p><p>&gt;Also, has anyone successfully used the MTS dump on SCALA with Windows?  If<br/>&gt;so, to which synthesizers?</p><p>Alison just reported she did with the FM7. I&apos;ve also used it<br/>with Timidity.</p><p>Manuel</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Re: [MMM] MTS questions</h1><h3><a id=5548 href="#5548">🔗</a>Manuel Op de Coul &#x3C;manuel.op.de.coul@...&#x3E;</h3><span>11/13/2003 9:13:04 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>John Loffink wrote:<br/>&gt;Does anyone have an up to date piece of software running on the MacIntosh<br/>&gt;that supports the MIDI Tuning Standard?</p><p>I&apos;d suggest Max Magic Microtuner indeed, why not try it?<br/>The old command line Scala also supports it, but it can&apos;t be<br/>called an up to date piece of software.</p><p>&gt;Also, has anyone successfully used the MTS dump on SCALA with Windows?  If<br/>&gt;so, to which synthesizers?</p><p>Alison just reported she did with the FM7. I&apos;ve also used it<br/>with Timidity.</p><p>Manuel</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

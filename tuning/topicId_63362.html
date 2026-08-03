@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>error with the "Virtual Ney"</h1><h3><a id=63362 href="#63362">🔗</a>pgreenhaw@nypl.org</h3><span>1/5/2006 2:35:20 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Sorry -- I left the wrong subject heading in the box --<br/>B<br/>the webpage didnt wrok though???<br/>B<br/><a href="http://www.paulgreenhaw.com">www.paulgreenhaw.com</a> [<a href="http://www.paulgreenhaw.com">http://www.paulgreenhaw.com</a>]<br/>B</p><p>B</p><p>___________________________________________<br/>PaulB Greenhaw<br/>Music&nbsp;SpecialistB II<br/>TheB NewB YorkB PublicB Library&nbsp;forB theB PerformingB Arts<br/>40B LincolnB Center&nbsp;Plaza<br/>NewB York,B NYB 10023<br/>(212)B 870-1892<br/>__________________________________________</p><p><a href="mailto:-----tuning@yahoogroups.com">-----tuning@yahoogroups.com</a> wrote: -----</p><p>&gt; To: <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a><br/>&gt; From: &quot;wallyesterpaulrus&quot;<br/>&gt; Sent by: <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a><br/>&gt; Date: 01/05/2006 04:49PM<br/>&gt; Subject: [tuning] Re: Virtual Ney<br/>&gt;<br/>&gt; Weird!<br/>&gt;<br/>&gt; On the web, I see a message with Paul Greenhaw&apos;s URL and .sig; nothing<br/>&gt; else.<br/>&gt;<br/>&gt; But when I click on reply, I see a blank screen!<br/>&gt;<br/>&gt; What&apos;s going on here?<br/>&gt;<br/>&gt; Anyway, Paul G., what does your website have to do with the virtual<br/>&gt; Ney? Could you provide a more specific URL there to look at?</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>error with the "Virtual Ney"</h1><h3><a id=63362 href="#63362">🔗</a>pgreenhaw@nypl.org</h3><span>1/5/2006 2:35:20 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Sorry -- I left the wrong subject heading in the box --<br/>B<br/>the webpage didnt wrok though???<br/>B<br/><a href="http://www.paulgreenhaw.com">www.paulgreenhaw.com</a> [<a href="http://www.paulgreenhaw.com">http://www.paulgreenhaw.com</a>]<br/>B</p><p>B</p><p>___________________________________________<br/>PaulB Greenhaw<br/>Music&nbsp;SpecialistB II<br/>TheB NewB YorkB PublicB Library&nbsp;forB theB PerformingB Arts<br/>40B LincolnB Center&nbsp;Plaza<br/>NewB York,B NYB 10023<br/>(212)B 870-1892<br/>__________________________________________</p><p><a href="mailto:-----tuning@yahoogroups.com">-----tuning@yahoogroups.com</a> wrote: -----</p><p>&gt; To: <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a><br/>&gt; From: &quot;wallyesterpaulrus&quot;<br/>&gt; Sent by: <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a><br/>&gt; Date: 01/05/2006 04:49PM<br/>&gt; Subject: [tuning] Re: Virtual Ney<br/>&gt;<br/>&gt; Weird!<br/>&gt;<br/>&gt; On the web, I see a message with Paul Greenhaw&apos;s URL and .sig; nothing<br/>&gt; else.<br/>&gt;<br/>&gt; But when I click on reply, I see a blank screen!<br/>&gt;<br/>&gt; What&apos;s going on here?<br/>&gt;<br/>&gt; Anyway, Paul G., what does your website have to do with the virtual<br/>&gt; Ney? Could you provide a more specific URL there to look at?</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

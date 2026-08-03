@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>My mp3.com page</h1><h3><a id=1228 href="#1228">🔗</a>genewardsmith@...</h3><span>11/5/2001 8:40:43 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>It appears this is up, though <a href="http://mp3.com">mp3.com</a> has not notified me of that. So<br/>far it has only one &quot;song&quot;; the first piece of music I&apos;ve written in<br/>two decades. It&apos;s nice to have more than square waves and my bad<br/>violin playing available!</p><p><a href="http://artists.mp3s.com/artists/322/gene_ward_smith.html">http://artists.mp3s.com/artists/322/gene_ward_smith.html</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>My mp3.com page</h1><h3><a id=1228 href="#1228">🔗</a>genewardsmith@...</h3><span>11/5/2001 8:40:43 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>It appears this is up, though <a href="http://mp3.com">mp3.com</a> has not notified me of that. So<br/>far it has only one &quot;song&quot;; the first piece of music I&apos;ve written in<br/>two decades. It&apos;s nice to have more than square waves and my bad<br/>violin playing available!</p><p><a href="http://artists.mp3s.com/artists/322/gene_ward_smith.html">http://artists.mp3s.com/artists/322/gene_ward_smith.html</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

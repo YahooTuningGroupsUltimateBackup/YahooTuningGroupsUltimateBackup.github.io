@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>New to Microtonal composition.</h1><h3><a id=1489 href="#1489">🔗</a>blackbirdskies2000 &#x3C;blackbirdskies2000@...&#x3E;</h3><span>12/23/2001 1:20:34 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello,<br/>I am erally quite new to the idea of composing microtoanl music using<br/>midi. It used to be that Midi did not have the capability od<br/>producing the toanl quality that i wanted, but now with new pysical<br/>modeling programs the quality has improved immensely. This has<br/>sparked interest in microtonal midi composing for me, but I realy<br/>don&apos;t know at all what I am doing. I have done enough reseach and<br/>fooling around so that I am able to ask a few questions.</p><p>How is it posible to use scala to tune cakewalk so that I can use the<br/>staff to write the music?</p><p>Are there any other good microtonal programs out there? I seems to me<br/>that scala is the most powerful if i could figure out how to utilize<br/>it.</p><p>What ways can I use phyiscal modeling synths such as Tassman to<br/>incorporate microtonal scales?</p><p>Any Help answering these questions would be greatly appreciated!</p><p>Blackbirdskies@...</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>New to Microtonal composition.</h1><h3><a id=1489 href="#1489">🔗</a>blackbirdskies2000 &#x3C;blackbirdskies2000@...&#x3E;</h3><span>12/23/2001 1:20:34 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hello,<br/>I am erally quite new to the idea of composing microtoanl music using<br/>midi. It used to be that Midi did not have the capability od<br/>producing the toanl quality that i wanted, but now with new pysical<br/>modeling programs the quality has improved immensely. This has<br/>sparked interest in microtonal midi composing for me, but I realy<br/>don&apos;t know at all what I am doing. I have done enough reseach and<br/>fooling around so that I am able to ask a few questions.</p><p>How is it posible to use scala to tune cakewalk so that I can use the<br/>staff to write the music?</p><p>Are there any other good microtonal programs out there? I seems to me<br/>that scala is the most powerful if i could figure out how to utilize<br/>it.</p><p>What ways can I use phyiscal modeling synths such as Tassman to<br/>incorporate microtonal scales?</p><p>Any Help answering these questions would be greatly appreciated!</p><p>Blackbirdskies@...</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

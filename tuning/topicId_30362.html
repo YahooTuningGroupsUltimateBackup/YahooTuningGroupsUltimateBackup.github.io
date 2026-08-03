@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>New midi:Superchromatic Fantasy</h1><h3><a id=30362 href="#30362">🔗</a>Mats &#xFFFD;ljare &#x3C;oljare@hotmail.com&#x3E;</h3><span>11/19/2001 3:10:45 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="/tuning/files/oljare/superchr.mid">/tuning/files/oljare/superchr.mid</a></p><p>Mostly diatonic with lots of modulations.</p><p>-=-=-=-=-=-=-<br/> MATS &#xFFFD;LJARE<br/> <a href="http://www.angelfire.com/mo/oljare">http://www.angelfire.com/mo/oljare</a></p><p>_________________________________________________________________<br/>Get your FREE download of MSN Explorer at <a href="http://explorer.msn.com/intl.asp">http://explorer.msn.com/intl.asp</a></p></div><h3><a id=30373 href="#30373">🔗</a>Paul Erlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>11/19/2001 4:51:19 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In tuning@y..., &quot;Mats &Ouml;ljare&quot; &lt;oljare@h...&gt; wrote:<br/>&gt;<br/>&gt; <a href="/tuning/files/oljare/superchr.mid">/tuning/files/oljare/superchr.mid</a><br/>&gt;<br/>&gt; Mostly diatonic with lots of modulations.<br/>&gt;<br/>I loved the last section. 19-tET?</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>New midi:Superchromatic Fantasy</h1><h3><a id=30362 href="#30362">🔗</a>Mats &#xFFFD;ljare &#x3C;oljare@hotmail.com&#x3E;</h3><span>11/19/2001 3:10:45 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="/tuning/files/oljare/superchr.mid">/tuning/files/oljare/superchr.mid</a></p><p>Mostly diatonic with lots of modulations.</p><p>-=-=-=-=-=-=-<br/> MATS &#xFFFD;LJARE<br/> <a href="http://www.angelfire.com/mo/oljare">http://www.angelfire.com/mo/oljare</a></p><p>_________________________________________________________________<br/>Get your FREE download of MSN Explorer at <a href="http://explorer.msn.com/intl.asp">http://explorer.msn.com/intl.asp</a></p></div><h3><a id=30373 href="#30373">🔗</a>Paul Erlich &#x3C;paul@stretch-music.com&#x3E;</h3><span>11/19/2001 4:51:19 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In tuning@y..., &quot;Mats &Ouml;ljare&quot; &lt;oljare@h...&gt; wrote:<br/>&gt;<br/>&gt; <a href="/tuning/files/oljare/superchr.mid">/tuning/files/oljare/superchr.mid</a><br/>&gt;<br/>&gt; Mostly diatonic with lots of modulations.<br/>&gt;<br/>I loved the last section. 19-tET?</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

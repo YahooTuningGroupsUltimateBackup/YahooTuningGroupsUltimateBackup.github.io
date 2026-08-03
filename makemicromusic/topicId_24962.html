@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>the blues</h1><h3><a id=24962 href="#24962">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>1/25/2011 3:35:45 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I can&apos;t find the thread just now but I thought I&apos;d chime in to say<br/>that I agree with what was said about the blues.  For me at least,<br/>the blues kind of starts and stops with Robert Johnson (and a handful<br/>of contemporary Delta players).  Johnson played with a slide most or<br/>all of the time and his stuff is quite microtonal, as first pointed<br/>out to me by Joe Monzo.  Oh, and Johnson was very young when he was<br/>in his prime, so no old men crying about the past were involved. -Carl</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>the blues</h1><h3><a id=24962 href="#24962">🔗</a>Carl Lumma &#x3C;carl@...&#x3E;</h3><span>1/25/2011 3:35:45 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I can&apos;t find the thread just now but I thought I&apos;d chime in to say<br/>that I agree with what was said about the blues.  For me at least,<br/>the blues kind of starts and stops with Robert Johnson (and a handful<br/>of contemporary Delta players).  Johnson played with a slide most or<br/>all of the time and his stuff is quite microtonal, as first pointed<br/>out to me by Joe Monzo.  Oh, and Johnson was very young when he was<br/>in his prime, so no old men crying about the past were involved. -Carl</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Stellated Eikosany continued</h1><h3><a id=10882 href="#10882">🔗</a>John Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>6/24/2000 4:49:44 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>I got a note from Erv Wilson today and he says the Stellated 20-any has<br/>92 tones. He included a diagram, alas, without ratios or factors, but<br/>it&apos;s based on the pentagon lattices in Figures 36 and 37 of the article<br/>on the D&apos;alessandro keyboard and tuning.</p><p>--John</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Stellated Eikosany continued</h1><h3><a id=10882 href="#10882">🔗</a>John Chalmers &#x3C;JHCHALMERS@UCSD.EDU&#x3E;</h3><span>6/24/2000 4:49:44 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>I got a note from Erv Wilson today and he says the Stellated 20-any has<br/>92 tones. He included a diagram, alas, without ratios or factors, but<br/>it&apos;s based on the pentagon lattices in Figures 36 and 37 of the article<br/>on the D&apos;alessandro keyboard and tuning.</p><p>--John</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

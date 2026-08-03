@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Music and Videos of Harry Partch.</h1><h3><a id=20437 href="#20437">🔗</a>robert thomas martin &#x3C;robertthomasmartin@...&#x3E;</h3><span>2/20/2009 3:48:22 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://www.deezer.com/#music/result/all/harry%20partch">http://www.deezer.com/#music/result/all/harry%20partch</a></p><p>Click on Videos for videos.</p><p>Insert &quot;microtonal&quot; into the Search box for music then click on Videos<br/>for videos. An important link for the Corporeal Meadows site.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Music and Videos of Harry Partch.</h1><h3><a id=20437 href="#20437">🔗</a>robert thomas martin &#x3C;robertthomasmartin@...&#x3E;</h3><span>2/20/2009 3:48:22 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://www.deezer.com/#music/result/all/harry%20partch">http://www.deezer.com/#music/result/all/harry%20partch</a></p><p>Click on Videos for videos.</p><p>Insert &quot;microtonal&quot; into the Search box for music then click on Videos<br/>for videos. An important link for the Corporeal Meadows site.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

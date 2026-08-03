@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Microtonal Guitar CD RELEASE</h1><h3><a id=1217 href="#1217">🔗</a>Orphon Soul, Inc. &#x3C;tuning@...&#x3E;</h3><span>8/31/2002 11:00:36 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Orphon Soul presents</p><p>Cyberenaissance Vol. 6  &quot;Over Seas&quot;<br/>(Broken Umbrella Records  BU 006)</p><p>$12 ($15 international)</p><p>Marc Jones<br/>Mostly Electric String Quartet No. 1 in G major; 32tET<br/>Mostly Electric String Quartet No. 2 in A double-harmonic-minor; 49tET</p><p>Buy One:  <a href="http://www.orphonsoul.com/auth.html">http://www.orphonsoul.com/auth.html</a></p><p>Reviews:  <a href="http://www.orphonsoul.com/cdreviews/cyb6.html">http://www.orphonsoul.com/cdreviews/cyb6.html</a></p><p>Radio clips:  <a href="http://www.orphonsoul.com">http://www.orphonsoul.com</a></p><p>$10 + $2 s/h  ($10 + $5 s/h international)</p><p>Cyberenaissance Series<br/>Mostly Electric String Quartets<br/>Classical-Jazz-Rock-Fusion Pseudo-Sonatas</p><p>for</p><p>Electric Bass<br/>Electric Guitar Low<br/>Electric Guitar High<br/>Acoustic Violin</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Microtonal Guitar CD RELEASE</h1><h3><a id=1217 href="#1217">🔗</a>Orphon Soul, Inc. &#x3C;tuning@...&#x3E;</h3><span>8/31/2002 11:00:36 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Orphon Soul presents</p><p>Cyberenaissance Vol. 6  &quot;Over Seas&quot;<br/>(Broken Umbrella Records  BU 006)</p><p>$12 ($15 international)</p><p>Marc Jones<br/>Mostly Electric String Quartet No. 1 in G major; 32tET<br/>Mostly Electric String Quartet No. 2 in A double-harmonic-minor; 49tET</p><p>Buy One:  <a href="http://www.orphonsoul.com/auth.html">http://www.orphonsoul.com/auth.html</a></p><p>Reviews:  <a href="http://www.orphonsoul.com/cdreviews/cyb6.html">http://www.orphonsoul.com/cdreviews/cyb6.html</a></p><p>Radio clips:  <a href="http://www.orphonsoul.com">http://www.orphonsoul.com</a></p><p>$10 + $2 s/h  ($10 + $5 s/h international)</p><p>Cyberenaissance Series<br/>Mostly Electric String Quartets<br/>Classical-Jazz-Rock-Fusion Pseudo-Sonatas</p><p>for</p><p>Electric Bass<br/>Electric Guitar Low<br/>Electric Guitar High<br/>Acoustic Violin</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

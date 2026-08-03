@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>New Items on Website</h1><h3><a id=38820 href="#38820">🔗</a>Billbrpt@aol.com</h3><span>8/18/2002 2:32:40 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>List,</p><p>There are now two new items on my website:</p><p>1.  Jason Kanter&apos;s fascinating graph of my Equal Beating Victorian<br/>Temperament (EBVT).</p><p>2.  Information about and ordering links to a new Jazz CD (July, 2002) which<br/>features pianos tuned in EBVT.</p><p>Next to come:  Guitar tuning specifications used in the show, Man of La<br/>Mancha in 1992 and 2002.</p><p>Bill Bremmer RPT<br/>Madison, Wisconsin<br/> &lt;A HREF=&quot;<a href="http://www.billbremmer.com/">http://www.billbremmer.com/</a>&quot;&gt;Click here: -=w w w . b i l l b r e m m e r . c o m =-&lt;/A&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>New Items on Website</h1><h3><a id=38820 href="#38820">🔗</a>Billbrpt@aol.com</h3><span>8/18/2002 2:32:40 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>List,</p><p>There are now two new items on my website:</p><p>1.  Jason Kanter&apos;s fascinating graph of my Equal Beating Victorian<br/>Temperament (EBVT).</p><p>2.  Information about and ordering links to a new Jazz CD (July, 2002) which<br/>features pianos tuned in EBVT.</p><p>Next to come:  Guitar tuning specifications used in the show, Man of La<br/>Mancha in 1992 and 2002.</p><p>Bill Bremmer RPT<br/>Madison, Wisconsin<br/> &lt;A HREF=&quot;<a href="http://www.billbremmer.com/">http://www.billbremmer.com/</a>&quot;&gt;Click here: -=w w w . b i l l b r e m m e r . c o m =-&lt;/A&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

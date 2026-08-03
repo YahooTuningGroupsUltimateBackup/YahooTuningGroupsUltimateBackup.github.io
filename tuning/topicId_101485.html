@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>A newbie question....</h1><h3><a id=101485 href="#101485">🔗</a>MMMAKII &#x3C;milanovicmarko@...&#x3E;</h3><span>8/30/2011 4:49:32 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hello,<br/>I guess this is the right place to ask this following question:<br/>What multilayer multitimbral hardware/software synthesizer allows for independent tunings per layer? Means, each layer within one midi channel should play its own scale.</p><p> Best regards, Maki</p></div><h3><a id=101486 href="#101486">🔗</a>Steve Parker &#x3C;steve@...&#x3E;</h3><span>8/30/2011 6:01:47 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Kontakt allows independent tuning of every note of every layer of every instantiation.</p><p>Steve P.</p><p>On 30 Aug 2011, at 12:49, MMMAKII wrote:</p><p>&gt; Hello,<br/>&gt; I guess this is the right place to ask this following question:<br/>&gt; What multilayer multitimbral hardware/software synthesizer allows for independent tunings per layer? Means, each layer within one midi channel should play its own scale.<br/>&gt;<br/>&gt; Best regards, Maki<br/>&gt;<br/>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>A newbie question....</h1><h3><a id=101485 href="#101485">🔗</a>MMMAKII &#x3C;milanovicmarko@...&#x3E;</h3><span>8/30/2011 4:49:32 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hello,<br/>I guess this is the right place to ask this following question:<br/>What multilayer multitimbral hardware/software synthesizer allows for independent tunings per layer? Means, each layer within one midi channel should play its own scale.</p><p> Best regards, Maki</p></div><h3><a id=101486 href="#101486">🔗</a>Steve Parker &#x3C;steve@...&#x3E;</h3><span>8/30/2011 6:01:47 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Kontakt allows independent tuning of every note of every layer of every instantiation.</p><p>Steve P.</p><p>On 30 Aug 2011, at 12:49, MMMAKII wrote:</p><p>&gt; Hello,<br/>&gt; I guess this is the right place to ask this following question:<br/>&gt; What multilayer multitimbral hardware/software synthesizer allows for independent tunings per layer? Means, each layer within one midi channel should play its own scale.<br/>&gt;<br/>&gt; Best regards, Maki<br/>&gt;<br/>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

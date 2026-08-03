@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Schwartzenkurosawa</h1><h3><a id=9687 href="#9687">🔗</a>Aaron Krister Johnson &#x3C;aaron@...&#x3E;</h3><span>5/2/2005 10:41:50 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>....is one of the tracks from our (Divide By Pi&apos;s that is) new<br/>album-in-progress. You can hear it in the format of your choice (hi-fi ogg or<br/>128-kbps mp3) at <a href="http://www.dividebypi.com/listen.html">http://www.dividebypi.com/listen.html</a></p><p>Enjoy! Comments welcome.</p><p>Best,<br/>Aaron.</p><p>P.S. Now that my recital is over, I can say for real now that a sample of Mr.<br/>Carl Lumma&apos;s work will be on its way shortly.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Schwartzenkurosawa</h1><h3><a id=9687 href="#9687">🔗</a>Aaron Krister Johnson &#x3C;aaron@...&#x3E;</h3><span>5/2/2005 10:41:50 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>....is one of the tracks from our (Divide By Pi&apos;s that is) new<br/>album-in-progress. You can hear it in the format of your choice (hi-fi ogg or<br/>128-kbps mp3) at <a href="http://www.dividebypi.com/listen.html">http://www.dividebypi.com/listen.html</a></p><p>Enjoy! Comments welcome.</p><p>Best,<br/>Aaron.</p><p>P.S. Now that my recital is over, I can say for real now that a sample of Mr.<br/>Carl Lumma&apos;s work will be on its way shortly.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

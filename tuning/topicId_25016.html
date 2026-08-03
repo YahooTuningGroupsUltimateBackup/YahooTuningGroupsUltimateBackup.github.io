@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>Re: [tuning] Re: A missed opportunity-for Dave Keenan</h1><h3><a id=25016 href="#25016">🔗</a>Alison Monteith &#x3C;alison.monteith3@which.net&#x3E;</h3><span>6/13/2001 10:12:21 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Dave Keenan wrote:In the Scala scale archive</p><p>&gt;   <a href="http://www.xs4all.nl/~huygensf/doc/scales.zip">http://www.xs4all.nl/~huygensf/doc/scales.zip</a><br/>&gt; see the scales<br/>&gt;   dow_high.scl<br/>&gt;   dow_lmh.scl<br/>&gt;   dow_low.scl<br/>&gt;   dow_middle.scl<br/>&gt;   dowland_12.scl<br/>&gt;   mersen_l1.scl<br/>&gt;   mersen_l2.scl<br/>&gt;   artusi.scl<br/>&gt;<br/>&gt; Regards,<br/>&gt; -- Dave Keenan</p><p>Thanks, Dave. I have these on disk so I&apos;ll have a trawl through.</p><p>Best Wishes.</p><p>&gt;</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>Re: [tuning] Re: A missed opportunity-for Dave Keenan</h1><h3><a id=25016 href="#25016">🔗</a>Alison Monteith &#x3C;alison.monteith3@which.net&#x3E;</h3><span>6/13/2001 10:12:21 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Dave Keenan wrote:In the Scala scale archive</p><p>&gt;   <a href="http://www.xs4all.nl/~huygensf/doc/scales.zip">http://www.xs4all.nl/~huygensf/doc/scales.zip</a><br/>&gt; see the scales<br/>&gt;   dow_high.scl<br/>&gt;   dow_lmh.scl<br/>&gt;   dow_low.scl<br/>&gt;   dow_middle.scl<br/>&gt;   dowland_12.scl<br/>&gt;   mersen_l1.scl<br/>&gt;   mersen_l2.scl<br/>&gt;   artusi.scl<br/>&gt;<br/>&gt; Regards,<br/>&gt; -- Dave Keenan</p><p>Thanks, Dave. I have these on disk so I&apos;ll have a trawl through.</p><p>Best Wishes.</p><p>&gt;</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

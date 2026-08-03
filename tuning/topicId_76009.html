@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/tuning">back to list</a><h1>xenharmony.org mirror is up</h1><h3><a id=76009 href="#76009">🔗</a>Carl Lumma &#x3C;carl@lumma.org&#x3E;</h3><span>4/23/2008 4:55:46 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://lumma.org/tuning/gws/">http://lumma.org/tuning/gws/</a></p><p>-Carl</p></div><h3><a id=76013 href="#76013">🔗</a>Jon Szanto &#x3C;jszanto@cox.net&#x3E;</h3><span>4/23/2008 11:06:30 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>How is Gene these days?</p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;Carl Lumma&quot; &lt;carl@...&gt; wrote:<br/>&gt;<br/>&gt; <a href="http://lumma.org/tuning/gws/">http://lumma.org/tuning/gws/</a><br/>&gt;<br/>&gt; -Carl<br/>&gt;</p></div><h3><a id=76014 href="#76014">🔗</a>Carl Lumma &#x3C;carl@lumma.org&#x3E;</h3><span>4/23/2008 11:14:50 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;Jon Szanto&quot; &lt;jszanto@...&gt; wrote:<br/>&gt;<br/>&gt; How is Gene these days?</p><p>I don&apos;t know.  -Carl</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/tuning">back to list</a><h1>xenharmony.org mirror is up</h1><h3><a id=76009 href="#76009">🔗</a>Carl Lumma &#x3C;carl@lumma.org&#x3E;</h3><span>4/23/2008 4:55:46 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://lumma.org/tuning/gws/">http://lumma.org/tuning/gws/</a></p><p>-Carl</p></div><h3><a id=76013 href="#76013">🔗</a>Jon Szanto &#x3C;jszanto@cox.net&#x3E;</h3><span>4/23/2008 11:06:30 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>How is Gene these days?</p><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;Carl Lumma&quot; &lt;carl@...&gt; wrote:<br/>&gt;<br/>&gt; <a href="http://lumma.org/tuning/gws/">http://lumma.org/tuning/gws/</a><br/>&gt;<br/>&gt; -Carl<br/>&gt;</p></div><h3><a id=76014 href="#76014">🔗</a>Carl Lumma &#x3C;carl@lumma.org&#x3E;</h3><span>4/23/2008 11:14:50 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>--- In <a href="mailto:tuning@yahoogroups.com">tuning@yahoogroups.com</a>, &quot;Jon Szanto&quot; &lt;jszanto@...&gt; wrote:<br/>&gt;<br/>&gt; How is Gene these days?</p><p>I don&apos;t know.  -Carl</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

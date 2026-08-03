@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>(for M.V.)</h1><h3><a id=1837 href="#1837">🔗</a>X. J. Scott &#x3C;xjscott@...&#x3E;</h3><span>1/21/2002 1:53:42 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>M.V.,</p><p>I got your last email and resent but it still bounced.</p><p>It&apos;s possible that, although your computer is<br/>downloading your email messages, copies are still left<br/>on the server.</p><p>To see if this is the case:</p><p>In Netscape Communicator Preferences, under Mail &amp;<br/>Groups-&gt;Mail Server, UNcheck the &apos;leave mail on server&apos;<br/>option.</p><p>In MSIE, under Preferences-&gt; Accounts-&gt; E-mail-&gt;<br/>Advanced..., uncheck the same option.</p><p>If you found that it was checked, then that was the<br/>problem *but* you still might have to figure out how to<br/>delete the *old* messages from your ISPs server. A<br/>friend who has done this informs me that she called her<br/>ISP and they did it for her, but there might be a way<br/>to do it also manually if there is web access to your<br/>ISP account.</p><p>T henagain, it might be something else causing the<br/>problem, this is just the one I&apos;ve heard about.</p><p>Good luck!</p><p>- Jeff</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>(for M.V.)</h1><h3><a id=1837 href="#1837">🔗</a>X. J. Scott &#x3C;xjscott@...&#x3E;</h3><span>1/21/2002 1:53:42 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>M.V.,</p><p>I got your last email and resent but it still bounced.</p><p>It&apos;s possible that, although your computer is<br/>downloading your email messages, copies are still left<br/>on the server.</p><p>To see if this is the case:</p><p>In Netscape Communicator Preferences, under Mail &amp;<br/>Groups-&gt;Mail Server, UNcheck the &apos;leave mail on server&apos;<br/>option.</p><p>In MSIE, under Preferences-&gt; Accounts-&gt; E-mail-&gt;<br/>Advanced..., uncheck the same option.</p><p>If you found that it was checked, then that was the<br/>problem *but* you still might have to figure out how to<br/>delete the *old* messages from your ISPs server. A<br/>friend who has done this informs me that she called her<br/>ISP and they did it for her, but there might be a way<br/>to do it also manually if there is web access to your<br/>ISP account.</p><p>T henagain, it might be something else causing the<br/>problem, this is just the one I&apos;ve heard about.</p><p>Good luck!</p><p>- Jeff</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

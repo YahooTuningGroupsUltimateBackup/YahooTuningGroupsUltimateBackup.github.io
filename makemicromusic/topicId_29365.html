@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Two non-octave pieces</h1><h3><a id=29365 href="#29365">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>1/19/2015 6:44:38 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>5/2 in 12 and 18/7 in 12</p><p><a href="http://chrisvaisvil.com/2-pallas-dances-with-jupiter-two-non-octave-dances-largo-52-and-presto-187/">http://chrisvaisvil.com/2-pallas-dances-with-jupiter-two-non-octave-dances-largo-52-and-presto-187/</a></p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Two non-octave pieces</h1><h3><a id=29365 href="#29365">🔗</a>Chris Vaisvil &#x3C;chrisvaisvil@...&#x3E;</h3><span>1/19/2015 6:44:38 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>5/2 in 12 and 18/7 in 12</p><p><a href="http://chrisvaisvil.com/2-pallas-dances-with-jupiter-two-non-octave-dances-largo-52-and-presto-187/">http://chrisvaisvil.com/2-pallas-dances-with-jupiter-two-non-octave-dances-largo-52-and-presto-187/</a></p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

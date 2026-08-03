@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Movable frets</h1><h3><a id=9048 href="#9048">🔗</a>Igliashon Jones &#x3C;igliashon@...&#x3E;</h3><span>2/19/2005 1:55:45 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Hey folks, hate to interrupt the Vorbis war, but does anyone know<br/>what gauge of nylon fishing line is the best to use as movable<br/>lute/guitar frets?  I&apos;m going to de-fret an old nylon-string next<br/>weekend.</p><p>Thanks,</p><p>-Igliashon Jones</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Movable frets</h1><h3><a id=9048 href="#9048">🔗</a>Igliashon Jones &#x3C;igliashon@...&#x3E;</h3><span>2/19/2005 1:55:45 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Hey folks, hate to interrupt the Vorbis war, but does anyone know<br/>what gauge of nylon fishing line is the best to use as movable<br/>lute/guitar frets?  I&apos;m going to de-fret an old nylon-string next<br/>weekend.</p><p>Thanks,</p><p>-Igliashon Jones</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/metatuning">back to list</a><h1>windows in the wild</h1><h3><a id=6565 href="#6565">🔗</a>Carl Lumma &#x3C;clumma@...&#x3E;</h3><span>12/21/2003 11:24:07 AM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p><a href="http://tinyurl.com/2xhev">http://tinyurl.com/2xhev</a></p><p><a href="http://tinyurl.com/3xbms">http://tinyurl.com/3xbms</a></p><p>-C.</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/metatuning">back to list</a><h1>windows in the wild</h1><h3><a id=6565 href="#6565">🔗</a>Carl Lumma &#x3C;clumma@...&#x3E;</h3><span>12/21/2003 11:24:07 AM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p><a href="http://tinyurl.com/2xhev">http://tinyurl.com/2xhev</a></p><p><a href="http://tinyurl.com/3xbms">http://tinyurl.com/3xbms</a></p><p>-C.</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>

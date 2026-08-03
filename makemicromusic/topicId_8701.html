@@ -32,16 +32,16 @@
             <label>before <input type="text" name="before" size="10" placeholder="2003"></label>
         </div>
     </form>
-<a href="/makemicromusic">back to list</a><h1>Calculators</h1><h3><a id=8701 href="#8701">🔗</a>Gordon Rumson &#x3C;rumsong@...&#x3E;</h3><span>1/29/2005 2:09:14 PM</span><button style="float: right; margin-right: 20px">toggle monospace</button><div style='margin: 0px 20px 20px; padding: 20px; background-color: #eee'><p>Greetings,</p><p>An excellent resource:</p><p><a href="http://www.martindalecenter.com/Calculators.html">http://www.martindalecenter.com/Calculators.html</a></p><p>Prgrams, applets for doing calculations.  Music section, but also acoustics<br/>and many others.  Superb!</p><p>All best wishes,<br/>Gordon Rumson<br/>Pianist, composer, author and storyteller<br/>Music Director and Organist, St. Matthew&apos;s United Church</p><p>Death is the last great defence of Life against tyrants.  For eventually<br/>all tyrants die. -- Gordon Rumson</p></div>
-                <script>
-                    let monospace = false
-                    $('button').on('click', function () {
-                      if (monospace) {
-                        $('p').css("font-family", "")
-                      } else {
-                        $('p').css("font-family", "monospace")
-                      }
-                      monospace = !monospace
-                    })
-                </script>
-            
+<a href="/makemicromusic">back to list</a><h1>Calculators</h1><h3><a id=8701 href="#8701">🔗</a>Gordon Rumson &#x3C;rumsong@...&#x3E;</h3><span>1/29/2005 2:09:14 PM</span><label style="float: right; margin-right: 20px"><input type="checkbox" class="monospace" checked> monospace</label><div class='message-text' style='margin: 0px 20px 20px; padding: 20px; background-color: #eee; font-size: 16px; line-height: 1.2; white-space: pre-wrap'><p>Greetings,</p><p>An excellent resource:</p><p><a href="http://www.martindalecenter.com/Calculators.html">http://www.martindalecenter.com/Calculators.html</a></p><p>Prgrams, applets for doing calculations.  Music section, but also acoustics<br/>and many others.  Superb!</p><p>All best wishes,<br/>Gordon Rumson<br/>Pianist, composer, author and storyteller<br/>Music Director and Organist, St. Matthew&apos;s United Church</p><p>Death is the last great defence of Life against tyrants.  For eventually<br/>all tyrants die. -- Gordon Rumson</p></div>
+    <script>
+        const applyMonospace = monospace => {
+            $('.monospace').prop('checked', monospace)
+            $('.message-text').css('font-family', monospace ? 'monospace' : '')
+        }
+
+        applyMonospace(true)
+
+        $('.monospace').on('change', function () {
+            applyMonospace(this.checked)
+        })
+    </script>
